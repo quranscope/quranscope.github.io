@@ -1,5 +1,4 @@
-import { Helmet } from 'react-helmet-async'
-import { useOutletContext } from 'react-router-dom'
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import {
   Container,
@@ -8,42 +7,29 @@ import {
   ContentCard,
   CategoryTag,
   SectionTitle,
-  StatsGrid
+  StatsGrid,
+  PageHeader
 } from '../components/ui'
+import { PAGES } from '../config/pages'
 
-export default function TerroristOrganizations() {
-  const { currentLang } = useOutletContext()
-  const [translations, setTranslations] = useState(null)
-
-  useEffect(() => {
-    const loadTranslations = async () => {
-      try {
-        const response = await fetch(`/lang/terrorist_${currentLang}.json`)
-        if (response.ok) {
-          const data = await response.json()
-          setTranslations(data)
-        }
-      } catch (error) {
-        console.error('Error loading terrorist translations:', error)
-      }
-    }
-    loadTranslations()
-  }, [currentLang])
-
-  if (!translations) return <div className="flex items-center justify-center min-h-screen">Loading...</div>
+export default function TerroristOrganizations({ translations, currentLang }) {
+  if (!translations) return <div>Loading...</div>
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{translations.title}</title>
         <meta name="description" content={translations.introParaOverview} />
-      </Helmet>
+      </Head>
+
+      <PageHeader 
+        title={translations.title} 
+        subtitle={translations.subtitle}
+        gradient={PAGES.terrorist.backgroundColor}
+      />
 
       <Container>
         <BackLink href="/">← Back to Home</BackLink>
-
-        <h1 className="text-4xl font-bold mb-4">{translations.title}</h1>
-        <p className="text-xl text-gray-600 mb-8">{translations.subtitle}</p>
 
         <IntroBox>
           <p>{translations.introParaOverview}</p>

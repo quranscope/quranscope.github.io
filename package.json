@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run sync && npm run validate && (npm run validate:keys || echo 'Warning: Translation key validation found issues') && (npm run validate:key-format || echo 'Warning: Key format validation found issues') && next build",
+    "build": "npm run sync && npm run validate:keys:cleanup && npm run validate && npm run validate:key-format && next build",
     "build:force": "next build",
     "deploy": "gh-pages -d out",
     "sync": "node scripts/sync-translations.js",
@@ -12,6 +12,7 @@
     "lint": "next lint",
     "validate": "node scripts/validate-translations.js",
     "validate:keys": "node scripts/validate-translation-keys.js",
+    "validate:keys:cleanup": "node scripts/validate-translation-keys.js --cleanup",
     "validate:key-format": "node scripts/validate-key-format.js",
     "validate:language": "node scripts/validate-language-content.js",
     "validate:usage": "node scripts/validate-translation-usage.js",
@@ -31,7 +32,13 @@
     "translate:google:all": "npm run translate:google:antisemitism && npm run translate:google:jihad && npm run translate:google:exmuslim",
     "translate:check": "node scripts/check-translation-status.js",
     "refactor:keys": "node scripts/refactor-translation-keys.js",
-    "refactor:keys:dry-run": "node scripts/refactor-translation-keys.js --dry-run"
+    "refactor:keys:dry-run": "node scripts/refactor-translation-keys.js --dry-run",
+    "test": "playwright test",
+    "test:strict": "playwright test tests/strict-content.spec.js",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "next": "^16.0.10",
@@ -41,6 +48,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",

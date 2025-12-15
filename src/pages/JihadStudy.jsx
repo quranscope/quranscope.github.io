@@ -7,8 +7,10 @@ import {
   CategoryTag,
   SectionTitle,
   StatsGrid,
-  HighlightBox
+  HighlightBox,
+  PageHeader
 } from '../components/ui'
+import { PAGES } from '../config/pages'
 
 export default function JihadStudy({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -23,11 +25,15 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
         <link rel="canonical" href="https://quranscope.github.io/jihad-study" />
         <meta property="og:title" content={t.title} />
       </Head>
+      
+      <PageHeader 
+        title={t.title} 
+        subtitle={t.pageSubtitle}
+        gradient={PAGES.jihad.backgroundColor}
+      />
+      
       <Container>
         <BackLink href="/">{t.backLink}</BackLink>
-        
-        <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
-        <p className="text-xl text-gray-600 mb-8">{t.pageSubtitle}</p>
 
         <IntroBox variant="warning">
           <h3 dangerouslySetInnerHTML={{ __html: t.introTitle }} />

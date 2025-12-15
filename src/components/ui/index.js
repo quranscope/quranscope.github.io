@@ -12,3 +12,4 @@ export { default as SourceDate } from './SourceDate';
 export { default as ResearchItem } from './ResearchItem';
 export { default as HighlightBox } from './HighlightBox';
 export { default as Container } from './Container';
+export { default as PageHeader } from './PageHeader';

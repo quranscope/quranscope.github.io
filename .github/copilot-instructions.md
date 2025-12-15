@@ -519,23 +519,61 @@ import {
 **Available Scripts** (from `package.json`):
 
 ```bash
-# Validation
-npm run validate:translations       # Check all translation files
-npm run validate:translation-keys   # Verify key consistency across languages
+# Development & Build
+npm run dev                         # Start Next.js dev server (http://localhost:3000)
+npm run build                       # Production build with validation (sync → validate → build)
+npm run build:force                 # Force build without validation checks
+npm run start                       # Start production server
+npm run deploy                      # Deploy to GitHub Pages
+npm run sync                        # Sync translation files across languages
+npm run lint                        # Run ESLint
 
-# Translation via DeepL API (premium, high quality)
-npm run translate:deepl             # Translate all files via DeepL
-npm run translate:deepl:ar          # Translate specific language
-npm run translate:deepl:status      # Check DeepL API quota
+# Validation Commands
+npm run validate                    # Validate all translation files structure
+npm run validate:keys               # Verify JSX uses valid translation keys (checks against *_en.json)
+npm run validate:key-format         # Check for numbers in translation keys (CRITICAL)
+npm run validate:language           # Validate language-specific content
+npm run validate:usage              # Check translation key usage patterns
+npm run validate:all                # Run all validation checks sequentially
+npm run validate:report             # Generate translation validation report
+npm run validate:watch              # Watch lang/ folder and auto-validate on changes
 
-# Fallback: Google Translate (free, lower quality)
-npm run translate:google
-npm run translate:google:ar
+# Translation - DeepL API (premium, high quality, 500k chars/month)
+npm run translate                   # Translate all files via DeepL
+npm run translate:usage             # Check DeepL API usage/quota
+npm run translate:antisemitism      # Translate antisemitism_en.json only
+npm run translate:jihad             # Translate jihad_en.json only
+npm run translate:exmuslim          # Translate exmuslim_en.json only
+npm run translate:all               # Translate specific files (antisemitism, jihad, exmuslim)
 
-# Check translation status
-npm run translate:status
-npm run translate:status:ar
+# Translation - Google Translate (fallback, free, lower quality)
+npm run translate:google            # Auto-translate all files via Google
+npm run translate:google:antisemitism  # Translate antisemitism_en.json via Google
+npm run translate:google:jihad      # Translate jihad_en.json via Google
+npm run translate:google:exmuslim   # Translate exmuslim_en.json via Google
+npm run translate:google:all        # Translate specific files via Google
+
+# Translation Status
+npm run translate:check             # Check translation completion status across all languages
+
+# Refactoring Tools
+npm run refactor:keys               # Refactor translation keys (rename, fix issues)
+npm run refactor:keys:dry-run       # Preview key refactoring without applying changes
+
+# Testing (Playwright)
+npm run test                        # Run all Playwright tests
+npm run test:ui                     # Run tests with Playwright UI
+npm run test:headed                 # Run tests in headed mode (visible browser)
+npm run test:debug                  # Run tests in debug mode
+npm run test:report                 # Show Playwright test report
 ```
+
+**Important Notes**:
+- **ALWAYS run `npm run validate:keys`** before committing to catch missing translation keys
+- **ALWAYS run `npm run validate:key-format`** to detect numbers in keys (violates naming convention)
+- Build command automatically runs validation - fix errors before deployment
+- DeepL is preferred for quality translations (check quota with `translate:usage`)
+- Google Translate is fallback when DeepL quota exhausted
 
 **Translation Process** (from `TRANSLATION-COMMANDS.md`):
 
@@ -942,6 +980,73 @@ npm run build
 
 ## 🚀 Quick Start for AI Agents
 
+### 🤖 AI-Specific Development Guidelines
+
+**⚠️ CRITICAL: DO NOT RUN `npm run dev` FOR TESTING**
+
+AI agents should **NEVER** start the dev server (`npm run dev`) because:
+- ❌ AI cannot interact with browser UI to verify implementation
+- ❌ Dev server keeps terminal blocked indefinitely (no useful output for AI)
+- ❌ Wastes resources and provides no validation feedback
+- ✅ **INSTEAD**: Use Playwright tests to verify implementation
+
+**Correct Testing Workflow for AI:**
+```bash
+# ✅ CORRECT - Use Playwright to validate implementation
+npm run test                  # Run all E2E tests
+npm run test:headed           # Run tests with visible browser (for debugging)
+npm run test:ui               # Interactive Playwright UI mode
+
+# ❌ WRONG - Don't start dev server
+npm run dev                   # AI cannot interact with browser!
+```
+
+**Why Playwright Tests?**
+- ✅ Tests verify pages render correctly
+- ✅ Validates translation loading
+- ✅ Checks component structure and styling
+- ✅ Provides concrete pass/fail feedback
+- ✅ Automated verification without manual browser interaction
+
+---
+
+**🔴 CRITICAL: NEVER REMOVE OR SKIP VALIDATION/TEST SCRIPTS**
+
+When completing any work, AI agents must **ALWAYS**:
+- ✅ **Run `npm run build`** - This includes validation checks that catch errors
+- ✅ **Run `npm run validate:all`** - Validates translation keys, formats, and structure
+- ✅ **Run `npm run test`** - Runs Playwright E2E tests to verify implementation
+- ❌ **NEVER** remove or comment out validation scripts in package.json
+- ❌ **NEVER** skip validation steps to "save time"
+- ❌ **NEVER** assume code works without running tests
+
+**Why This Matters:**
+- Build command includes `validate:keys` that catches typos like `hadith2Titl` (missing 'e')
+- Validation scripts prevent broken translation keys from reaching production
+- Tests catch rendering issues before deployment
+- These scripts exist to catch mistakes - skipping them defeats their purpose
+
+**Validation Workflow:**
+```bash
+# ✅ CORRECT - Complete validation before finishing work
+npm run validate:all          # Catch translation key issues
+npm run build                 # Build with validation (includes validate:keys)
+npm run test                  # Verify implementation works
+
+# ❌ WRONG - Never skip these steps
+# "I'll skip validation to finish faster"
+# "Build takes too long, I'll skip it"
+# "Tests probably pass, no need to run"
+```
+
+**If Validation Fails:**
+- ❌ Don't remove the validation script
+- ❌ Don't comment out the failing check
+- ✅ **FIX THE ACTUAL ERROR** (e.g., fix `hadith2Titl` → `hadith2Title`)
+- ✅ Re-run validation to confirm fix works
+
+---
+
 **When asked to add content:**
 1. ✅ Create translation file with descriptive keys (NO NUMBERS, NO NESTED OBJECTS)
 2. ✅ Add to `pages.js` config
@@ -950,23 +1055,27 @@ npm run build
 5. ✅ Add page mapping to `scripts/validate-translation-keys.js`
 6. ✅ Run translation scripts
 7. ✅ Run `npm run validate:keys` to check for missing keys
+8. ✅ **Test with `npm run test` instead of `npm run dev`**
 
 **When asked to edit content:**
 1. ✅ Edit `public/lang/{page}_en.json`
 2. ✅ Run `npm run validate:keys` to check JSX uses valid keys
 3. ✅ Run `npm run translate:deepl`
 4. ✅ Validate with `npm run validate:all`
+5. ✅ **Test with `npm run test` to verify rendering**
 
 **When asked to fix styling:**
 1. ✅ Check component CSS file first
 2. ✅ Check `PageContent.css` for shared styles
 3. ✅ Verify page gradient in `pages.js`
+4. ✅ **Run `npm run test` to validate visual changes**
 
 **When converting HTML to JSX:**
 1. ✅ Read `REACT_CONVERSION_INSTRUCTIONS.md` first
 2. ✅ NEVER edit content during conversion
 3. ✅ Use standard component pattern
 4. ✅ Add to routing and translation system
+5. ✅ **Validate with Playwright tests, NOT dev server**
 
 ---
 

@@ -7,8 +7,10 @@ import {
   CategoryTag,
   SectionTitle,
   VerseBox,
-  HighlightBox
+  HighlightBox,
+  PageHeader
 } from '../components/ui';
+import { PAGES } from '../config/pages';
 
 export default function ScientificErrors({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -25,6 +27,12 @@ export default function ScientificErrors({ translations: t, currentLang = 'en' }
         <link rel="canonical" href="https://quranscope.github.io/scientific-errors" />
         <meta property="og:title" content={t.pageTitle} />
       </Head>
+
+      <PageHeader 
+        title={t.pageTitle} 
+        subtitle={t.pageSubtitle}
+        gradient={PAGES.scientific.backgroundColor}
+      />
 
       <Container>
         <BackLink />

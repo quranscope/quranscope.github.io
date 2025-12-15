@@ -7,8 +7,10 @@ import {
   CategoryTag,
   SectionTitle,
   VerseBox,
-  HighlightBox
+  HighlightBox,
+  PageHeader
 } from '../components/ui';
+import { PAGES } from '../config/pages';
 
 export default function AntisemitismChristianity({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -24,6 +26,12 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href="https://quranscope.github.io/antisemitism-christianity" />
       </Head>
+      
+      <PageHeader 
+        title={t.metaTitle.replace(' - Quran Scope', '')} 
+        subtitle={t.metaDescription}
+        gradient={PAGES.antisemitism.backgroundColor}
+      />
       
       <Container>
         <BackLink>{t.backLink}</BackLink>

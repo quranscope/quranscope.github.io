@@ -33,11 +33,11 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
       <Head>
         <title>Solutions - Quran Scope</title>
         <meta name="description" content="Path forward for reform and progress." />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/solution" />
+        <link rel="canonical" href="https://quranscope.github.io/solution" />
       </Head>
       
       <div style={styles.container}>
-        <a href="/quranscopycreatedcontents/" style={styles.backLink}>← Back to Home</a>
+        <a href="/" style={styles.backLink}>← Back to Home</a>
         
         <div style={styles.introBox}>
           <h2 style={styles.introH2}>🕊️ Our Position: Freedom of/from Religion, But Truth First</h2>

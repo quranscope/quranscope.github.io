@@ -18,7 +18,7 @@ export default function LanguageBar() {
       // Extract language from slug (e.g., /page-ml -> ml, /page -> en)
       const slug = router.asPath
         .split('?')[0]
-        .replace(/^\/quranscopycreatedcontents/, '') // Remove basePath
+        .replace(/^\//, '') // Remove leading slash
         .replace(/\/+$/, ''); // Remove trailing slashes
       const langMatch = slug.match(/-(en|hi|de|fr|ta|pl|ml|ar)$/);
       const urlLang = langMatch ? langMatch[1] : 'en';
@@ -41,7 +41,6 @@ export default function LanguageBar() {
     // Extract page slug from current path
     let cleanPath = router.asPath
       .split('?')[0] // Remove query params
-      .replace(/^\/quranscopycreatedcontents\//, '') // Remove basePath with slash
       .replace(/^\//, '') // Remove any leading slash
       .replace(/\/+$/, '') // Remove all trailing slashes
       .trim(); // Remove any whitespace

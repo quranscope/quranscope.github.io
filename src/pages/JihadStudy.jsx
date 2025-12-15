@@ -22,14 +22,15 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
   return (
     <>
       <Head>
-        <title>{t.pageTitle} - Quran Scope</title>
-        <meta name="description" content={t.pageSubtitle} />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/jihad-study" />
+                <title>{t.title} - Quran Scope</title>
+        <meta name="description" content={t.subtitle} />
+        <link rel="canonical" href="https://quranscope.github.io/jihad-study" />
+        <meta property="og:title" content={t.title} />
       </Head>
       <div className="page-content">
-        <a href="/quranscopycreatedcontents/" className="back-link">{t.backLink}</a>
+        <a href="/" className="back-link">{t.backLink}</a>
         
-        <h1>{t.pageTitle}</h1>
+        <h1>{t.title}</h1>
         <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>{t.pageSubtitle}</p>
 
         <div style={styles.intro}>
@@ -262,7 +263,7 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
         </div>
 
         <div className="nav-buttons">
-          <a href="/quranscopycreatedcontents/" className="nav-button">🏠 Home</a>
+          <a href="/" className="nav-button">🏠 Home</a>
         </div>
       </div>
     </>

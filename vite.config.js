@@ -17,7 +17,6 @@ export default defineConfig(({ command }) => ({
       }
     }
   ],
-  // Use base path only for production build (GitHub Pages)
-  // In development, use root path for easier local testing
-  base: command === 'build' ? '/quranscopycreatedcontents/' : '/',
+  // Use root path for organization GitHub Pages (quranscope.github.io)
+  base: '/',
 }))

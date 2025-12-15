@@ -34,7 +34,7 @@ function AnalyticsTracker() {
 
 function App() {
   // Use basename only in production (GitHub Pages)
-  const basename = import.meta.env.PROD ? '/quranscopycreatedcontents' : '/';
+  const basename = '/';
   
   return (
     <HelmetProvider>

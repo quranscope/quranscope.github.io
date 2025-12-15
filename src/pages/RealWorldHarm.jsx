@@ -23,10 +23,10 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
       <Head>
         <title>Real-World Harm From Islam - Quran Scope</title>
         <meta name="description" content="18+ categories of documented harm: terrorism, slavery, child marriage, honor killings, FGM, apostasy executions, grooming gangs, and systematic oppression." />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/real-world-harm" />
+        <link rel="canonical" href="https://quranscope.github.io/real-world-harm" />
       </Head>
       <div className="page-content">
-        <a href="/quranscopycreatedcontents/" className="back-link">← Back to Home</a>
+        <a href="/" className="back-link">← Back to Home</a>
         
         <h1>Real-World Harm From Islamic Texts</h1>
         <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>18+ Categories of Documented Violence, Oppression & Human Rights Violations</p>
@@ -717,7 +717,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
         </div>
 
         <div className="nav-buttons">
-          <a href="/quranscopycreatedcontents/" className="nav-button">🏠 Home</a>
+          <a href="/" className="nav-button">🏠 Home</a>
         </div>
       </div>
     </>

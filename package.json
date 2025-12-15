@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "npm run sync && npm run validate && next build",
     "build:force": "next build",
+    "deploy": "gh-pages -d out",
     "sync": "node scripts/sync-translations.js",
     "start": "next start",
     "lint": "next lint",

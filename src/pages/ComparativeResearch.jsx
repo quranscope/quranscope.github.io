@@ -34,13 +34,13 @@ export default function ComparativeResearch({ translations: t, currentLang = 'en
       <Head>
         <title>Copied & Edited Content - Quran Scope</title>
         <meta name="description" content="How Quranic Narratives Were Derived from Earlier Sources - 80 documented parallels between Quranic stories and earlier Jewish, Christian, Zoroastrian, and Arabian sources (100-1,300 years older)." />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/comparative-research" />
+        <link rel="canonical" href="https://quranscope.github.io/comparative-research" />
         <meta property="og:title" content="Copied & Edited Content - Quran Analysis" />
         <meta property="og:description" content="80 documented parallels between Quranic stories and sources 100-1,300 years older" />
       </Head>
 
       <div style={styles.container}>
-        <a href="/quranscopycreatedcontents/" style={styles.backLink}>← Back to Home</a>
+        <a href="/" style={styles.backLink}>← Back to Home</a>
         
         <div style={styles.intro}>
           <h3 style={styles.introH3}>⚠️ Research Overview</h3>

@@ -21,10 +21,10 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
       <Head>
         <title>Islamic Migration Impact - Quran Scope</title>
         <meta name="description" content="Lebanon pattern repeating in Europe: Demographics → Demands → Violence → Takeover. Eastern Europe survival vs Western suicide." />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/migration-impact" />
+        <link rel="canonical" href="https://quranscope.github.io/migration-impact" />
       </Head>
       <div className="page-content">
-        <a href="/quranscopycreatedcontents/" className="back-link">← Back to Home</a>
+        <a href="/" className="back-link">← Back to Home</a>
         
         <h1>Islamic Migration: The Lebanon Pattern</h1>
         <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>How Muslim Demographics Transform Nations</p>
@@ -410,7 +410,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
         </div>
 
         <div className="nav-buttons">
-          <a href="/quranscopycreatedcontents/" className="nav-button">🏠 Home</a>
+          <a href="/" className="nav-button">🏠 Home</a>
         </div>
       </div>
     </>

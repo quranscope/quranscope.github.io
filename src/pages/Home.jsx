@@ -14,7 +14,7 @@ export default function Home({ translations, currentLang = 'en' }) {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/" />
+        <link rel="canonical" href="https://quranscope.github.io/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />

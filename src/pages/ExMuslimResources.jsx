@@ -122,12 +122,11 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
       <Head>
         <title>{t.title} - Quran Scope</title>
         <meta name="description" content={t.intro} />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/ex-muslim-resources" />
+        <link rel="canonical" href="https://quranscope.github.io/ex-muslim-resources" />
       </Head>
-      <div className="page-content">
-        <a href="/quranscopycreatedcontents/" className="back-link">{t.homeButton}</a>
-        
-        <h1>{t.title}</h1>
+      <div className="container">
+        <a href="/" className="back-link">{t.homeButton}</a>
+        <h1>{t.pageTitle}</h1>
 
         <div style={styles.intro}>
           <p>{t.intro}</p>
@@ -175,9 +174,9 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
           </ul>
         </div>
 
-        <div className="nav-buttons">
-          <a href="/quranscopycreatedcontents/" className="nav-button">{t.homeButton}</a>
-          <a href="/quranscopycreatedcontents/muhammad-women" className="nav-button">{t.muhammadButton}</a>
+        <div className="navigation">
+          <a href="/" className="nav-button">{t.homeButton}</a>
+          <a href="/muhammad-women" className="nav-button">{t.muhammadButton}</a>
         </div>
       </div>
     </>

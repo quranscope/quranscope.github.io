@@ -91,10 +91,10 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
       <Head>
         <title>Muhammad & Women - Quran Scope</title>
         <meta name="description" content="Prophet's Marriages, Slavery, and Women's Treatment - Detailed examination of Muhammad's relationships and Islamic gender teachings." />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/muhammad-women" />
+        <link rel="canonical" href="https://quranscope.github.io/muhammad-women" />
       </Head>
       <div className="page-content">
-        <a href="/quranscopycreatedcontents/" className="back-link">{t.homeButton || '← Back to Home'}</a>
+        <a href="/" className="back-link">{t.homeButton || '← Back to Home'}</a>
         
         <h1>{t.title || 'Muhammad and the Treatment of Women: A Critical Analysis'}</h1>
 
@@ -352,8 +352,8 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
         </div>
 
         <div className="nav-buttons">
-          <a href="/quranscopycreatedcontents/" className="nav-button">🏠 Home</a>
-          <a href="/quranscopycreatedcontents/ex-muslim-resources" className="nav-button">← Ex-Muslim Resources</a>
+          <a href="/" className="nav-button">🏠 Home</a>
+          <a href="/ex-muslim-resources" className="nav-button">← Ex-Muslim Resources</a>
         </div>
       </div>
     </>

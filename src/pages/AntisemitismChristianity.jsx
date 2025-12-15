@@ -34,11 +34,11 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
       <Head>
         <title>{t.metaTitle}</title>
         <meta name="description" content={t.metaDescription} />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/antisemitism-christianity" />
+        <link rel="canonical" href="https://quranscope.github.io/antisemitism-christianity" />
       </Head>
       
       <div style={styles.container}>
-        <a href="/quranscopycreatedcontents/" style={styles.backLink}>{t.backLink}</a>
+        <a href="/" style={styles.backLink}>{t.backLink}</a>
         
         <div style={styles.intro}>
           <h3 style={styles.introH3}>{t.introTitle}</h3>

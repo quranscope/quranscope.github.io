@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',  // Enable static HTML export
-  basePath: process.env.NODE_ENV === 'production' ? '/quranscopycreatedcontents' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/quranscopycreatedcontents' : '',
+  basePath: '',
+  assetPrefix: '',
   images: {
     unoptimized: true, // Required for static export
   },

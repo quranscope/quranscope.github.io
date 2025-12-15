@@ -25,13 +25,14 @@ export default function ScientificErrors({ translations: t, currentLang = 'en' }
   return (
     <>
       <Head>
-        <title>Scientific Inaccuracies - Quran Scope</title>
-        <meta name="description" content="15 Major Claims Contradicted by Modern Science" />
-        <link rel="canonical" href="https://majorqbot.github.io/quranscopycreatedcontents/scientific-errors" />
+                <title>{t.pageTitle} - Quran Scope</title>
+        <meta name="description" content={t.pageSubtitle} />
+        <link rel="canonical" href="https://quranscope.github.io/scientific-errors" />
+        <meta property="og:title" content={t.pageTitle} />
       </Head>
 
       <div style={styles.container}>
-        <a href="/quranscopycreatedcontents/" style={styles.backLink}>← Back to Home</a>
+        <a href="/" style={styles.backLink}>← Back to Home</a>
         
         <div style={styles.intro}>
           <h3 style={styles.introH3}>⚠️ Important Note</h3>

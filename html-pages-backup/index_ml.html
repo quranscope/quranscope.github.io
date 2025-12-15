@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ഖുർആൻ സ്കോപ്പ് - വിമർശനാത്മക വിശകലനം</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Malayalam', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .language-bar {
+            background: #1a252f;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .language-bar span {
+            color: #95a5a6;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .language-bar button {
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .language-bar button:hover {
+            background: #4a5f7f;
+            transform: translateY(-2px);
+        }
+
+        .language-bar button.active {
+            background: #3498db;
+            font-weight: bold;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .intro h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .nav-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .nav-card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .nav-card-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-card-header .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-card-body {
+            padding: 1.5rem;
+        }
+
+        .nav-card-body p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .nav-card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn-primary {
+            background: #2c3e50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #34495e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-bar">
+        <span id="langLabel">ഭാഷ തിരഞ്ഞെടുക്കുക:</span>
+        <button onclick="window.location.href='index.html'">English</button>
+        <button class="active">മലയാളം</button>
+        <button onclick="window.location.href='index_hi.html'">हिंदी</button>
+        <button onclick="window.location.href='index_pl.html'">Polski</button>
+        <button onclick="window.location.href='index_de.html'">Deutsch</button>
+        <button onclick="window.location.href='index_fr.html'">Français</button>
+        <button onclick="window.location.href='index_ta.html'">தமிழ்</button>
+        <button onclick="window.location.href='index_ar.html'">العربية</button>
+    </div>
+
+    <header>
+        <h1 id="siteTitle">ഖുർആൻ സ്കോപ്പ്</h1>
+        <p id="siteSubtitle">വിമർശനാത്മക വിശകലനം</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2 id="navHeading">ഗവേഷണ വിഭാഗങ്ങൾ</h2>
+            <p id="navSubtitle">ഒന്നിലധികം വിഷയങ്ങളിലുടനീളം സമഗ്രമായ വിശകലനം പര്യവേക്ഷണം ചെയ്യുക</p>
+        </div>
+
+        <div class="nav-grid">
+            <!-- Card 1: Comparative -->
+            <div class="nav-card">
+                <a id="link1" href="comparative-research.html?lang=ml">
+                    <div class="nav-card-header">
+                        <div class="icon" id="emoji1">📚</div>
+                        <h3 id="title1">പകർത്തിയതും എഡിറ്റുചെയ്തതുമായ ഉള്ളടക്കം</h3>
+                    </div>
+                    <div class="nav-card-body">
+                        <p id="desc1">മുൻകാല സ്രോതസുകളിൽ നിന്ന് ഖുർആനിക വിവരണങ്ങൾ എങ്ങനെ ഉരുത്തിരിഞ്ഞു</p>
+                        <p id="details1" style="font-size: 0.85rem; opacity: 0.8;">75+ രേഖപ്പെടുത്തിയ സമാന്തരങ്ങൾ</p>
+                        <span class="btn-primary" id="btn1">വിശകലനം കാണുക →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2: Scientific -->
+            <div class="nav-card">
+                <a id="link2" href="scientific-errors.html?lang=ml">
+                    <div class="nav-card-header">
+                        <div class="icon" id="emoji2">🔬</div>
+                        <h3 id="title2">ശാസ്ത്രീയ പിശകുകൾ</h3>
+                    </div>
+                    <div class="nav-card-body">
+                        <p id="desc2">ഖുർആനിലെ പരാജയപ്പെട്ട ശാസ്ത്രീയ വാദങ്ങൾ</p>
+                        <p id="details2" style="font-size: 0.85rem; opacity: 0.8;">15 പ്രധാന ശാസ്ത്രീയ അപാകതകൾ</p>
+                        <span class="btn-primary" id="btn2">പിശകുകൾ കാണുക →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3: Expansion -->
+            <div class="nav-card">
+                <a id="link3" href="expansion-history.html?lang=ml">
+                    <div class="nav-card-header">
+                        <div class="icon" id="emoji3">⚔️</div>
+                        <h3 id="title3">യുദ്ധത്തിലൂടെ വികാസം</h3>
+                    </div>
+                    <div class="nav-card-body">
+                        <p id="desc3">രാഷ്ട്രീയത്തിലൂടെയും സൈനിക കീഴടക്കലിലൂടെയും വളർച്ച</p>
+                        <p id="details3" style="font-size: 0.85rem; opacity: 0.8;">622 CE മുതൽ ഇന്നുവരെയുള്ള സമ്പൂർണ ടൈംലൈൻ</p>
+                        <span class="btn-primary" id="btn3">ചരിത്രം കാണുക →</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4: Antisemitism -->
+            <div class="nav-card">
+                <a id="link4" href="antisemitism-christianity.html?lang=ml">
+                    <div class="nav-card-header">
+                        <div class="icon" id="emoji4">✡️✝️</div>
+                        <h3 id="title4">യഹൂദന്മാർക്കും ക്രിസ്ത്യാനികൾക്കും എതിരെ</h3>
+                    </div>
+                    <div class="nav-card-body">
+                        <p id="desc4">ഇസ്ലാമിക ഗ്രന്ഥങ്ങളിലെ യഹൂദ-വിരുദ്ധ ഉള്ളടക്കം</p>
+                        <p id="details4" style="font-size: 0.85rem; opacity: 0.8;">ഖുർആനിക വാക്യങ്ങൾ, ഹദീസ്, 1,400 വർഷത്തെ പീഡനം</p>
+                        <span class="btn-primary" id="btn4">രേഖകൾ കാണുക →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p id="footerCopyright">© 2025 ഖുർആൻ സ്കോപ്പ്. എല്ലാ അവകാശങ്ങളും സംരക്ഷിതം.</p>
+        <p id="footerDesc">അക്കാദമിക് ഗവേഷണ ഉറവിടം • ചരിത്ര രേഖാമൂലം</p>
+    </footer>
+
+    <script>
+        async function loadLanguage(lang) {
+            try {
+                const response = await fetch(`lang/${lang}.json`);
+                const data = await response.json();
+                
+                document.getElementById('siteTitle').textContent = data.siteTitle;
+                document.getElementById('siteSubtitle').textContent = data.siteSubtitle;
+                document.getElementById('langLabel').textContent = data.languageSwitch;
+                document.getElementById('navHeading').textContent = data.navigation.heading;
+                document.getElementById('navSubtitle').textContent = data.navigation.subtitle;
+                
+                const cards = ['comparative', 'scientific', 'expansion', 'antisemitism'];
+                cards.forEach((card, index) => {
+                    const num = index + 1;
+                    document.getElementById(`emoji${num}`).textContent = data.cards[card].emoji;
+                    document.getElementById(`title${num}`).textContent = data.cards[card].title;
+                    document.getElementById(`desc${num}`).textContent = data.cards[card].description;
+                    document.getElementById(`details${num}`).textContent = data.cards[card].details;
+                    document.getElementById(`btn${num}`).textContent = data.cards[card].buttonText;
+                    document.getElementById(`link${num}`).href = data.cards[card].link;
+                });
+                
+                document.getElementById('footerCopyright').textContent = data.footer.copyright;
+                document.getElementById('footerDesc').textContent = data.footer.description;
+            } catch (error) {
+                console.error('Error loading language:', error);
+            }
+        }
+
+        loadLanguage('ml');
+    </script>
+</body>
+</html>

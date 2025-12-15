@@ -1,0 +1,75 @@
+{
+  "title": "Analyse du Coran - Analyse historique et critique",
+  "description": "Analyse historique, textuelle et critique complète du contenu coranique, examinant ses sources, ses affirmations et son développement historique",
+  "researchOverview": "Aperçu de la recherche",
+  "intro": "Ce site présente une analyse historique, textuelle et critique complète du contenu coranique, examinant ses sources, ses affirmations et son développement historique.",
+  "cards": {
+    "comparative": {
+      "title": "Contenu copié et modifié",
+      "subtitle": "Comment les récits coraniques ont été dérivés de sources antérieures",
+      "description": "75+ parallèles documentés entre les histoires coraniques et les sources antérieures",
+      "button": "Voir la recherche →"
+    },
+    "scientific": {
+      "title": "Inexactitudes scientifiques",
+      "subtitle": "Arguments scientifiques échoués dans le Coran",
+      "description": "40+ erreurs documentées en cosmologie, biologie et phénomènes naturels",
+      "button": "Voir la recherche →"
+    },
+    "expansion": {
+      "title": "Histoire d'expansion violente",
+      "subtitle": "14 siècles de conquête militaire et de conversion forcée",
+      "description": "Chronologie détaillée des campagnes militaires islamiques et de l'expansion territoriale",
+      "button": "Voir la recherche →"
+    },
+    "antisemitism": {
+      "title": "Antisémitisme et anti-christianisme",
+      "subtitle": "Versets coraniques contre les juifs et les chrétiens",
+      "description": "60+ versets promouvant la haine et la violence",
+      "button": "Voir la recherche →"
+    },
+    "harm": {
+      "title": "Dommages réels",
+      "subtitle": "Terrorisme, oppression et violations des droits de l'homme",
+      "description": "18 catégories principales de dommages documentés causés par l'idéologie islamique",
+      "button": "Voir la recherche →"
+    },
+    "migration": {
+      "title": "Impact de la migration",
+      "subtitle": "Comment la migration islamique détruit les nations hôtes",
+      "description": "Transformation du Liban, crise de l'Europe et survie de l'Europe de l'Est",
+      "button": "Voir la recherche →"
+    },
+    "exmuslim": {
+      "title": "Voix d'ex-musulmans",
+      "subtitle": "Témoignages, ressources et réseaux de soutien",
+      "description": "Principales chaînes YouTube et communautés aidant ceux qui ont quitté l'islam",
+      "button": "Voir les ressources →"
+    },
+    "muhammad": {
+      "title": "Mahomet et les femmes",
+      "subtitle": "Mariages du prophète, esclavage et traitement des femmes",
+      "description": "Examen détaillé des relations de Mahomet et des enseignements islamiques sur le genre",
+      "button": "Voir la recherche →"
+    },
+    "jihad": {
+      "title": "Étude du jihad",
+      "subtitle": "Fondement coranique de la doctrine de guerre islamique",
+      "description": "Analyse complète des versets du jihad et de leur interprétation",
+      "button": "Voir l'étude →"
+    },
+    "terrorist": {
+      "title": "Organisations Terroristes",
+      "subtitle": "Terrorisme mondial et violations des droits de l'homme",
+      "description": "Exposing terrorist groups operating under false religious and political agendas",
+      "button": "Voir les organisations →"
+    },
+    "solution": {
+      "title": "Solution",
+      "subtitle": "Comment aborder l'impact de l'idéologie islamique",
+      "description": "Practical approaches to countering extremism and promoting reform",
+      "button": "Voir les solutions →"
+    }
+  }
+}
+}

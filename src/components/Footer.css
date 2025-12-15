@@ -1,0 +1,144 @@
+.page-footer {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #2c3e50;
+  color: white;
+  margin-top: auto;
+}
+
+.related-pages {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.related-pages h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.related-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.related-page-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.related-page-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.related-page-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.related-page-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-content {
+  margin-top: 1rem;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+  opacity: 0.9;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.go-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.go-to-top:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .page-footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .related-pages {
+    padding: 1.5rem 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .related-pages h3 {
+    font-size: 1.5rem;
+  }
+
+  .related-pages-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .related-page-card {
+    padding: 1.2rem;
+    min-height: 100px;
+  }
+
+  .related-page-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .related-page-card p {
+    font-size: 0.85rem;
+  }
+
+  .footer-content p {
+    font-size: 0.9rem;
+  }
+
+  .go-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

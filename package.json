@@ -1,0 +1,53 @@
+{
+  "name": "quranscope-nextjs",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run sync && npm run validate && next build",
+    "build:force": "next build",
+    "sync": "node scripts/sync-translations.js",
+    "start": "next start",
+    "lint": "next lint",
+    "validate": "node scripts/validate-translations.js",
+    "validate:language": "node scripts/validate-language-content.js",
+    "validate:usage": "node scripts/validate-translation-usage.js",
+    "validate:all": "node scripts/validate-translations.js && node scripts/validate-language-content.js",
+    "validate:report": "node scripts/translation-report.js",
+    "validate:watch": "nodemon --watch lang --exec \"npm run validate:all\"",
+    "translate": "node scripts/translate-deepl.js",
+    "translate:usage": "node scripts/translate-deepl.js usage",
+    "translate:antisemitism": "node scripts/translate-deepl.js antisemitism_en.json",
+    "translate:jihad": "node scripts/translate-deepl.js jihad_en.json",
+    "translate:exmuslim": "node scripts/translate-deepl.js exmuslim_en.json",
+    "translate:all": "npm run translate:antisemitism && npm run translate:jihad && npm run translate:exmuslim",
+    "translate:google": "node scripts/auto-translate.js",
+    "translate:google:antisemitism": "node scripts/auto-translate.js antisemitism_en.json",
+    "translate:google:jihad": "node scripts/auto-translate.js jihad_en.json",
+    "translate:google:exmuslim": "node scripts/auto-translate.js exmuslim_en.json",
+    "translate:google:all": "npm run translate:google:antisemitism && npm run translate:google:jihad && npm run translate:google:exmuslim",
+    "translate:check": "node scripts/check-translation-status.js"
+  },
+  "dependencies": {
+    "next": "^16.0.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "deepl-node": "^1.24.0",
+    "dotenv": "^16.6.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.5.0",
+    "react-snap": "^1.23.0",
+    "vite": "^7.2.4"
+  }
+}

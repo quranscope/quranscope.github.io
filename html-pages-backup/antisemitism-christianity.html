@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antisemitism and Anti-Christianity in the Quran</title>
+    <script src="js/language-switcher.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.95; margin-top: 0.5rem; }
+        .header a {
+            color: white; text-decoration: none; background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem; border-radius: 5px; display: inline-block; margin-top: 1rem;
+        }
+        .header a:hover { background: rgba(255,255,255,0.3); }
+
+        .language-bar {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem;
+        }
+        .language-bar span {
+            color: rgba(255,255,255,0.9); margin-right: 0.5rem; font-size: 0.9rem; font-weight: bold;
+        }
+        .lang-btn {
+            padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); color: white;
+            border: 1px solid rgba(255,255,255,0.3); border-radius: 5px; cursor: pointer;
+            font-size: 0.9rem; transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3); border-color: white; transform: translateY(-2px);
+        }
+        .lang-btn.active {
+            background: white; color: #e74c3c; font-weight: bold; border-color: white;
+        }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+
+        .intro {
+            background: #fff3cd; border-left: 5px solid #ffc107; padding: 1.5rem;
+            margin-bottom: 2rem; border-radius: 5px;
+        }
+        .intro h3 { color: #856404; margin-bottom: 0.5rem; }
+        .intro p { color: #856404; margin: 0.5rem 0; }
+
+        .content-card {
+            background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-card h2 {
+            color: #d35400; margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e67e22;
+        }
+
+        .category-tag {
+            display: inline-block; background: #d35400; color: white;
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
+            margin-bottom: 1rem; font-weight: bold;
+        }
+
+        .verse-box {
+            background: #f8f9fa; border-left: 4px solid #e67e22;
+            padding: 1rem; margin: 1rem 0; font-style: italic;
+        }
+
+        .verse-ref {
+            color: #d35400; font-weight: bold; margin-top: 0.5rem; display: block;
+        }
+
+        .hadith-box {
+            background: #ffebee; border-left: 4px solid #f44336;
+            padding: 1rem; margin: 1rem 0;
+        }
+
+        .hadith-box h4 { color: #c62828; margin-bottom: 0.5rem; }
+
+        .historical-box {
+            background: #e8f5e9; border-left: 4px solid #4caf50;
+            padding: 1rem; margin: 1rem 0;
+        }
+
+        .historical-box h4 { color: #2e7d32; margin-bottom: 0.5rem; }
+
+        .warning-box {
+            background: #ffccbc; border: 2px solid #d84315;
+            padding: 1rem; margin: 1rem 0; border-radius: 5px;
+        }
+
+        .warning-box h4 { color: #bf360c; margin-bottom: 0.5rem; }
+
+        table {
+            width: 100%; border-collapse: collapse; margin: 1rem 0; background: white;
+        }
+
+        th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+        th { background: #d35400; color: white; font-weight: bold; }
+        tr:nth-child(even) { background: #f8f9fa; }
+
+        footer {
+            text-align: center; padding: 2rem 1rem; background: #2c3e50;
+            color: white; margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .content-card { padding: 1.5rem; }
+            table { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+        <h1 id="pageTitle">✝️☪️ Anti-Jewish & Anti-Christian Content in Islam</h1>
+        <p id="pageSubtitle">Documentation of Hatred, Violence, and Persecution Against "People of the Book"</p>
+        <a href="index.html" id="backLink">← Back to Home</a>
+        <div class="language-bar" id="languageBar" style="margin-top: 1rem;">
+            <!-- Language buttons generated by JS -->
+        </div>
+        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem; font-style: italic; text-align: center;">note: except english, all other languages are auto-generated and may contain translation errors</div>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <h3>⚠️ Important Context</h3>
+            <p>This page documents explicit anti-Jewish and anti-Christian content in Islamic scripture (Quran and Hadith), theological supersessionism, and historical persecution of Jews and Christians under Islamic rule.</p>
+            <p><strong>All verses are from standard Islamic translations. All historical events are documented from Islamic, Western, and neutral sources.</strong></p>
+        </div>
+
+        <!-- QURANIC VERSES AGAINST JEWS -->
+        <div class="content-card">
+            <span class="category-tag">QURAN - ANTI-JEWISH</span>
+            <h2>Quranic Verses Against Jews</h2>
+            
+            <div class="verse-box">
+                "Indeed, you will find the most intense of the people in animosity toward the believers [to be] the Jews and those who associate others with Allah."
+                <span class="verse-ref">Quran 5:82</span>
+            </div>
+
+            <div class="verse-box">
+                "And the Jews say, 'The hand of Allah is chained.' Chained are their hands, and cursed are they for what they say."
+                <span class="verse-ref">Quran 5:64</span>
+            </div>
+
+            <div class="verse-box">
+                "You will surely find them the most greedy of people for life - [even] more than those who associate others with Allah."
+                <span class="verse-ref">Quran 2:96</span>
+            </div>
+
+            <div class="verse-box">
+                "And [recall] when Allah said, 'O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve [Jews who rejected Jesus] and make those who follow you superior to those who disbelieve until the Day of Resurrection.'"
+                <span class="verse-ref">Quran 3:55</span>
+            </div>
+
+            <div class="verse-box">
+                "They [Jews] are avid listeners to falsehood, devourers of [what is] unlawful."
+                <span class="verse-ref">Quran 5:42</span>
+            </div>
+
+            <div class="verse-box">
+                "And [for] their saying, 'Indeed, we have killed the Messiah, Jesus, the son of Mary, the messenger of Allah.' And they did not kill him, nor did they crucify him; but [another] was made to resemble him to them... Rather, Allah raised him to Himself."
+                <span class="verse-ref">Quran 4:157-158</span>
+            </div>
+
+            <div class="warning-box">
+                <h4>🔥 Jews Transformed into Apes and Pigs:</h4>
+                <div class="verse-box">
+                    "And you had already known about those who transgressed among you concerning the sabbath, and We said to them, 'Be apes, despised.'"
+                    <span class="verse-ref">Quran 2:65</span>
+                </div>
+                <div class="verse-box">
+                    "Say, 'Shall I inform you of [what is] worse than that as penalty from Allah? [It is that of] those whom Allah has cursed and with whom He became angry and made of them apes and pigs and slaves of Taghut.'"
+                    <span class="verse-ref">Quran 5:60</span>
+                </div>
+                <div class="verse-box">
+                    "So when they were insolent about that which they had been forbidden, We said to them, 'Be apes, despised.'"
+                    <span class="verse-ref">Quran 7:166</span>
+                </div>
+            </div>
+
+            <div class="verse-box">
+                "The Jews say, 'Ezra is the son of Allah,' and the Christians say, 'The Messiah is the son of Allah.' That is their statement from their mouths; they imitate the saying of those who disbelieved [before them]. May Allah destroy them; how are they deluded?"
+                <span class="verse-ref">Quran 9:30</span>
+            </div>
+
+            <div class="verse-box">
+                "And [We cursed them] for their breaking of the covenant and their disbelief in the signs of Allah and their killing of the prophets without right and their saying, 'Our hearts are wrapped.' Rather, Allah has sealed them because of their disbelief."
+                <span class="verse-ref">Quran 4:155</span>
+            </div>
+
+            <div class="verse-box">
+                "Cursed were those who disbelieved among the Children of Israel by the tongue of David and of Jesus, the son of Mary. That was because they disobeyed and [habitually] transgressed."
+                <span class="verse-ref">Quran 5:78</span>
+            </div>
+        </div>
+
+        <!-- QURANIC VERSES AGAINST CHRISTIANS -->
+        <div class="content-card">
+            <span class="category-tag">QURAN - ANTI-CHRISTIAN</span>
+            <h2>Quranic Verses Against Christians</h2>
+            
+            <div class="verse-box">
+                "O you who have believed, do not take the Jews and the Christians as allies. They are [in fact] allies of one another. And whoever is an ally to them among you - then indeed, he is [one] of them. Indeed, Allah guides not the wrongdoing people."
+                <span class="verse-ref">Quran 5:51</span>
+            </div>
+
+            <div class="verse-box">
+                "They have certainly disbelieved who say that Allah is Christ, the son of Mary."
+                <span class="verse-ref">Quran 5:17, 5:72</span>
+            </div>
+
+            <div class="verse-box">
+                "They have certainly disbelieved who say, 'Allah is the third of three.' And there is no god except one God. And if they do not desist from what they are saying, there will surely afflict the disbelievers among them a painful punishment."
+                <span class="verse-ref">Quran 5:73</span>
+            </div>
+
+            <div class="verse-box">
+                "The Messiah, son of Mary, was not but a messenger; [other] messengers have passed on before him. And his mother was a supporter of truth. They both used to eat food. Look how We make clear to them the signs; then look how they are deluded."
+                <span class="verse-ref">Quran 5:75</span>
+            </div>
+
+            <div class="verse-box">
+                "And [beware the Day] when Allah will say, 'O Jesus, Son of Mary, did you say to the people, 'Take me and my mother as deities besides Allah?'' He will say, 'Exalted are You! It was not for me to say that to which I have no right.'"
+                <span class="verse-ref">Quran 5:116</span>
+            </div>
+
+            <div class="verse-box">
+                "[Such is] the saying of those who disbelieved among the People of the Scripture and the polytheists. They will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures."
+                <span class="verse-ref">Quran 98:6</span>
+            </div>
+
+            <div class="verse-box">
+                "O People of the Scripture, why do you disbelieve in the verses of Allah while you witness [to their truth]?"
+                <span class="verse-ref">Quran 3:70</span>
+            </div>
+
+            <div class="verse-box">
+                "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus, the son of Mary, was but a messenger of Allah and His word... So believe in Allah and His messengers. And do not say, 'Three'; desist - it is better for you."
+                <span class="verse-ref">Quran 4:171</span>
+            </div>
+        </div>
+
+        <!-- VERSES COMMANDING FIGHTING -->
+        <div class="content-card">
+            <span class="category-tag">QURAN - COMMANDS TO FIGHT JEWS & CHRISTIANS</span>
+            <h2>Commands to Fight "People of the Book"</h2>
+            
+            <div class="warning-box">
+                <h4>⚔️ Direct Command to Fight:</h4>
+                <div class="verse-box">
+                    "Fight those who do not believe in Allah or in the Last Day and who do not consider unlawful what Allah and His Messenger have made unlawful and who do not adopt the religion of truth from those who were given the Scripture - [fight] until they give the jizyah willingly while they are humbled."
+                    <span class="verse-ref">Quran 9:29</span>
+                </div>
+                <p><strong>Explanation:</strong> This verse explicitly commands Muslims to fight Jews and Christians until they either convert to Islam or pay the jizya tax in humiliation.</p>
+            </div>
+
+            <div class="verse-box">
+                "O you who have believed, fight those adjacent to you of the disbelievers and let them find in you harshness. And know that Allah is with the righteous."
+                <span class="verse-ref">Quran 9:123</span>
+            </div>
+
+            <div class="verse-box">
+                "And kill them wherever you overtake them and expel them from wherever they have expelled you, and fitnah is worse than killing."
+                <span class="verse-ref">Quran 2:191</span>
+            </div>
+
+            <div class="verse-box">
+                "Fighting has been enjoined upon you while it is hateful to you. But perhaps you hate a thing and it is good for you; and perhaps you love a thing and it is bad for you. And Allah knows, while you know not."
+                <span class="verse-ref">Quran 2:216</span>
+            </div>
+        </div>
+
+        <!-- HADITH ANTI-JEWISH -->
+        <div class="content-card">
+            <span class="category-tag">HADITH - ANTI-JEWISH</span>
+            <h2>Hadith (Prophetic Traditions) Against Jews</h2>
+            
+            <div class="hadith-box">
+                <h4>📜 The Day of Judgment Won't Come Until Muslims Kill Jews:</h4>
+                <p><strong>Sahih Muslim 2922:</strong></p>
+                <p>"The Hour will not be established until you fight with the Jews, and the stone behind which a Jew will be hiding will say: 'O Muslim! There is a Jew hiding behind me, so kill him.'"</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 Muhammad's Final Words Against Jews and Christians:</h4>
+                <p><strong>Sahih Bukhari 1390, Sahih Muslim 531:</strong></p>
+                <p>"May Allah curse the Jews and Christians, for they built the places of worship at the graves of their prophets." (Said on his deathbed)</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 Jews Likened to Donkeys Carrying Books:</h4>
+                <p><strong>Quran 62:5 + Tafsir:</strong></p>
+                <p>"The example of those who were entrusted with the Torah and then did not take it on is like that of a donkey who carries volumes [of books]."</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 Muhammad Expelled Jewish Tribes:</h4>
+                <p><strong>Sahih Muslim 1766:</strong></p>
+                <p>"Expel the Jews and Christians from the Arabian Peninsula, and do not leave anyone in it except Muslims."</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 Massacre of Banu Qurayza:</h4>
+                <p><strong>Sahih Bukhari 4121, 3043:</strong></p>
+                <p>Muhammad ordered the beheading of 600-900 Jewish men of the Banu Qurayza tribe. Women and children were enslaved. This is celebrated in Islamic history, not condemned.</p>
+            </div>
+        </div>
+
+        <!-- HADITH ANTI-CHRISTIAN -->
+        <div class="content-card">
+            <span class="category-tag">HADITH - ANTI-CHRISTIAN</span>
+            <h2>Hadith Against Christians</h2>
+            
+            <div class="hadith-box">
+                <h4>📜 Christians Cursed for Churches:</h4>
+                <p><strong>Sahih Bukhari 435, 436:</strong></p>
+                <p>"May Allah's curse be on the Jews and the Christians for they built the places of worship at the graves of their Prophets."</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 Jesus Will Return to Break Crosses:</h4>
+                <p><strong>Sahih Bukhari 2222, Sahih Muslim 155:</strong></p>
+                <p>"By Him in Whose Hands my soul is, surely (Jesus,) the son of Mary will soon descend amongst you and will judge mankind justly (as a Just Ruler); he will break the Cross and kill the pigs."</p>
+                <p><strong>Interpretation:</strong> Jesus will return as a Muslim, destroy Christianity (break crosses), abolish Christian practices, and institute Islamic law.</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 All Christians Go to Hell:</h4>
+                <p><strong>Sahih Muslim 153:</strong></p>
+                <p>"By Him in Whose hand is the life of Muhammad, he who amongst the community of Jews or Christians hears about me, but does not affirm his belief in that with which I have been sent and dies in this state (of disbelief), he shall be but one of the denizens of Hell-Fire."</p>
+            </div>
+
+            <div class="hadith-box">
+                <h4>📜 No Churches or Synagogues in Arabian Peninsula:</h4>
+                <p><strong>Muwatta Malik, Book 45, Hadith 5:</strong></p>
+                <p>"There are not to be two religions in the Arabian peninsula." (Used to justify expulsion of Jews and Christians)</p>
+            </div>
+        </div>
+
+        <!-- HISTORICAL PERSECUTION -->
+        <div class="content-card">
+            <span class="category-tag">HISTORICAL PERSECUTION</span>
+            <h2>Historical Persecution of Jews Under Islam</h2>
+            
+            <table>
+                <tr>
+                    <th>Year/Period</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>627 CE</td>
+                    <td>Banu Qurayza Massacre</td>
+                    <td>Medina</td>
+                    <td>600-900 Jewish men beheaded; women/children enslaved by Muhammad's order</td>
+                </tr>
+                <tr>
+                    <td>628 CE</td>
+                    <td>Expulsion of Banu Nadir</td>
+                    <td>Medina</td>
+                    <td>Jewish tribe expelled; property confiscated</td>
+                </tr>
+                <tr>
+                    <td>628 CE</td>
+                    <td>Conquest of Khaybar</td>
+                    <td>Arabia</td>
+                    <td>Jewish fortress conquered; forced to pay 50% of produce; later expelled</td>
+                </tr>
+                <tr>
+                    <td>634 CE</td>
+                    <td>Expulsion from Arabia</td>
+                    <td>Arabian Peninsula</td>
+                    <td>Caliph Umar expelled all Jews and Christians from Arabia</td>
+                </tr>
+                <tr>
+                    <td>1011</td>
+                    <td>Córdoba Massacre</td>
+                    <td>Spain</td>
+                    <td>Thousands of Jews killed; city sacked</td>
+                </tr>
+                <tr>
+                    <td>1033</td>
+                    <td>Fez Massacre</td>
+                    <td>Morocco</td>
+                    <td>6,000 Jews killed</td>
+                </tr>
+                <tr>
+                    <td>1066</td>
+                    <td>Granada Massacre</td>
+                    <td>Spain</td>
+                    <td>Over 4,000 Jews killed; Jewish vizier crucified</td>
+                </tr>
+                <tr>
+                    <td>1148</td>
+                    <td>Almohad Persecution</td>
+                    <td>North Africa/Spain</td>
+                    <td>Forced conversions or death; tens of thousands killed or fled</td>
+                </tr>
+                <tr>
+                    <td>1165</td>
+                    <td>Yemen Persecution</td>
+                    <td>Yemen</td>
+                    <td>Forced conversion; Maimonides wrote "Epistle to Yemen" in response</td>
+                </tr>
+                <tr>
+                    <td>1291</td>
+                    <td>Baghdad Pogrom</td>
+                    <td>Iraq</td>
+                    <td>Mass killings and forced conversions</td>
+                </tr>
+                <tr>
+                    <td>1834</td>
+                    <td>Safed Pogrom</td>
+                    <td>Palestine</td>
+                    <td>Jewish quarter looted; synagogues destroyed; many killed</td>
+                </tr>
+                <tr>
+                    <td>1839</td>
+                    <td>Mashhad Pogrom</td>
+                    <td>Iran</td>
+                    <td>Entire Jewish community forcibly converted; 36 killed</td>
+                </tr>
+                <tr>
+                    <td>1941</td>
+                    <td>Farhud Pogrom</td>
+                    <td>Iraq</td>
+                    <td>180+ Jews killed; 1,000+ injured; massive property destruction</td>
+                </tr>
+                <tr>
+                    <td>1948-1970s</td>
+                    <td>Expulsion from Arab Lands</td>
+                    <td>Middle East/North Africa</td>
+                    <td>850,000+ Jews expelled/fled from Muslim countries; property confiscated</td>
+                </tr>
+            </table>
+
+            <div class="historical-box">
+                <h4>📊 Jewish Population Decline Under Islamic Rule:</h4>
+                <ul>
+                    <li><strong>Iraq:</strong> 150,000 Jews (1948) → ~5 Jews (2020)</li>
+                    <li><strong>Egypt:</strong> 75,000 Jews (1948) → ~5 Jews (2020)</li>
+                    <li><strong>Yemen:</strong> 55,000 Jews (1948) → ~1 Jew (2020)</li>
+                    <li><strong>Syria:</strong> 30,000 Jews (1948) → ~0 Jews (2020)</li>
+                    <li><strong>Libya:</strong> 38,000 Jews (1948) → ~0 Jews (2020)</li>
+                    <li><strong>Algeria:</strong> 140,000 Jews (1948) → ~0 Jews (2020)</li>
+                    <li><strong>Morocco:</strong> 265,000 Jews (1948) → ~2,000 Jews (2020)</li>
+                </ul>
+                <p><strong>Result:</strong> Near-total elimination of Jewish communities that had existed for 2,000+ years in these regions.</p>
+            </div>
+        </div>
+
+        <!-- HISTORICAL PERSECUTION CHRISTIANS -->
+        <div class="content-card">
+            <span class="category-tag">HISTORICAL PERSECUTION</span>
+            <h2>Historical Persecution of Christians Under Islam</h2>
+            
+            <table>
+                <tr>
+                    <th>Year/Period</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>634-638</td>
+                    <td>Conquest of Levant</td>
+                    <td>Syria, Palestine</td>
+                    <td>Christian majority subjugated; churches destroyed or converted</td>
+                </tr>
+                <tr>
+                    <td>638</td>
+                    <td>Jerusalem Conquered</td>
+                    <td>Palestine</td>
+                    <td>Christian holy sites taken; dhimmi status imposed</td>
+                </tr>
+                <tr>
+                    <td>642</td>
+                    <td>Conquest of Egypt</td>
+                    <td>Egypt</td>
+                    <td>Coptic Christians subjugated; heavy jizya; many churches destroyed</td>
+                </tr>
+                <tr>
+                    <td>639-698</td>
+                    <td>Conquest of North Africa</td>
+                    <td>Libya, Tunisia, Algeria</td>
+                    <td>Christian communities destroyed or forced to convert</td>
+                </tr>
+                <tr>
+                    <td>1009-1010</td>
+                    <td>Church of Holy Sepulchre Destroyed</td>
+                    <td>Jerusalem</td>
+                    <td>Caliph al-Hakim destroyed Christianity's holiest site</td>
+                </tr>
+                <tr>
+                    <td>1268</td>
+                    <td>Fall of Antioch</td>
+                    <td>Syria</td>
+                    <td>Mamluk conquest; Christian population killed or enslaved; ancient Christian city eliminated</td>
+                </tr>
+                <tr>
+                    <td>1453</td>
+                    <td>Fall of Constantinople</td>
+                    <td>Byzantine Empire</td>
+                    <td>Hagia Sophia converted to mosque; Christian empire ended</td>
+                </tr>
+                <tr>
+                    <td>1894-1896</td>
+                    <td>Hamidian Massacres</td>
+                    <td>Ottoman Empire</td>
+                    <td>100,000-300,000 Armenian Christians killed</td>
+                </tr>
+                <tr>
+                    <td>1915-1917</td>
+                    <td>Armenian Genocide</td>
+                    <td>Ottoman Empire</td>
+                    <td>1.5 million Armenians systematically killed; death marches; cultural genocide</td>
+                </tr>
+                <tr>
+                    <td>1914-1923</td>
+                    <td>Assyrian Genocide</td>
+                    <td>Ottoman Empire</td>
+                    <td>250,000-750,000 Assyrian Christians killed</td>
+                </tr>
+                <tr>
+                    <td>1914-1923</td>
+                    <td>Greek Genocide</td>
+                    <td>Ottoman Empire</td>
+                    <td>450,000-900,000 Greek Christians killed or expelled</td>
+                </tr>
+                <tr>
+                    <td>2003-Present</td>
+                    <td>Iraq Christian Exodus</td>
+                    <td>Iraq</td>
+                    <td>1.5 million Christians (2003) → 200,000 (2020); churches bombed; many killed</td>
+                </tr>
+                <tr>
+                    <td>2011-Present</td>
+                    <td>Syrian Civil War</td>
+                    <td>Syria</td>
+                    <td>2 million Christians (2011) → 300,000 (2020); ISIS genocide; forced exile</td>
+                </tr>
+                <tr>
+                    <td>2014-2017</td>
+                    <td>ISIS Genocide</td>
+                    <td>Iraq/Syria</td>
+                    <td>Yazidis, Christians targeted; mass executions; sex slavery; ancient churches destroyed</td>
+                </tr>
+                <tr>
+                    <td>Ongoing</td>
+                    <td>Egyptian Coptic Persecution</td>
+                    <td>Egypt</td>
+                    <td>Regular church bombings; kidnappings; forced conversions; discrimination</td>
+                </tr>
+                <tr>
+                    <td>Ongoing</td>
+                    <td>Pakistani Christian Persecution</td>
+                    <td>Pakistan</td>
+                    <td>Blasphemy laws; forced conversions; church burnings; lynchings</td>
+                </tr>
+            </table>
+
+            <div class="historical-box">
+                <h4>📊 Christian Population Decline Under Islamic Rule:</h4>
+                <ul>
+                    <li><strong>Turkey:</strong> 25% Christian (1914) → 0.2% Christian (2020)</li>
+                    <li><strong>Iraq:</strong> 1.5 million Christians (2003) → ~200,000 (2020) = 87% decline</li>
+                    <li><strong>Syria:</strong> 2 million Christians (2011) → ~300,000 (2020) = 85% decline</li>
+                    <li><strong>Egypt:</strong> ~90% Christian (640 CE) → ~10% Christian (2020)</li>
+                    <li><strong>Palestine:</strong> 18% Christian (1948) → ~1% Christian (2020)</li>
+                    <li><strong>Lebanon:</strong> 78% Christian (1932) → ~30% Christian (2020)</li>
+                </ul>
+                <p><strong>Overall:</strong> Middle East went from ~95% Christian (600 CE) to ~4% Christian (2020) under Islamic rule.</p>
+            </div>
+        </div>
+
+        <!-- DHIMMI SYSTEM -->
+        <div class="content-card">
+            <span class="category-tag">INSTITUTIONAL DISCRIMINATION</span>
+            <h2>The Dhimmi System: Institutionalized Oppression</h2>
+            
+            <div class="warning-box">
+                <h4>📜 Pact of Umar (7th-9th Century) - Rules for Christians/Jews:</h4>
+                <ul>
+                    <li>✗ Cannot build new churches, synagogues, or monasteries</li>
+                    <li>✗ Cannot repair existing ones without permission</li>
+                    <li>✗ Must wear distinctive clothing (yellow badge for Jews, blue for Christians)</li>
+                    <li>✗ Cannot display crosses or religious symbols publicly</li>
+                    <li>✗ Cannot ring church bells or pray loudly</li>
+                    <li>✗ Must stand when Muslims enter room</li>
+                    <li>✗ Cannot ride horses (only donkeys/mules)</li>
+                    <li>✗ Cannot carry weapons</li>
+                    <li>✗ Testimony in court worth half that of Muslim</li>
+                    <li>✗ Must pay jizya tax (often 50%+ of income)</li>
+                    <li>✗ Homes must be lower than Muslim homes</li>
+                    <li>✗ Cannot hold positions of authority over Muslims</li>
+                    <li>✗ Cannot proselytize or prevent family members from converting to Islam</li>
+                    <li>✗ Face public humiliation during jizya payment ceremony</li>
+                </ul>
+            </div>
+
+            <div class="verse-box">
+                "Fight those who do not believe in Allah... until they give the jizyah willingly while they are humbled."
+                <span class="verse-ref">Quran 9:29</span>
+            </div>
+
+            <div class="historical-box">
+                <h4>💰 Jizya Tax System:</h4>
+                <p>The jizya was not merely a tax - it was a systematic humiliation designed to pressure conversion:</p>
+                <ul>
+                    <li>Often 50-80% of income</li>
+                    <li>Public humiliation during payment (struck on neck, forced to stand while Muslim sits)</li>
+                    <li>Failure to pay = enslavement, execution, or forced conversion</li>
+                    <li>Women, children sometimes enslaved if men couldn't pay</li>
+                    <li>Created economic incentive to convert (Muslims exempt from jizya)</li>
+                </ul>
+                <p><strong>Result:</strong> Over centuries, economic pressure forced gradual conversion of entire populations.</p>
+            </div>
+        </div>
+
+        <!-- THEOLOGICAL SUPERSESSIONISM -->
+        <div class="content-card">
+            <span class="category-tag">THEOLOGICAL</span>
+            <h2>Islamic Supersessionism: Replacement Theology</h2>
+            
+            <div class="verse-box">
+                "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion."
+                <span class="verse-ref">Quran 5:3</span>
+            </div>
+
+            <div class="verse-box">
+                "And whoever desires other than Islam as religion - never will it be accepted from him, and he, in the Hereafter, will be among the losers."
+                <span class="verse-ref">Quran 3:85</span>
+            </div>
+
+            <div class="warning-box">
+                <h4>🔄 Supersessionist Claims:</h4>
+                <ol>
+                    <li><strong>Torah & Gospel "Corrupted":</strong> Quran claims Jews and Christians corrupted their scriptures (Tahrif doctrine)</li>
+                    <li><strong>Muhammad Final Prophet:</strong> Supersedes all previous prophets including Moses and Jesus</li>
+                    <li><strong>Islam Only Valid Religion:</strong> Judaism and Christianity declared obsolete</li>
+                    <li><strong>Quran Replaces Bible:</strong> Claims to "correct" earlier scriptures</li>
+                    <li><strong>Muslims = True Inheritors:</strong> Claims Abraham, Moses, Jesus were actually Muslims</li>
+                </ol>
+                <p><strong>Effect:</strong> Delegitimizes and invalidates Judaism and Christianity entirely.</p>
+            </div>
+        </div>
+
+        <!-- MODERN IMPLICATIONS -->
+        <div class="content-card">
+            <span class="category-tag">MODERN ERA</span>
+            <h2>Modern Implications & Ongoing Issues</h2>
+            
+            <div class="warning-box">
+                <h4>⚠️ Contemporary Problems:</h4>
+                <ul>
+                    <li><strong>Antisemitism:</strong> Islamic world remains most antisemitic region globally (ADL surveys)</li>
+                    <li><strong>Holocaust Denial:</strong> Widespread in Muslim-majority countries</li>
+                    <li><strong>Israel Demonization:</strong> Jews denied right to homeland despite 3,000+ year connection</li>
+                    <li><strong>Christian Persecution:</strong> Most persecuted religion globally, primarily in Muslim countries (Open Doors, Pew Research)</li>
+                    <li><strong>Apostasy Laws:</strong> Death penalty for leaving Islam in 13 Muslim countries</li>
+                    <li><strong>Blasphemy Laws:</strong> Used to persecute Christians and suppress free speech</li>
+                    <li><strong>Forced Conversions:</strong> Ongoing in Pakistan, Egypt, Nigeria, etc.</li>
+                    <li><strong>Church Destruction:</strong> Systematic destruction in ISIS territories, Afghanistan, Pakistan</li>
+                </ul>
+            </div>
+
+            <div class="historical-box">
+                <h4>📊 Statistics:</h4>
+                <ul>
+                    <li><strong>ADL Global 100:</strong> 9 of top 10 most antisemitic countries are Muslim-majority</li>
+                    <li><strong>Open Doors Watch List 2024:</strong> 11 of top 20 Christian-persecuting countries are Muslim-majority</li>
+                    <li><strong>Pew Research:</strong> Christians face harassment in more countries than any other religion, primarily in Muslim regions</li>
+                    <li><strong>USCIRF:</strong> Consistently lists Muslim-majority countries as worst violators of religious freedom</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONCLUSION -->
+        <div class="content-card">
+            <h2>📋 Conclusion</h2>
+            
+            <div class="warning-box">
+                <h4>Key Facts:</h4>
+                <ol>
+                    <li><strong>Scriptural Basis:</strong> Quran and Hadith contain explicit anti-Jewish and anti-Christian content</li>
+                    <li><strong>Theological Supersessionism:</strong> Islam claims to supersede and invalidate Judaism and Christianity</li>
+                    <li><strong>Historical Persecution:</strong> 1,400 years of documented persecution, massacres, and forced conversions</li>
+                    <li><strong>Institutional Discrimination:</strong> Dhimmi system systematically oppressed Jews and Christians for centuries</li>
+                    <li><strong>Demographic Elimination:</strong> Christian and Jewish populations nearly eliminated in regions conquered by Islam</li>
+                    <li><strong>Ongoing Persecution:</strong> Continues today in Muslim-majority countries</li>
+                </ol>
+                <p><strong>This is documented historical fact, not opinion or interpretation.</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p id="footerCopyright">&copy; 2025 Quran Scope. All rights reserved.</p>
+        <p id="footerDesc">Academic Research Resource • Historical Documentation</p>
+    </footer>
+
+    <script>
+        // Language support
+        async function loadLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en';
+            
+            try {
+                const response = await fetch(`lang/antisemitism_${lang}.json`);
+                if (!response.ok) throw new Error('Language file not found');
+                
+                const data = await response.json();
+                
+                // Update text elements
+                document.getElementById('pageTitle').textContent = data.pageTitle;
+                document.getElementById('pageSubtitle').textContent = data.pageSubtitle;
+                document.getElementById('backLink').textContent = data.backLink;
+                document.getElementById('footerCopyright').textContent = data.footerCopyright;
+                document.getElementById('footerDesc').textContent = data.footerDesc;
+            } catch (error) {
+                console.log('Using default English content');
+            }
+        }
+
+        // Generate language bar and load content
+        generateLanguageBar('antisemitism-christianity');
+        loadLanguageContent('antisemitism');
+    </script>
+</body>
+</html>

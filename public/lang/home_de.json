@@ -1,0 +1,75 @@
+{
+  "title": "Koran-Analyse - Historische und kritische Untersuchung",
+  "description": "Umfassende historische, textliche und kritische Analyse des koranischen Inhalts, Untersuchung seiner Quellen, Behauptungen und historischen Entwicklung",
+  "researchOverview": "Forschungsübersicht",
+  "intro": "Diese Website präsentiert eine umfassende historische, textliche und kritische Analyse des koranischen Inhalts und untersucht seine Quellen, Behauptungen und historische Entwicklung.",
+  "cards": {
+    "comparative": {
+      "title": "Kopierte und bearbeitete Inhalte",
+      "subtitle": "Wie koranische Erzählungen aus früheren Quellen abgeleitet wurden",
+      "description": "75+ dokumentierte Parallelen zwischen koranischen Geschichten und früheren Quellen",
+      "button": "Forschung ansehen →"
+    },
+    "scientific": {
+      "title": "Wissenschaftliche Ungenauigkeiten",
+      "subtitle": "Gescheiterte wissenschaftliche Argumente im Koran",
+      "description": "40+ dokumentierte Fehler in Kosmologie, Biologie und Naturphänomenen",
+      "button": "Forschung ansehen →"
+    },
+    "expansion": {
+      "title": "Gewaltsame Expansionsgeschichte",
+      "subtitle": "14 Jahrhunderte militärischer Eroberung und Zwangsbekehrung",
+      "description": "Detaillierte Zeitleiste islamischer Militärkampagnen und territorialer Expansion",
+      "button": "Forschung ansehen →"
+    },
+    "antisemitism": {
+      "title": "Antisemitismus und Antichristentum",
+      "subtitle": "Koranische Verse gegen Juden und Christen",
+      "description": "60+ Verse, die Hass und Gewalt fördern",
+      "button": "Forschung ansehen →"
+    },
+    "harm": {
+      "title": "Realer Schaden",
+      "subtitle": "Terrorismus, Unterdrückung und Menschenrechtsverletzungen",
+      "description": "18 Hauptkategorien dokumentierter Schäden durch islamische Ideologie",
+      "button": "Forschung ansehen →"
+    },
+    "migration": {
+      "title": "Migrationsauswirkungen",
+      "subtitle": "Wie islamische Migration Gastländer zerstört",
+      "description": "Libanons Transformation, Europas Krise und Osteuropas Überleben",
+      "button": "Forschung ansehen →"
+    },
+    "exmuslim": {
+      "title": "Ex-Muslim-Stimmen",
+      "subtitle": "Zeugnisse, Ressourcen und Unterstützungsnetzwerke",
+      "description": "Wichtige YouTube-Kanäle und Gemeinschaften, die denjenigen helfen, die den Islam verlassen haben",
+      "button": "Ressourcen ansehen →"
+    },
+    "muhammad": {
+      "title": "Mohammed und Frauen",
+      "subtitle": "Ehen des Propheten, Sklaverei und Behandlung von Frauen",
+      "description": "Detaillierte Untersuchung von Mohammeds Beziehungen und islamischen Geschlechterlehren",
+      "button": "Forschung ansehen →"
+    },
+    "jihad": {
+      "title": "Dschihad-Studie",
+      "subtitle": "Koranische Grundlage der islamischen Kriegsdoktrin",
+      "description": "Umfassende Analyse der Dschihad-Verse und ihrer Interpretation",
+      "button": "Studie ansehen →"
+    },
+    "terrorist": {
+      "title": "Terrororganisationen",
+      "subtitle": "Globaler Terrorismus und Menschenrechtsverletzungen",
+      "description": "Exposing terrorist groups operating under false religious and political agendas",
+      "button": "Organisationen ansehen →"
+    },
+    "solution": {
+      "title": "Lösung",
+      "subtitle": "Wie man mit den Auswirkungen der islamischen Ideologie umgeht",
+      "description": "Practical approaches to countering extremism and promoting reform",
+      "button": "Lösungen ansehen →"
+    }
+  }
+}
+}

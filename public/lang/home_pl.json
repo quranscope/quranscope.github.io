@@ -1,0 +1,75 @@
+{
+  "title": "Zakres Koranu - Analiza historyczna i krytyczna",
+  "description": "Kompleksowa analiza historyczna, tekstowa i krytyczna treści Koranu, badająca jego źródła, twierdzenia i rozwój historyczny",
+  "researchOverview": "Przegląd badań",
+  "intro": "Ta strona internetowa przedstawia kompleksową analizę historyczną, tekstową i krytyczną treści Koranu, badając jego źródła, twierdzenia i rozwój historyczny.",
+  "cards": {
+    "comparative": {
+      "title": "Skopiowane i edytowane treści",
+      "subtitle": "Jak koraniczne narracje zostały wyprowadzone z wcześniejszych źródeł",
+      "description": "Ponad 75 udokumentowanych podobieństw między historiami koranu a wcześniejszymi źródłami",
+      "button": "Zobacz badania →"
+    },
+    "scientific": {
+      "title": "Nieścisłości naukowe",
+      "subtitle": "Nieudane argumenty naukowe w Koranie",
+      "description": "Ponad 40 udokumentowanych błędów w kosmologii, biologii i zjawiskach naturalnych",
+      "button": "Zobacz badania →"
+    },
+    "expansion": {
+      "title": "Historia gwałtownej ekspansji",
+      "subtitle": "14 wieków podbojów wojskowych i przymusowej konwersji",
+      "description": "Szczegółowa oś czasu islamskich kampanii wojskowych i ekspansji terytorialnej",
+      "button": "Zobacz badania →"
+    },
+    "antisemitism": {
+      "title": "Antysemityzm i antychrześcijaństwo",
+      "subtitle": "Wersety koraniczne przeciwko Żydom i chrześcijanom",
+      "description": "Ponad 60 wersetów promujących nienawiść i przemoc",
+      "button": "Zobacz badania →"
+    },
+    "harm": {
+      "title": "Rzeczywista krzywda",
+      "subtitle": "Terroryzm, ucisk i łamanie praw człowieka",
+      "description": "18 głównych kategorii udokumentowanych szkód spowodowanych islamską ideologią",
+      "button": "Zobacz badania →"
+    },
+    "migration": {
+      "title": "Wpływ migracji",
+      "subtitle": "Jak islamska migracja niszczy kraje przyjmujące",
+      "description": "Transformacja Libanu, kryzys Europy i przetrwanie Europy Wschodniej",
+      "button": "Zobacz badania →"
+    },
+    "exmuslim": {
+      "title": "Głosy byłych muzułmanów",
+      "subtitle": "Świadectwa, zasoby i sieci wsparcia",
+      "description": "Główne kanały YouTube i społeczności pomagające tym, którzy opuścili islam",
+      "button": "Zobacz zasoby →"
+    },
+    "muhammad": {
+      "title": "Mahomet i kobiety",
+      "subtitle": "Małżeństwa proroka, niewolnictwo i traktowanie kobiet",
+      "description": "Szczegółowe badanie relacji Mahometa i islamskich nauk dotyczących płci",
+      "button": "Zobacz badania →"
+    },
+    "jihad": {
+      "title": "Studium dżihadu",
+      "subtitle": "Koraniczne podstawy islamskiej doktryny wojny",
+      "description": "Kompleksowa analiza wersetów o dżihadzie i ich interpretacji",
+      "button": "Zobacz studium →"
+    },
+    "terrorist": {
+      "title": "Organizacje Terrorystyczne",
+      "subtitle": "Globalny terroryzm i naruszenia praw człowieka",
+      "description": "Exposing terrorist groups operating under false religious and political agendas",
+      "button": "Zobacz organizacje →"
+    },
+    "solution": {
+      "title": "Rozwiązanie",
+      "subtitle": "Jak zająć się wpływem ideologii islamskiej",
+      "description": "Practical approaches to countering extremism and promoting reform",
+      "button": "Zobacz rozwiązania →"
+    }
+  }
+}
+}

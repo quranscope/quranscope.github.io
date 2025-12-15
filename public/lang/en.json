@@ -1,0 +1,115 @@
+{
+  "title": "Quran Scope - Critical Analysis & Research",
+  "description": "Examining Islamic Texts Through Historical, Scientific & Comparative Perspectives",
+  "researchOverview": "Research Sections",
+  "intro": "Explore comprehensive analysis across multiple disciplines",
+  "siteTitle": "Quran Scope - Critical Analysis & Research",
+  "siteSubtitle": "Examining Islamic Texts Through Historical, Scientific & Comparative Perspectives",
+  "backHome": "Back to Home",
+  "languageSwitch": "Choose Language:",
+  "navigation": {
+    "heading": "Research Sections",
+    "subtitle": "Explore comprehensive analysis across multiple disciplines"
+  },
+  "cards": {
+    "comparative": {
+      "emoji": "📚",
+      "title": "Copied & Edited Content",
+      "description": "How Quranic Narratives Were Derived from Earlier Sources",
+      "details": "75+ documented parallels between Quranic stories and Jewish, Christian, Zoroastrian, and Arabian sources",
+      "link": "comparative-research.html",
+      "buttonText": "View Analysis"
+    },
+    "scientific": {
+      "emoji": "🔬",
+      "title": "Scientific Errors",
+      "description": "Failed Scientific Arguments in the Quran",
+      "details": "15 major scientific inaccuracies including flat earth, geocentrism, embryology errors, and more",
+      "link": "scientific-errors.html",
+      "buttonText": "View Errors"
+    },
+    "expansion": {
+      "emoji": "⚔️",
+      "title": "Expansion Through War",
+      "description": "Growth via Politics and Military Conquest",
+      "details": "Complete historical timeline from 622 CE to present documenting warfare, conquests, and political strategies",
+      "link": "expansion-history.html",
+      "buttonText": "View History"
+    },
+    "antisemitism": {
+      "emoji": "✡️✝️",
+      "title": "Against Jews & Christians",
+      "description": "Anti-Jewish and Anti-Christian Content in Islamic Texts",
+      "details": "Quranic verses, Hadith, dhimmi system, and 1,400 years of documented persecution",
+      "link": "antisemitism-christianity.html",
+      "buttonText": "View Documentation"
+    },
+    "harm": {
+      "emoji": "⚠️",
+      "title": "Real-World Harm & Violence",
+      "description": "How Islamic Texts Motivate Terrorism, Oppression & Human Rights Violations",
+      "details": "Global cases: Women as property, sex slavery, child marriage, terrorism, grooming gangs - with direct Quran/Hadith citations",
+      "link": "real-world-harm.html",
+      "buttonText": "View Evidence"
+    },
+    "jihad": {
+      "emoji": "🗡️",
+      "title": "Jihad: Complete Study",
+      "description": "Types, Quranic Evidence, Historical Reality & Modern Terrorism",
+      "details": "1,400 years of holy war, 270M+ deaths, from Muhammad to ISIS",
+      "link": "jihad-study.html",
+      "buttonText": "View Study"
+    },
+    "solution": {
+      "emoji": "✨",
+      "title": "Solutions & Path Forward",
+      "description": "Reform, Not Ban - Ex-Muslim Community's Vision",
+      "details": "How to keep the good, discard the harmful, and build a better future",
+      "link": "solution.html",
+      "buttonText": "View Solutions"
+    },
+    "migration": {
+      "emoji": "🌍",
+      "title": "Islamic Migration Impact",
+      "description": "How Muslim Immigration Destroys Host Countries",
+      "details": "Lebanon's fall, Europe's crisis (UK, France, Germany), parallel societies, Sharia demands, inevitable future",
+      "link": "migration-impact.html",
+      "buttonText": "View Analysis"
+    },
+    "exmuslim": {
+      "emoji": "🎙️",
+      "title": "Ex-Muslim Testimonies",
+      "description": "Why Educated Muslims Leave Islam",
+      "details": "18+ major YouTube channels (Dr. Arif Hussain, Liakath Ali CM, ExMuslim Sahil, etc.), websites, and testimonies from those who discovered the truth",
+      "link": "ex-muslim-resources.html",
+      "buttonText": "View Resources"
+    },
+    "muhammadWomen": {
+      "emoji": "⚖️",
+      "title": "Muhammad & Treatment of Women",
+      "description": "Child Rape, Murder for Marriage, Sexual Slavery & Genocide",
+      "details": "9 major crimes documented: Child rape (Aisha-9), murdered Kinana to marry Safiyya, sex slave gifts, Banu Qurayza genocide. Legal verdict: Life/Death penalty in all countries",
+      "link": "muhammad-women.html",
+      "buttonText": "View Evidence"
+    },
+    "terrorist": {
+      "emoji": "🚫",
+      "title": "Global Terrorist Organizations",
+      "description": "False Agendas & Human Rights Violations Worldwide",
+      "details": "ISIS, Al-Qaeda, Hamas, Taliban, Hezbollah, Boko Haram, PFI, and more - banned & active groups committing atrocities",
+      "link": "terrorist-organizations.html",
+      "buttonText": "View Documentation"
+    },
+    "recentAttacks": {
+      "emoji": "🚨",
+      "title": "Recent Islamic Terror Attacks",
+      "subtitle": "100+ Documented Attacks (2023-2025)",
+      "description": "Latest attacks: Australia synagogue (Dec 2024), India Pahalgam (Nov 2024), Germany, Nigeria, UK - with news sources and Quranic verses",
+      "button": "View Attacks"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Quran Scope. All rights reserved.",
+    "description": "Academic Research Resource • Historical Documentation"
+  }
+}

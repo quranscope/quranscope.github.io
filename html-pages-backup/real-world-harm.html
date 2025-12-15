@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-World Harm: Islamic Texts & Global Violence</title>
+    <script src="js/language-switcher.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.95; margin-top: 0.5rem; }
+        .header a {
+            color: white; text-decoration: none; background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem; border-radius: 5px; display: inline-block; margin-top: 1rem;
+        }
+        .header a:hover { background: rgba(255,255,255,0.3); }
+
+        .language-bar {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem;
+        }
+        .language-bar span {
+            color: rgba(255,255,255,0.9); margin-right: 0.5rem; font-size: 0.9rem; font-weight: bold;
+        }
+        .lang-btn {
+            padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); color: white;
+            border: 1px solid rgba(255,255,255,0.3); border-radius: 5px; cursor: pointer;
+            font-size: 0.9rem; transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3); border-color: white; transform: translateY(-2px);
+        }
+        .lang-btn.active {
+            background: white; color: #c0392b; font-weight: bold; border-color: white;
+        }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+
+        .warning-box {
+            background: #d32f2f; color: white; border-left: 5px solid #b71c1c;
+            padding: 1.5rem; margin-bottom: 2rem; border-radius: 5px;
+        }
+        .warning-box h3 { margin-bottom: 0.5rem; }
+        .warning-box p { margin: 0.5rem 0; }
+
+        .content-card {
+            background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-card h2 {
+            color: #c0392b; margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .harm-item {
+            background: #ffebee; border-left: 4px solid #c0392b;
+            padding: 1.5rem; margin: 1.5rem 0; border-radius: 5px;
+        }
+
+        .harm-item h3 {
+            color: #b71c1c; font-size: 1.2rem; margin-bottom: 0.75rem;
+        }
+
+        .detail-row {
+            margin: 0.75rem 0; padding: 0.25rem 0;
+        }
+
+        .detail-label {
+            font-weight: bold; color: #c0392b;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .detail-value {
+            color: #555;
+            padding-left: 1rem;
+        }
+
+        .scripture-ref {
+            background: #fff3e0; color: #e65100; padding: 0.3rem 0.6rem;
+            border-radius: 3px; font-size: 0.9rem; margin: 0.2rem;
+            display: inline-block; font-weight: bold;
+            border: 1px solid #ffb74d;
+        }
+
+        .country-tag {
+            display: inline-block; background: #1976d2; color: white;
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
+            margin: 0.2rem; font-weight: bold;
+        }
+
+        .victim-tag {
+            display: inline-block; background: #7b1fa2; color: white;
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
+            margin: 0.2rem; font-weight: bold;
+        }
+
+        .category-tag {
+            display: inline-block; background: #d32f2f; color: white;
+            padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
+            margin-bottom: 1rem; font-weight: bold;
+        }
+
+        .quote-box {
+            background: #fff8e1; border-left: 4px solid #fbc02d;
+            padding: 1rem; margin: 1rem 0; font-style: italic;
+        }
+
+        .stats-box {
+            background: #f5f5f5; border: 2px solid #e74c3c;
+            padding: 1.5rem; margin: 1rem 0; border-radius: 5px;
+        }
+
+        .stats-box h4 {
+            color: #c0392b; margin-bottom: 0.5rem;
+        }
+
+        .stats-box ul {
+            margin-left: 1.5rem;
+        }
+
+        .stats-box li {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center; padding: 2rem 1rem; background: #2c3e50;
+            color: white; margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .content-card { padding: 1.5rem; }
+            .harm-item { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="pageTitle">⚠️ Real-World Harm: Islamic Texts & Global Violence</h1>
+        <p id="pageSubtitle">How Quranic & Hadith Teachings Directly Motivate Terrorism, Oppression, and Human Rights Violations Worldwide</p>
+        <a href="index.html" id="backLink">← Back to Home</a>
+        <div class="language-bar" id="languageBar" style="margin-top: 1rem;">
+            <!-- Language buttons generated by JS -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="warning-box">
+            <h3 id="warningTitle">🚨 CRITICAL WARNING</h3>
+            <p id="warningText1">This page documents how Islamic religious texts directly inspire and justify violence, oppression, terrorism, and human rights abuses globally.</p>
+            <p id="warningText2">Every example includes: (1) Direct Quranic/Hadith verse citations, (2) Real-world implementation, (3) Victims and death tolls, (4) Geographic regions affected.</p>
+            <p id="warningText3"><strong>This is not opinion or interpretation - these are documented facts with primary source citations.</strong></p>
+        </div>
+
+        <!-- WOMEN AS PROPERTY -->
+        <div class="content-card">
+            <span class="category-tag">WOMEN AS PROPERTY & SEX SLAVES</span>
+            <h2 id="cat1Title">Women Treated as Farms, Property, and Objects</h2>
+            
+            <div class="harm-item">
+                <h3>1. Women as "Tilth/Farm" for Sexual Use</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 2:223</span>
+                    <div class="quote-box">"Your wives are a tilth [farm/field] for you, so come to your tilth when or how you will."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="country-tag">Iran</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="country-tag">Pakistan</span>
+                        <p>Women denied basic autonomy; marital rape legalized; no consent required; treated as breeding machines; forced pregnancy; child marriage justified.</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Real Victims:</h4>
+                    <ul>
+                        <li><strong>Afghanistan:</strong> 28% of girls married before 18; Taliban enforce absolute male ownership</li>
+                        <li><strong>Pakistan:</strong> 1,000+ honor killings/year of women seeking autonomy</li>
+                        <li><strong>Saudi Arabia:</strong> Women required male guardian permission until 2019 reforms; still heavily restricted</li>
+                        <li><strong>Iran:</strong> Forced hijab; morality police; Mahsa Amini killed for improper hijab (2022)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>2. Sex Slavery Explicitly Permitted</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 4:24</span>
+                    <span class="scripture-ref">23:5-6</span>
+                    <span class="scripture-ref">70:29-30</span>
+                    <div class="quote-box">"Also forbidden are married women, except those whom your right hands possess [war captives/slaves]... And those who guard their chastity except with their wives or those their right hands possess."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Support:</span>
+                    <span class="scripture-ref">Sahih Muslim 3432</span>
+                    <div class="quote-box">"We went out with Allah's Messenger on the expedition to Banu Mustaliq and took captive some excellent Arab women; and we desired them, for we were suffering from the absence of our wives... So we asked the Prophet about coitus interruptus and he said: 'Do you really do that? It is better for you not to do it.'"</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">ISIS Caliphate</span>
+                        <span class="country-tag">Boko Haram</span>
+                        <span class="country-tag">Al-Shabaab</span>
+                        <span class="victim-tag">Yazidi Women</span>
+                        <span class="victim-tag">Christian Girls</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Documented Cases:</h4>
+                    <ul>
+                        <li><strong>ISIS (2014-2019):</strong> 5,000+ Yazidi women/girls kidnapped, raped, sold in slave markets with religious justification</li>
+                        <li><strong>Boko Haram (Nigeria):</strong> 276 Chibok schoolgirls kidnapped (2014); forced conversion; sexual slavery; ongoing</li>
+                        <li><strong>ISIS Manual:</strong> Published "Questions and Answers on Taking Captives and Slaves" (2014) citing Quran 4:24</li>
+                        <li><strong>Yazidi Genocide:</strong> UN documented systematic rape as religious duty; ISIS fighters cited Quran to justify</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>3. Beating Wives Commanded</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 4:34</span>
+                    <div class="quote-box">"Men are in charge of women... As to those women on whose part you fear disloyalty and ill-conduct, admonish them, refuse to share their beds, and beat them."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Bangladesh</span>
+                        <span class="country-tag">Egypt</span>
+                        <span class="country-tag">Jordan</span>
+                        <p>Domestic violence endemic; legally minimized; religious justification prevents prosecution; honor killings for "disobedience."</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Statistics:</h4>
+                    <ul>
+                        <li><strong>Pakistan:</strong> 70-90% of women experience domestic violence (UN Women)</li>
+                        <li><strong>Egypt:</strong> Influential clerics defend wife-beating as Islamic right</li>
+                        <li><strong>Afghanistan:</strong> 87% of women report physical/sexual/psychological violence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLAVERY -->
+        <div class="content-card">
+            <span class="category-tag">SLAVERY: INSTITUTIONALIZED & ONGOING</span>
+            <h2 id="catSlaveryTitle">Islamic Slavery - Legal Until Recently, Still Practiced Today</h2>
+            
+            <div class="harm-item">
+                <h3>Quranic Authorization of Slavery</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 16:71</span>
+                    <span class="scripture-ref">4:24</span>
+                    <span class="scripture-ref">23:5-6</span>
+                    <span class="scripture-ref">70:29-30</span>
+                    <div class="quote-box">"Allah has favored some of you over others in provision. Those who were favored would not hand over their provision to those whom their right hands possess [slaves]... Also forbidden are married women, except those whom your right hands possess [war captives/slaves]."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Support:</span>
+                    <span class="scripture-ref">Sahih Bukhari 2543</span>
+                    <div class="quote-box">"The Prophet said, 'Whoever frees a Muslim slave, Allah will save all the parts of his body from the Fire as he has freed the body-parts of the slave.'" (Implies slavery is acceptable, freeing is merely rewarded)</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Critical Point:</span>
+                    <div class="detail-value">
+                        <p><strong>Muhammad himself owned slaves.</strong> He bought, sold, captured, and gave slaves as gifts. The Quran NEVER abolishes slavery - it merely regulates it and encourages (but does not require) freeing slaves as a pious act.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Countries That Only Recently Abolished Slavery</h3>
+                <div class="stats-box">
+                    <h4>Islamic Countries - Last to Abolish Slavery:</h4>
+                    <ul>
+                        <li><strong>Saudi Arabia (1962):</strong> Officially abolished slavery under international pressure, NOT religious grounds. Estimated 300,000 slaves at abolition. Practice continued informally for decades.</li>
+                        <li><strong>Yemen (1962):</strong> Abolished same year as Saudi Arabia; enforcement minimal; practices continued in rural areas</li>
+                        <li><strong>United Arab Emirates (1963):</strong> Formally abolished but Kafala system creates modern slavery conditions</li>
+                        <li><strong>Oman (1970):</strong> One of the last countries globally to abolish slavery; estimated 10,000 slaves freed</li>
+                        <li><strong>Mauritania (1981, criminalized 2007):</strong> LAST country on Earth to abolish slavery; didn't criminalize until 2007; estimated 90,000-140,000 still enslaved today (2-4% of population)</li>
+                        <li><strong>Niger (2003):</strong> Criminalized slavery only in 2003; still widespread practice; 70,000+ in hereditary slavery</li>
+                        <li><strong>Context:</strong> Western countries abolished 100-150 years earlier (USA 1865, UK 1833). Islamic countries held onto slavery citing religious justification.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Countries Where Slavery Still Exists Today</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Current Reality:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Mauritania</span>
+                        <span class="country-tag">Niger</span>
+                        <span class="country-tag">Mali</span>
+                        <span class="country-tag">Sudan</span>
+                        <span class="country-tag">Chad</span>
+                        <p>Islamic slavery never truly ended - it just went underground or transformed into "modern slavery."</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Mauritania - Hereditary Slavery Ongoing:</h4>
+                    <ul>
+                        <li><strong>Scale:</strong> 90,000-140,000 people enslaved (Global Slavery Index); 2-4% of entire population</li>
+                        <li><strong>Nature:</strong> Hereditary "chattel slavery" - born into slavery; owned by "masters"; generations enslaved</li>
+                        <li><strong>Victims:</strong> Black Mauritanians (Haratin) enslaved by Arab-Berber Mauritanians</li>
+                        <li><strong>Religious Justification:</strong> Islamic scholars teach slaves should "serve their masters as they serve Allah"; slavery justified as Islamic tradition</li>
+                        <li><strong>Conditions:</strong> No pay; no freedom of movement; beatings common; sexual abuse of slave women routine; children born into slavery</li>
+                        <li><strong>Legal Reality:</strong> Despite 2007 criminalization, only ONE slave owner successfully prosecuted by 2020; authorities complicit</li>
+                        <li><strong>Cases:</strong> Yarg Mint (2011) - tried to escape slavery, was hunted down; Biram Dah Abeid - anti-slavery activist imprisoned multiple times for "threatening social order"</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Niger - Descent-Based Slavery:</h4>
+                    <ul>
+                        <li><strong>Scale:</strong> 70,000+ people in hereditary slavery (Walk Free Foundation)</li>
+                        <li><strong>Nature:</strong> "Wahaya" system - girls born into slave families given as 5th wives; sexually exploited; children become slaves</li>
+                        <li><strong>Religious Basis:</strong> Justified as Islamic practice; masters cite Quranic permission for concubines</li>
+                        <li><strong>Case - Hadijatou Mani (2005):</strong> Sold as 5th wife/slave at age 12; sexually abused for 9 years; master refused to free her despite supposed liberation; won case at ECOWAS Court but faced death threats</li>
+                        <li><strong>Ongoing:</strong> 2023 reports show practice continues; authorities ignore cases to avoid "cultural conflict"</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Sudan - Child Slave Raids:</h4>
+                    <ul>
+                        <li><strong>Scale:</strong> Tens of thousands enslaved during 1983-2005 civil war; ongoing in Darfur/border regions</li>
+                        <li><strong>Pattern:</strong> Northern Arab Muslims raid Southern Christian/Animist villages; capture women and children; sell into slavery</li>
+                        <li><strong>Nature:</strong> Domestic slavery; forced labor; sexual slavery; forced conversion to Islam</li>
+                        <li><strong>Documentation:</strong> Christian Solidarity International purchased freedom of 100,000+ slaves between 1995-2023 - proof of active slave markets</li>
+                        <li><strong>Religious Justification:</strong> Raiders cite jihad against non-Muslims; Quran 4:24 cited for sex slavery of captives</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Kafala System - Modern Slavery by Another Name</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Countries Using Kafala:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="country-tag">UAE</span>
+                        <span class="country-tag">Qatar</span>
+                        <span class="country-tag">Kuwait</span>
+                        <span class="country-tag">Bahrain</span>
+                        <span class="country-tag">Oman</span>
+                        <span class="country-tag">Lebanon</span>
+                        <span class="country-tag">Jordan</span>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">How It Works:</span>
+                    <div class="detail-value">
+                        <p>Migrant workers (mostly from South Asia, Africa, Philippines) "sponsored" by employers who confiscate passports, control movement, withhold wages, prevent workers from leaving. This is textbook slavery.</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Kafala System Abuses:</h4>
+                    <ul>
+                        <li><strong>Scale:</strong> 30+ million migrant workers trapped in Kafala system across Gulf states</li>
+                        <li><strong>Passport Confiscation:</strong> Employers seize passports upon arrival; workers cannot leave country</li>
+                        <li><strong>Wage Theft:</strong> Months/years of unpaid wages; no legal recourse; workers can't leave until "debt" paid</li>
+                        <li><strong>Physical Abuse:</strong> Domestic workers beaten, starved, locked in homes; some killed; employers rarely prosecuted</li>
+                        <li><strong>Sexual Abuse:</strong> Female domestic workers routinely raped by male employers; reporting = deportation/jail for "adultery"</li>
+                        <li><strong>Death Toll:</strong> Thousands die yearly from "workplace accidents," suicide, or murder</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Notable Cases:</h4>
+                    <ul>
+                        <li><strong>Qatar World Cup (2010-2022):</strong> 6,500+ migrant workers died building stadiums (Guardian investigation); kafala slavery conditions documented by Amnesty International</li>
+                        <li><strong>Lebanon (2020):</strong> Ethiopian domestic worker Faustina Tay filmed falling from 7th floor while escaping abusive employer; employer only got 1-year sentence</li>
+                        <li><strong>Saudi Arabia (2018):</strong> Indonesian maid Tuti Tursilawati beheaded for killing employer who tried to rape her; self-defense not accepted</li>
+                        <li><strong>UAE (2013):</strong> Filipina maid Juvelyn Balansag killed by employer; body found in freezer; employer initially claimed she "ran away"</li>
+                        <li><strong>Kuwait (2019):</strong> Ethiopian maid Lensa Lelisa killed herself after sharing videos of abuse by employer; employer faced no charges</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>ISIS Revival of Open Slave Markets</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Islamic State Slavery (2014-2019):</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Iraq</span>
+                        <span class="country-tag">Syria</span>
+                        <span class="victim-tag">Yazidi Women</span>
+                        <span class="victim-tag">Christian Girls</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>ISIS Reintroduction of Quranic Slavery:</h4>
+                    <ul>
+                        <li><strong>Scale:</strong> 5,000+ Yazidi women/girls captured; 3,000+ still missing (2025)</li>
+                        <li><strong>Theological Justification:</strong> ISIS published pamphlet "Questions and Answers on Taking Captives and Slaves" (2014) citing Quran 4:24, 23:5-6</li>
+                        <li><strong>Slave Markets:</strong> Women sold in markets in Mosul, Raqqa; prices: $150-$10,000 depending on age/beauty</li>
+                        <li><strong>Gang Rape:</strong> Girls sold to multiple ISIS fighters; raped by 10-20 men daily; treated as "spoils of war"</li>
+                        <li><strong>Child Victims:</strong> Girls as young as 9 years old sold; ISIS cited Aisha's age at consummation to justify pedophilia</li>
+                        <li><strong>Religious Enforcement:</strong> Fighters told raping slaves was worship; bringing them closer to Allah; Quranic mandate</li>
+                        <li><strong>Documentation:</strong> UN Commission found ISIS committed genocide; slavery was central crime; explicitly religious motivation</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Survivor Testimonies:</h4>
+                    <ul>
+                        <li><strong>Nadia Murad (Nobel Prize 2018):</strong> Yazidi slave, repeatedly raped by ISIS; witnessed mother and brothers killed; 18 members of her family murdered</li>
+                        <li><strong>Testimony:</strong> "ISIS told us it was our fate to be slaves because we are kuffar [non-believers]. They said Quran allowed them to do this."</li>
+                        <li><strong>Lamiya Aji Bashar:</strong> 18-year-old Yazidi; sold 7 times to different ISIS members; tortured; friend killed attempting escape</li>
+                        <li><strong>Pattern:</strong> All survivors report ISIS fighters justified rape/slavery by citing Quran and Hadith; saw it as religious duty</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Why Islamic Slavery Persisted So Long</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Theological Problem:</span>
+                    <div class="detail-value">
+                        <ol>
+                            <li><strong>Quran Never Abolishes Slavery:</strong> Unlike clear prohibitions on alcohol, pork, or interest, there is NO verse prohibiting slavery. It is regulated, humanized somewhat, but never forbidden.</li>
+                            <li><strong>Muhammad Owned Slaves:</strong> The "perfect example" for Muslims owned, bought, sold, and had sex with slaves. How can Muslims condemn what the Prophet practiced?</li>
+                            <li><strong>War Captives = Automatic Slaves:</strong> Quran 4:24 explicitly permits enslaving and raping war captives. Jihad theology creates endless supply of "permissible" slaves.</li>
+                            <li><strong>Manumission is Encouraged, Not Required:</strong> Freeing slaves is praised as pious but optional. Keeping slaves is not sinful.</li>
+                            <li><strong>Cannot Criticize Quran:</strong> If Quran permits slavery, how can Islamic countries abolish it without admitting Quran is morally flawed? This is blasphemy.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Historical Reality:</span>
+                    <div class="detail-value">
+                        <p>Islamic countries only abolished slavery when forced by:</p>
+                        <ul>
+                            <li><strong>Western Colonial Pressure:</strong> British Empire, France forced abolition in colonies</li>
+                            <li><strong>Economic Modernization:</strong> Needed international legitimacy for trade/relations</li>
+                            <li><strong>UN Pressure:</strong> Universal Declaration of Human Rights (1948) made slavery untenable internationally</li>
+                        </ul>
+                        <p><strong>NOT abolished because Islam prohibited it - abolished DESPITE Islam permitting it.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Arab Slave Trade - Historical Context</h3>
+                <div class="stats-box">
+                    <h4>Arab-Islamic Slave Trade (7th-20th Century):</h4>
+                    <ul>
+                        <li><strong>Duration:</strong> 1,300+ years (650 CE - 1960s); longer than Atlantic slave trade by 900 years</li>
+                        <li><strong>Scale:</strong> Conservative estimate: 17-18 million African slaves; some historians estimate 30-40 million</li>
+                        <li><strong>Routes:</strong> Trans-Saharan (North Africa), Red Sea, Indian Ocean; slaves transported to Middle East, North Africa, India</li>
+                        <li><strong>Castration:</strong> Up to 80% of male slaves castrated to serve as eunuchs; most died from procedure; prevented reproduction</li>
+                        <li><strong>Death Rate:</strong> Estimated 75% mortality during capture/transport; harsher than Atlantic route</li>
+                        <li><strong>Sexual Slavery:</strong> Female slaves used as concubines; children often killed or enslaved; no large African population remains in Arab world (unlike Americas) because slaves didn't survive to reproduce</li>
+                        <li><strong>Religious Justification:</strong> Explicitly permitted by Quran and Hadith; jihad provided endless supply; scholars defended it theologically</li>
+                        <li><strong>Why Less Known:</strong> No written records kept by slaves; Arab countries never acknowledged/apologized; Western focus on Atlantic trade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIOLENCE AGAINST NON-MUSLIMS -->
+        <div class="content-card">
+            <span class="category-tag">COMMANDED VIOLENCE AGAINST "KUFFAR" (NON-BELIEVERS)</span>
+            <h2 id="cat2Title">Kill the Unbelievers: Direct Commands for Violence</h2>
+            
+            <div class="harm-item">
+                <h3>4. Kill Polytheists/Pagans Wherever You Find Them</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 9:5</span>
+                    <div class="quote-box">"When the sacred months are over, kill the polytheists wherever you find them, capture them, besiege them, and lie in wait for them at every ambush."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">India - Kashmir</span>
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="victim-tag">Hindus</span>
+                        <span class="victim-tag">Buddhists</span>
+                        <span class="victim-tag">Sikhs</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Ethnic Cleansing Cases:</h4>
+                    <ul>
+                        <li><strong>Kashmir (1990):</strong> 300,000-600,000 Kashmiri Pandits (Hindus) ethnically cleansed; mosques broadcast "Convert, leave, or die"; mass exodus; ongoing terrorism</li>
+                        <li><strong>Pahalgam Terror Attack (December 2024):</strong> Pakistani terrorists ambushed non-local workers at construction site; systematically checked IDs to identify non-Muslims; killed only Hindu and Sikh workers; spared local Muslims; 7 innocent workers executed; clear religious targeting; terrorists asked victims their religion before shooting</li>
+                        <li><strong>Pattern of Selective Killings:</strong> Kashmir terrorists specifically target non-Muslim migrant workers, pundits who returned, Hindu teachers, Sikh traders - always verifying religion before killing</li>
+                        <li><strong>Recent Targeted Killings (2021-2024):</strong> Hindu chemist Makhan Lal Bindroo shot dead (2021); Sikh principal and Hindu teacher killed same day (2021); Hindu bank manager shot (2022); multiple non-Muslim street vendors executed after ID checks</li>
+                        <li><strong>Pakistan (1947-present):</strong> Hindu population dropped from 20% to <2%; forced conversions; temple destructions; kidnapping of Hindu girls</li>
+                        <li><strong>Afghanistan (2001):</strong> Taliban destroyed Bamiyan Buddha statues citing Islamic prohibition of idols</li>
+                        <li><strong>Bangladesh (1971):</strong> 2-3 million killed in genocide; Hindu minority specifically targeted</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Kashmir - Ongoing Religious Cleansing (Documented Pattern):</h4>
+                    <ul>
+                        <li><strong>Modus Operandi:</strong> Terrorists stop vehicles/enter workplaces → check IDs/ask names → verify religion → kill only non-Muslims → spare Muslims</li>
+                        <li><strong>Proof of Religious Targeting:</strong> Survivors consistently report terrorists asking "Are you Hindu?" or checking ID cards for Hindu/Sikh names before executing victims</li>
+                        <li><strong>Justification:</strong> Pakistan-based terror groups cite Quran 9:5 ("kill the polytheists wherever you find them") in propaganda; label Hindus as "mushrikeen" (polytheists) deserving death</li>
+                        <li><strong>2020-2024 Selective Killings:</strong> 50+ non-Muslims specifically targeted and killed; attacks designed to terrorize Hindu/Sikh minorities into fleeing Kashmir</li>
+                        <li><strong>Goal:</strong> Complete Islamic state by eliminating remaining non-Muslim population; finish what 1990 exodus started</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>5. Fight Until All Religion is for Allah</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 8:39</span>
+                    <span class="scripture-ref">2:193</span>
+                    <div class="quote-box">"Fight them until there is no more fitnah [disbelief] and the religion is entirely for Allah."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">ISIS Territory</span>
+                        <span class="country-tag">Taliban Afghanistan</span>
+                        <span class="country-tag">Boko Haram Nigeria</span>
+                        <span class="country-tag">Al-Shabaab Somalia</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Terrorist Implementation:</h4>
+                    <ul>
+                        <li><strong>ISIS (2014-2019):</strong> Genocide against Yazidis, Christians, Shia; cited Quran 8:39 in propaganda</li>
+                        <li><strong>Boko Haram:</strong> Name means "Western education is forbidden"; 350,000+ killed; schools destroyed; forced Islamization</li>
+                        <li><strong>Al-Shabaab:</strong> Somalia terror; non-Muslim aid workers targeted; church attacks; forced conversions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>6. Terror Commanded: Strike Fear into Hearts of Enemies</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 8:12</span>
+                    <span class="scripture-ref">8:60</span>
+                    <div class="quote-box">"I will cast terror into the hearts of those who disbelieve. Therefore strike off their heads and strike off every fingertip of them... Prepare against them whatever force you can to terrify the enemy of Allah."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Global Terrorism</span>
+                        <p>Al-Qaeda, ISIS, Hamas, Hezbollah, Taliban - all cite these verses explicitly in justification for terrorist attacks.</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Major Attacks with Religious Justification:</h4>
+                    <ul>
+                        <li><strong>9/11 (2001):</strong> 2,977 killed; hijackers cited jihad verses; bin Laden quoted Quran 8:60 in fatwas</li>
+                        <li><strong>Mumbai Attacks (2008):</strong> 166 killed; terrorists specifically targeted Jews/Americans; religious motivation confirmed</li>
+                        <li><strong>Paris Attacks (2015):</strong> 130 killed; ISIS claimed; attackers shouted "Allahu Akbar"</li>
+                        <li><strong>Bataclan Theater:</strong> Execution of concertgoers; religious justification for attacking "degenerate" Western culture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- JEWS & CHRISTIANS SPECIFIC -->
+        <div class="content-card">
+            <span class="category-tag">SPECIFIC HATRED: JEWS & CHRISTIANS</span>
+            <h2 id="cat3Title">Kill Jews & Christians Until the Last Day</h2>
+            
+            <div class="harm-item">
+                <h3>7. Jews & Christians as Enemies - Do Not Take as Friends</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 5:51</span>
+                    <span class="scripture-ref">5:57</span>
+                    <div class="quote-box">"O you who believe! Do not take the Jews and Christians as allies. They are allies of one another. Whoever among you takes them as allies, is one of them."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Middle East</span>
+                        <span class="country-tag">Iraq</span>
+                        <span class="country-tag">Syria</span>
+                        <span class="country-tag">Egypt</span>
+                        <span class="country-tag">Pakistan</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Christian Persecution & Ethnic Cleansing:</h4>
+                    <ul>
+                        <li><strong>Iraq (2003-present):</strong> Christian population dropped from 1.5 million to <250,000; systematic church bombings; forced conversions</li>
+                        <li><strong>Syria:</strong> 75% of Christians fled during civil war; ISIS targeted for execution</li>
+                        <li><strong>Egypt:</strong> Coptic Christians attacked regularly; 2011 Alexandria church bombing (21 killed); 2017 Palm Sunday bombings (45 killed)</li>
+                        <li><strong>Pakistan:</strong> Asia Bibi case - Christian woman death sentence for blasphemy (acquitted after 8 years); church attacks common</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>8. Jews Transformed into Apes & Pigs - Dehumanization</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 5:60</span>
+                    <span class="scripture-ref">2:65</span>
+                    <span class="scripture-ref">7:166</span>
+                    <div class="quote-box">"Those whom Allah has cursed and with whom He became angry and made of them apes and pigs... Say: Shall I inform you of what is worse than that as penalty from Allah? Those whom Allah has cursed... and made them apes."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Hamas</span>
+                        <span class="country-tag">Hezbollah</span>
+                        <span class="country-tag">Iran</span>
+                        <span class="victim-tag">Israeli Civilians</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Anti-Jewish Violence with Religious Motivation:</h4>
+                    <ul>
+                        <li><strong>Hamas Charter (1988):</strong> Quotes Quran 5:60 and hadith calling for killing Jews; Article 7 cites: "The Day of Judgement will not come about until Muslims fight Jews and kill them"</li>
+                        <li><strong>October 7, 2023:</strong> 1,200+ Israelis massacred; babies beheaded; women raped; Hamas livestreamed atrocities citing religious duty</li>
+                        <li><strong>Iran:</strong> Supreme Leader quotes Quran verses calling for Israel's destruction; funds proxy terror groups</li>
+                        <li><strong>Hezbollah:</strong> Nasrallah sermons regularly cite Quranic verses dehumanizing Jews</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>9. Kill Jews Until Final Hour - Hadith Prophecy</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Text:</span>
+                    <span class="scripture-ref">Sahih Muslim 2922</span>
+                    <span class="scripture-ref">Sahih Bukhari 2926</span>
+                    <div class="quote-box">"The Day of Judgement will not come about until Muslims fight the Jews, when the Jew will hide behind stones and trees. The stones and trees will say: 'O Muslim, there is a Jew behind me, come and kill him.'"</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <p><strong>This hadith is cited in:</strong></p>
+                        <ul>
+                            <li>Hamas Charter Article 7</li>
+                            <li>Friday sermons in mosques globally</li>
+                            <li>ISIS, Al-Qaeda, Hezbollah propaganda</li>
+                            <li>Justification for every major attack on Jewish civilians</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APOSTASY & BLASPHEMY -->
+        <div class="content-card">
+            <span class="category-tag">THOUGHT CONTROL: APOSTASY & BLASPHEMY LAWS</span>
+            <h2 id="cat4Title">Death for Leaving Islam or Criticizing Muhammad</h2>
+            
+            <div class="harm-item">
+                <h3>10. Kill Apostates - Death for Leaving Islam</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Text:</span>
+                    <span class="scripture-ref">Sahih Bukhari 6922</span>
+                    <span class="scripture-ref">Sahih Muslim 1676</span>
+                    <div class="quote-box">"Whoever changed his Islamic religion, then kill him." - Prophet Muhammad</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="country-tag">Iran</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="country-tag">Sudan</span>
+                        <span class="country-tag">Yemen</span>
+                        <span class="country-tag">Pakistan</span>
+                        <p><strong>Legal Status:</strong> Apostasy punishable by death in 13 Muslim-majority countries</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Recent Cases:</h4>
+                    <ul>
+                        <li><strong>Saudi Arabia:</strong> Atheist blogger Raif Badawi sentenced to 10 years + 1,000 lashes for "insulting Islam"</li>
+                        <li><strong>Sudan:</strong> Meriam Ibrahim sentenced to death for apostasy (2014) - Christian woman born to Muslim father</li>
+                        <li><strong>Pakistan:</strong> Countless honor killings of those who leave Islam; state protection impossible</li>
+                        <li><strong>Afghanistan:</strong> Convert to Christianity = death sentence under Taliban; zero religious freedom</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>11. Blasphemy Death Penalty</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Basis:</span>
+                    <span class="scripture-ref">Multiple Sahih Hadith</span>
+                    <div class="quote-box">Numerous hadith describe Muhammad ordering execution of poets, critics, and mockers.</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Iran</span>
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="country-tag">Global Assassinations</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Victims of Blasphemy Accusations:</h4>
+                    <ul>
+                        <li><strong>Charlie Hebdo (2015):</strong> 12 killed in Paris for cartoons of Muhammad; attackers cited religious duty</li>
+                        <li><strong>Theo van Gogh (2004):</strong> Dutch filmmaker murdered for "Submission" film critical of Islam; note left citing Quran</li>
+                        <li><strong>Salman Rushdie (1989-present):</strong> Fatwa death sentence by Iran's Ayatollah; survived 2022 stabbing attack</li>
+                        <li><strong>Pakistan Blasphemy Law:</strong> 1,500+ cases since 1987; Christians disproportionately targeted; mob lynchings common</li>
+                        <li><strong>Asia Bibi:</strong> 8 years on death row for alleged blasphemy; Christians attacked in retaliation for her acquittal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHILD ABUSE -->
+        <div class="content-card">
+            <span class="category-tag">CHILDREN AS VICTIMS</span>
+            <h2 id="cat5Title">Child Marriage, Grooming, and Sexual Abuse</h2>
+            
+            <div class="harm-item">
+                <h3>12. Child Marriage - Muhammad's Example with Aisha</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Text:</span>
+                    <span class="scripture-ref">Sahih Bukhari 5134</span>
+                    <span class="scripture-ref">Sahih Muslim 1422</span>
+                    <div class="quote-box">"The Prophet married Aisha when she was six years old and consummated the marriage when she was nine."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Yemen</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="country-tag">Iran</span>
+                        <p><strong>Justification:</strong> "If it was good for the Prophet, it's permissible for us"</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Child Marriage Statistics:</h4>
+                    <ul>
+                        <li><strong>Yemen:</strong> 32% of girls married before 18; 9% before 15; Nujood Ali (10) forced to marry 30-year-old man (2008)</li>
+                        <li><strong>Afghanistan:</strong> 28% child marriage rate; Taliban lowered age restrictions citing Islamic law</li>
+                        <li><strong>Pakistan:</strong> Child bride Saima (12) burned alive by in-laws (2016); countless unreported cases</li>
+                        <li><strong>Iran:</strong> Legal marriage age lowered to 9 for girls citing Aisha precedent; parental consent required but granted routinely</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>13. Grooming Gangs - Religious Targeting of "Kuffar" Girls</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Theological Basis:</span>
+                    <span class="scripture-ref">Quran 4:24 (sex with captives)</span>
+                    <div class="detail-value">
+                        <p>Non-Muslim girls viewed as "lesser" and permissible for exploitation; similar to sex slavery verses applied to modern context.</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">UK</span>
+                        <span class="victim-tag">Working-class White Girls</span>
+                        <span class="victim-tag">Sikh Girls</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>UK Grooming Gang Scandals:</h4>
+                    <ul>
+                        <li><strong>Rotherham (1997-2013):</strong> 1,400+ girls systematically groomed, raped, trafficked by predominantly Pakistani Muslim gangs; authorities suppressed investigations for fear of "racism" accusations</li>
+                        <li><strong>Rochdale (2012):</strong> 47 girls; gang members called victims "white trash"; religious/cultural motivation confirmed</li>
+                        <li><strong>Oxford (2013):</strong> Girls as young as 11; targeted because they were "kuffar" (non-believers)</li>
+                        <li><strong>Telford (1980s-2018):</strong> 1,000+ victims; longest-running grooming scandal; ongoing</li>
+                        <li><strong>Newcastle (2017):</strong> 17 men, mostly Muslim, convicted; victims plied with alcohol and drugs; "treat them like white trash"</li>
+                        <li><strong>Huddersfield (2018):</strong> 20 men convicted; 15 girls abused; youngest victim 11 years old</li>
+                        <li><strong>Pattern:</strong> Gangs predominantly Muslim men; victims predominantly non-Muslim girls; religious superiority complex confirmed in trials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>14. Madrasa Sexual Abuse - Systematic Child Rape in Religious Schools</h3>
+                <div class="detail-row">
+                    <span class="detail-label">System Context:</span>
+                    <div class="detail-value">
+                        <p>Madrasas (Islamic schools) with unsupervised access to children; religious authority prevents reporting; victims shamed into silence; mullahs/imams use religious authority to abuse.</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">India - Kerala</span>
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Bangladesh</span>
+                        <span class="country-tag">UK</span>
+                        <span class="victim-tag">Boys & Girls</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Kerala Madrasa Abuse Cases (Rising Epidemic):</h4>
+                    <ul>
+                        <li><strong>Malappuram Case (2023):</strong> Madrasa teacher arrested for sexually abusing 11-year-old boy; victim threatened with religious consequences</li>
+                        <li><strong>Kozhikode Case (2023):</strong> 12-year-old girl raped by madrasa teacher; family pressured to stay silent to "protect community honor"</li>
+                        <li><strong>Kannur Case (2022):</strong> Multiple children abused over years; authorities ignored complaints due to religious sensitivity</li>
+                        <li><strong>Thrissur Case (2024):</strong> 8-year-old boy sodomized by Quranic teacher; case emerged only after medical emergency</li>
+                        <li><strong>Pattern in Kerala:</strong> Cases dramatically increasing 2020-2024; most unreported due to community pressure; victims often sent to madrasas from poor families</li>
+                        <li><strong>Underreporting:</strong> Estimated only 5-10% of cases reported; families fear social ostracization; religious leaders discourage police involvement</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Pakistan - Massive Madrasa Abuse Scandal:</h4>
+                    <ul>
+                        <li><strong>Nationwide Crisis:</strong> Estimated 1.5-2 million children in madrasas; abuse endemic and systematic</li>
+                        <li><strong>2019 Report:</strong> Human Rights Commission documented hundreds of cases; actual number likely in thousands</li>
+                        <li><strong>Kasur Scandal (2019):</strong> 8 children rescued from madrasa torture chamber; sexually abused, chained, beaten</li>
+                        <li><strong>Lahore Cases:</strong> Multiple madrasas raided; children found in chains; sodomy, rape, torture documented</li>
+                        <li><strong>Bacha Bazi Connection:</strong> Cultural practice of "boy play" normalized in religious schools; imams perpetrators</li>
+                        <li><strong>Impunity:</strong> Religious leaders rarely prosecuted; political protection; community silence</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Bangladesh Madrasa Abuse:</h4>
+                    <ul>
+                        <li><strong>Systematic Problem:</strong> 2,500+ registered madrasas; thousands unregistered and unmonitored</li>
+                        <li><strong>Feni Case (2019):</strong> 19-year-old madrasa student Nusrat Jahan burned alive after reporting sexual assault by headmaster</li>
+                        <li><strong>Documented Cases (2015-2020):</strong> 150+ reported cases of madrasa sexual abuse; estimated 1,000+ unreported</li>
+                        <li><strong>Pattern:</strong> Teachers use religious authority; threaten victims with "Allah's punishment"; families pressured to withdraw complaints</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>UK Madrasa Abuse Cases:</h4>
+                    <ul>
+                        <li><strong>Stoke-on-Trent (2016):</strong> Islamic teacher Mohammed Haque jailed for abusing 11 children in madrasa</li>
+                        <li><strong>Manchester (2018):</strong> Qari Hafiz Mohammed jailed for raping boy at mosque madrasa</li>
+                        <li><strong>Birmingham (2020):</strong> Multiple cases; community pressure prevented earlier reporting</li>
+                        <li><strong>Investigation Gap:</strong> Thousands of unregistered madrasas operating without oversight</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>15. Forced Child Marriage - Girls as Young as 6 Years Old</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Religious Justification:</span>
+                    <span class="scripture-ref">Sahih Bukhari 5134</span>
+                    <span class="scripture-ref">Quran 65:4</span>
+                    <div class="quote-box">"Quran 65:4 discusses divorce waiting period for women who have 'not yet menstruated' - explicitly allowing marriage to pre-pubescent girls. Combined with Muhammad's marriage to Aisha at 6, consummation at 9."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Yemen</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">India</span>
+                        <span class="country-tag">Bangladesh</span>
+                        <span class="country-tag">Saudi Arabia</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Horrific Individual Cases:</h4>
+                    <ul>
+                        <li><strong>Rawan (Yemen, 2013):</strong> 8-year-old bride died of internal injuries on wedding night with 40-year-old husband; internal hemorrhaging from forced sex</li>
+                        <li><strong>Nujood Ali (Yemen, 2008):</strong> 10 years old, forced to marry 30-year-old man; raped repeatedly; escaped to seek divorce; became international case</li>
+                        <li><strong>Arwa (Yemen, 2009):</strong> 12-year-old died in childbirth; body too small for pregnancy; forced marriage to 24-year-old</li>
+                        <li><strong>Naila Amin (Pakistan, 2008):</strong> 10 years old when married to 70-year-old man; raped; beaten; escaped years later</li>
+                        <li><strong>Saima (Pakistan, 2016):</strong> 12-year-old married to 40-year-old man; burned alive by in-laws when family couldn't pay more dowry</li>
+                        <li><strong>Tahani (Yemen, 2010):</strong> 6 years old when married; died at 13 from complications of repeated rape and childbirth</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Statistical Reality - The Scale:</h4>
+                    <ul>
+                        <li><strong>Global Numbers:</strong> 12 million girls married yearly; disproportionately in Muslim-majority countries</li>
+                        <li><strong>Yemen:</strong> 32% of girls married before 18; 9% before 15; 3% before 10 years old</li>
+                        <li><strong>Afghanistan:</strong> 28% child marriage rate; Taliban reduced minimum age citing Islamic law; girls sold to settle debts</li>
+                        <li><strong>Pakistan:</strong> 21% married before 18; 3% before 15; thousands of cases annually involving pre-teen girls</li>
+                        <li><strong>Bangladesh:</strong> 59% married before 18 (highest in Asia); religious justification common</li>
+                        <li><strong>India (Muslim Communities):</strong> Significantly higher child marriage rates in Muslim-majority areas; Kerala seeing increase in cases</li>
+                        <li><strong>Saudi Arabia:</strong> No minimum age until 2019 reforms; still allows marriage of minors with judicial approval citing Islamic precedent</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Medical Consequences:</h4>
+                    <ul>
+                        <li><strong>Death Rate:</strong> Girls under 15 are 5x more likely to die in childbirth</li>
+                        <li><strong>Physical Trauma:</strong> Vaginal tearing, fistulas, internal bleeding, pelvic fractures from forced sex</li>
+                        <li><strong>Psychological:</strong> PTSD, depression, suicide rates drastically higher</li>
+                        <li><strong>Educational:</strong> Schooling terminated; permanent illiteracy</li>
+                        <li><strong>Health:</strong> Repeated pregnancies from young age; maternal mortality; infant mortality</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Kerala (India) - Rising Muslim Child Marriage Cases:</h4>
+                    <ul>
+                        <li><strong>Malappuram District:</strong> Highest concentration; multiple cases of 13-15 year old brides rescued by authorities</li>
+                        <li><strong>Pattern:</strong> Girls withdrawn from school; married to Gulf-based older men; justified as Islamic practice</li>
+                        <li><strong>2022-2024:</strong> 50+ documented intervention cases in Kerala alone; actual number much higher</li>
+                        <li><strong>Community Resistance:</strong> Families hide marriages; religious leaders oppose government intervention</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>16. Honor Killings - Murder of Women and Girls for "Family Honor"</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Religious/Cultural Basis:</span>
+                    <span class="scripture-ref">Quran 4:15</span>
+                    <div class="detail-value">
+                        <p>While not explicitly commanded, Islamic emphasis on male honor, female obedience (Quran 4:34), and severe punishments for adultery/fornication create environment where families kill daughters/wives to "restore honor."</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Jordan</span>
+                        <span class="country-tag">Iraq</span>
+                        <span class="country-tag">Iran</span>
+                        <span class="country-tag">India</span>
+                        <span class="country-tag">UK</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Honor Killing Statistics:</h4>
+                    <ul>
+                        <li><strong>Global Estimate:</strong> 5,000+ women killed annually for "honor" (UN estimate); actual number likely 10,000-20,000</li>
+                        <li><strong>Pakistan:</strong> 1,000+ reported yearly; actual estimate 3,000-4,000 annually</li>
+                        <li><strong>Reasons:</strong> Refusing arranged marriage, dating, being raped, seeking divorce, "inappropriate" dress, talking to men</li>
+                        <li><strong>Perpetrators:</strong> Fathers, brothers, uncles, husbands; often with family/community approval</li>
+                        <li><strong>Impunity:</strong> Many countries have lenient laws; families forgive killers; religious justification accepted</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Notable Cases:</h4>
+                    <ul>
+                        <li><strong>Qandeel Baloch (Pakistan, 2016):</strong> Social media star strangled by brother for "bringing dishonor"; national outrage but practice continues</li>
+                        <li><strong>Shafilea Ahmed (UK, 2003):</strong> 17-year-old murdered by parents for being "too Western"; suffocated with plastic bag</li>
+                        <li><strong>Du'a Khalil Aswad (Iraq, 2007):</strong> 17-year-old Yazidi girl stoned to death by mob for dating Muslim boy; filmed on phones</li>
+                        <li><strong>Aqsa Parvez (Canada, 2007):</strong> 16-year-old strangled by father for refusing hijab</li>
+                        <li><strong>Banaz Mahmod (UK, 2006):</strong> 20-year-old killed by family for leaving abusive marriage; begged police for help beforehand</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>17. Female Genital Mutilation (FGM) - Religious Practice Despite Harm</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Religious Basis:</span>
+                    <span class="scripture-ref">Hadith (various)</span>
+                    <div class="detail-value">
+                        <p>Muhammad approved FGM: "Circumcision is obligatory for men and honorable for women" (Ahmad, Abu Dawud). Practiced widely in Muslim communities claiming religious obligation.</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Somalia</span>
+                        <span class="country-tag">Egypt</span>
+                        <span class="country-tag">Sudan</span>
+                        <span class="country-tag">Indonesia</span>
+                        <span class="country-tag">Malaysia</span>
+                        <span class="victim-tag">200 Million Women Mutilated</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>FGM Statistics & Cases:</h4>
+                    <ul>
+                        <li><strong>Global:</strong> 200 million women/girls have undergone FGM; 3 million at risk annually</li>
+                        <li><strong>Somalia:</strong> 98% of women; most severe Type III (infibulation) - complete removal and sewing shut</li>
+                        <li><strong>Egypt:</strong> 87% of women aged 15-49; despite ban, religious leaders promote it</li>
+                        <li><strong>Indonesia:</strong> 50%+ of girls undergo FGM; justified as Islamic requirement</li>
+                        <li><strong>Health Consequences:</strong> Severe bleeding, infections, chronic pain, complications in childbirth, death</li>
+                        <li><strong>Psychological:</strong> Lifelong trauma, PTSD, sexual dysfunction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>18. Forced Conversions & Religious Persecution</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Basis:</span>
+                    <span class="scripture-ref">Quran 9:29</span>
+                    <div class="quote-box">"Fight those who do not believe in Allah... until they pay jizyah [protection tax] with willing submission and feel themselves subdued."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Egypt</span>
+                        <span class="country-tag">Iraq</span>
+                        <span class="country-tag">Sudan</span>
+                        <span class="victim-tag">Hindu & Christian Girls</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Forced Conversion Epidemic:</h4>
+                    <ul>
+                        <li><strong>Pakistan:</strong> 1,000+ Hindu and Christian girls kidnapped yearly; forced to convert and marry Muslim men; police complicit</li>
+                        <li><strong>Pattern:</strong> Girls abducted; forced conversion certificate obtained; married immediately; families can't reverse due to Islamic law</li>
+                        <li><strong>Huma Younus (Pakistan, 2019):</strong> 14-year-old Christian girl abducted; forcibly converted; married to 44-year-old Muslim; court ruled marriage valid despite age</li>
+                        <li><strong>Arzoo Raja (Pakistan, 2020):</strong> 13-year-old Christian girl kidnapped; forced conversion; court upheld marriage citing she had "menstruated"</li>
+                        <li><strong>Egypt:</strong> Coptic Christian girls systematically targeted; thousands of cases; families terrorized into silence</li>
+                        <li><strong>Legal Cover:</strong> Once conversion certificate issued, Islamic law prevents return; kidnapping becomes "legitimate marriage"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- JIHAD MOTIVATION -->
+        <div class="content-card">
+            <span class="category-tag">JIHAD INCENTIVES</span>
+            <h2 id="cat6Title">Paradise Promises for Martyrs & Fighters</h2>
+            
+            <div class="harm-item">
+                <h3>14. 72 Virgins in Paradise for Martyrs</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Text:</span>
+                    <span class="scripture-ref">Sunan al-Tirmidhi 1663</span>
+                    <div class="quote-box">"The martyr receives six blessings from Allah... He is married to 72 of the houris [virgins of Paradise]."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Support:</span>
+                    <span class="scripture-ref">Quran 44:54</span>
+                    <span class="scripture-ref">55:56</span>
+                    <span class="scripture-ref">56:22-23</span>
+                    <div class="quote-box">"We shall wed them to fair women with beautiful, big and lustrous eyes... Maidens restrained in pavilions... like hidden pearls."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <p><strong>Primary Motivation:</strong> Suicide bombers, ISIS fighters, Taliban martyrs - consistently cite paradise rewards</p>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Documented Cases:</h4>
+                    <ul>
+                        <li><strong>9/11 Hijackers:</strong> Told to prepare for paradise; wedding night with virgins; motivation in recovered documents</li>
+                        <li><strong>ISIS Recruits:</strong> Propaganda videos explicitly promise sexual rewards in paradise</li>
+                        <li><strong>Suicide Bombers:</strong> Families celebrate martyrdom; expect son/husband in paradise with rewards</li>
+                        <li><strong>Palestinian Attacks:</strong> Families receive financial payments; martyrs praised in sermons citing rewards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>14a. Suicide Bombings - Self-Detonation for Paradise & 72 Virgins</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Theological Motivation:</span>
+                    <div class="detail-value">
+                        <p>Suicide bombers believe death in jihad guarantees instant paradise with 72 virgins (houris), eternal sexual pleasure, rivers of wine, endless feasts. Death is not loss but ultimate reward.</p>
+                        <p><strong>Key Belief:</strong> "Paradise lies in the shadow of swords" + 72 virgins promise = powerful motivation for suicide attacks</p>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Scale of Suicide Bombing:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Iraq</span>
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="country-tag">Pakistan</span>
+                        <span class="country-tag">Syria</span>
+                        <span class="country-tag">Israel</span>
+                        <span class="country-tag">Nigeria</span>
+                        <span class="country-tag">Sri Lanka</span>
+                        <span class="country-tag">Global</span>
+                    </div>
+                </div>
+                <div class="stats-box">
+                    <h4>Major Suicide Bombing Attacks:</h4>
+                    <ul>
+                        <li><strong>9/11 (2001):</strong> 2,977 killed; hijackers' final instructions: "Tighten your shoelaces... You will be entering paradise. You will be entering the happiest life"</li>
+                        <li><strong>Bali Bombings (2002):</strong> 202 killed; nightclub bombed; bomber Imam Samudra: "I ask forgiveness to Allah if there are victims who are not kafir [infidels]"</li>
+                        <li><strong>Madrid Train Bombings (2004):</strong> 193 killed, 2,000+ injured; bombers cited jihad; 72 virgins reward in martyrdom videos</li>
+                        <li><strong>London 7/7 Bombings (2005):</strong> 52 killed; suicide bomber Mohammad Sidique Khan in video: "I'm going to paradise"; cited Quran</li>
+                        <li><strong>Mumbai Attacks (2008):</strong> 166 killed; Pakistani handlers told terrorists via phone: "Keep killing, you will go to heaven"</li>
+                        <li><strong>Boston Marathon (2013):</strong> 3 killed, 264 injured; Tsarnaev brothers motivated by jihad ideology; paradise belief</li>
+                        <li><strong>Paris Bataclan (2015):</strong> 130 killed; suicide bombers + gunmen; ISIS claimed; attackers shouted "Allahu Akbar"; paradise motivation</li>
+                        <li><strong>Brussels Airport (2016):</strong> 32 killed; suicide belts; ISIS claimed; martyrdom videos recovered</li>
+                        <li><strong>Manchester Arena (2017):</strong> 22 killed (many children); Salman Abedi suicide bomber; visited Libya before attack; ISIS-inspired</li>
+                        <li><strong>Sri Lanka Easter Bombings (2019):</strong> 269 killed; 8 suicide bombers attacked churches/hotels; ISIS pledge; 72 virgins motivation confirmed in investigations</li>
+                        <li><strong>Kabul Airport (2021):</strong> 170+ killed during evacuation; ISIS-K suicide bomber; targeted fleeing civilians</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Iraq War Era (2003-2011) - Suicide Bombing Epidemic:</h4>
+                    <ul>
+                        <li><strong>Total Attacks:</strong> 1,800+ suicide bombings in Iraq alone during this period</li>
+                        <li><strong>Death Toll:</strong> 15,000-20,000 killed by suicide attacks; tens of thousands injured</li>
+                        <li><strong>Targets:</strong> Shia mosques, markets, funerals, weddings, police stations, US forces</li>
+                        <li><strong>Motivation:</strong> Al-Qaeda in Iraq (AQI) and ISIS promised martyrs instant paradise; 72 virgins; families paid stipends</li>
+                        <li><strong>Notable:</strong> Samarra mosque bombing (2006) - 165 killed; sparked sectarian civil war; bombers believed martyrdom guaranteed paradise</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Afghanistan - Decades of Suicide Terror:</h4>
+                    <ul>
+                        <li><strong>2001-2021:</strong> 1,650+ suicide attacks; 17,000+ killed</li>
+                        <li><strong>Taliban/ISIS-K:</strong> Suicide bombers recruited with paradise promises; 72 virgins explicitly cited in training</li>
+                        <li><strong>School Attack (2018):</strong> Kabul education center bombed; 48 students killed preparing for exams; suicide bomber</li>
+                        <li><strong>Wedding Hall (2019):</strong> 63 killed at Shia wedding; ISIS suicide bomber; attacked "infidels"</li>
+                        <li><strong>Maternity Ward (2020):</strong> 24 killed including newborns, mothers; gunmen + suicide bomber</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Pakistan - Suicide Bombing Scourge:</h4>
+                    <ul>
+                        <li><strong>2002-2024:</strong> 500+ suicide attacks; 10,000+ killed</li>
+                        <li><strong>Peshawar School Massacre (2014):</strong> 149 killed (132 children); Taliban; included suicide bombers; "We are dying for Islam and going to paradise"</li>
+                        <li><strong>Marriott Hotel Islamabad (2008):</strong> 54 killed; massive truck bomb; suicide attack; Al-Qaeda claimed</li>
+                        <li><strong>Quetta Attacks:</strong> Multiple suicide bombings targeting Shia Hazaras; 100+ killed in various attacks; TTP claimed martyrdom</li>
+                        <li><strong>Church Attacks:</strong> Peshawar church (2013) - 127 killed by double suicide bombing; targeting Christians</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Israel/Palestine - Suicide Bombing Intifada:</h4>
+                    <ul>
+                        <li><strong>2000-2008 Second Intifada:</strong> 140+ suicide bombings; 800+ Israelis killed</li>
+                        <li><strong>Passover Massacre (2002):</strong> 30 killed at hotel seder; suicide bomber Abdel-Basset Odeh; Hamas praised him as "shahid" (martyr) in paradise</li>
+                        <li><strong>Dolphinarium (2001):</strong> 21 teenagers killed at nightclub; suicide bomber; Hamas/Islamic Jihad praised martyrdom</li>
+                        <li><strong>Bus Bombings:</strong> Multiple attacks on civilian buses; bombers' families received payments; posters celebrated martyrs with paradise imagery</li>
+                        <li><strong>Female Bombers:</strong> Wafa Idris (2002) first female Palestinian suicide bomber; 1 killed, 100+ injured; praised as martyr guaranteed paradise</li>
+                        <li><strong>Martyrdom Culture:</strong> Palestinian TV shows children's programs teaching martyrdom; paradise rewards; 72 virgins openly discussed</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Nigeria - Boko Haram Suicide Attacks:</h4>
+                    <ul>
+                        <li><strong>2011-present:</strong> 500+ suicide bombings; 20,000+ killed</li>
+                        <li><strong>Female Bombers:</strong> Young girls (some as young as 7) strapped with explosives; sent to markets; told they'll go to paradise</li>
+                        <li><strong>Kano Mosque (2014):</strong> 120+ killed; double suicide bombing during Friday prayers</li>
+                        <li><strong>Maiduguri Attacks:</strong> Repeated suicide bombings of markets, mosques, military targets; paradise justification</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Syria/ISIS - Industrial-Scale Suicide Attacks:</h4>
+                    <ul>
+                        <li><strong>2011-2019:</strong> 1,000+ suicide attacks by ISIS, Al-Nusra, other groups</li>
+                        <li><strong>Tactic:</strong> Armored vehicle packed with explosives; driver blows up at target; called "martyrdom operations"</li>
+                        <li><strong>ISIS Videos:</strong> Suicide bombers filmed testimonials praising Allah; excited about paradise; 72 virgins promise explicit</li>
+                        <li><strong>Foreign Fighters:</strong> Thousands traveled to Syria/Iraq specifically to become "martyrs"; paradise belief primary motivation</li>
+                    </ul>
+                </div>
+                <div class="stats-box">
+                    <h4>Evidence of 72 Virgins Motivation:</h4>
+                    <ul>
+                        <li><strong>Martyrdom Videos:</strong> Hundreds of pre-attack videos show bombers citing paradise, houris, rewards</li>
+                        <li><strong>9/11 Instructions:</strong> "Know that the gardens of paradise are waiting for you" - found in hijackers' luggage</li>
+                        <li><strong>Training Materials:</strong> Al-Qaeda, ISIS manuals explicitly promise sexual rewards; houris; eternal pleasure</li>
+                        <li><strong>Family Statements:</strong> Mothers of suicide bombers celebrate on camera: "My son is in paradise with the virgins"</li>
+                        <li><strong>Recruiting Tool:</strong> Young men recruited with promise of paradise; 72 virgins; escape poverty/suffering for eternal pleasure</li>
+                        <li><strong>ISIS Magazines:</strong> Dabiq, Rumiyah magazines explicitly describe paradise rewards including sexual pleasures for martyrs</li>
+                    </ul>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Children as Suicide Bombers:</span>
+                    <div class="detail-value">
+                        <p><strong>Taliban, Boko Haram, ISIS all used children:</strong></p>
+                        <ul>
+                            <li>Boys as young as 8 strapped with explosives</li>
+                            <li>Girls (7-15) sent into markets with suicide vests</li>
+                            <li>Told they'll wake up in paradise with rewards</li>
+                            <li>Cognitive inability to understand death = easier manipulation</li>
+                            <li>Religious authority figures promise heaven = child obeys</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>15. Guaranteed Paradise for Killing in Allah's Cause</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Quranic Text:</span>
+                    <span class="scripture-ref">Quran 9:111</span>
+                    <div class="quote-box">"Allah has purchased from the believers their lives and their properties; in exchange for that they will have Paradise. They fight in the cause of Allah, so they kill and are killed. [It is] a true promise [binding] upon Him."</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Hadith Support:</span>
+                    <span class="scripture-ref">Sahih Bukhari 2797</span>
+                    <div class="quote-box">"A man came to the Prophet and said, 'Instruct me as to such a deed as equals Jihad in reward.' He replied, 'I do not find such a deed.'"</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Real-World Implementation:</span>
+                    <div class="detail-value">
+                        <p>Every major Islamic terrorist group cites Quran 9:111 as theological justification for martyrdom operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGIONAL BREAKDOWN -->
+        <div class="content-card">
+            <span class="category-tag">GEOGRAPHIC IMPACT</span>
+            <h2 id="cat7Title">Region-by-Region Breakdown of Islamic Violence</h2>
+            
+            <div class="harm-item">
+                <h3>Kashmir - Ongoing Genocide of Hindus</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">India - Kashmir</span>
+                        <span class="victim-tag">Kashmiri Pandits (Hindus)</span>
+                        <p><strong>1990 Exodus:</strong> 300,000-600,000 Hindus ethnically cleansed from Kashmir Valley</p>
+                        <p><strong>Mosque Announcements:</strong> "Raliv, Tsaliv, Galiv" (Convert, Leave, or Die)</p>
+                        <p><strong>Massacres:</strong> Wandhama (1998) - 23 Pandits killed including children; Nadimarg (2003) - 24 Pandits executed</p>
+                        <p><strong>Ongoing Terror:</strong> Regular attacks on Hindu civilians, temples; Pakistani-backed militants cite jihad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Pakistan - Systematic Persecution of Minorities</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Pakistan</span>
+                        <span class="victim-tag">Hindus</span>
+                        <span class="victim-tag">Christians</span>
+                        <span class="victim-tag">Ahmadis</span>
+                        <p><strong>Hindu Decline:</strong> 1947: 20% Hindu → 2020: <2% Hindu population</p>
+                        <p><strong>Forced Conversions:</strong> 1,000+ Hindu/Christian girls kidnapped yearly; forced to convert and marry Muslim men</p>
+                        <p><strong>Blasphemy Law:</strong> Weaponized against minorities; death penalty for insulting Islam</p>
+                        <p><strong>Ahmadi Persecution:</strong> Declared non-Muslim by law (1974); banned from calling themselves Muslim; routine attacks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Bangladesh - Hindu Minority Under Attack</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Bangladesh</span>
+                        <span class="victim-tag">Hindus</span>
+                        <span class="victim-tag">Buddhists</span>
+                        <p><strong>Population Decline:</strong> 1947: 29% Hindu → 2011: 8.5% Hindu</p>
+                        <p><strong>1971 Genocide:</strong> 2-3 million killed; Hindu intellectuals specifically targeted</p>
+                        <p><strong>Ongoing Attacks:</strong> Temple destructions; land grabs; forced conversions; rape of Hindu women</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Iran - Women's Rights Obliterated</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Iran</span>
+                        <span class="victim-tag">Women & Girls</span>
+                        <p><strong>Mandatory Hijab:</strong> Morality police enforce dress code; beatings, arrests, imprisonment</p>
+                        <p><strong>Mahsa Amini (2022):</strong> 22-year-old killed by morality police for "improper hijab"; sparked nationwide protests</p>
+                        <p><strong>Protest Crackdown:</strong> 500+ protesters killed; thousands arrested; women specifically targeted</p>
+                        <p><strong>Legal Discrimination:</strong> Women's testimony worth half of men's; cannot travel without male permission; honor killings minimized</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Yemen - Child Brides & Humanitarian Crisis</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Yemen</span>
+                        <span class="victim-tag">Girls & Women</span>
+                        <p><strong>Child Marriage:</strong> 32% married before 18; youngest case: 8-year-old bride died of internal injuries on wedding night</p>
+                        <p><strong>Houthi Rebels:</strong> Shia militia imposes strict Islamic law; child soldiers; attacks on civilians</p>
+                        <p><strong>Al-Qaeda Presence:</strong> AQAP controls territory; implements strict Sharia; executions for apostasy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Saudi Arabia - Women as Property</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Saudi Arabia</span>
+                        <span class="victim-tag">Women</span>
+                        <p><strong>Male Guardianship:</strong> Until 2019, women needed male permission to travel, work, marry; still heavily restricted</p>
+                        <p><strong>Religious Police:</strong> Enforce strict gender segregation; women jailed for driving (until 2018 reform)</p>
+                        <p><strong>Execution for Sorcery:</strong> Women beheaded for "witchcraft" and "sorcery"</p>
+                        <p><strong>Apostasy Death Penalty:</strong> Atheist bloggers jailed; religious freedom zero</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Nigeria - Boko Haram Terror</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Nigeria</span>
+                        <span class="victim-tag">Christians</span>
+                        <span class="victim-tag">Schoolgirls</span>
+                        <p><strong>Boko Haram:</strong> "Western education is forbidden"; 350,000+ killed since 2009</p>
+                        <p><strong>Chibok Kidnapping (2014):</strong> 276 schoolgirls kidnapped; forced conversions; sexual slavery; some still missing</p>
+                        <p><strong>Church Attacks:</strong> Systematic targeting of Christian churches; thousands killed</p>
+                        <p><strong>Sharia Law:</strong> Implemented in northern states; amputations, stonings, floggings</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Somalia - Al-Shabaab Terrorism</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Somalia</span>
+                        <span class="victim-tag">Aid Workers</span>
+                        <span class="victim-tag">Women</span>
+                        <p><strong>Al-Shabaab Control:</strong> Implements strict Sharia; public executions; amputations</p>
+                        <p><strong>Targeted Killings:</strong> Aid workers killed for "working with infidels"</p>
+                        <p><strong>Female Genital Mutilation:</strong> 98% of women; religiously justified despite health dangers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Afghanistan - Taliban Oppression</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Afghanistan</span>
+                        <span class="victim-tag">Women & Girls</span>
+                        <span class="victim-tag">Religious Minorities</span>
+                        <p><strong>Women Banned from:</strong> Education beyond 6th grade; most jobs; public spaces without male guardian; showing face</p>
+                        <p><strong>Public Executions:</strong> Resumed under Taliban; stonings for adultery; amputations for theft</p>
+                        <p><strong>Religious Persecution:</strong> Zero tolerance for non-Muslims; forced conversions or death</p>
+                        <p><strong>Hazara Genocide:</strong> Shia minority systematically targeted; massacres ongoing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="harm-item">
+                <h3>Hamas - Gaza Terror State</h3>
+                <div class="detail-row">
+                    <span class="detail-label">Situation:</span>
+                    <div class="detail-value">
+                        <span class="country-tag">Gaza</span>
+                        <span class="victim-tag">Israeli Civilians</span>
+                        <span class="victim-tag">Palestinian Dissidents</span>
+                        <p><strong>Hamas Charter:</strong> Explicitly calls for killing Jews citing Islamic texts; rejects peace as religious obligation</p>
+                        <p><strong>October 7, 2023:</strong> 1,200+ Israelis massacred; babies beheaded; women gang-raped; families burned alive; hostages taken</p>
+                        <p><strong>Human Shields:</strong> Uses civilians deliberately; stores weapons in mosques, schools, hospitals</p>
+                        <p><strong>Internal Terror:</strong> Executes Palestinian "collaborators" without trial; oppresses women; persecutes LGBTQ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONCLUSION -->
+        <div class="content-card">
+            <h2 id="conclusionTitle">📋 Conclusion: The Undeniable Connection</h2>
+            <div class="harm-item">
+                <h3 id="conclusionH3">What This Documentation Proves Beyond Doubt:</h3>
+                <div class="detail-row">
+                    <span class="detail-label">1. Direct Causation:</span>
+                    <div class="detail-value">Every case documented shows terrorists, oppressors, and human rights violators explicitly citing Quranic verses and Hadith to justify their actions. This is not "misinterpretation" - they quote the texts accurately.</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">2. Global Scale:</span>
+                    <div class="detail-value">From Kashmir to Nigeria, from Yemen to UK, from Afghanistan to Gaza - the pattern is identical: Islamic texts → Religious justification → Violence and oppression</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">3. Multiple Victim Categories:</span>
+                    <div class="detail-value">Women, children, religious minorities (Hindus, Christians, Jews, Buddhists, Sikhs, atheists), LGBTQ, apostates, critics - all face systematic persecution justified by the same religious texts.</div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">4. Impossible to Deny:</span>
+                    <div class="detail-value">
+                        <ul>
+                            <li>✓ Perpetrators cite the texts themselves</li>
+                            <li>✓ Victims number in millions over decades</li>
+                            <li>✓ Documented in court cases, investigations, human rights reports</li>
+                            <li>✓ Ongoing right now in dozens of countries</li>
+                            <li>✓ Consistent pattern across different cultures, regions, time periods</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">5. The Texts ARE the Problem:</span>
+                    <div class="detail-value">When terrorists quote Quran 9:5 before beheading someone, when child brides are justified by Muhammad's marriage to Aisha, when honor killings cite Quran 4:34, when grooming gangs view non-Muslim girls as "war booty" per Quran 4:24 - the problem is the SOURCE TEXT, not "misinterpretation."</div>
+                </div>
+                <div class="stats-box">
+                    <h4>Final Statistics - The Human Cost:</h4>
+                    <ul>
+                        <li><strong>Estimated Deaths:</strong> 270 million killed in Islamic conquests and jihad over 1,400 years (political scientist Rudolph Rummel)</li>
+                        <li><strong>Current Terrorism:</strong> 90%+ of global terrorist attacks have Islamic motivation (GTI 2023)</li>
+                        <li><strong>Women Oppressed:</strong> 600+ million Muslim women live under Islamic law restricting basic rights</li>
+                        <li><strong>Child Marriage:</strong> 12 million girls married yearly in Muslim-majority countries</li>
+                        <li><strong>Apostasy Laws:</strong> 13 countries with death penalty for leaving Islam</li>
+                        <li><strong>Blasphemy Executions:</strong> Dozens killed yearly for criticizing Islam</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p id="footerCopyright">&copy; 2025 Quran Scope. All rights reserved.</p>
+        <p id="footerDesc">Academic Research Resource • Human Rights Documentation</p>
+    </footer>
+
+    <script>
+        // Generate language bar and load content
+        generateLanguageBar('real-world-harm');
+        loadLanguageContent('harm');
+    </script>
+</body>
+</html>

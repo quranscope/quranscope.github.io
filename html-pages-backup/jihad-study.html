@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihad: Complete Study - Types, Evidence & History</title>
+    <script src="js/language-switcher.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.95; margin-top: 0.5rem; }
+        .header a {
+            color: white; text-decoration: none; background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem; border-radius: 5px; display: inline-block; margin-top: 1rem;
+        }
+        .header a:hover { background: rgba(255,255,255,0.3); }
+
+        .language-bar {
+            display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.25rem;
+            margin-top: 1rem;
+        }
+        .language-bar span {
+            color: rgba(255,255,255,0.9); margin-right: 0.5rem; font-size: 0.9rem; font-weight: bold;
+        }
+        .lang-btn {
+            padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); color: white;
+            border: 1px solid rgba(255,255,255,0.3); border-radius: 5px; cursor: pointer;
+            font-size: 0.9rem; transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.3); border-color: white; transform: translateY(-2px);
+        }
+        .lang-btn.active {
+            background: white; color: #c0392b; font-weight: bold; border-color: white;
+        }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+
+        .intro {
+            background: #fff3cd; border-left: 5px solid #ffc107; padding: 1.5rem;
+            margin-bottom: 2rem; border-radius: 5px;
+        }
+        .intro h3 { color: #856404; margin-bottom: 0.5rem; }
+        .intro p { color: #856404; margin: 0.5rem 0; }
+
+        .section-card {
+            background: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-card h2 {
+            color: #c0392b; margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .section-card h3 {
+            color: #c0392b; margin-top: 1.5rem; margin-bottom: 1rem;
+        }
+
+        .type-box {
+            background: #e8f5e9; border-left: 4px solid #4caf50;
+            padding: 1rem; margin: 1rem 0; border-radius: 4px;
+        }
+
+        .type-box h4 { color: #2e7d32; margin-bottom: 0.5rem; }
+
+        .verse-box {
+            background: #e3f2fd; border-left: 4px solid #2196f3;
+            padding: 1rem; margin: 1rem 0; border-radius: 4px;
+        }
+
+        .verse-box .verse-ref {
+            font-weight: bold; color: #1565c0; margin-bottom: 0.5rem;
+        }
+
+        .hadith-box {
+            background: #f3e5f5; border-left: 4px solid #9c27b0;
+            padding: 1rem; margin: 1rem 0; border-radius: 4px;
+        }
+
+        .hadith-box .hadith-ref {
+            font-weight: bold; color: #6a1b9a; margin-bottom: 0.5rem;
+        }
+
+        .war-box {
+            background: #ffebee; border-left: 4px solid #f44336;
+            padding: 1rem; margin: 1rem 0; border-radius: 4px;
+        }
+
+        .war-box h4 { color: #c62828; margin-bottom: 0.5rem; }
+
+        .modern-box {
+            background: #fff3e0; border-left: 4px solid #ff9800;
+            padding: 1rem; margin: 1rem 0; border-radius: 4px;
+        }
+
+        .modern-box h4 { color: #e65100; margin-bottom: 0.5rem; }
+
+        table {
+            width: 100%; border-collapse: collapse; margin: 1rem 0;
+            background: white;
+        }
+
+        th {
+            background: #c0392b; color: white; padding: 0.75rem;
+            text-align: left; font-weight: bold;
+        }
+
+        td {
+            padding: 0.75rem; border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover { background: #f5f5f5; }
+
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem; margin: 1.5rem 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white; padding: 1.5rem; border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box h3 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .stat-box p { opacity: 0.95; }
+
+        ul, ol { margin-left: 2rem; margin-top: 0.5rem; }
+        li { margin: 0.5rem 0; }
+
+        .quote {
+            font-style: italic; background: #f8f9fa;
+            padding: 1rem; border-left: 3px solid #c0392b;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .container { padding: 0 0.5rem; }
+            .section-card { padding: 1rem; }
+            table { font-size: 0.9rem; }
+            th, td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="pageTitle">Jihad: Complete Study & Analysis</h1>
+        <p id="pageSubtitle">Types, Quranic Evidence, Historical Reality & Modern Manifestations</p>
+        <a href="index.html" id="backLink">← Back to Home</a>
+        <div class="language-bar">
+            <span id="langLabel">Choose Language:</span>
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="ar">العربية</button>
+            <button class="lang-btn" data-lang="de">Deutsch</button>
+            <button class="lang-btn" data-lang="fr">Français</button>
+            <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            <button class="lang-btn" data-lang="ml">മലയാളം</button>
+            <button class="lang-btn" data-lang="pl">Polski</button>
+            <button class="lang-btn" data-lang="ta">தமிழ்</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <h3 id="introTitle">📖 Understanding Jihad: Beyond the Rhetoric</h3>
+            <p id="introPara1">Jihad is often portrayed as "inner spiritual struggle" in apologetic discourse, but Islamic texts reveal a more complex and violent reality. This comprehensive study examines what the Quran, Hadith, and Sira actually say about jihad, how it was practiced historically, and how it manifests today.</p>
+            <p id="introPara2"><strong>Key Finding:</strong> While "struggle" is a linguistic meaning, the overwhelming majority of Quranic and Hadith references to jihad refer to physical warfare against non-Muslims to expand Islamic rule.</p>
+        </div>
+
+        <div class="section-card">
+            <h2 id="etymologyTitle">📚 Etymology & Definition</h2>
+            
+            <div class="type-box">
+                <h4 id="lingMeaningTitle">Linguistic Meaning</h4>
+                <p id="lingMeaningText"><strong>Arabic Root:</strong> ج-ه-د (j-h-d) = "to struggle, strive, exert effort"</p>
+                <p id="lingMeaningText2">The word "jihad" literally means "struggle" or "striving." However, in Islamic jurisprudence (fiqh) and historical practice, it has specific theological and military meanings.</p>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-ref" id="quranDefTitle">Quranic Definition - The "Sword Verse"</div>
+                <p id="quranDef1"><strong>Quran 9:5</strong> - "And when the sacred months have passed, then kill the polytheists wherever you find them and capture them and besiege them and sit in wait for them at every place of ambush. But if they should repent, establish prayer, and give zakah, let them [go] on their way."</p>
+                <p id="quranDef2"><strong>Quran 9:29</strong> - "Fight those who do not believe in Allah or in the Last Day and who do not consider unlawful what Allah and His Messenger have made unlawful and who do not adopt the religion of truth from those who were given the Scripture - [fight] until they give the jizyah willingly while they are humbled."</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="prophetDefTitle">Muhammad's Definition</div>
+                <p id="prophetDef1"><strong>Sahih Bukhari 2785</strong> - "Allah's Messenger was asked, 'What is the best deed?' He replied, 'To believe in Allah and His Apostle.' The questioner then asked, 'What is the next (in goodness)?' He replied, 'To participate in Jihad (religious fighting) in Allah's Cause.'"</p>
+                <p id="prophetDef2"><strong>Sahih Muslim 1731</strong> - "I have been commanded to fight against people till they testify that there is no god but Allah, that Muhammad is the messenger of Allah."</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="typesTitle">⚔️ Types of Jihad in Islamic Theology</h2>
+
+            <h3 id="greaterJihadTitle">1. "Greater Jihad" (Jihad al-Akbar) - Inner Struggle</h3>
+            <div class="type-box">
+                <h4 id="greaterJihadSubtitle">The Apologetic Narrative</h4>
+                <p id="greaterJihadText1">Modern apologists claim jihad primarily means "inner spiritual struggle against ego and sin."</p>
+                <p id="greaterJihadText2"><strong>Reality:</strong> This concept is based on a <em>weak hadith</em> (not found in Sahih collections) and contradicts the overwhelming textual evidence. The famous statement "We have returned from the lesser jihad to the greater jihad" is considered fabricated (mawdu) by hadith scholars including Al-Suyuti and Ibn Taymiyyah.</p>
+            </div>
+
+            <h3 id="lesserJihadTitle">2. "Lesser Jihad" (Jihad al-Asghar) - Physical Warfare</h3>
+            <div class="war-box">
+                <h4 id="lesserJihadSubtitle">Military Jihad - The Dominant Understanding</h4>
+                <p id="lesserJihadText1">This is jihad as understood by Islamic scholars throughout history:</p>
+                <ul>
+                    <li id="lesserItem1"><strong>Offensive Jihad:</strong> Waging war to expand Islamic territory (Dar al-Islam) at the expense of non-Muslim lands (Dar al-Harb)</li>
+                    <li id="lesserItem2"><strong>Defensive Jihad:</strong> Fighting when Muslim lands are attacked</li>
+                    <li id="lesserItem3"><strong>Obligation:</strong> Fard Kifaya (collective duty) when conditions are met, Fard Ayn (individual duty) when Muslims are attacked</li>
+                </ul>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-ref" id="offensiveTitle">Offensive Warfare Mandated</div>
+                <p id="offensiveText1"><strong>Quran 9:123</strong> - "O you who have believed, fight those adjacent to you of the disbelievers and let them find in you harshness. And know that Allah is with the righteous."</p>
+                <p id="offensiveText2"><strong>Quran 2:216</strong> - "Fighting has been enjoined upon you while it is hateful to you. But perhaps you hate a thing and it is good for you; and perhaps you love a thing and it is bad for you. And Allah Knows, while you know not."</p>
+            </div>
+
+            <h3 id="otherTypesTitle">3. Other Forms of Jihad</h3>
+            <div class="type-box">
+                <ul>
+                    <li id="otherItem1"><strong>Jihad bil-Lisan (Tongue):</strong> Verbal propagation and defense of Islam</li>
+                    <li id="otherItem2"><strong>Jihad bil-Qalam (Pen):</strong> Writing and scholarship for Islamic causes</li>
+                    <li id="otherItem3"><strong>Jihad bil-Mal (Wealth):</strong> Financial support for jihad</li>
+                    <li id="otherItem4"><strong>Jihad bil-Nafs (Self):</strong> Personal purification (least emphasized)</li>
+                </ul>
+                <p id="otherTypesNote"><strong>Note:</strong> Even these "non-violent" forms are ultimately in service of Islamic dominance.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="quranEvidenceTitle">📖 Quranic Evidence for Violent Jihad</h2>
+
+            <h3 id="chronologyTitle">Chronological Development (Abrogation Principle)</h3>
+            <p id="chronologyText">The Quran's verses on jihad evolved as Muhammad's power grew, with later verses abrogating (canceling) earlier peaceful ones:</p>
+
+            <div class="verse-box">
+                <div class="verse-ref" id="meccanTitle">Meccan Period (Weak) - Tolerance</div>
+                <p id="meccanText1"><strong>Quran 109:6</strong> - "For you is your religion, and for me is my religion."</p>
+                <p id="meccanText2"><strong>Quran 2:256</strong> - "There shall be no compulsion in religion."</p>
+                <p id="meccanNote"><em>Context: Muhammad had few followers and no military power.</em></p>
+            </div>
+
+            <div class="verse-box">
+                <div class="verse-ref" id="medinanTitle">Medinan Period (Strong) - Warfare</div>
+                <p id="medinanText1"><strong>Quran 9:5 (Sword Verse)</strong> - "Kill the polytheists wherever you find them..."</p>
+                <p id="medinanText2"><strong>Quran 47:4</strong> - "So when you meet those who disbelieve, strike [their] necks until, when you have inflicted slaughter upon them, then secure their bonds..."</p>
+                <p id="medinanNote"><em>Context: Muhammad had an army and political power. These verses abrogate earlier peaceful verses according to scholars like Ibn Kathir.</em></p>
+            </div>
+
+            <h3 id="keyVersesTitle">Key Quranic Verses Commanding Jihad</h3>
+            <table id="versesTable">
+                <thead>
+                    <tr>
+                        <th id="verseHeader">Verse</th>
+                        <th id="commandHeader">Command</th>
+                        <th id="contextHeader">Context</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Quran 2:191-193</td>
+                        <td id="verse2191">"And kill them wherever you overtake them... And fight them until there is no fitnah and [until] the religion, all of it, is for Allah."</td>
+                        <td id="context2191">Warfare against polytheists</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 4:89</td>
+                        <td id="verse489">"They wish you would disbelieve... so seize them and kill them wherever you find them."</td>
+                        <td id="context489">Apostates and hypocrites</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 8:12</td>
+                        <td id="verse812">"I will cast terror into the hearts of those who disbelieved, so strike [them] upon the necks and strike from them every fingertip."</td>
+                        <td id="context812">Allah's command to angels at Badr</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 8:39</td>
+                        <td id="verse839">"Fight them until there is no fitnah and [until] the religion, all of it, is for Allah."</td>
+                        <td id="context839">Universal religious domination</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 9:29</td>
+                        <td id="verse929">"Fight those who do not believe... until they give the jizyah willingly while they are humbled."</td>
+                        <td id="context929">Jews and Christians (dhimmi status)</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 9:111</td>
+                        <td id="verse9111">"Allah has purchased from the believers their lives and their properties... they fight in the cause of Allah, so they kill and are killed."</td>
+                        <td id="context9111">Martyrdom promise</td>
+                    </tr>
+                    <tr>
+                        <td>Quran 48:29</td>
+                        <td id="verse4829">"Muhammad is the Messenger of Allah; and those with him are forceful against the disbelievers, merciful among themselves."</td>
+                        <td id="context4829">Character of believers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-card">
+            <h2 id="hadithEvidenceTitle">📜 Hadith Evidence for Violent Jihad</h2>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith1Title">Jihad as the Best Deed</div>
+                <p id="hadith1Text"><strong>Sahih Bukhari 2785</strong> - Muhammad said jihad (fighting) is the second-best deed after belief in Allah.</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith2Title">Command to Fight Until Conversion</div>
+                <p id="hadith2Text"><strong>Sahih Muslim 1731</strong> - "I have been commanded to fight against people till they testify that there is no god but Allah, that Muhammad is the messenger of Allah, and till they establish the prayer, and pay the Zakat."</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith3Title">Martyrdom Rewards</div>
+                <p id="hadith3Text"><strong>Sahih Bukhari 2797</strong> - "A martyr receives six blessings from Allah: forgiveness at the first drop of blood, seeing his seat in Paradise, protection from punishment of the grave, security from the greatest terror, a crown of dignity with precious stones, marriage to 72 houris, and intercession for 70 relatives."</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith4Title">Terror as Strategy</div>
+                <p id="hadith4Text"><strong>Sahih Bukhari 2977</strong> - Muhammad said: "I have been made victorious with terror."</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith5Title">Paradise Under Swords</div>
+                <p id="hadith5Text"><strong>Sahih Bukhari 2818</strong> - "Know that Paradise is under the shades of swords."</p>
+            </div>
+
+            <div class="hadith-box">
+                <div class="hadith-ref" id="hadith6Title">Continuous Warfare Until Judgment Day</div>
+                <p id="hadith6Text"><strong>Sahih Muslim 1731a</strong> - "I have been commanded to fight against people so long as they do not declare that there is no god but Allah."</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="historicalTitle">🗡️ Historical Evidence: Jihad in Practice</h2>
+
+            <h3 id="muhammadCampaignsTitle">Muhammad's Military Campaigns</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>27</h3>
+                    <p id="statGhazwa">Ghazwa (battles led personally)</p>
+                </div>
+                <div class="stat-box">
+                    <h3>38</h3>
+                    <p id="statSaraya">Saraya (raids sent)</p>
+                </div>
+                <div class="stat-box">
+                    <h3>65+</h3>
+                    <p id="statTotal">Total military operations</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10</h3>
+                    <p id="statYears">Years of warfare (622-632 CE)</p>
+                </div>
+            </div>
+
+            <h3 id="majorBattlesTitle">Major Military Operations</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="battleYearHeader">Year</th>
+                        <th id="battleNameHeader">Battle/Event</th>
+                        <th id="battleVictimsHeader">Victims</th>
+                        <th id="battleOutcomeHeader">Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>624</td>
+                        <td id="battleBadr">Battle of Badr</td>
+                        <td id="battleBadrVictims">70 Quraysh killed, 70 captured</td>
+                        <td id="battleBadrOutcome">First major victory, beheading of prisoners</td>
+                    </tr>
+                    <tr>
+                        <td>625</td>
+                        <td id="battleUhud">Battle of Uhud</td>
+                        <td id="battleUhudVictims">70 Muslims killed</td>
+                        <td id="battleUhudOutcome">Tactical defeat but continued warfare</td>
+                    </tr>
+                    <tr>
+                        <td>627</td>
+                        <td id="battleTrench">Battle of the Trench</td>
+                        <td id="battleTrenchVictims">600-900 Jewish men beheaded</td>
+                        <td id="battleTrenchOutcome">Genocide of Banu Qurayza tribe</td>
+                    </tr>
+                    <tr>
+                        <td>628</td>
+                        <td id="battleKhaybar">Battle of Khaybar</td>
+                        <td id="battleKhaybarVictims">Jewish fortress conquered</td>
+                        <td id="battleKhaybarOutcome">Torture of Kinana, enslavement of Safiyya</td>
+                    </tr>
+                    <tr>
+                        <td>630</td>
+                        <td id="battleMecca">Conquest of Mecca</td>
+                        <td id="battleMeccaVictims">10,000 troops, minimal resistance</td>
+                        <td id="battleMeccaOutcome">Forced conversions, destruction of idols</td>
+                    </tr>
+                    <tr>
+                        <td>630</td>
+                        <td id="battleHunain">Battle of Hunayn</td>
+                        <td id="battleHunainVictims">6,000 captives enslaved</td>
+                        <td id="battleHunainOutcome">Mass distribution of slaves</td>
+                    </tr>
+                    <tr>
+                        <td>630</td>
+                        <td id="battleTabuk">Expedition of Tabuk</td>
+                        <td id="battleTabukVictims">30,000 troops mobilized</td>
+                        <td id="battleTabukOutcome">Byzantine territories threatened</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id="rashidunTitle">Rashidun Caliphate (632-661 CE) - The "Rightly Guided" Conquerors</h3>
+            <div class="war-box">
+                <h4 id="rashidunSubtitle">Massive Expansion Through Warfare</h4>
+                <p id="rashidunText1">Within 30 years of Muhammad's death, Muslim armies conquered:</p>
+                <ul>
+                    <li id="rashidunItem1"><strong>Byzantine Syria & Palestine:</strong> Battle of Yarmouk (636), 40,000+ dead</li>
+                    <li id="rashidunItem2"><strong>Sassanid Persia:</strong> Battle of Qadisiyyah (636), entire empire collapsed</li>
+                    <li id="rashidunItem3"><strong>Egypt:</strong> Conquered 639-642, Alexandria burned, library destroyed</li>
+                    <li id="rashidunItem4"><strong>North Africa:</strong> Berber populations forced to convert</li>
+                    <li id="rashidunItem5"><strong>Cyprus, Armenia, Mesopotamia:</strong> Constant raids and conquests</li>
+                </ul>
+            </div>
+
+            <h3 id="umayyadTitle">Umayyad Caliphate (661-750 CE) - Peak Expansion</h3>
+            <div class="war-box">
+                <h4 id="umayyadSubtitle">Empire Building Through Jihad</h4>
+                <ul>
+                    <li id="umayyadItem1"><strong>Spain (711 CE):</strong> Entire Iberian Peninsula conquered, 700 years of occupation</li>
+                    <li id="umayyadItem2"><strong>Central Asia:</strong> Forced conversion of Zoroastrians, Buddhists, Hindus</li>
+                    <li id="umayyadItem3"><strong>India:</strong> Muhammad bin Qasim's invasion of Sindh (711-712)</li>
+                    <li id="umayyadItem4"><strong>France:</strong> Battle of Tours (732) - stopped by Charles Martel</li>
+                    <li id="umayyadItem5"><strong>Constantinople:</strong> Multiple sieges (674-678, 717-718)</li>
+                </ul>
+            </div>
+
+            <h3 id="abbasidTitle">Abbasid & Later Periods</h3>
+            <div class="war-box">
+                <h4 id="abbasidSubtitle">Continued Warfare & Slave Trade</h4>
+                <ul>
+                    <li id="abbasidItem1"><strong>Indian Subcontinent:</strong> Mahmud of Ghazni (1001-1026) - 17 invasions, destruction of Hindu temples, millions enslaved</li>
+                    <li id="abbasidItem2"><strong>Byzantine Empire:</strong> Constant border warfare, Anatolia conquered</li>
+                    <li id="abbasidItem3"><strong>Africa:</strong> Arab slave trade - 18+ million Africans enslaved over 1,300 years</li>
+                    <li id="abbasidItem4"><strong>Crusades Response:</strong> Saladin's jihad to recapture Jerusalem</li>
+                </ul>
+            </div>
+
+            <h3 id="ottomanTitle">Ottoman Empire (1299-1922)</h3>
+            <div class="war-box">
+                <h4 id="ottomanSubtitle">Ghazi Warriors & Genocides</h4>
+                <ul>
+                    <li id="ottomanItem1"><strong>Constantinople (1453):</strong> Fall of Byzantine Empire, forced conversions</li>
+                    <li id="ottomanItem2"><strong>Balkans:</strong> Devshirme system (Christian boys enslaved, converted to janissaries)</li>
+                    <li id="ottomanItem3"><strong>Armenian Genocide (1915-1923):</strong> 1.5 million Christians massacred</li>
+                    <li id="ottomanItem4"><strong>Greek Genocide (1913-1923):</strong> 750,000-900,000 killed</li>
+                    <li id="ottomanItem5"><strong>Assyrian Genocide (1914-1920):</strong> 250,000-750,000 killed</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="scholarlyTitle">🕌 What Islamic Scholars Say About Jihad</h2>
+
+            <div class="quote" id="quoteIbnKathir">
+                <strong>Ibn Kathir (d. 1373) - Tafsir on Quran 9:5:</strong><br>
+                "This verse is called the Verse of the Sword concerning which Ad-Dahhak bin Muzahim said: It abrogated every agreement of peace between the Prophet and any idolater, every treaty, and every term."
+            </div>
+
+            <div class="quote" id="quoteIbnTaymiyyah">
+                <strong>Ibn Taymiyyah (d. 1328) - Medieval Scholar:</strong><br>
+                "The purpose of fighting in Islam is that the religion in its entirety should be for Allah alone. Whoever refuses this must be fought, as Allah said: 'Fight them until there is no fitnah and the religion, all of it, is for Allah.'"
+            </div>
+
+            <div class="quote" id="quoteAveroes">
+                <strong>Averroes (Ibn Rushd, d. 1198) - Bidayat al-Mujtahid:</strong><br>
+                "Muslims agree that the purpose of fighting the People of the Book is twofold: either they convert to Islam or pay the jizyah. The Muslims are agreed that this is a fard kifaya (collective obligation)."
+            </div>
+
+            <div class="quote" id="quoteQurtubi">
+                <strong>Al-Qurtubi (d. 1273) - Tafsir:</strong><br>
+                "Jihad is called for against all of the different groups of disbelievers. This jihad is an individual obligation (fard 'ayn) when a Muslim land is attacked."
+            </div>
+
+            <div class="quote" id="quoteShafii">
+                <strong>Imam Shafi'i (d. 820) - Founder of School of Law:</strong><br>
+                "The least that the imam must do is to raid the enemy's territory once a year so that the jizyah can be collected from the dhimmis. If the imam fails to do that, he is in error."
+            </div>
+
+            <div class="modern-box">
+                <h4 id="modernScholarsTitle">Modern Scholars Affirm Offensive Jihad</h4>
+                <ul>
+                    <li id="modernItem1"><strong>Sayyid Qutb (d. 1966):</strong> "Islam is not merely a belief, so it has to strive actively to secure its own environment... Islam has every right to take the initiative."</li>
+                    <li id="modernItem2"><strong>Abdullah Azzam (d. 1989):</strong> "Jihad and the rifle alone: no negotiations, no conferences, and no dialogues."</li>
+                    <li id="modernItem3"><strong>Yusuf al-Qaradawi:</strong> "I support Hamas, the Islamic Jihad, and Hezbollah. I oppose the peace process... I support martyrdom operations."</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="modernTitle">🌍 Modern Manifestations of Jihad</h2>
+
+            <h3 id="terrorGroupsTitle">Major Jihadist Organizations (2000-Present)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="groupHeader">Group</th>
+                        <th id="regionHeader">Region</th>
+                        <th id="deathsHeader">Est. Deaths</th>
+                        <th id="justificationHeader">Quranic Justification Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="groupAlQaeda">Al-Qaeda</td>
+                        <td id="regionAlQaeda">Global</td>
+                        <td id="deathsAlQaeda">15,000+ direct</td>
+                        <td id="justAlQaeda">9/11 (Quran 9:111, martyrdom)</td>
+                    </tr>
+                    <tr>
+                        <td id="groupISIS">ISIS/ISIL/Daesh</td>
+                        <td id="regionISIS">Iraq, Syria, Global</td>
+                        <td id="deathsISIS">50,000-70,000</td>
+                        <td id="justISIS">Quran 9:5, 47:4 (beheadings), sex slavery (Quran 4:3, 23:5-6)</td>
+                    </tr>
+                    <tr>
+                        <td id="groupBoko">Boko Haram</td>
+                        <td id="regionBoko">Nigeria, West Africa</td>
+                        <td id="deathsBoko">35,000+</td>
+                        <td id="justBoko">Against "Western education," Chibok girls kidnapping</td>
+                    </tr>
+                    <tr>
+                        <td id="groupTaliban">Taliban</td>
+                        <td id="regionTaliban">Afghanistan, Pakistan</td>
+                        <td id="deathsTaliban">50,000+ civilians</td>
+                        <td id="justTaliban">Sharia law, destruction of Bamiyan Buddhas</td>
+                    </tr>
+                    <tr>
+                        <td id="groupHamas">Hamas</td>
+                        <td id="regionHamas">Gaza, Israel</td>
+                        <td id="deathsHamas">5,000+ (incl. Oct 7, 2023)</td>
+                        <td id="justHamas">Charter cites Quran 9:29, calls for Jewish destruction</td>
+                    </tr>
+                    <tr>
+                        <td id="groupHezbollah">Hezbollah</td>
+                        <td id="regionHezbollah">Lebanon</td>
+                        <td id="deathsHezbollah">3,000+</td>
+                        <td id="justHezbollah">Iranian-backed, suicide bombings justified</td>
+                    </tr>
+                    <tr>
+                        <td id="groupAl-Shabaab">Al-Shabaab</td>
+                        <td id="regionShabaab">Somalia, East Africa</td>
+                        <td id="deathsShabaab">10,000+</td>
+                        <td id="justShabaab">Westgate Mall attack, Garissa University massacre</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 id="attacksTitle">Major Jihad Terrorist Attacks (21st Century)</h3>
+            <div class="war-box">
+                <h4 id="attacksSubtitle">Selected High-Profile Attacks</h4>
+                <ul>
+                    <li id="attack1"><strong>9/11 (2001):</strong> 2,977 killed - Al-Qaeda</li>
+                    <li id="attack2"><strong>Beslan School Siege (2004):</strong> 334 killed (186 children) - Chechen jihadists</li>
+                    <li id="attack3"><strong>Madrid Train Bombings (2004):</strong> 191 killed - Al-Qaeda</li>
+                    <li id="attack4"><strong>London Bombings (2005):</strong> 52 killed - Al-Qaeda inspired</li>
+                    <li id="attack5"><strong>Mumbai Attacks (2008):</strong> 166 killed - Lashkar-e-Taiba</li>
+                    <li id="attack6"><strong>Nairobi Westgate Mall (2013):</strong> 67 killed - Al-Shabaab</li>
+                    <li id="attack7"><strong>Peshawar School Massacre (2014):</strong> 141 killed (132 children) - Taliban</li>
+                    <li id="attack8"><strong>Charlie Hebdo (2015):</strong> 12 killed - Al-Qaeda</li>
+                    <li id="attack9"><strong>Paris Attacks (2015):</strong> 130 killed - ISIS</li>
+                    <li id="attack10"><strong>Brussels Bombings (2016):</strong> 32 killed - ISIS</li>
+                    <li id="attack11"><strong>Nice Truck Attack (2016):</strong> 86 killed - ISIS inspired</li>
+                    <li id="attack12"><strong>Manchester Arena (2017):</strong> 22 killed - ISIS inspired</li>
+                    <li id="attack13"><strong>Christchurch Response Threats (ongoing):</strong> ISIS called for revenge attacks</li>
+                    <li id="attack14"><strong>Hamas October 7 Massacre (2023):</strong> 1,200+ killed, 240+ kidnapped</li>
+                </ul>
+            </div>
+
+            <h3 id="currentTitle">Current Manifestations (2020s)</h3>
+            <div class="modern-box">
+                <h4 id="currentSubtitle">Ongoing Jihad Activities</h4>
+                <ul>
+                    <li id="current1"><strong>Afghanistan:</strong> Taliban's return to power (2021), strict Sharia enforcement, women's rights eliminated</li>
+                    <li id="current2"><strong>Nigeria:</strong> Boko Haram and ISWAP continue attacks, kidnappings</li>
+                    <li id="current3"><strong>Syria/Iraq:</strong> ISIS remnants still active in desert regions</li>
+                    <li id="current4"><strong>Sahel Region (Africa):</strong> Multiple jihadist groups expanding</li>
+                    <li id="current5"><strong>Kashmir:</strong> Pakistan-backed jihadist insurgency continues</li>
+                    <li id="current6"><strong>Philippines:</strong> Abu Sayyaf and ISIL-affiliated groups</li>
+                    <li id="current7"><strong>Europe:</strong> Lone wolf attacks, grooming gangs, no-go zones</li>
+                    <li id="current8"><strong>Social Media:</strong> Online radicalization, ISIS propaganda continues</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="whyTitle">❓ Why Jihad Continues</h2>
+
+            <div class="type-box">
+                <h4 id="reason1Title">1. Theological Mandate</h4>
+                <p id="reason1Text">Jihad is not a "perversion" of Islam - it's commanded in the Quran (9:29, 9:111), demonstrated by Muhammad's life, and affirmed by 1,400 years of scholarship. Any Muslim who reads the source texts in Arabic can find explicit commands to fight non-Muslims.</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason2Title">2. Doctrinal Clarity</h4>
+                <p id="reason2Text">Unlike the "spiritual struggle" apologetic, the texts are unambiguous about military jihad. Every major school of Islamic jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali) agrees that offensive jihad is part of Islam.</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason3Title">3. Martyrdom Incentive</h4>
+                <p id="reason3Text">The promise of paradise (with 72 virgins, rivers of wine, eternal pleasure) for dying in jihad creates a powerful motivation that transcends worldly concerns. (Quran 9:111, multiple Sahih Hadiths)</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason4Title">4. Collective Memory</h4>
+                <p id="reason4Text">Muslims are taught about early Islamic conquests as glorious victories. The "Golden Age" of Islam was built on military expansion and subjugation of non-Muslims, creating a nostalgic ideal.</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason5Title">5. Political Tool</h4>
+                <p id="reason5Text">Leaders use jihad to mobilize populations, distract from internal problems, and justify authoritarianism. It's a mechanism of political control masquerading as religious duty.</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason6Title">6. No Reformation</h4>
+                <p id="reason6Text">Unlike Christianity's Reformation, Islam lacks a mechanism to reinterpret violent texts. The Quran is considered the eternal, unchangeable word of Allah - literal reinterpretation is heresy (bid'ah).</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason7Title">7. Apostasy Laws</h4>
+                <p id="reason7Text">Muslims who question jihad or advocate for peace can be accused of apostasy (punishable by death in Islamic law), silencing internal reform movements.</p>
+            </div>
+
+            <div class="type-box">
+                <h4 id="reason8Title">8. Western Enablement</h4>
+                <p id="reason8Text">Western politicians and media promote the "religion of peace" narrative, call criticism "Islamophobia," and refuse to acknowledge the doctrinal basis of jihad, preventing honest discussion and solutions.</p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2 id="conclusionTitle">📊 Conclusion</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>164</h3>
+                    <p id="statJihadVerses">Verses on jihad in Quran</p>
+                </div>
+                <div class="stat-box">
+                    <h3>1,400</h3>
+                    <p id="statYearsWar">Years of continuous warfare</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100+</h3>
+                    <p id="statCountries">Countries affected</p>
+                </div>
+                <div class="stat-box">
+                    <h3>270M+</h3>
+                    <p id="statDeaths">Estimated deaths (total history)</p>
+                </div>
+            </div>
+
+            <div class="intro">
+                <h3 id="finalTitle">The Inescapable Reality</h3>
+                <p id="finalPara1">Jihad is not a "misinterpretation" or "extremism" - it is core Islamic doctrine based on the Quran, exemplified by Muhammad's life, codified in Hadith and Sira, systematized by 14 centuries of Islamic scholars, and practiced continuously throughout history to this day.</p>
+                <p id="finalPara2">The "inner struggle" interpretation is a modern apologetic innovation that contradicts the source texts, historical practice, and scholarly consensus. When ISIS, Al-Qaeda, Taliban, and Hamas cite Quranic verses to justify their actions, they are being textually accurate.</p>
+                <p id="finalPara3"><strong>The question is not whether jihad is in Islam - it demonstrably is. The question is whether Muslims will continue following these 7th-century commands or join the modern world by reforming or leaving Islam entirely.</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        loadTranslations('jihad');
+    </script>
+</body>
+</html>

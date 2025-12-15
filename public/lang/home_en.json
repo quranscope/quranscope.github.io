@@ -1,0 +1,74 @@
+{
+  "title": "Quran Scope - Historical & Critical Analysis",
+  "description": "Comprehensive historical, textual, and critical analysis of Quranic content, examining its sources, claims, and historical development",
+  "researchOverview": "Research Overview",
+  "intro": "This website presents comprehensive historical, textual, and critical analysis of Quranic content, examining its sources, claims, and historical development.",
+  "cards": {
+    "comparative": {
+      "title": "Copied & Edited Content",
+      "subtitle": "How Quranic Narratives Were Derived from Earlier Sources",
+      "description": "75+ documented parallels between Quranic stories and earlier sources",
+      "button": "View Research →"
+    },
+    "scientific": {
+      "title": "Scientific Inaccuracies",
+      "subtitle": "Failed Scientific Arguments in the Quran",
+      "description": "40+ documented errors in cosmology, biology, and natural phenomena",
+      "button": "View Research →"
+    },
+    "expansion": {
+      "title": "Violent Expansion History",
+      "subtitle": "14 Centuries of Military Conquest and Forced Conversion",
+      "description": "Detailed timeline of Islamic military campaigns and territorial expansion",
+      "button": "View Research →"
+    },
+    "antisemitism": {
+      "title": "Anti-Semitism & Anti-Christianity",
+      "subtitle": "Quranic Verses Against Jews and Christians",
+      "description": "60+ verses promoting hatred and violence",
+      "button": "View Research →"
+    },
+    "harm": {
+      "title": "Real-World Harm",
+      "subtitle": "Terrorism, Oppression, and Human Rights Violations",
+      "description": "18 major categories of documented harm caused by Islamic ideology",
+      "button": "View Research →"
+    },
+    "migration": {
+      "title": "Migration Impact",
+      "subtitle": "How Islamic Migration Destroys Host Nations",
+      "description": "Lebanon's transformation, Europe's crisis, and Eastern Europe's survival",
+      "button": "View Research →"
+    },
+    "exmuslim": {
+      "title": "Ex-Muslim Voices",
+      "subtitle": "Testimonies, Resources, and Support Networks",
+      "description": "Major YouTube channels and communities helping those who left Islam",
+      "button": "View Resources →"
+    },
+    "muhammad": {
+      "title": "Muhammad & Women",
+      "subtitle": "Prophet's Marriages, Slavery, and Women's Treatment",
+      "description": "Detailed examination of Muhammad's relationships and Islamic gender teachings",
+      "button": "View Research →"
+    },
+    "jihad": {
+      "title": "Jihad Study",
+      "subtitle": "Quranic Foundation of Islamic Warfare Doctrine",
+      "description": "Comprehensive analysis of jihad verses and their interpretation",
+      "button": "View Study →"
+    },
+    "terrorist": {
+      "title": "Terrorist Organizations",
+      "subtitle": "Global Terrorism and Human Rights Violations",
+      "description": "Exposing terrorist groups operating under false religious and political agendas",
+      "button": "View Organizations →"
+    },
+    "solution": {
+      "title": "Solution",
+      "subtitle": "How to Address Islamic Ideology's Impact",
+      "description": "Practical approaches to countering extremism and promoting reform",
+      "button": "View Solutions →"
+    }
+  }
+}

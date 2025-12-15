@@ -28,7 +28,7 @@ export default function TerroristOrganizations() {
     <>
       <Helmet>
         <title>{translations.title}</title>
-        <meta name="description" content={translations.introPara1} />
+        <meta name="description" content={translations.introParaOverview} />
       </Helmet>
 
       <div className="page-container">
@@ -39,9 +39,9 @@ export default function TerroristOrganizations() {
 
         <div className="page-content">
           <section className="intro-section">
-            <p>{translations.introPara1}</p>
-            <p>{translations.introPara2}</p>
-            <p>{translations.introPara3}</p>
+            <p>{translations.introParaOverview}</p>
+            <p>{translations.introParaCommonTactics}</p>
+            <p>{translations.introParaScope}</p>
           </section>
 
           <section className="warning-box">
@@ -54,39 +54,39 @@ export default function TerroristOrganizations() {
             <div className="stats-grid">
               <div className="stat-card">
                 <div className="stat-number">70+</div>
-                <div className="stat-label">{translations.stat1Label}</div>
+                <div className="stat-label">{translations.statActiveGroupsLabel}</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">100+</div>
-                <div className="stat-label">{translations.stat2Label}</div>
+                <div className="stat-label">{translations.statCountriesAffectedLabel}</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">25,000+</div>
-                <div className="stat-label">{translations.stat3Label}</div>
+                <div className="stat-label">{translations.statAnnualDeathsLabel}</div>
               </div>
               <div className="stat-card">
                 <div className="stat-number">$100B+</div>
-                <div className="stat-label">{translations.stat4Label}</div>
+                <div className="stat-label">{translations.statEconomicDamageLabel}</div>
               </div>
             </div>
           </section>
 
           <section className="organizations-section">
-            <h2>{translations.category1Title}</h2>
+            <h2>{translations.categoryBannedTitle}</h2>
             
             {/* ISIS */}
             <div className="org-card">
-              <h3>{translations.org1Name}</h3>
+              <h3>{translations.isisName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org1Aka}</span>
-                <span className="org-status">{translations.org1Status}</span>
-                <span className="org-location">{translations.org1Location}</span>
+                <span className="org-aka">{translations.isisAka}</span>
+                <span className="org-status">{translations.isisStatus}</span>
+                <span className="org-location">{translations.isisLocation}</span>
               </div>
-              <p className="org-description">{translations.org1Desc}</p>
+              <p className="org-description">{translations.isisDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org1CrimesTitle}</h4>
+                <h4>{translations.isisCrimesTitle}</h4>
                 <ul>
-                  {translations.org1Crimes.map((crime, index) => (
+                  {translations.isisCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -95,17 +95,17 @@ export default function TerroristOrganizations() {
 
             {/* Al-Qaeda */}
             <div className="org-card">
-              <h3>{translations.org2Name}</h3>
+              <h3>{translations.alqaedaName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org2Aka}</span>
-                <span className="org-status">{translations.org2Status}</span>
-                <span className="org-location">{translations.org2Location}</span>
+                <span className="org-aka">{translations.alqaedaAka}</span>
+                <span className="org-status">{translations.alqaedaStatus}</span>
+                <span className="org-location">{translations.alqaedaLocation}</span>
               </div>
-              <p className="org-description">{translations.org2Desc}</p>
+              <p className="org-description">{translations.alqaedaDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org2CrimesTitle}</h4>
+                <h4>{translations.alqaedaCrimesTitle}</h4>
                 <ul>
-                  {translations.org2Crimes.map((crime, index) => (
+                  {translations.alqaedaCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -114,17 +114,17 @@ export default function TerroristOrganizations() {
 
             {/* Boko Haram */}
             <div className="org-card">
-              <h3>{translations.org3Name}</h3>
+              <h3>{translations.bokoharamName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org3Aka}</span>
-                <span className="org-status">{translations.org3Status}</span>
-                <span className="org-location">{translations.org3Location}</span>
+                <span className="org-aka">{translations.bokoharamAka}</span>
+                <span className="org-status">{translations.bokoharamStatus}</span>
+                <span className="org-location">{translations.bokoharamLocation}</span>
               </div>
-              <p className="org-description">{translations.org3Desc}</p>
+              <p className="org-description">{translations.bokoharamDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org3CrimesTitle}</h4>
+                <h4>{translations.bokoharamCrimesTitle}</h4>
                 <ul>
-                  {translations.org3Crimes.map((crime, index) => (
+                  {translations.bokoharamCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -133,17 +133,17 @@ export default function TerroristOrganizations() {
 
             {/* PFI */}
             <div className="org-card">
-              <h3>{translations.org4Name}</h3>
+              <h3>{translations.talibanName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org4Aka}</span>
-                <span className="org-status">{translations.org4Status}</span>
-                <span className="org-location">{translations.org4Location}</span>
+                <span className="org-aka">{translations.talibanAka}</span>
+                <span className="org-status">{translations.talibanStatus}</span>
+                <span className="org-location">{translations.talibanLocation}</span>
               </div>
-              <p className="org-description">{translations.org4Desc}</p>
+              <p className="org-description">{translations.talibanDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org4CrimesTitle}</h4>
+                <h4>{translations.talibanCrimesTitle}</h4>
                 <ul>
-                  {translations.org4Crimes.map((crime, index) => (
+                  {translations.talibanCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -152,21 +152,21 @@ export default function TerroristOrganizations() {
           </section>
 
           <section className="organizations-section">
-            <h2>{translations.category2Title}</h2>
+            <h2>{translations.categoryActiveTitle}</h2>
 
             {/* Hamas */}
             <div className="org-card">
-              <h3>{translations.org5Name}</h3>
+              <h3>{translations.hamasName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org5Aka}</span>
-                <span className="org-status active">{translations.org5Status}</span>
-                <span className="org-location">{translations.org5Location}</span>
+                <span className="org-aka">{translations.hamasAka}</span>
+                <span className="org-status active">{translations.hamasStatus}</span>
+                <span className="org-location">{translations.hamasLocation}</span>
               </div>
-              <p className="org-description">{translations.org5Desc}</p>
+              <p className="org-description">{translations.hamasDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org5CrimesTitle}</h4>
+                <h4>{translations.hamasCrimesTitle}</h4>
                 <ul>
-                  {translations.org5Crimes.map((crime, index) => (
+                  {translations.hamasCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -175,17 +175,17 @@ export default function TerroristOrganizations() {
 
             {/* Hezbollah */}
             <div className="org-card">
-              <h3>{translations.org6Name}</h3>
+              <h3>{translations.hezbollahName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org6Aka}</span>
-                <span className="org-status active">{translations.org6Status}</span>
-                <span className="org-location">{translations.org6Location}</span>
+                <span className="org-aka">{translations.hezbollahAka}</span>
+                <span className="org-status active">{translations.hezbollahStatus}</span>
+                <span className="org-location">{translations.hezbollahLocation}</span>
               </div>
-              <p className="org-description">{translations.org6Desc}</p>
+              <p className="org-description">{translations.hezbollahDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org6CrimesTitle}</h4>
+                <h4>{translations.hezbollahCrimesTitle}</h4>
                 <ul>
-                  {translations.org6Crimes.map((crime, index) => (
+                  {translations.hezbollahCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -194,17 +194,17 @@ export default function TerroristOrganizations() {
 
             {/* Taliban */}
             <div className="org-card">
-              <h3>{translations.org7Name}</h3>
+              <h3>{translations.alshabaabName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org7Aka}</span>
-                <span className="org-status active">{translations.org7Status}</span>
-                <span className="org-location">{translations.org7Location}</span>
+                <span className="org-aka">{translations.alshabaabAka}</span>
+                <span className="org-status active">{translations.alshabaabStatus}</span>
+                <span className="org-location">{translations.alshabaabLocation}</span>
               </div>
-              <p className="org-description">{translations.org7Desc}</p>
+              <p className="org-description">{translations.alshabaabDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org7CrimesTitle}</h4>
+                <h4>{translations.alshabaabCrimesTitle}</h4>
                 <ul>
-                  {translations.org7Crimes.map((crime, index) => (
+                  {translations.alshabaabCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>
@@ -213,17 +213,17 @@ export default function TerroristOrganizations() {
 
             {/* Al-Shabaab */}
             <div className="org-card">
-              <h3>{translations.org8Name}</h3>
+              <h3>{translations.aqapName}</h3>
               <div className="org-meta">
-                <span className="org-aka">{translations.org8Aka}</span>
-                <span className="org-status active">{translations.org8Status}</span>
-                <span className="org-location">{translations.org8Location}</span>
+                <span className="org-aka">{translations.aqapAka}</span>
+                <span className="org-status active">{translations.aqapStatus}</span>
+                <span className="org-location">{translations.aqapLocation}</span>
               </div>
-              <p className="org-description">{translations.org8Desc}</p>
+              <p className="org-description">{translations.aqapDesc}</p>
               <div className="org-crimes">
-                <h4>{translations.org8CrimesTitle}</h4>
+                <h4>{translations.aqapCrimesTitle}</h4>
                 <ul>
-                  {translations.org8Crimes.map((crime, index) => (
+                  {translations.aqapCrimes.map((crime, index) => (
                     <li key={index}>{crime}</li>
                   ))}
                 </ul>

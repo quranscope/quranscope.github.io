@@ -3,73 +3,52 @@
   "description": "कुरानिक सामग्री का व्यापक ऐतिहासिक, पाठ्य और आलोचनात्मक विश्लेषण, इसके स्रोतों, दावों और ऐतिहासिक विकास की जांच",
   "researchOverview": "अनुसंधान अवलोकन",
   "intro": "यह वेबसाइट कुरानिक सामग्री का व्यापक ऐतिहासिक, पाठ्य और आलोचनात्मक विश्लेषण प्रस्तुत करती है, इसके स्रोतों, दावों और ऐतिहासिक विकास की जांच करती है।",
-  "cards": {
-    "comparative": {
-      "title": "नकल और संपादित सामग्री",
-      "subtitle": "कैसे कुरानिक कथाओं को पहले के स्रोतों से लिया गया",
-      "description": "कुरानिक कहानियों और पहले के स्रोतों के बीच 75+ प्रलेखित समानताएं",
-      "button": "अनुसंधान देखें →"
-    },
-    "scientific": {
-      "title": "वैज्ञानिक अशुद्धियां",
-      "subtitle": "कुरान में असफल वैज्ञानिक तर्क",
-      "description": "ब्रह्मांड विज्ञान, जीव विज्ञान और प्राकृतिक घटनाओं में 40+ प्रलेखित त्रुटियां",
-      "button": "अनुसंधान देखें →"
-    },
-    "expansion": {
-      "title": "हिंसक विस्तार इतिहास",
-      "subtitle": "14 शताब्दियों का सैन्य विजय और जबरन धर्मांतरण",
-      "description": "इस्लामी सैन्य अभियानों और क्षेत्रीय विस्तार की विस्तृत समयरेखा",
-      "button": "अनुसंधान देखें →"
-    },
-    "antisemitism": {
-      "title": "यहूदी-विरोध और ईसाई-विरोध",
-      "subtitle": "यहूदियों और ईसाइयों के खिलाफ कुरानिक आयतें",
-      "description": "घृणा और हिंसा को बढ़ावा देने वाली 60+ आयतें",
-      "button": "अनुसंधान देखें →"
-    },
-    "harm": {
-      "title": "वास्तविक दुनिया का नुकसान",
-      "subtitle": "आतंकवाद, उत्पीड़न और मानवाधिकार उल्लंघन",
-      "description": "इस्लामी विचारधारा के कारण होने वाले नुकसान की 18 प्रमुख श्रेणियां",
-      "button": "अनुसंधान देखें →"
-    },
-    "migration": {
-      "title": "प्रवासन प्रभाव",
-      "subtitle": "इस्लामी प्रवासन कैसे मेजबान राष्ट्रों को नष्ट करता है",
-      "description": "लेबनान का परिवर्तन, यूरोप का संकट, और पूर्वी यूरोप का अस्तित्व",
-      "button": "अनुसंधान देखें →"
-    },
-    "exmuslim": {
-      "title": "पूर्व-मुस्लिम आवाजें",
-      "subtitle": "गवाही, संसाधन और समर्थन नेटवर्क",
-      "description": "प्रमुख YouTube चैनल और समुदाय जो इस्लाम छोड़ने वालों की मदद करते हैं",
-      "button": "संसाधन देखें →"
-    },
-    "muhammad": {
-      "title": "मुहम्मद और महिलाएं",
-      "subtitle": "पैगंबर की शादियां, गुलामी, और महिलाओं का उपचार",
-      "description": "मुहम्मद के संबंधों और इस्लामी लिंग शिक्षाओं की विस्तृत जांच",
-      "button": "अनुसंधान देखें →"
-    },
-    "jihad": {
-      "title": "जिहाद अध्ययन",
-      "subtitle": "इस्लामी युद्ध सिद्धांत की कुरानिक नींव",
-      "description": "जिहाद आयतों और उनकी व्याख्या का व्यापक विश्लेषण",
-      "button": "अध्ययन देखें →"
-    },
-    "terrorist": {
-      "title": "आतंकवादी संगठन",
-      "subtitle": "वैश्विक आतंकवाद और मानवाधिकार उल्लंघन",
-      "description": "Exposing terrorist groups operating under false religious and political agendas",
-      "button": "संगठन देखें →"
-    },
-    "solution": {
-      "title": "समाधान",
-      "subtitle": "इस्लामी विचारधारा के प्रभाव को कैसे संबोधित करें",
-      "description": "Practical approaches to countering extremism and promoting reform",
-      "button": "समाधान देखें →"
-    }
-  }
-}
+  "cards_comparative_title": "नकल और संपादित सामग्री",
+  "cards_comparative_subtitle": "कैसे कुरानिक कथाओं को पहले के स्रोतों से लिया गया",
+  "cards_comparative_description": "कुरानिक कहानियों और पहले के स्रोतों के बीच 75+ प्रलेखित समानताएं",
+  "cards_comparative_button": "अनुसंधान देखें →",
+  "cards_scientific_title": "वैज्ञानिक अशुद्धियां",
+  "cards_scientific_subtitle": "कुरान में असफल वैज्ञानिक तर्क",
+  "cards_scientific_description": "ब्रह्मांड विज्ञान, जीव विज्ञान और प्राकृतिक घटनाओं में 40+ प्रलेखित त्रुटियां",
+  "cards_scientific_button": "अनुसंधान देखें →",
+  "cards_expansion_title": "हिंसक विस्तार इतिहास",
+  "cards_expansion_subtitle": "14 शताब्दियों का सैन्य विजय और जबरन धर्मांतरण",
+  "cards_expansion_description": "इस्लामी सैन्य अभियानों और क्षेत्रीय विस्तार की विस्तृत समयरेखा",
+  "cards_expansion_button": "अनुसंधान देखें →",
+  "cards_antisemitism_title": "यहूदी-विरोध और ईसाई-विरोध",
+  "cards_antisemitism_subtitle": "यहूदियों और ईसाइयों के खिलाफ कुरानिक आयतें",
+  "cards_antisemitism_description": "घृणा और हिंसा को बढ़ावा देने वाली 60+ आयतें",
+  "cards_antisemitism_button": "अनुसंधान देखें →",
+  "cards_harm_title": "वास्तविक दुनिया का नुकसान",
+  "cards_harm_subtitle": "आतंकवाद, उत्पीड़न और मानवाधिकार उल्लंघन",
+  "cards_harm_description": "इस्लामी विचारधारा के कारण होने वाले नुकसान की 18 प्रमुख श्रेणियां",
+  "cards_harm_button": "अनुसंधान देखें →",
+  "cards_migration_title": "प्रवासन प्रभाव",
+  "cards_migration_subtitle": "इस्लामी प्रवासन कैसे मेजबान राष्ट्रों को नष्ट करता है",
+  "cards_migration_description": "लेबनान का परिवर्तन, यूरोप का संकट, और पूर्वी यूरोप का अस्तित्व",
+  "cards_migration_button": "अनुसंधान देखें →",
+  "cards_exmuslim_title": "पूर्व-मुस्लिम आवाजें",
+  "cards_exmuslim_subtitle": "गवाही, संसाधन और समर्थन नेटवर्क",
+  "cards_exmuslim_description": "प्रमुख YouTube चैनल और समुदाय जो इस्लाम छोड़ने वालों की मदद करते हैं",
+  "cards_exmuslim_button": "संसाधन देखें →",
+  "cards_muhammadWomen_title": "मुहम्मद और महिलाएं",
+  "cards_muhammadWomen_subtitle": "पैगंबर की शादियां, गुलामी, और महिलाओं का उपचार",
+  "cards_muhammadWomen_description": "मुहम्मद के संबंधों और इस्लामी लिंग शिक्षाओं की विस्तृत जांच",
+  "cards_muhammadWomen_button": "अनुसंधान देखें →",
+  "cards_jihad_title": "जिहाद अध्ययन",
+  "cards_jihad_subtitle": "इस्लामी युद्ध सिद्धांत की कुरानिक नींव",
+  "cards_jihad_description": "जिहाद आयतों और उनकी व्याख्या का व्यापक विश्लेषण",
+  "cards_jihad_button": "अध्ययन देखें →",
+  "cards_terrorist_title": "आतंकवादी संगठन",
+  "cards_terrorist_subtitle": "वैश्विक आतंकवाद और मानवाधिकार उल्लंघन",
+  "cards_terrorist_description": "Exposing terrorist groups operating under false religious and political agendas",
+  "cards_terrorist_button": "संगठन देखें →",
+  "cards_recentAttacks_title": "हालिया हमले",
+  "cards_recentAttacks_subtitle": "नवीनतम आतंकवादी घटनाएं और हिंसा",
+  "cards_recentAttacks_description": "इस्लामी विचारधारा से प्रेरित हालिया आतंकवादी हमलों और हिंसा का दस्तावेजीकरण",
+  "cards_recentAttacks_button": "हालिया हमले देखें →",
+  "cards_solution_title": "समाधान",
+  "cards_solution_subtitle": "इस्लामी विचारधारा के प्रभाव को कैसे संबोधित करें",
+  "cards_solution_description": "Practical approaches to countering extremism and promoting reform",
+  "cards_solution_button": "समाधान देखें →"
 }

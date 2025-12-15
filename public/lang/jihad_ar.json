@@ -4,8 +4,8 @@
   "backLink": "← Back to Home",
   "langLabel": "Choose Language:",
   "introTitle": "📖 Understanding Jihad: Beyond the Rhetoric",
-  "introPara1": "Jihad is often portrayed as \"inner spiritual struggle\" in apologetic discourse, but Islamic texts reveal a more complex and violent reality. This comprehensive study examines what the Quran, Hadith, and Sira actually say about jihad, how it was practiced historically, and how it manifests today.",
-  "introPara2": "<strong>Key Finding:</strong> While \"struggle\" is a linguistic meaning, the overwhelming majority of Quranic and Hadith references to jihad refer to physical warfare against non-Muslims to expand Islamic rule.",
+  "introParaDefinition": "Jihad is often portrayed as \"inner spiritual struggle\" in apologetic discourse, but Islamic texts reveal a more complex and violent reality. This comprehensive study examines what the Quran, Hadith, and Sira actually say about jihad, how it was practiced historically, and how it manifests today.",
+  "introParaDebate": "<strong>Key Finding:</strong> While \"struggle\" is a linguistic meaning, the overwhelming majority of Quranic and Hadith references to jihad refer to physical warfare against non-Muslims to expand Islamic rule.",
   "etymologyTitle": "📚 Etymology & Definition",
   "lingMeaningTitle": "Linguistic Meaning",
   "lingMeaningText": "<strong>Arabic Root:</strong> ج-ه-د (j-h-d) = \"to struggle, strive, exert effort\"",
@@ -233,5 +233,9 @@
   "finalTitle": "The Inescapable Reality",
   "finalPara1": "Jihad is not a \"misinterpretation\" or \"extremism\" - it is core Islamic doctrine based on the Quran, exemplified by Muhammad's life, codified in Hadith and Sira, systematized by 14 centuries of Islamic scholars, and practiced continuously throughout history to this day.",
   "finalPara2": "The \"inner struggle\" interpretation is a modern apologetic innovation that contradicts the source texts, historical practice, and scholarly consensus. When ISIS, Al-Qaeda, Taliban, and Hamas cite Quranic verses to justify their actions, they are being textually accurate.",
-  "finalPara3": "<strong>The question is not whether jihad is in Islam - it demonstrably is. The question is whether Muslims will continue following these 7th-century commands or join the modern world by reforming or leaving Islam entirely.</strong>"
+  "finalPara3": "<strong>The question is not whether jihad is in Islam - it demonstrably is. The question is whether Muslims will continue following these 7th-century commands or join the modern world by reforming or leaving Islam entirely.</strong>",
+  "title": "Jihad: Complete Study & Analysis",
+  "subtitle": "Types, Quranic Evidence, Historical Reality & Modern Manifestations",
+  "introParaOverview": "Jihad is often portrayed as \"inner spiritual struggle\" in apologetic discourse, but Islamic texts reveal a more complex and violent reality. This comprehensive study examines what the Quran, Hadith, and Sira actually say about jihad, how it was practiced historically, and how it manifests today.",
+  "introParaCommonTactics": "<strong>Key Finding:</strong> While \"struggle\" is a linguistic meaning, the overwhelming majority of Quranic and Hadith references to jihad refer to physical warfare against non-Muslims to expand Islamic rule."
 }

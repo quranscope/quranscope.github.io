@@ -35,8 +35,8 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
 
         <div style={styles.intro}>
           <h3 dangerouslySetInnerHTML={{ __html: t.introTitle }} />
-          <p dangerouslySetInnerHTML={{ __html: t.introPara1 }} />
-          <p dangerouslySetInnerHTML={{ __html: t.introPara2 }} />
+          <p dangerouslySetInnerHTML={{ __html: t.introParaOverview }} />
+          <p dangerouslySetInnerHTML={{ __html: t.introParaCommonTactics }} />
         </div>
 
         <h2 dangerouslySetInnerHTML={{ __html: t.etymologyTitle }} />

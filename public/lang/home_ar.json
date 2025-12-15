@@ -3,72 +3,52 @@
   "description": "تحليل تاريخي ونصي ونقدي شامل لمحتوى القرآن، يدرس مصادره وادعاءاته وتطوره التاريخي",
   "researchOverview": "نظرة عامة على البحث",
   "intro": "يقدم هذا الموقع تحليلاً تاريخياً ونصياً ونقدياً شاملاً لمحتوى القرآن، ويدرس مصادره وادعاءاته وتطوره التاريخي.",
-  "cards": {
-    "comparative": {
-      "title": "محتوى منسوخ ومحرر",
-      "subtitle": "كيف اشتُقت الروايات القرآنية من مصادر سابقة",
-      "description": "أكثر من 75 تشابهاً موثقاً بين القصص القرآنية والمصادر السابقة",
-      "button": "عرض البحث ←"
-    },
-    "scientific": {
-      "title": "عدم الدقة العلمية",
-      "subtitle": "الحجج العلمية الفاشلة في القرآن",
-      "description": "أكثر من 40 خطأ موثق في علم الكونيات والأحياء والظواهر الطبيعية",
-      "button": "عرض البحث ←"
-    },
-    "expansion": {
-      "title": "تاريخ التوسع العنيف",
-      "subtitle": "14 قرناً من الغزو العسكري والتحول القسري",
-      "description": "جدول زمني مفصل للحملات العسكرية الإسلامية والتوسع الإقليمي",
-      "button": "عرض البحث ←"
-    },
-    "antisemitism": {
-      "title": "معاداة السامية ومعاداة المسيحية",
-      "subtitle": "آيات قرآنية ضد اليهود والمسيحيين",
-      "description": "أكثر من 60 آية تروج للكراهية والعنف",
-      "button": "عرض البحث ←"
-    },
-    "harm": {
-      "title": "الضرر في العالم الحقيقي",
-      "subtitle": "الإرهاب والقمع وانتهاكات حقوق الإنسان",
-      "description": "18 فئة رئيسية من الأضرار الموثقة التي تسببها الأيديولوجية الإسلامية",
-      "button": "عرض البحث ←"
-    },
-    "migration": {
-      "title": "تأثير الهجرة",
-      "subtitle": "كيف تدمر الهجرة الإسلامية الدول المضيفة",
-      "description": "تحول لبنان، أزمة أوروبا، وبقاء أوروبا الشرقية",
-      "button": "عرض البحث ←"
-    },
-    "exmuslim": {
-      "title": "أصوات المسلمين السابقين",
-      "subtitle": "الشهادات والموارد وشبكات الدعم",
-      "description": "قنوات YouTube الرئيسية والمجتمعات التي تساعد أولئك الذين تركوا الإسلام",
-      "button": "عرض الموارد ←"
-    },
-    "muhammad": {
-      "title": "محمد والنساء",
-      "subtitle": "زيجات النبي والعبودية ومعاملة النساء",
-      "description": "دراسة مفصلة لعلاقات محمد والتعاليم الإسلامية حول الجنسين",
-      "button": "عرض البحث ←"
-    },
-    "jihad": {
-      "title": "دراسة الجهاد",
-      "subtitle": "الأساس القرآني لعقيدة الحرب الإسلامية",
-      "description": "تحليل شامل لآيات الجهاد وتفسيرها",
-      "button": "عرض الدراسة ←"
-    },
-    "terrorist": {
-      "title": "المنظمات الإرهابية",
-      "subtitle": "الإرهاب العالمي وانتهاكات حقوق الإنسان",
-      "description": "Exposing terrorist groups operating under false religious and political agendas",
-      "button": "عرض المنظمات ←"
-    },
-    "solution": {
-      "title": "الحل",
-      "subtitle": "كيفية معالجة تأثير الأيديولوجية الإسلامية",
-      "description": "Practical approaches to countering extremism and promoting reform",
-      "button": "عرض الحلول ←"
-    }
-  }
+  "cards_comparative_title": "محتوى منسوخ ومحرر",
+  "cards_comparative_subtitle": "كيف اشتُقت الروايات القرآنية من مصادر سابقة",
+  "cards_comparative_description": "أكثر من 75 تشابهاً موثقاً بين القصص القرآنية والمصادر السابقة",
+  "cards_comparative_button": "عرض البحث ←",
+  "cards_scientific_title": "عدم الدقة العلمية",
+  "cards_scientific_subtitle": "الحجج العلمية الفاشلة في القرآن",
+  "cards_scientific_description": "أكثر من 40 خطأ موثق في علم الكونيات والأحياء والظواهر الطبيعية",
+  "cards_scientific_button": "عرض البحث ←",
+  "cards_expansion_title": "تاريخ التوسع العنيف",
+  "cards_expansion_subtitle": "14 قرناً من الغزو العسكري والتحول القسري",
+  "cards_expansion_description": "جدول زمني مفصل للحملات العسكرية الإسلامية والتوسع الإقليمي",
+  "cards_expansion_button": "عرض البحث ←",
+  "cards_antisemitism_title": "معاداة السامية ومعاداة المسيحية",
+  "cards_antisemitism_subtitle": "آيات قرآنية ضد اليهود والمسيحيين",
+  "cards_antisemitism_description": "أكثر من 60 آية تروج للكراهية والعنف",
+  "cards_antisemitism_button": "عرض البحث ←",
+  "cards_harm_title": "الضرر في العالم الحقيقي",
+  "cards_harm_subtitle": "الإرهاب والقمع وانتهاكات حقوق الإنسان",
+  "cards_harm_description": "18 فئة رئيسية من الأضرار الموثقة التي تسببها الأيديولوجية الإسلامية",
+  "cards_harm_button": "عرض البحث ←",
+  "cards_migration_title": "تأثير الهجرة",
+  "cards_migration_subtitle": "كيف تدمر الهجرة الإسلامية الدول المضيفة",
+  "cards_migration_description": "تحول لبنان، أزمة أوروبا، وبقاء أوروبا الشرقية",
+  "cards_migration_button": "عرض البحث ←",
+  "cards_exmuslim_title": "أصوات المسلمين السابقين",
+  "cards_exmuslim_subtitle": "الشهادات والموارد وشبكات الدعم",
+  "cards_exmuslim_description": "قنوات YouTube الرئيسية والمجتمعات التي تساعد أولئك الذين تركوا الإسلام",
+  "cards_exmuslim_button": "عرض الموارد ←",
+  "cards_muhammadWomen_title": "محمد والنساء",
+  "cards_muhammadWomen_subtitle": "زيجات النبي والعبودية ومعاملة النساء",
+  "cards_muhammadWomen_description": "دراسة مفصلة لعلاقات محمد والتعاليم الإسلامية حول الجنسين",
+  "cards_muhammadWomen_button": "عرض البحث ←",
+  "cards_jihad_title": "دراسة الجهاد",
+  "cards_jihad_subtitle": "الأساس القرآني لعقيدة الحرب الإسلامية",
+  "cards_jihad_description": "تحليل شامل لآيات الجهاد وتفسيرها",
+  "cards_jihad_button": "عرض الدراسة ←",
+  "cards_terrorist_title": "المنظمات الإرهابية",
+  "cards_terrorist_subtitle": "الإرهاب العالمي وانتهاكات حقوق الإنسان",
+  "cards_terrorist_description": "Exposing terrorist groups operating under false religious and political agendas",
+  "cards_terrorist_button": "عرض المنظمات ←",
+  "cards_recentAttacks_title": "الهجمات الأخيرة",
+  "cards_recentAttacks_subtitle": "أحدث الحوادث الإرهابية والعنف",
+  "cards_recentAttacks_description": "توثيق الهجمات الإرهابية الأخيرة والعنف المحفز بالأيديولوجية الإسلامية",
+  "cards_recentAttacks_button": "عرض الهجمات الأخيرة ←",
+  "cards_solution_title": "الحل",
+  "cards_solution_subtitle": "كيفية معالجة تأثير الأيديولوجية الإسلامية",
+  "cards_solution_description": "Practical approaches to countering extremism and promoting reform",
+  "cards_solution_button": "عرض الحلول ←"
 }

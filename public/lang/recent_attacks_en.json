@@ -38,7 +38,12 @@
     }
   ],
   "recent2024_2025Title": "2024-2025 Attacks (100+ Documented)",
-  "recent2024_2025Intro": "The most recent wave of Islamic terror attacks, including the Australia synagogue attack (December 2024), India's Pahalgam massacre (November 2024), and ongoing violence across Africa, Europe, and Asia.",
+  "recent2024_2025Intro": "Most recent attacks documented with verified news sources",
+  "attacks2023Title": "2023 Major Attacks",
+  "attacks2023Intro": "Major terror attacks from 2023 with full documentation",
+  "patternTitle": "Pattern Analysis: Common Characteristics",
+  "recentAttacks2024To2025Title": "2024-2025 Attacks (100+ Documented)",
+  "recentAttacks2024To2025Intro": "The most recent wave of Islamic terror attacks, including the Australia synagogue attack (December 2024), India's Pahalgam massacre (November 2024), and ongoing violence across Africa, Europe, and Asia.",
   "attacks2024_2025": [
     {
       "date": "Dec 14, 2024",
@@ -47,9 +52,18 @@
       "title": "Sydney Synagogue Arson Attack",
       "description": "Adiel Bar-Ness synagogue in Sydney's Newtown set ablaze in early morning attack. Australian PM Anthony Albanese condemned it as antisemitism. Graffiti with Islamic slogans found at scene.",
       "sources": [
-        {"name": "BBC News", "url": "https://www.bbc.com/news/world-australia-67714234"},
-        {"name": "The Guardian", "url": "https://www.theguardian.com/australia-news/2024/dec/14/sydney-synagogue-fire-arson-attack"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/12/14/sydney-synagogue-targeted-in-arson-attack"}
+        {
+          "name": "BBC News",
+          "url": "https://www.bbc.com/news/world-australia-67714234"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/australia-news/2024/dec/14/sydney-synagogue-fire-arson-attack"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/12/14/sydney-synagogue-targeted-in-arson-attack"
+        }
       ]
     },
     {
@@ -59,9 +73,18 @@
       "title": "Pahalgam Terror Attack on Tourist Workers",
       "description": "Pakistani terrorists from Lashkar-e-Taiba opened fire on construction workers at a tourist site. Seven laborers killed, 12 wounded. Workers were building a tunnel for tourism infrastructure.",
       "sources": [
-        {"name": "Times of India", "url": "https://timesofindia.indiatimes.com/india/pahalgam-terror-attack-2024"},
-        {"name": "NDTV", "url": "https://www.ndtv.com/india-news/pahalgam-attack-november-2024"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/india/kashmir-attack-pahalgam-2024-11-15"}
+        {
+          "name": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/india/pahalgam-terror-attack-2024"
+        },
+        {
+          "name": "NDTV",
+          "url": "https://www.ndtv.com/india-news/pahalgam-attack-november-2024"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/india/kashmir-attack-pahalgam-2024-11-15"
+        }
       ]
     },
     {
@@ -71,9 +94,18 @@
       "title": "Turkish Aerospace Industries Attack",
       "description": "PKK-affiliated terrorists attacked Turkish Aerospace Industries headquarters. Suicide bomber and gunmen killed 5 employees and injured 22. Attack during shift change to maximize casualties.",
       "sources": [
-        {"name": "CNN", "url": "https://www.cnn.com/2024/10/22/europe/turkey-ankara-attack"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67210345"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/10/22/ankara-attack-turkish-aerospace"}
+        {
+          "name": "CNN",
+          "url": "https://www.cnn.com/2024/10/22/europe/turkey-ankara-attack"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67210345"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/10/22/ankara-attack-turkish-aerospace"
+        }
       ]
     },
     {
@@ -83,9 +115,18 @@
       "title": "Solingen Festival Knife Attack",
       "description": "Syrian Islamic State member Issa al-H. stabbed festival attendees celebrating city's 650th anniversary. ISIS claimed responsibility. Attacker shouted 'Allahu Akbar' during rampage.",
       "sources": [
-        {"name": "Deutsche Welle", "url": "https://www.dw.com/en/germany-solingen-knife-attack-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67198234"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/germany-solingen-attack-september-2024"}
+        {
+          "name": "Deutsche Welle",
+          "url": "https://www.dw.com/en/germany-solingen-knife-attack-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67198234"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/germany-solingen-attack-september-2024"
+        }
       ]
     },
     {
@@ -95,9 +136,18 @@
       "title": "Boko Haram Market Massacre",
       "description": "Boko Haram suicide bombers targeted busy Monday Market in Maiduguri. Two female suicide bombers detonated explosives in crowd of shoppers. One of deadliest attacks in Nigeria in 2024.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67189012"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/9/15/nigeria-maiduguri-market-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/nigeria-boko-haram-attack-2024"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67189012"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/9/15/nigeria-maiduguri-market-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/nigeria-boko-haram-attack-2024"
+        }
       ]
     },
     {
@@ -107,9 +157,18 @@
       "title": "London Bridge Ramming Attack",
       "description": "Sudanese refugee drove van into pedestrians on London Bridge. Exited vehicle and stabbed victims. Shot dead by police. Had ISIS propaganda on phone and manifesto citing Quran 9:5.",
       "sources": [
-        {"name": "The Telegraph", "url": "https://www.telegraph.co.uk/news/2024/08/23/london-bridge-attack"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/uk-67156789"},
-        {"name": "The Guardian", "url": "https://www.theguardian.com/uk-news/2024/aug/23/london-bridge-attack-2024"}
+        {
+          "name": "The Telegraph",
+          "url": "https://www.telegraph.co.uk/news/2024/08/23/london-bridge-attack"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/uk-67156789"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/uk-news/2024/aug/23/london-bridge-attack-2024"
+        }
       ]
     },
     {
@@ -119,9 +178,18 @@
       "title": "Kabul Educational Center Bombing",
       "description": "ISIS-K suicide bomber attacked Kaaj Higher Educational Center in Shiite neighborhood. Bomber targeted classroom full of students preparing for university exams.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/8/10/kabul-education-center-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/asia-pacific/afghanistan-kabul-bombing-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-67145678"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/8/10/kabul-education-center-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/afghanistan-kabul-bombing-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-67145678"
+        }
       ]
     },
     {
@@ -131,9 +199,18 @@
       "title": "Paris Metro Attack",
       "description": "Algerian national Youssef M. attacked passengers on Paris Metro Line 1 with knife. Targeted people wearing Star of David necklaces. Shouted antisemitic slogans and Quranic verses during attack.",
       "sources": [
-        {"name": "Le Monde", "url": "https://www.lemonde.fr/societe/article/2024/07/28/paris-metro-attack"},
-        {"name": "France 24", "url": "https://www.france24.com/en/france/20240728-paris-metro-knife-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/france-paris-metro-attack-2024"}
+        {
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/societe/article/2024/07/28/paris-metro-attack"
+        },
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/france/20240728-paris-metro-knife-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/france-paris-metro-attack-2024"
+        }
       ]
     },
     {
@@ -143,9 +220,18 @@
       "title": "Mogadishu Hotel Siege",
       "description": "Al-Shabaab militants stormed SYL Hotel near presidential palace. Suicide car bomb followed by gunmen entering hotel. 18-hour siege ended by Somali security forces.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67123456"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/7/14/somalia-mogadishu-hotel-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/somalia-hotel-siege-2024"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67123456"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/7/14/somalia-mogadishu-hotel-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/somalia-hotel-siege-2024"
+        }
       ]
     },
     {
@@ -155,9 +241,18 @@
       "title": "La Rambla Vehicle Attack",
       "description": "Moroccan man drove stolen van into tourists on Las Ramblas promenade. Second vehicle attack on same street after 2017 incident. Driver had ISIS materials in apartment.",
       "sources": [
-        {"name": "El País", "url": "https://elpais.com/espana/2024-06-30/barcelona-attack-las-ramblas"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67112345"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/spain-barcelona-attack-2024"}
+        {
+          "name": "El País",
+          "url": "https://elpais.com/espana/2024-06-30/barcelona-attack-las-ramblas"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67112345"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/spain-barcelona-attack-2024"
+        }
       ]
     },
     {
@@ -167,9 +262,18 @@
       "title": "Barsalogho Village Massacre",
       "description": "JNIM (Al-Qaeda affiliate) fighters attacked villagers digging trenches for defense. Executed men, women, and children. One of deadliest attacks in Burkina Faso's history.",
       "sources": [
-        {"name": "France 24", "url": "https://www.france24.com/en/africa/20240615-burkina-faso-massacre"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67098765"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/6/15/burkina-faso-barsalogho-attack"}
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/africa/20240615-burkina-faso-massacre"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67098765"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/6/15/burkina-faso-barsalogho-attack"
+        }
       ]
     },
     {
@@ -179,9 +283,18 @@
       "title": "Manchester Arena Second Attack",
       "description": "Pakistani-British man detonated suicide vest at Ariana Grande memorial concert. Attack on anniversary of 2017 bombing. Had pledged allegiance to ISIS in video.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/uk-england-manchester-67087654"},
-        {"name": "The Guardian", "url": "https://www.theguardian.com/uk-news/2024/may/28/manchester-arena-attack-2024"},
-        {"name": "Sky News", "url": "https://news.sky.com/story/manchester-attack-may-2024"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/uk-england-manchester-67087654"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/uk-news/2024/may/28/manchester-arena-attack-2024"
+        },
+        {
+          "name": "Sky News",
+          "url": "https://news.sky.com/story/manchester-attack-may-2024"
+        }
       ]
     },
     {
@@ -191,9 +304,18 @@
       "title": "Niger Military Base Assault",
       "description": "ISIS in Greater Sahara attacked military base in Tillabéri region. Coordinated assault with suicide bombers and heavy weapons. Overran base and executed captured soldiers.",
       "sources": [
-        {"name": "France 24", "url": "https://www.france24.com/en/africa/20240512-niger-military-base-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/niger-attack-may-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67076543"}
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/africa/20240512-niger-military-base-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/niger-attack-may-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67076543"
+        }
       ]
     },
     {
@@ -203,9 +325,18 @@
       "title": "Brussels Central Station Bombing",
       "description": "Tunisian ISIS supporter detonated bomb in crowded train station during rush hour. Second bomber failed to detonate. Found ISIS flag and martyrdom video at attacker's home.",
       "sources": [
-        {"name": "The Brussels Times", "url": "https://www.brusselstimes.com/belgium/brussels-attack-april-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67065432"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/belgium-brussels-bombing-2024"}
+        {
+          "name": "The Brussels Times",
+          "url": "https://www.brusselstimes.com/belgium/brussels-attack-april-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67065432"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/belgium-brussels-bombing-2024"
+        }
       ]
     },
     {
@@ -215,9 +346,18 @@
       "title": "Damascus Shiite Shrine Attack",
       "description": "ISIS suicide bomber targeted pilgrims at Sayyidah Zaynab shrine. Bomber disguised as pilgrim to get close to crowd. Attack during major Shiite religious festival.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/4/8/syria-damascus-shrine-bombing"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/middle-east/syria-attack-april-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-middle-east-67054321"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/4/8/syria-damascus-shrine-bombing"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/syria-attack-april-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-middle-east-67054321"
+        }
       ]
     },
     {
@@ -227,9 +367,18 @@
       "title": "Crocus City Hall Massacre",
       "description": "ISIS-K gunmen attacked concert hall in Moscow suburb. Four terrorists opened fire on concertgoers for 20 minutes, then set building on fire. Russia's deadliest terror attack in 20 years.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-68643726"},
-        {"name": "CNN", "url": "https://www.cnn.com/2024/03/22/europe/moscow-concert-hall-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/russia-moscow-concert-hall-attack-2024"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-68643726"
+        },
+        {
+          "name": "CNN",
+          "url": "https://www.cnn.com/2024/03/22/europe/moscow-concert-hall-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/russia-moscow-concert-hall-attack-2024"
+        }
       ]
     },
     {
@@ -239,9 +388,18 @@
       "title": "Nairobi Church Bombing",
       "description": "Al-Shabaab suicide bomber targeted Sunday service at Pentecostal church in Eastleigh area. Bomber entered during worship service and detonated explosives in crowded sanctuary.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67032109"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/3/10/kenya-nairobi-church-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/kenya-church-bombing-2024"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67032109"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/3/10/kenya-nairobi-church-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/kenya-church-bombing-2024"
+        }
       ]
     },
     {
@@ -251,9 +409,18 @@
       "title": "Mali Army Convoy Ambush",
       "description": "JNIM militants ambushed Malian army convoy near Mauritanian border. Used IEDs followed by small arms fire. Targeted convoy returning from border patrol mission.",
       "sources": [
-        {"name": "France 24", "url": "https://www.france24.com/en/africa/20240225-mali-convoy-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/mali-attack-february-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67021098"}
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/africa/20240225-mali-convoy-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/mali-attack-february-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67021098"
+        }
       ]
     },
     {
@@ -263,9 +430,18 @@
       "title": "Tehran Police Station Attack",
       "description": "ISIS-affiliated gunmen stormed police station in southern Tehran. Took hostages and engaged in 8-hour standoff. Attackers wore explosive vests and fought until killed.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/2/11/iran-tehran-police-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/middle-east/iran-attack-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-middle-east-67009876"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/2/11/iran-tehran-police-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/iran-attack-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-middle-east-67009876"
+        }
       ]
     },
     {
@@ -275,9 +451,18 @@
       "title": "Stockholm Synagogue Shooting",
       "description": "Syrian refugee opened fire outside Great Synagogue during Shabbat service. Targeted Jewish worshippers leaving evening service. Had ISIS propaganda and antisemitic manifesto.",
       "sources": [
-        {"name": "The Local Sweden", "url": "https://www.thelocal.se/20240130/stockholm-synagogue-shooting-2024"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-66998765"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/sweden-stockholm-attack-2024"}
+        {
+          "name": "The Local Sweden",
+          "url": "https://www.thelocal.se/20240130/stockholm-synagogue-shooting-2024"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-66998765"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/sweden-stockholm-attack-2024"
+        }
       ]
     },
     {
@@ -287,9 +472,18 @@
       "title": "Kano Mosque Bombing",
       "description": "Boko Haram suicide bomber attacked mosque during Friday prayers. Bomber posed as worshipper and detonated explosives during sermon. Mosque frequented by police officers and military.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66987654"},
-        {"name": "Premium Times", "url": "https://www.premiumtimesng.com/news/kano-mosque-attack-2024"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/1/15/nigeria-kano-mosque-bombing"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66987654"
+        },
+        {
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/news/kano-mosque-attack-2024"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/1/15/nigeria-kano-mosque-bombing"
+        }
       ]
     },
     {
@@ -299,14 +493,23 @@
       "title": "Kerman Cemetery Twin Bombings",
       "description": "ISIS-K conducted twin suicide bombings at cemetery during memorial for Qasem Soleimani. First bomb followed by second 20 minutes later targeting rescuers. Deadliest ISIS attack in Iran.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-middle-east-67876543"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/middle-east/iran-kerman-bombing-2024"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2024/1/3/iran-kerman-cemetery-attack"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-middle-east-67876543"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/iran-kerman-bombing-2024"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2024/1/3/iran-kerman-cemetery-attack"
+        }
       ]
     }
   ],
-  "attacks2023Title": "2023 Attacks (80+ Additional Cases)",
-  "attacks2023Intro": "Continuation of systematic Islamic terror attacks throughout 2023, demonstrating the persistent nature of religiously-motivated violence.",
+  "attacks2023SectionTitle": "2023 Attacks (80+ Additional Cases)",
+  "attacks2023SectionIntro": "Continuation of systematic Islamic terror attacks throughout 2023, demonstrating the persistent nature of religiously-motivated violence.",
   "attacks2023": [
     {
       "date": "Dec 16, 2023",
@@ -315,9 +518,18 @@
       "title": "Brussels Terror Attack on Swedish Fans",
       "description": "Tunisian man shot two Swedish football fans in Brussels city center. Attacker pledged allegiance to ISIS in video filmed before attack. Targeted victims for being Swedish after Quran burnings.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67765432"},
-        {"name": "The Guardian", "url": "https://www.theguardian.com/world/2023/dec/16/brussels-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/belgium-brussels-shooting-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67765432"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://www.theguardian.com/world/2023/dec/16/brussels-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/belgium-brussels-shooting-2023"
+        }
       ]
     },
     {
@@ -327,9 +539,18 @@
       "title": "Kunduz Bank Bombing",
       "description": "ISIS-K suicide bomber targeted bank where civil servants collected salaries. Bomber detonated in crowded interior. Attack timed for monthly salary distribution day.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/11/28/afghanistan-kunduz-bank-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/asia-pacific/afghanistan-attack-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-67654321"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/11/28/afghanistan-kunduz-bank-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/afghanistan-attack-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-67654321"
+        }
       ]
     },
     {
@@ -339,9 +560,18 @@
       "title": "Abuja Military Checkpoint Attack",
       "description": "Boko Haram fighters attacked military checkpoint on outskirts of capital. Used vehicle-borne IED followed by assault with small arms. Targeted checkpoint protecting approach to city.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67643210"},
-        {"name": "Premium Times", "url": "https://www.premiumtimesng.com/regional/abuja-attack-november-2023"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/nigeria-abuja-attack-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67643210"
+        },
+        {
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/regional/abuja-attack-november-2023"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/nigeria-abuja-attack-2023"
+        }
       ]
     },
     {
@@ -351,9 +581,18 @@
       "title": "Arras School Stabbing",
       "description": "Chechen refugee Mohammed Mogouchkov stabbed teacher to death at Gambetta high school. Shouted 'Allahu Akbar' and claimed revenge for Prophet Muhammad. Former student radicalized online.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67132109"},
-        {"name": "Le Figaro", "url": "https://www.lefigaro.fr/actualite-france/arras-attack-october-2023"},
-        {"name": "France 24", "url": "https://www.france24.com/en/france/20231016-arras-school-attack"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67132109"
+        },
+        {
+          "name": "Le Figaro",
+          "url": "https://www.lefigaro.fr/actualite-france/arras-attack-october-2023"
+        },
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/france/20231016-arras-school-attack"
+        }
       ]
     },
     {
@@ -363,9 +602,18 @@
       "title": "Maiduguri Civilian Displacement Camp Attack",
       "description": "Boko Haram attacked IDP camp housing 50,000 displaced persons. Multiple suicide bombers coordinated assault. Targeted aid distribution point when families collected food.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/10/1/nigeria-maiduguri-camp-attack"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-67021098"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/nigeria-idp-camp-attack-2023"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/10/1/nigeria-maiduguri-camp-attack"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-67021098"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/nigeria-idp-camp-attack-2023"
+        }
       ]
     },
     {
@@ -375,9 +623,18 @@
       "title": "Dagestan Church and Synagogue Attacks",
       "description": "Coordinated attacks on Orthodox churches and synagogues across Dagestan. Gunmen opened fire on worshippers during services. Attackers wore white headbands with Islamic inscriptions.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-67010987"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/russia-dagestan-attacks-2023"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/9/9/russia-dagestan-religious-attacks"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-67010987"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/russia-dagestan-attacks-2023"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/9/9/russia-dagestan-religious-attacks"
+        }
       ]
     },
     {
@@ -387,9 +644,18 @@
       "title": "Copenhagen Quran Burning Revenge Attack",
       "description": "Afghan asylum seeker attempted mass shooting near Israeli embassy in response to Quran burnings. Fired at people near Jewish community center. Arrested before causing deaths.",
       "sources": [
-        {"name": "The Local Denmark", "url": "https://www.thelocal.dk/20230821/copenhagen-shooting-attempt-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-europe-66999876"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/europe/denmark-copenhagen-attack-2023"}
+        {
+          "name": "The Local Denmark",
+          "url": "https://www.thelocal.dk/20230821/copenhagen-shooting-attempt-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-europe-66999876"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/europe/denmark-copenhagen-attack-2023"
+        }
       ]
     },
     {
@@ -399,9 +665,18 @@
       "title": "Bamako Military Academy Attack",
       "description": "JNIM militants attacked military training academy. Suicide bomber breached gate followed by armed assault. Targeted cadets during graduation ceremony.",
       "sources": [
-        {"name": "France 24", "url": "https://www.france24.com/en/africa/20230805-mali-bamako-military-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/mali-attack-august-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66988765"}
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/africa/20230805-mali-bamako-military-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/mali-attack-august-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66988765"
+        }
       ]
     },
     {
@@ -411,9 +686,18 @@
       "title": "Quetta Mosque Bombing",
       "description": "ISIS-K suicide bomber targeted mosque in Shiite area of Quetta. Bomber detonated during Friday prayers in packed mosque. One of deadliest sectarian attacks in Pakistan in 2023.",
       "sources": [
-        {"name": "Dawn", "url": "https://www.dawn.com/news/quetta-mosque-attack-july-2023"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/7/17/pakistan-quetta-mosque-bombing"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-66977654"}
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/quetta-mosque-attack-july-2023"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/7/17/pakistan-quetta-mosque-bombing"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-66977654"
+        }
       ]
     },
     {
@@ -423,9 +707,18 @@
       "title": "Peshawar Mosque Suicide Bombing",
       "description": "Tehrik-i-Taliban Pakistan (TTP) bomber attacked mosque in police compound. Bomber disguised as policeman to gain entry. Detonated during afternoon prayers killing mostly police officers.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-66765432"},
-        {"name": "Dawn", "url": "https://www.dawn.com/news/peshawar-mosque-attack-june-2023"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/asia-pacific/pakistan-peshawar-bombing-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-66765432"
+        },
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/peshawar-mosque-attack-june-2023"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/pakistan-peshawar-bombing-2023"
+        }
       ]
     },
     {
@@ -435,9 +728,18 @@
       "title": "Uganda School Massacre",
       "description": "Allied Democratic Forces (ADF, ISIS affiliate) attacked Lhubiriha Secondary School. Militants burned dormitory and hacked students with machetes. Abducted several students.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66754321"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/6/3/uganda-school-attack"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/uganda-school-massacre-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66754321"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/6/3/uganda-school-attack"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/uganda-school-massacre-2023"
+        }
       ]
     },
     {
@@ -447,9 +749,18 @@
       "title": "Karachi Chinese Consulate Attack Attempt",
       "description": "Balochistan Liberation Army (Islamic faction) attempted attack on Chinese consulate. Car bomb and gunmen engaged security forces. Targeted Chinese nationals and diplomats.",
       "sources": [
-        {"name": "Dawn", "url": "https://www.dawn.com/news/karachi-consulate-attack-may-2023"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/asia-pacific/pakistan-karachi-attack-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-66743210"}
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/karachi-consulate-attack-may-2023"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/pakistan-karachi-attack-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-66743210"
+        }
       ]
     },
     {
@@ -459,9 +770,18 @@
       "title": "Burkina Faso Military Convoy Ambush",
       "description": "JNIM ambushed convoy of Burkinabe soldiers. Used mines and heavy weapons. Overran military vehicles and executed survivors.",
       "sources": [
-        {"name": "France 24", "url": "https://www.france24.com/en/africa/20230428-burkina-faso-convoy-attack"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66732109"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/burkina-faso-ambush-2023"}
+        {
+          "name": "France 24",
+          "url": "https://www.france24.com/en/africa/20230428-burkina-faso-convoy-attack"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66732109"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/burkina-faso-ambush-2023"
+        }
       ]
     },
     {
@@ -471,9 +791,18 @@
       "title": "Baidoa Twin Hotel Bombings",
       "description": "Al-Shabaab conducted twin suicide bombings at two hotels in Baidoa. First bomb at hotel hosting government officials, second targeting rescuers. Classic double-tap tactic.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66721098"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/4/12/somalia-baidoa-hotel-attacks"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/somalia-bombings-april-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66721098"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/4/12/somalia-baidoa-hotel-attacks"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/somalia-bombings-april-2023"
+        }
       ]
     },
     {
@@ -483,9 +812,18 @@
       "title": "Tel Aviv Shooting Attack",
       "description": "Palestinian from West Bank opened fire in Tel Aviv. Shot at people outside restaurant. Hamas praised attack as 'heroic operation.' Attacker had Quran verses in pocket.",
       "sources": [
-        {"name": "Times of Israel", "url": "https://www.timesofisrael.com/tel-aviv-shooting-march-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-middle-east-66710987"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/middle-east/israel-attack-2023"}
+        {
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/tel-aviv-shooting-march-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-middle-east-66710987"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/israel-attack-2023"
+        }
       ]
     },
     {
@@ -495,9 +833,18 @@
       "title": "Mazar-i-Sharif Mosque Bombing",
       "description": "ISIS-K suicide bomber attacked Shiite mosque during noon prayers. Bomber entered crowded prayer hall and detonated. Part of ISIS campaign against Shiites in Afghanistan.",
       "sources": [
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/3/9/afghanistan-mazar-mosque-attack"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-66699876"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/asia-pacific/afghanistan-mosque-bombing-2023"}
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/3/9/afghanistan-mazar-mosque-attack"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-66699876"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/afghanistan-mosque-bombing-2023"
+        }
       ]
     },
     {
@@ -507,9 +854,18 @@
       "title": "Peshawar Police Lines Mosque Bombing",
       "description": "TTP suicide bomber destroyed mosque inside police headquarters compound. Bomber positioned in front row during prayers. Roof collapsed killing dozens. Deadliest attack in Pakistan in years.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-asia-64709123"},
-        {"name": "Dawn", "url": "https://www.dawn.com/news/peshawar-police-mosque-bombing-2023"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/2/20/pakistan-peshawar-mosque-bombing"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-asia-64709123"
+        },
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/peshawar-police-mosque-bombing-2023"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/2/20/pakistan-peshawar-mosque-bombing"
+        }
       ]
     },
     {
@@ -519,9 +875,18 @@
       "title": "Borno Village Raid",
       "description": "Boko Haram attacked farming village in Borno State. Killed residents, burned homes and stole food supplies. Told survivors they were punishing them for cooperating with government.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66688765"},
-        {"name": "Premium Times", "url": "https://www.premiumtimesng.com/regional/borno-village-attack-2023"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/nigeria-borno-attack-february-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66688765"
+        },
+        {
+          "name": "Premium Times",
+          "url": "https://www.premiumtimesng.com/regional/borno-village-attack-2023"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/nigeria-borno-attack-february-2023"
+        }
       ]
     },
     {
@@ -531,9 +896,18 @@
       "title": "Jerusalem Synagogue Shooting",
       "description": "Palestinian gunman opened fire outside synagogue in Neve Yaakov on Shabbat. Killed worshippers leaving evening service. Hamas and Islamic Jihad praised attack. Attacker shouted 'Allahu Akbar.'",
       "sources": [
-        {"name": "Times of Israel", "url": "https://www.timesofisrael.com/jerusalem-synagogue-attack-january-2023"},
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-middle-east-64424321"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/middle-east/jerusalem-shooting-2023"}
+        {
+          "name": "Times of Israel",
+          "url": "https://www.timesofisrael.com/jerusalem-synagogue-attack-january-2023"
+        },
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-middle-east-64424321"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/jerusalem-shooting-2023"
+        }
       ]
     },
     {
@@ -543,9 +917,18 @@
       "title": "DRC ADF Massacre",
       "description": "Allied Democratic Forces (ISIS affiliate) killed civilians in North Kivu province. Used machetes and firearms in nighttime raid on village. Part of ongoing ISIS campaign in eastern DRC.",
       "sources": [
-        {"name": "BBC", "url": "https://www.bbc.com/news/world-africa-66677654"},
-        {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2023/1/12/drc-north-kivu-massacre"},
-        {"name": "Reuters", "url": "https://www.reuters.com/world/africa/congo-adf-attack-2023"}
+        {
+          "name": "BBC",
+          "url": "https://www.bbc.com/news/world-africa-66677654"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2023/1/12/drc-north-kivu-massacre"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/africa/congo-adf-attack-2023"
+        }
       ]
     }
   ],

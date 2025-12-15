@@ -100,10 +100,10 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
 
         <div style={styles.intro}>
           <p style={{ marginBottom: '15px' }}>
-            {t.introPara1 || 'Muhammad, considered the perfect moral example for 1.8 billion Muslims, married a 6-year-old child, owned slaves, captured women as war booty, and established legal frameworks treating women as inferior beings.'}
+            {t.introParaOverview || 'Muhammad, considered the perfect moral example for 1.8 billion Muslims, married a 6-year-old child, owned slaves, captured women as war booty, and established legal frameworks treating women as inferior beings.'}
           </p>
           <p style={{ marginBottom: '15px' }}>
-            {t.introPara2 || 'This page documents Muhammad\'s treatment of women based on Islam\'s most authentic sources: Sahih (authentic) Hadith collections and the Quran.'}
+            {t.introParaCommonTactics || 'This page documents Muhammad\'s treatment of women based on Islam\'s most authentic sources: Sahih (authentic) Hadith collections and the Quran.'}
           </p>
           <p style={{ fontWeight: '600', color: '#c94b4b', fontSize: '1.05em' }}>
             {t.introQuestion || 'If Muhammad lived today, would he be considered a role model, or would he be prosecuted for child sexual abuse, slavery, and war crimes?'}

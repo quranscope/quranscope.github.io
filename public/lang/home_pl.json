@@ -3,73 +3,52 @@
   "description": "Kompleksowa analiza historyczna, tekstowa i krytyczna treści Koranu, badająca jego źródła, twierdzenia i rozwój historyczny",
   "researchOverview": "Przegląd badań",
   "intro": "Ta strona internetowa przedstawia kompleksową analizę historyczną, tekstową i krytyczną treści Koranu, badając jego źródła, twierdzenia i rozwój historyczny.",
-  "cards": {
-    "comparative": {
-      "title": "Skopiowane i edytowane treści",
-      "subtitle": "Jak koraniczne narracje zostały wyprowadzone z wcześniejszych źródeł",
-      "description": "Ponad 75 udokumentowanych podobieństw między historiami koranu a wcześniejszymi źródłami",
-      "button": "Zobacz badania →"
-    },
-    "scientific": {
-      "title": "Nieścisłości naukowe",
-      "subtitle": "Nieudane argumenty naukowe w Koranie",
-      "description": "Ponad 40 udokumentowanych błędów w kosmologii, biologii i zjawiskach naturalnych",
-      "button": "Zobacz badania →"
-    },
-    "expansion": {
-      "title": "Historia gwałtownej ekspansji",
-      "subtitle": "14 wieków podbojów wojskowych i przymusowej konwersji",
-      "description": "Szczegółowa oś czasu islamskich kampanii wojskowych i ekspansji terytorialnej",
-      "button": "Zobacz badania →"
-    },
-    "antisemitism": {
-      "title": "Antysemityzm i antychrześcijaństwo",
-      "subtitle": "Wersety koraniczne przeciwko Żydom i chrześcijanom",
-      "description": "Ponad 60 wersetów promujących nienawiść i przemoc",
-      "button": "Zobacz badania →"
-    },
-    "harm": {
-      "title": "Rzeczywista krzywda",
-      "subtitle": "Terroryzm, ucisk i łamanie praw człowieka",
-      "description": "18 głównych kategorii udokumentowanych szkód spowodowanych islamską ideologią",
-      "button": "Zobacz badania →"
-    },
-    "migration": {
-      "title": "Wpływ migracji",
-      "subtitle": "Jak islamska migracja niszczy kraje przyjmujące",
-      "description": "Transformacja Libanu, kryzys Europy i przetrwanie Europy Wschodniej",
-      "button": "Zobacz badania →"
-    },
-    "exmuslim": {
-      "title": "Głosy byłych muzułmanów",
-      "subtitle": "Świadectwa, zasoby i sieci wsparcia",
-      "description": "Główne kanały YouTube i społeczności pomagające tym, którzy opuścili islam",
-      "button": "Zobacz zasoby →"
-    },
-    "muhammad": {
-      "title": "Mahomet i kobiety",
-      "subtitle": "Małżeństwa proroka, niewolnictwo i traktowanie kobiet",
-      "description": "Szczegółowe badanie relacji Mahometa i islamskich nauk dotyczących płci",
-      "button": "Zobacz badania →"
-    },
-    "jihad": {
-      "title": "Studium dżihadu",
-      "subtitle": "Koraniczne podstawy islamskiej doktryny wojny",
-      "description": "Kompleksowa analiza wersetów o dżihadzie i ich interpretacji",
-      "button": "Zobacz studium →"
-    },
-    "terrorist": {
-      "title": "Organizacje Terrorystyczne",
-      "subtitle": "Globalny terroryzm i naruszenia praw człowieka",
-      "description": "Exposing terrorist groups operating under false religious and political agendas",
-      "button": "Zobacz organizacje →"
-    },
-    "solution": {
-      "title": "Rozwiązanie",
-      "subtitle": "Jak zająć się wpływem ideologii islamskiej",
-      "description": "Practical approaches to countering extremism and promoting reform",
-      "button": "Zobacz rozwiązania →"
-    }
-  }
-}
+  "cards_comparative_title": "Skopiowane i edytowane treści",
+  "cards_comparative_subtitle": "Jak koraniczne narracje zostały wyprowadzone z wcześniejszych źródeł",
+  "cards_comparative_description": "Ponad 75 udokumentowanych podobieństw między historiami koranu a wcześniejszymi źródłami",
+  "cards_comparative_button": "Zobacz badania →",
+  "cards_scientific_title": "Nieścisłości naukowe",
+  "cards_scientific_subtitle": "Nieudane argumenty naukowe w Koranie",
+  "cards_scientific_description": "Ponad 40 udokumentowanych błędów w kosmologii, biologii i zjawiskach naturalnych",
+  "cards_scientific_button": "Zobacz badania →",
+  "cards_expansion_title": "Historia gwałtownej ekspansji",
+  "cards_expansion_subtitle": "14 wieków podbojów wojskowych i przymusowej konwersji",
+  "cards_expansion_description": "Szczegółowa oś czasu islamskich kampanii wojskowych i ekspansji terytorialnej",
+  "cards_expansion_button": "Zobacz badania →",
+  "cards_antisemitism_title": "Antysemityzm i antychrześcijaństwo",
+  "cards_antisemitism_subtitle": "Wersety koraniczne przeciwko Żydom i chrześcijanom",
+  "cards_antisemitism_description": "Ponad 60 wersetów promujących nienawiść i przemoc",
+  "cards_antisemitism_button": "Zobacz badania →",
+  "cards_harm_title": "Rzeczywista krzywda",
+  "cards_harm_subtitle": "Terroryzm, ucisk i łamanie praw człowieka",
+  "cards_harm_description": "18 głównych kategorii udokumentowanych szkód spowodowanych islamską ideologią",
+  "cards_harm_button": "Zobacz badania →",
+  "cards_migration_title": "Wpływ migracji",
+  "cards_migration_subtitle": "Jak islamska migracja niszczy kraje przyjmujące",
+  "cards_migration_description": "Transformacja Libanu, kryzys Europy i przetrwanie Europy Wschodniej",
+  "cards_migration_button": "Zobacz badania →",
+  "cards_exmuslim_title": "Głosy byłych muzułmanów",
+  "cards_exmuslim_subtitle": "Świadectwa, zasoby i sieci wsparcia",
+  "cards_exmuslim_description": "Główne kanały YouTube i społeczności pomagające tym, którzy opuścili islam",
+  "cards_exmuslim_button": "Zobacz zasoby →",
+  "cards_muhammadWomen_title": "Mahomet i kobiety",
+  "cards_muhammadWomen_subtitle": "Małżeństwa proroka, niewolnictwo i traktowanie kobiet",
+  "cards_muhammadWomen_description": "Szczegółowe badanie relacji Mahometa i islamskich nauk dotyczących płci",
+  "cards_muhammadWomen_button": "Zobacz badania →",
+  "cards_jihad_title": "Studium dżihadu",
+  "cards_jihad_subtitle": "Koraniczne podstawy islamskiej doktryny wojny",
+  "cards_jihad_description": "Kompleksowa analiza wersetów o dżihadzie i ich interpretacji",
+  "cards_jihad_button": "Zobacz studium →",
+  "cards_terrorist_title": "Organizacje Terrorystyczne",
+  "cards_terrorist_subtitle": "Globalny terroryzm i naruszenia praw człowieka",
+  "cards_terrorist_description": "Exposing terrorist groups operating under false religious and political agendas",
+  "cards_terrorist_button": "Zobacz organizacje →",
+  "cards_recentAttacks_title": "Ostatnie ataki",
+  "cards_recentAttacks_subtitle": "Najnowsze incydenty terrorystyczne i przemoc",
+  "cards_recentAttacks_description": "Dokumentowanie ostatnich ataków terrorystycznych i przemocy motywowanej ideologią islamską",
+  "cards_recentAttacks_button": "Zobacz ostatnie ataki →",
+  "cards_solution_title": "Rozwiązanie",
+  "cards_solution_subtitle": "Jak zająć się wpływem ideologii islamskiej",
+  "cards_solution_description": "Practical approaches to countering extremism and promoting reform",
+  "cards_solution_button": "Zobacz rozwiązania →"
 }

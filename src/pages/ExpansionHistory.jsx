@@ -9,7 +9,9 @@ import {
   CategoryTag, 
   SectionTitle, 
   HighlightBox,
-  BackLink 
+  BackLink,
+  ResearchItem,
+  DetailRow
 } from '../components/ui';
 
 export default function ExpansionHistory({ translations: t, currentLang = 'en' }) {
@@ -47,82 +49,57 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           </HighlightBox>
 
           <HighlightBox title="⚔️ Major Military Campaigns:" variant="danger">
-            <table className="w-full border-collapse my-4 bg-white">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Battle/Raid</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Outcome</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">624 CE</td>
-                  <td className="border border-gray-300 p-3">Battle of Badr</td>
-                  <td className="border border-gray-300 p-3">Muslim victory</td>
-                  <td className="border border-gray-300 p-3">Caravan raid turned battle; 70 Meccans killed; prisoners ransomed or executed</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">625 CE</td>
-                  <td className="border border-gray-300 p-3">Battle of Uhud</td>
-                  <td className="border border-gray-300 p-3">Muslim defeat</td>
-                  <td className="border border-gray-300 p-3">Revenge attack by Meccans; Muhammad wounded; 70 Muslims killed</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">627 CE</td>
-                  <td className="border border-gray-300 p-3">Battle of the Trench</td>
-                  <td className="border border-gray-300 p-3">Stalemate/Muslim strategic win</td>
-                  <td className="border border-gray-300 p-3">Siege of Medina; followed by genocide of Banu Qurayza Jews</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">627 CE</td>
-                  <td className="border border-gray-300 p-3">Massacre of Banu Qurayza</td>
-                  <td className="border border-gray-300 p-3">Genocide</td>
-                  <td className="border border-gray-300 p-3">600-900 Jewish men beheaded; women/children enslaved; total annihilation</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">628 CE</td>
-                  <td className="border border-gray-300 p-3">Treaty of Hudaybiyyah</td>
-                  <td className="border border-gray-300 p-3">Temporary peace</td>
-                  <td className="border border-gray-300 p-3">Broken by Muhammad two years later</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">628 CE</td>
-                  <td className="border border-gray-300 p-3">Conquest of Khaybar</td>
-                  <td className="border border-gray-300 p-3">Muslim victory</td>
-                  <td className="border border-gray-300 p-3">Jewish fortress city conquered; wealth seized; jizya imposed</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">630 CE</td>
-                  <td className="border border-gray-300 p-3">Conquest of Mecca</td>
-                  <td className="border border-gray-300 p-3">Muslim victory (mostly bloodless)</td>
-                  <td className="border border-gray-300 p-3">10,000 troops; idols destroyed; forced conversion or exile</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">630 CE</td>
-                  <td className="border border-gray-300 p-3">Battle of Hunayn</td>
-                  <td className="border border-gray-300 p-3">Muslim victory</td>
-                  <td className="border border-gray-300 p-3">6,000 captives; massive booty distribution</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">630 CE</td>
-                  <td className="border border-gray-300 p-3">Siege of Taif</td>
-                  <td className="border border-gray-300 p-3">Initial failure, later submission</td>
-                  <td className="border border-gray-300 p-3">Catapults used; later forced conversion</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">630 CE</td>
-                  <td className="border border-gray-300 p-3">Expedition to Tabuk</td>
-                  <td className="border border-gray-300 p-3">Show of force</td>
-                  <td className="border border-gray-300 p-3">30,000 troops; Byzantine frontier; submission or jizya demanded</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>🗡️ Ordered Assassinations (Partial List):</h4>
+            <ResearchItem title="624 CE - Battle of Badr">
+              <DetailRow label="Outcome" value="Muslim victory" />
+              <DetailRow label="Details" value="Caravan raid turned battle; 70 Meccans killed; prisoners ransomed or executed" />
+            </ResearchItem>
+            
+            <ResearchItem title="625 CE - Battle of Uhud">
+              <DetailRow label="Outcome" value="Muslim defeat" />
+              <DetailRow label="Details" value="Revenge attack by Meccans; Muhammad wounded; 70 Muslims killed" />
+            </ResearchItem>
+            
+            <ResearchItem title="627 CE - Battle of the Trench">
+              <DetailRow label="Outcome" value="Stalemate/Muslim strategic win" />
+              <DetailRow label="Details" value="Siege of Medina; followed by genocide of Banu Qurayza Jews" />
+            </ResearchItem>
+            
+            <ResearchItem title="627 CE - Massacre of Banu Qurayza">
+              <DetailRow label="Outcome" value="Genocide" />
+              <DetailRow label="Details" value="600-900 Jewish men beheaded; women/children enslaved; total annihilation" />
+            </ResearchItem>
+            
+            <ResearchItem title="628 CE - Treaty of Hudaybiyyah">
+              <DetailRow label="Outcome" value="Temporary peace" />
+              <DetailRow label="Details" value="Broken by Muhammad two years later" />
+            </ResearchItem>
+            
+            <ResearchItem title="628 CE - Conquest of Khaybar">
+              <DetailRow label="Outcome" value="Muslim victory" />
+              <DetailRow label="Details" value="Jewish fortress city conquered; wealth seized; jizya imposed" />
+            </ResearchItem>
+            
+            <ResearchItem title="630 CE - Conquest of Mecca">
+              <DetailRow label="Outcome" value="Muslim victory (mostly bloodless)" />
+              <DetailRow label="Details" value="10,000 troops; idols destroyed; forced conversion or exile" />
+            </ResearchItem>
+            
+            <ResearchItem title="630 CE - Battle of Hunayn">
+              <DetailRow label="Outcome" value="Muslim victory" />
+              <DetailRow label="Details" value="6,000 captives; massive booty distribution" />
+            </ResearchItem>
+            
+            <ResearchItem title="630 CE - Siege of Taif">
+              <DetailRow label="Outcome" value="Initial failure, later submission" />
+              <DetailRow label="Details" value="Catapults used; later forced conversion" />
+            </ResearchItem>
+            
+            <ResearchItem title="630 CE - Expedition to Tabuk">
+              <DetailRow label="Outcome" value="Show of force" />
+              <DetailRow label="Details" value="30,000 troops; Byzantine frontier; submission or jizya demanded" />
+            </ResearchItem>
+          </HighlightBox>
+          <HighlightBox title="🗡️ Ordered Assassinations (Partial List):" variant="danger">
             <List>
               <ListItem><strong>Asma bint Marwan</strong> - Poetess killed for writing critical poetry (624 CE)</ListItem>
               <ListItem><strong>Abu Afak</strong> - 120-year-old poet assassinated for criticizing Muhammad (624 CE)</ListItem>
@@ -136,12 +113,11 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
         </ContentCard>
 
         {/* RASHIDUN CALIPHATE */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>632-661 CE</span>
-          <h2 style={h2Style}>Rashidun Caliphate Conquests (First 4 Caliphs)</h2>
+        <ContentCard>
+          <CategoryTag color="purple">632-661 CE</CategoryTag>
+          <SectionTitle color="primary">Rashidun Caliphate Conquests (First 4 Caliphs)</SectionTitle>
           
-          <div style={statsBoxStyle}>
-            <h4 style={h4StatsStyle}>📈 Territorial Expansion:</h4>
+          <HighlightBox title="📈 Territorial Expansion:" variant="success">
             <p>In just 30 years, Islam expanded from Arabia across:</p>
             <List>
               <ListItem>Entire Arabian Peninsula</ListItem>
@@ -151,11 +127,9 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem>Parts of Anatolia and Armenia</ListItem>
             </List>
             <p><strong>Result:</strong> One of the fastest military expansions in human history - almost entirely through warfare.</p>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚔️ Major Conquests:</h4>
-            <table style={tableStyle}>
+          </HighlightBox>
+          <HighlightBox title="⚔️ Major Conquests:" variant="danger">
+            <table className="w-full border-collapse my-4 bg-white">
               <thead>
                 <tr>
                   <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
@@ -215,10 +189,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div style={eventBoxStyle}>
-            <h4 style={h4EventStyle}>🔥 Methods of Conquest:</h4>
+          </HighlightBox>
+          <HighlightBox title="🔥 Methods of Conquest:" variant="info">
             <List variant="numbered">
               <ListItem><strong>Ultimatum System:</strong> "Convert to Islam, pay jizya (heavy tax), or face war"</ListItem>
               <ListItem><strong>Jizya Taxation:</strong> Non-Muslims taxed heavily to incentivize conversion</ListItem>
@@ -227,16 +199,15 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Dhimmi System:</strong> Non-Muslims made second-class citizens with restricted rights</ListItem>
               <ListItem><strong>Economic Pressure:</strong> Non-Muslims barred from many professions and positions</ListItem>
             </List>
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
         {/* UMAYYAD CALIPHATE */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>661-750 CE</span>
-          <h2 style={h2Style}>Umayyad Caliphate Expansion</h2>
+        <ContentCard>
+          <CategoryTag color="purple">661-750 CE</CategoryTag>
+          <SectionTitle color="primary">Umayyad Caliphate Expansion</SectionTitle>
           
-          <div style={statsBoxStyle}>
-            <h4 style={h4StatsStyle}>📈 Peak Territorial Extent:</h4>
+          <HighlightBox title="📈 Peak Territorial Extent:" variant="success">
             <p>At its height, the Umayyad Caliphate was one of the largest empires in history, spanning from:</p>
             <List>
               <ListItem><strong>West:</strong> Iberian Peninsula (Spain/Portugal)</ListItem>
@@ -245,11 +216,9 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>South:</strong> North Africa to the Sahara</ListItem>
             </List>
             <p><strong>Total Area:</strong> ~15 million km² (5.8 million sq mi)</p>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚔️ Major Military Campaigns:</h4>
-            <table style={tableStyle}>
+          </HighlightBox>
+          <HighlightBox title="⚔️ Major Military Campaigns:" variant="danger">
+            <table className="w-full border-collapse my-4 bg-white">
               <thead>
                 <tr>
                   <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
@@ -297,10 +266,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>🔥 Forced Islamization Methods:</h4>
+          </HighlightBox>
+          <HighlightBox title="🔥 Forced Islamization Methods:" variant="danger">
             <List>
               <ListItem><strong>Temple Destruction:</strong> Hindu, Buddhist, Zoroastrian temples systematically destroyed</ListItem>
               <ListItem><strong>Enslavement:</strong> Millions of Hindus, Persians, Europeans enslaved</ListItem>
@@ -308,16 +275,15 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Kidnapping Children:</strong> Devshirme-like systems; children taken and raised Muslim</ListItem>
               <ListItem><strong>Economic Exclusion:</strong> Non-Muslims banned from government, military, education</ListItem>
             </List>
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
         {/* ABBASID ERA */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>750-1258 CE</span>
-          <h2 style={h2Style}>Abbasid Caliphate & Continued Expansion</h2>
+        <ContentCard>
+          <CategoryTag color="purple">750-1258 CE</CategoryTag>
+          <SectionTitle color="primary">Abbasid Caliphate & Continued Expansion</SectionTitle>
           
-          <div style={eventBoxStyle}>
-            <h4 style={h4EventStyle}>📜 Systematic Islamization Policies:</h4>
+          <HighlightBox title="📜 Systematic Islamization Policies:" variant="info">
             <List>
               <ListItem><strong>Dhimmi Laws Codified:</strong> Non-Muslims required to wear distinctive clothing; restricted from certain professions</ListItem>
               <ListItem><strong>Church/Temple Destruction:</strong> Laws prohibiting new church/temple construction; many forcibly converted to mosques</ListItem>
@@ -325,10 +291,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Forced Relocation:</strong> Christian and Jewish communities moved or scattered</ListItem>
               <ListItem><strong>Slavery Trade:</strong> Massive African and European slave trade; millions enslaved</ListItem>
             </List>
-          </div>
-
-          <div style={statsBoxStyle}>
-            <h4 style={h4StatsStyle}>📊 Demographic Changes:</h4>
+          </HighlightBox>
+          <HighlightBox title="📊 Demographic Changes:" variant="success">
             <p>Over 500 years, formerly Christian/Zoroastrian/Hindu/Buddhist majority regions became Muslim majority through:</p>
             <List>
               <ListItem>Economic pressure via jizya taxation</ListItem>
@@ -338,17 +302,16 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem>Educational exclusion (non-Muslims barred from learning)</ListItem>
               <ListItem>Periodic violence and forced conversions</ListItem>
             </List>
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
         {/* OTTOMAN EMPIRE */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>1299-1922 CE</span>
-          <h2 style={h2Style}>Ottoman Empire Expansion & Devshirme System</h2>
+        <ContentCard>
+          <CategoryTag color="purple">1299-1922 CE</CategoryTag>
+          <SectionTitle color="primary">Ottoman Empire Expansion & Devshirme System</SectionTitle>
           
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚔️ Major Conquests:</h4>
-            <table style={tableStyle}>
+          <HighlightBox title="⚔️ Major Conquests:" variant="danger">
+            <table className="w-full border-collapse my-4 bg-white">
               <thead>
                 <tr>
                   <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
@@ -390,10 +353,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>👶 Devshirme System (Blood Tax):</h4>
+          </HighlightBox>
+          <HighlightBox title="👶 Devshirme System (Blood Tax):" variant="danger">
             <p><strong>Definition:</strong> Systematic kidnapping of Christian boys to create Janissary soldiers and bureaucrats</p>
             <List>
               <ListItem><strong>Age:</strong> Boys aged 8-18 taken from Christian families</ListItem>
@@ -404,26 +365,23 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Purpose:</strong> Create elite military force loyal only to Islam and Sultan</ListItem>
             </List>
             <p><em>This constitutes systematic child kidnapping, forced conversion, and cultural genocide.</em></p>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>💀 Ottoman Genocides & Atrocities:</h4>
+          </HighlightBox>
+          <HighlightBox title="💀 Ottoman Genocides & Atrocities:" variant="danger">
             <List>
               <ListItem><strong>Armenian Genocide (1915-1917):</strong> 1.5 million Armenians killed; systematic ethnic cleansing</ListItem>
               <ListItem><strong>Assyrian Genocide:</strong> 250,000-750,000 Assyrian Christians killed</ListItem>
               <ListItem><strong>Greek Genocide:</strong> 450,000-900,000 Greeks killed or expelled</ListItem>
               <ListItem><strong>Forced Islamization:</strong> Millions of Balkan and Caucasus Christians forcibly converted or killed over 600 years</ListItem>
             </List>
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
         {/* MODERN ERA */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>1900-2025 CE</span>
-          <h2 style={h2Style}>Modern Era: Political & Demographic Expansion</h2>
+        <ContentCard>
+          <CategoryTag color="purple">1900-2025 CE</CategoryTag>
+          <SectionTitle color="primary">Modern Era: Political & Demographic Expansion</SectionTitle>
           
-          <div style={eventBoxStyle}>
-            <h4 style={h4EventStyle}>📊 Methods of Modern Expansion:</h4>
+          <HighlightBox title="📊 Methods of Modern Expansion:" variant="info">
             <List>
               <ListItem><strong>High Birth Rates:</strong> Demographic conquest through population growth in minority regions</ListItem>
               <ListItem><strong>Immigration & Refusal to Integrate:</strong> Mass migration with self-segregation and demand for Sharia</ListItem>
@@ -433,11 +391,9 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Lawfare:</strong> Using Western legal systems to impose Islamic restrictions</ListItem>
               <ListItem><strong>Educational Infiltration:</strong> Demanding Islamic content in schools; opposing critical analysis</ListItem>
             </List>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚠️ Contemporary Conflicts & Forced Islamization:</h4>
-            <table style={tableStyle}>
+          </HighlightBox>
+          <HighlightBox title="⚠️ Contemporary Conflicts & Forced Islamization:" variant="danger">
+            <table className="w-full border-collapse my-4 bg-white">
               <thead>
                 <tr>
                   <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
@@ -483,10 +439,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div style={statsBoxStyle}>
-            <h4 style={h4StatsStyle}>📈 Statistical Growth Mechanisms:</h4>
+          </HighlightBox>
+          <HighlightBox title="📈 Statistical Growth Mechanisms:" variant="success">
             <List>
               <ListItem><strong>Birth Rate Differential:</strong> Muslim-majority countries have significantly higher birth rates than non-Muslim populations</ListItem>
               <ListItem><strong>Apostasy Prohibition:</strong> Death penalty or social death for leaving Islam = one-way conversion system</ListItem>
@@ -494,15 +448,14 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Inheritance Laws:</strong> Non-Muslim children receive less inheritance, incentivizing conversion</ListItem>
               <ListItem><strong>Political Dominance:</strong> Once Muslim majority is achieved, Sharia implemented; non-Muslims become second-class</ListItem>
             </List>
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
         {/* SUMMARY */}
-        <div style={timelineCardStyle}>
-          <h2 style={h2Style}>📋 Summary: Patterns of Islamic Expansion</h2>
+        <ContentCard>
+          <SectionTitle color="primary">📋 Summary: Patterns of Islamic Expansion</SectionTitle>
           
-          <div style={eventBoxStyle}>
-            <h4 style={h4EventStyle}>Historical Pattern:</h4>
+          <HighlightBox title="Historical Pattern:" variant="info">
             <List variant="numbered">
               <ListItem><strong>Military Conquest:</strong> Invade territory through warfare</ListItem>
               <ListItem><strong>Impose Jizya Tax:</strong> Economic pressure on non-Muslims</ListItem>
@@ -514,10 +467,8 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Generational Pressure:</strong> Over time, economic and social pressure converts majority</ListItem>
               <ListItem><strong>Final Stage:</strong> Sharia fully implemented; remaining non-Muslims expelled or killed</ListItem>
             </List>
-          </div>
-
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚠️ Key Conclusion:</h4>
+          </HighlightBox>
+          <HighlightBox title="⚠️ Key Conclusion:" variant="danger">
             <p><strong>Islamic expansion was NOT primarily through "peaceful preaching" as often claimed.</strong></p>
             <p>Historical evidence overwhelmingly shows expansion through:</p>
             <List>
@@ -530,9 +481,9 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem>✗ Demographic manipulation (birth rates + apostasy laws)</ListItem>
             </List>
             <p><em>These are documented historical facts from Islamic, Western, and neutral sources.</em></p>
-          </div>
-        </div>
-      </div>
+          </HighlightBox>
+        </ContentCard>
+      </Container>
     </>
   );
 }

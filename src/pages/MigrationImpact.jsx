@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Heading, Description, Blockquote } from '../components/ui'
 
 export default function MigrationImpact({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -12,7 +13,6 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
     timelineItem: { borderLeft: '3px solid #2196f3', paddingLeft: '1.5rem', marginBottom: '1.5rem' },
     countryTag: { display: 'inline-block', background: '#e3f2fd', color: '#1565c0', padding: '0.25rem 0.75rem', borderRadius: '12px', margin: '0.25rem', fontSize: '0.9rem', fontWeight: 'bold' },
     conclusionBox: { background: '#e8f5e9', borderLeft: '5px solid #4caf50', padding: '1.5rem', marginTop: '2rem', borderRadius: '8px' },
-    quoteBox: { background: '#f5f5f5', borderLeft: '4px solid #666', padding: '1rem', margin: '1rem 0', fontStyle: 'italic' },
     newsLink: { color: '#2196f3', textDecoration: 'none', fontWeight: 'bold' },
   };
 
@@ -26,8 +26,8 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
       <div className="page-content">
         <a href="/" className="back-link">← Back to Home</a>
         
-        <h1>Islamic Migration: The Lebanon Pattern</h1>
-        <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>How Muslim Demographics Transform Nations</p>
+        <Heading level={1} variant="page">Islamic Migration: The Lebanon Pattern</Heading>
+        <Description>How Muslim Demographics Transform Nations</Description>
 
         <div style={styles.warningBox}>
           <h2 style={{ color: '#c62828', marginTop: 0 }}>⚠️ The Documented Pattern</h2>
@@ -41,7 +41,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           <p><strong>This pattern happened in Lebanon. It's happening NOW in Western Europe.</strong></p>
         </div>
 
-        <h2>🇱🇧 Lebanon Case Study: From Paradise to Islamic Failed State</h2>
+        <Heading level={2} variant="section">🇱🇧 Lebanon Case Study: From Paradise to Islamic Failed State</Heading>
         <div className="content-section">
           <h3>Historical Transformation (1920-2025)</h3>
           
@@ -86,7 +86,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🇬🇧 United Kingdom: Grooming Gangs & No-Go Zones</h2>
+        <Heading level={2} variant="section">🇬🇧 United Kingdom: Grooming Gangs & No-Go Zones</Heading>
         <div className="content-section">
           <div style={styles.impactItem}>
             <h3>Demographics</h3>
@@ -135,7 +135,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🇫🇷 France: Charlie Hebdo to Bataclan</h2>
+        <Heading level={2} variant="section">🇫🇷 France: Charlie Hebdo to Bataclan</Heading>
         <div className="content-section">
           <div style={styles.impactItem}>
             <h3>Demographics</h3>
@@ -176,7 +176,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🇩🇪 Germany: Merkel's Disaster</h2>
+        <Heading level={2} variant="section">🇩🇪 Germany: Merkel's Disaster</Heading>
         <div className="content-section">
           <div style={styles.impactItem}>
             <h3>The 2015 Migration Crisis</h3>
@@ -213,7 +213,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🇸🇪 Sweden: Europe's Rape Capital</h2>
+        <Heading level={2} variant="section">🇸🇪 Sweden: Europe's Rape Capital</Heading>
         <div className="content-section">
           <div style={styles.impactItem}>
             <h3>Demographics & Policy</h3>
@@ -242,7 +242,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>✅ Eastern Europe: The Survivors (Poland, Hungary, Czech Republic)</h2>
+        <Heading level={2} variant="section">✅ Eastern Europe: The Survivors (Poland, Hungary, Czech Republic)</Heading>
         <div className="content-section">
           <div style={styles.conclusionBox}>
             <h3 style={{ color: '#2e7d32' }}>🛡️ The Countries That Said NO</h3>
@@ -293,11 +293,11 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🔍 Pattern Analysis: Why Muslims Don't Integrate</h2>
+        <Heading level={2} variant="section">🔍 Pattern Analysis: Why Muslims Don't Integrate</Heading>
         <div className="content-section">
-          <div style={styles.quoteBox}>
+          <Blockquote variant="neutral">
             <p><strong>Quran 5:51</strong> - "O you who have believed, do not take the Jews and the Christians as allies. They are allies of one another. And whoever is an ally to them among you – then indeed, he is one of them."</p>
-          </div>
+          </Blockquote>
 
           <ol>
             <li><strong>Theological Prohibition:</strong> Quran forbids close friendship with non-Muslims</li>
@@ -309,7 +309,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </ol>
         </div>
 
-        <h2>📜 Sharia Law Demands</h2>
+        <Heading level={2} variant="section">📜 Sharia Law Demands</Heading>
         <div className="content-section">
           <h3>Stage 1: Special Accommodations</h3>
           <ul>
@@ -340,7 +340,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🔮 Future Predictions</h2>
+        <Heading level={2} variant="section">🔮 Future Predictions</Heading>
         <div className="content-section">
           <h3>Two Europes by 2070</h3>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', margin: '1rem 0' }}>
@@ -369,7 +369,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </div>
         </div>
 
-        <h2>🛑 How to Stop It</h2>
+        <Heading level={2} variant="section">🛑 How to Stop It</Heading>
         <div className="content-section">
           <ol>
             <li><strong>Stop All Muslim Immigration:</strong> Follow Poland/Hungary model</li>
@@ -383,7 +383,7 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
           </ol>
         </div>
 
-        <h2>📊 Conclusion</h2>
+        <Heading level={2} variant="section">📊 Conclusion</Heading>
         <div className="content-section">
           <div style={styles.statsBox}>
             <h3>The Lebanon Pattern is Repeating</h3>

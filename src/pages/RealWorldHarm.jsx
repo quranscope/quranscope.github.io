@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Heading, Description, Blockquote } from '../components/ui'
 
 export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -13,7 +14,6 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
     countryTag: { display: 'inline-block', background: '#ffcdd2', color: '#c62828', padding: '0.25rem 0.75rem', borderRadius: '12px', margin: '0.25rem', fontSize: '0.85rem', fontWeight: 'bold' },
     victimTag: { display: 'inline-block', background: '#fff3e0', color: '#e65100', padding: '0.25rem 0.75rem', borderRadius: '12px', margin: '0.25rem', fontSize: '0.85rem', fontWeight: 'bold' },
     categoryTag: { display: 'inline-block', background: '#f3e5f5', color: '#6a1b9a', padding: '0.25rem 0.75rem', borderRadius: '12px', margin: '0.25rem', fontSize: '0.85rem', fontWeight: 'bold' },
-    quoteBox: { background: '#fff8e1', borderLeft: '4px solid #fbc02d', padding: '1rem', margin: '1rem 0', fontStyle: 'italic' },
     statsBox: { background: 'linear-gradient(135deg, #e74c3c, #c0392b)', color: 'white', padding: '1.5rem', borderRadius: '8px', margin: '1rem 0' },
     newsLink: { color: '#2196f3', textDecoration: 'none', fontWeight: 'bold' },
   };
@@ -28,8 +28,8 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
       <div className="page-content">
         <a href="/" className="back-link">← Back to Home</a>
         
-        <h1>Real-World Harm From Islamic Texts</h1>
-        <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>18+ Categories of Documented Violence, Oppression & Human Rights Violations</p>
+        <Heading level={1} variant="page">Real-World Harm From Islamic Texts</Heading>
+        <Description>18+ Categories of Documented Violence, Oppression & Human Rights Violations</Description>
 
         <div style={styles.warningBox}>
           <h2 style={{ color: '#c62828', marginTop: 0 }}>⚠️ The Connection is Direct</h2>
@@ -46,7 +46,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>1. 👩 Women as Property</h2>
+        <Heading level={2} variant="section">1. 👩 Women as Property</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 2:223</strong> - "Your wives are a place of sowing of seed for you, so come to your place of cultivation however you wish."</p>
@@ -63,7 +63,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>2. ⛓️ Sex Slavery Commanded</h2>
+        <Heading level={2} variant="section">2. ⛓️ Sex Slavery Commanded</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 4:24</strong> - "And [also prohibited to you are all] married women except those your right hands possess [i.e., female captives]."</p>
@@ -89,9 +89,9 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
                 <li>Gang rape common; pregnancy forced; escape attempts punished by torture/death</li>
               </ul>
             </div>
-            <div style={styles.quoteBox}>
+            <Blockquote variant="warning">
               <p><strong>Nadia Murad (Nobel Peace Prize winner, Yazidi survivor):</strong> "They destroyed us systematically. ISIS gave us Quran verses before raping us. They said it was halal because we were infidels."</p>
-            </div>
+            </Blockquote>
           </div>
           <div style={styles.harmItem}>
             <h3>Other Recent Cases</h3>
@@ -103,7 +103,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>3. 🤜 Wife Beating Permitted</h2>
+        <Heading level={2} variant="section">3. 🤜 Wife Beating Permitted</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 4:34</strong> - "Men are in charge of women... But those [wives] from whom you fear arrogance - [first] advise them; [then if they persist], forsake them in bed; and [finally], strike them."</p>
@@ -128,7 +128,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>4. ⛓️ Slavery Institutionalized</h2>
+        <Heading level={2} variant="section">4. ⛓️ Slavery Institutionalized</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran References:</strong> 4:3, 4:24, 4:25, 4:36, 16:71, 23:6, 24:31, 24:33, 24:58, 30:28, 33:50, 33:52, 33:55, 70:30</p>
@@ -186,7 +186,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>5. 📜 Arab Slave Trade (1,300 Years)</h2>
+        <Heading level={2} variant="section">5. 📜 Arab Slave Trade (1,300 Years)</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>Scale & Duration</h3>
@@ -208,14 +208,14 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
           <div style={styles.harmItem}>
             <h3>Racism in Islam</h3>
-            <div style={styles.quoteBox}>
+            <Blockquote variant="warning">
               <p><strong>Sahih Muslim 2334:</strong> Muhammad described Ethiopians as having "heads like raisins"</p>
               <p><strong>Arab Term:</strong> "Abd" (عبد) = slave, still used today to mean "Black person" in Arabic</p>
-            </div>
+            </Blockquote>
           </div>
         </div>
 
-        <h2>6. 🏗️ Modern Kafala System (30M+ Victims)</h2>
+        <Heading level={2} variant="section">6. 🏗️ Modern Kafala System (30M+ Victims)</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>What is Kafala?</h3>
@@ -255,7 +255,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>7. ⚔️ Kill Polytheists Command</h2>
+        <Heading level={2} variant="section">7. ⚔️ Kill Polytheists Command</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 9:5 (Sword Verse)</strong> - "And when the sacred months have passed, then kill the polytheists wherever you find them and capture them and besiege them and sit in wait for them at every place of ambush."</p>
@@ -289,9 +289,9 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
                 <li><strong>Hundreds:</strong> Killed in similar brutal fashion</li>
               </ul>
             </div>
-            <div style={styles.quoteBox}>
+            <Blockquote variant="warning">
               <p><strong>Mosque Announcements (January 19, 1990):</strong> "Leave Kashmir, leave your women behind, but leave immediately"</p>
-            </div>
+            </Blockquote>
           </div>
           <div style={styles.harmItem}>
             <h3>Current Status</h3>
@@ -303,7 +303,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>8. 🕌 Fight Until All Religion for Allah</h2>
+        <Heading level={2} variant="section">8. 🕌 Fight Until All Religion for Allah</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 8:39</strong> - "And fight them until there is no fitnah [polytheism] and [until] the religion, all of it, is for Allah."</p>
@@ -319,7 +319,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>9. 💣 Terror Commanded</h2>
+        <Heading level={2} variant="section">9. 💣 Terror Commanded</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 8:12</strong> - "I will cast terror into the hearts of those who disbelieved, so strike [them] upon the necks and strike from them every fingertip."</p>
@@ -352,7 +352,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>10. ✡️ Jews as Eternal Enemies</h2>
+        <Heading level={2} variant="section">10. ✡️ Jews as Eternal Enemies</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 5:51</strong> - "O you who have believed, do not take the Jews and the Christians as allies."</p>
@@ -379,13 +379,13 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
                 <li><strong>Social Media:</strong> Terrorists live-streamed murders, celebrating with "Allahu Akbar"</li>
               </ul>
             </div>
-            <div style={styles.quoteBox}>
+            <Blockquote variant="warning">
               <p><strong>Sahih Muslim 2922 (cited in Hamas Charter):</strong> "The Day of Judgment will not come until Muslims fight the Jews, when the Jew will hide behind stones and trees. The stones and trees will say, 'O Muslim, O servant of Allah, there is a Jew behind me, come and kill him.'"</p>
-            </div>
+            </Blockquote>
           </div>
         </div>
 
-        <h2>11. ⚰️ Apostasy Death Penalty</h2>
+        <Heading level={2} variant="section">11. ⚰️ Apostasy Death Penalty</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Sahih Bukhari 6922:</strong> Muhammad said: "Whoever changed his Islamic religion, then kill him."</p>
@@ -419,7 +419,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>12. 🗣️ Blasphemy Death Penalty</h2>
+        <Heading level={2} variant="section">12. 🗣️ Blasphemy Death Penalty</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>Major Attacks Over Blasphemy</h3>
@@ -432,7 +432,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>13. 👧 Child Marriage (Aisha Precedent)</h2>
+        <Heading level={2} variant="section">13. 👧 Child Marriage (Aisha Precedent)</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Sahih Bukhari 5134:</strong> Aisha said: "The Prophet married me when I was six years old and consummated the marriage when I was nine."</p>
@@ -456,7 +456,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>14. 🚨 UK Grooming Gangs</h2>
+        <Heading level={2} variant="section">14. 🚨 UK Grooming Gangs</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>Pattern</h3>
@@ -473,7 +473,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>15. 🕌 Madrasa Child Abuse</h2>
+        <Heading level={2} variant="section">15. 🕌 Madrasa Child Abuse</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>🚨 Systematic Sexual Abuse in Islamic Schools</h3>
@@ -485,7 +485,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>16. 💔 Honor Killings (5,000+/year)</h2>
+        <Heading level={2} variant="section">16. 💔 Honor Killings (5,000+/year)</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>What Are Honor Killings?</h3>
@@ -510,7 +510,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>17. ✂️ Female Genital Mutilation (200M Victims)</h2>
+        <Heading level={2} variant="section">17. ✂️ Female Genital Mutilation (200M Victims)</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>What is FGM?</h3>
@@ -544,7 +544,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>18. ✝️ Forced Conversions</h2>
+        <Heading level={2} variant="section">18. ✝️ Forced Conversions</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>🚨 Pakistan: 1,000+ Hindu/Christian Girls Abducted Yearly</h3>
@@ -557,7 +557,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>19. 🌸 72 Virgins: Martyrdom Incentive</h2>
+        <Heading level={2} variant="section">19. 🌸 72 Virgins: Martyrdom Incentive</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 44:54</strong> - "We will marry them to fair women with large, beautiful eyes."</p>
@@ -574,7 +574,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>20. 💣 Suicide Bombings (Guaranteed Paradise)</h2>
+        <Heading level={2} variant="section">20. 💣 Suicide Bombings (Guaranteed Paradise)</Heading>
         <div className="content-section">
           <div style={styles.scriptureRef}>
             <p><strong>Quran 9:111</strong> - "Indeed, Allah has purchased from the believers their lives and their properties [in exchange] for that they will have Paradise. They fight in the cause of Allah, so they kill and are killed."</p>
@@ -592,7 +592,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>📊 Regional Breakdown</h2>
+        <Heading level={2} variant="section">📊 Regional Breakdown</Heading>
         <div className="content-section">
           <div style={styles.harmItem}>
             <h3>Kashmir</h3>
@@ -669,7 +669,7 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           </div>
         </div>
 
-        <h2>🎯 Conclusion</h2>
+        <Heading level={2} variant="section">🎯 Conclusion</Heading>
         <div className="content-section">
           <div style={styles.statsBox}>
             <h3>The Numbers Don't Lie</h3>

@@ -534,6 +534,7 @@ npm run validate:keys               # Verify JSX uses valid translation keys (ch
 npm run validate:key-format         # Check for numbers in translation keys (CRITICAL)
 npm run validate:language           # Validate language-specific content
 npm run validate:usage              # Check translation key usage patterns
+npm run validate:links              # Validate external links return 200 success (checks URLs in JSON files)
 npm run validate:all                # Run all validation checks sequentially
 npm run validate:report             # Generate translation validation report
 npm run validate:watch              # Watch lang/ folder and auto-validate on changes

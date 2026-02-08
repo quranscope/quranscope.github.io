@@ -67,6 +67,104 @@
   color: #666;
 }
 
+/* Reusable content component styles */
+.qs-heading {
+  color: #2c3e50;
+  margin: 0 0 1rem;
+}
+
+.qs-heading--page {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.qs-heading--section {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #667eea;
+}
+
+.qs-heading--subsection {
+  color: #34495e;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.qs-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.qs-blockquote {
+  padding: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  border-left: 4px solid #666;
+  background: #f5f5f5;
+  color: #555;
+}
+
+.qs-blockquote--warning {
+  background: #fff8e1;
+  border-left-color: #fbc02d;
+}
+
+.qs-blockquote--info {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+}
+
+.qs-blockquote--neutral {
+  background: #f5f5f5;
+  border-left-color: #666;
+}
+
+.qs-image-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.qs-image-text__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.qs-image-text--right {
+  grid-template-areas: "content image";
+}
+
+.qs-image-text--right .qs-image-text__image {
+  grid-area: image;
+}
+
+.qs-image-text--right .qs-image-text__content {
+  grid-area: content;
+}
+
+.qs-youtube {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.qs-youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Terrorist Organizations Styles */
 .warning-box {
   background: #fff3cd;
@@ -296,5 +394,13 @@
   .org-meta {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .qs-heading--page {
+    font-size: 1.8rem;
+  }
+
+  .qs-image-text {
+    grid-template-columns: 1fr;
   }
 }

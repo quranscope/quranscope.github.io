@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Heading, Description, Blockquote } from '../components/ui'
 
 export default function Solution({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -18,7 +19,6 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
     emphasisH4: { color: '#e65100', marginBottom: '0.75rem', fontSize: '1.15rem' },
     notSolution: { background: '#ffebee', borderLeft: '4px solid #f44336', padding: '1.5rem', margin: '1.5rem 0', borderRadius: '5px' },
     notSolutionH3: { color: '#c62828', fontSize: '1.2rem', marginBottom: '0.75rem' },
-    quoteBox: { background: '#e3f2fd', borderLeft: '4px solid #2196f3', padding: '1.5rem', margin: '1.5rem 0', fontStyle: 'italic', borderRadius: '5px', fontSize: '1.05rem' },
     actionList: { background: '#f1f8e9', padding: '1.5rem', margin: '1rem 0', borderRadius: '5px', border: '2px solid #8bc34a' },
     actionListH4: { color: '#33691e', marginBottom: '1rem', fontSize: '1.2rem' },
     ul: { marginLeft: '2rem', lineHeight: '1.7' },

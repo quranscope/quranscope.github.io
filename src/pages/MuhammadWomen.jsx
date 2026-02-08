@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Heading, Description } from '../components/ui'
 
 export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
   if (!t) return <div>Loading...</div>
@@ -96,7 +97,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
       <div className="page-content">
         <a href="/" className="back-link">{t.homeButton || '← Back to Home'}</a>
         
-        <h1>{t.title || 'Muhammad and the Treatment of Women: A Critical Analysis'}</h1>
+        <Heading level={1} variant="page">{t.title || 'Muhammad and the Treatment of Women: A Critical Analysis'}</Heading>
 
         <div style={styles.intro}>
           <p style={{ marginBottom: '15px' }}>
@@ -125,7 +126,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           <p style={{ marginTop: '10px' }}>{t.warningText || 'This page discusses child marriage, sexual slavery, domestic violence, and human rights violations documented in Islamic texts.'}</p>
         </div>
 
-        <h2>1. Child Marriage: The Case of Aisha</h2>
+        <Heading level={2} variant="section">1. Child Marriage: The Case of Aisha</Heading>
         <div className="content-section">
           <p><strong>The single most damaging fact about Muhammad:</strong> He married a 6-year-old child and had sex with her at age 9.</p>
 
@@ -161,7 +162,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </ul>
         </div>
 
-        <h2>2. Multiple Wives and Captive Women</h2>
+        <Heading level={2} variant="section">2. Multiple Wives and Captive Women</Heading>
         <div className="content-section">
           <p>Muhammad had special permission from Allah to exceed the 4-wife limit imposed on other Muslims. He married at least 11 women, including war captives.</p>
 
@@ -196,7 +197,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </ul>
         </div>
 
-        <h2>3. Women's Rights and Status in Islam</h2>
+        <Heading level={2} variant="section">3. Women's Rights and Status in Islam</Heading>
         <div className="content-section">
           <p>The Quran and Hadith establish women as legally and morally inferior to men in Islamic law.</p>
 
@@ -232,7 +233,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </ul>
         </div>
 
-        <h2>4. War Captives and Sexual Slavery</h2>
+        <Heading level={2} variant="section">4. War Captives and Sexual Slavery</Heading>
         <div className="content-section">
           <p>Islam explicitly permits sexual slavery of war captives. Muhammad practiced this and established it as Islamic law.</p>
 
@@ -267,7 +268,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </ul>
         </div>
 
-        <h2>5. Modern Perspective: Is Muhammad Followable Today?</h2>
+        <Heading level={2} variant="section">5. Modern Perspective: Is Muhammad Followable Today?</Heading>
         <div className="content-section" style={{ background: '#ffebee', padding: '25px', borderRadius: '10px', borderLeft: '5px solid #c94b4b' }}>
           <h3>Ethical and Legal Analysis</h3>
           <p><strong>If Muhammad lived in any modern country and repeated his actions, he would be:</strong></p>
@@ -286,7 +287,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </p>
         </div>
 
-        <h2>6. Legal Consequences in Modern Countries</h2>
+        <Heading level={2} variant="section">6. Legal Consequences in Modern Countries</Heading>
         <div className="content-section">
           <p><strong>What would happen to Muhammad if he lived today and repeated his documented actions?</strong></p>
 
@@ -330,7 +331,7 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </ul>
         </div>
 
-        <h2>7. Conclusion: The Impact on Women</h2>
+        <Heading level={2} variant="section">7. Conclusion: The Impact on Women</Heading>
         <div className="content-section">
           <p style={{ marginBottom: '25px', fontWeight: '500', fontSize: '1.05em' }}>
             Muhammad's treatment of women and the legal frameworks he established have resulted in 1,400 years of systemic oppression affecting hundreds of millions of women.

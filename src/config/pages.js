@@ -118,6 +118,22 @@ export const PAGES = {
     backgroundColor: 'linear-gradient(135deg, #c31432 0%, #240b36 100%)',
     translationFile: 'recent_attacks',
     availableLanguages: AVAILABLE_LANGUAGES
+  },
+  wahhabism: {
+    path: '/wahhabism',
+    title: 'Wahhabism: The Extremist Ideology',
+    subtitle: 'Origins, Saudi Funding & Global Terrorism',
+    backgroundColor: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+    translationFile: 'wahhabism',
+    availableLanguages: AVAILABLE_LANGUAGES
+  },
+  dhimmi: {
+    path: '/dhimmi-ideology',
+    title: 'Dhimmi Ideology',
+    subtitle: 'The Status and Treatment of Non-Muslims Under Islamic Rule',
+    backgroundColor: 'linear-gradient(135deg, #8e44ad 0%, #c0392b 100%)',
+    translationFile: 'dhimmi',
+    availableLanguages: AVAILABLE_LANGUAGES
   }
 };
 

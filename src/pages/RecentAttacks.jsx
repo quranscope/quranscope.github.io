@@ -8,7 +8,10 @@ import {
   SectionTitle,
   StatsGrid,
   VerseBox,
-  HighlightBox
+  HighlightBox,
+  Heading,
+  Description,
+  EventBox
 } from '../components/ui';
 
 export default function RecentAttacks({ translations: t, currentLang = 'en' }) {
@@ -63,7 +66,7 @@ export default function RecentAttacks({ translations: t, currentLang = 'en' }) {
 
           <div className="space-y-6">
             {t.attacks2024_2025 && t.attacks2024_2025.map((attack, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-red-600">
+              <EventBox key={index} variant="war">
                 <div className="flex flex-wrap gap-3 mb-4 text-sm">
                   <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full font-semibold">
                     📅 {attack.date}
@@ -90,7 +93,7 @@ export default function RecentAttacks({ translations: t, currentLang = 'en' }) {
                     </a>
                   ))}
                 </div>
-              </div>
+              </EventBox>
             ))}
           </div>
         </ContentCard>
@@ -102,7 +105,7 @@ export default function RecentAttacks({ translations: t, currentLang = 'en' }) {
 
           <div className="space-y-6">
             {t.attacks2023 && t.attacks2023.map((attack, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-red-600">
+              <EventBox key={index} variant="war">
                 <div className="flex flex-wrap gap-3 mb-4 text-sm">
                   <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full font-semibold">
                     📅 {attack.date}
@@ -129,7 +132,7 @@ export default function RecentAttacks({ translations: t, currentLang = 'en' }) {
                     </a>
                   ))}
                 </div>
-              </div>
+              </EventBox>
             ))}
           </div>
         </ContentCard>

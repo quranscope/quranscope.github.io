@@ -68,28 +68,45 @@ export default function LanguageBar() {
   return (
     <>
       {showWarning && (
-        <div className="translation-warning">
-          ⚠️ This page is not yet translated to your selected language. Showing English version.
+        <div className="bg-yellow-50 border-b-2 border-yellow-400 px-4 py-3">
+          <div className="max-w-7xl mx-auto text-center">
+            <p className="text-sm font-medium text-yellow-800">
+              ⚠️ This page is not yet translated to your selected language. Showing English version.
+            </p>
+          </div>
         </div>
       )}
-      <div className="language-bar">
-        <span>Choose Language:</span>
-        {LANGUAGES.map(lang => {
-          const isAvailable = pageConfig.availableLanguages.includes(lang.code);
-          const isActive = currentLang === lang.code;
-          
-          return (
-            <button
-              key={lang.code}
-              className={`${isActive ? 'active' : ''} ${!isAvailable ? 'disabled' : ''}`}
-              onClick={() => handleLanguageChange(lang.code)}
-              disabled={!isAvailable}
-              title={!isAvailable ? `Not available in ${lang.name}` : ''}
-            >
-              {lang.nativeName}
-            </button>
-          );
-        })}
+      <div className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="text-sm font-medium text-gray-700 mr-2">Choose Language:</span>
+            {LANGUAGES.map(lang => {
+              const isAvailable = pageConfig.availableLanguages.includes(lang.code);
+              const isActive = currentLang === lang.code;
+              
+              return (
+                <button
+                  key={lang.code}
+                  className={`
+                    px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200
+                    ${isActive 
+                      ? 'bg-blue-600 text-white shadow-md hover:bg-blue-700' 
+                      : isAvailable
+                        ? 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900'
+                        : 'bg-gray-50 text-gray-400 cursor-not-allowed opacity-50'
+                    }
+                    ${isAvailable && !isActive ? 'hover:shadow-sm' : ''}
+                  `}
+                  onClick={() => handleLanguageChange(lang.code)}
+                  disabled={!isAvailable}
+                  title={!isAvailable ? `Not available in ${lang.name}` : ''}
+                >
+                  {lang.nativeName}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );

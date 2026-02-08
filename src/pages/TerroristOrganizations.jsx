@@ -8,7 +8,10 @@ import {
   CategoryTag,
   SectionTitle,
   StatsGrid,
-  PageHeader
+  PageHeader,
+  Heading,
+  Description,
+  EventBox
 } from '../components/ui'
 import { PAGES } from '../config/pages'
 
@@ -55,7 +58,7 @@ export default function TerroristOrganizations({ translations, currentLang }) {
           <SectionTitle color="red">{translations.categoryBannedTitle}</SectionTitle>
           
           {/* ISIS */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-red-600 shadow-sm">
+          <EventBox variant="war">
             <h3 className="text-2xl font-bold mb-3">{translations.isisName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="red">{translations.isisAka}</CategoryTag>
@@ -71,10 +74,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* Al-Qaeda */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-red-600 shadow-sm">
+          <EventBox variant="war">
             <h3 className="text-2xl font-bold mb-3">{translations.alqaedaName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="red">{translations.alqaedaAka}</CategoryTag>
@@ -90,10 +93,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* Boko Haram */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-red-600 shadow-sm">
+          <EventBox variant="war">
             <h3 className="text-2xl font-bold mb-3">{translations.bokoharamName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="red">{translations.bokoharamAka}</CategoryTag>
@@ -109,10 +112,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* Taliban */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-red-600 shadow-sm">
+          <EventBox variant="war">
             <h3 className="text-2xl font-bold mb-3">{translations.talibanName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="red">{translations.talibanAka}</CategoryTag>
@@ -128,14 +131,14 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
         </ContentCard>
 
         <ContentCard>
           <SectionTitle color="red">{translations.categoryActiveTitle}</SectionTitle>
 
           {/* Hamas */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-orange-500 shadow-sm">
+          <EventBox variant="event">
             <h3 className="text-2xl font-bold mb-3">{translations.hamasName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="orange">{translations.hamasAka}</CategoryTag>
@@ -151,10 +154,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* Hezbollah */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-orange-500 shadow-sm">
+          <EventBox variant="event">
             <h3 className="text-2xl font-bold mb-3">{translations.hezbollahName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="orange">{translations.hezbollahAka}</CategoryTag>
@@ -170,10 +173,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* Al-Shabaab */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-orange-500 shadow-sm">
+          <EventBox variant="event">
             <h3 className="text-2xl font-bold mb-3">{translations.alshabaabName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="orange">{translations.alshabaabAka}</CategoryTag>
@@ -189,10 +192,10 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
 
           {/* AQAP */}
-          <div className="bg-white rounded-lg p-6 mb-6 border-l-4 border-orange-500 shadow-sm">
+          <EventBox variant="event">
             <h3 className="text-2xl font-bold mb-3">{translations.aqapName}</h3>
             <div className="flex flex-wrap gap-2 mb-4">
               <CategoryTag color="orange">{translations.aqapAka}</CategoryTag>
@@ -208,7 +211,7 @@ export default function TerroristOrganizations({ translations, currentLang }) {
                 ))}
               </ul>
             </div>
-          </div>
+          </EventBox>
         </ContentCard>
 
         {translations.conclusionTitle && (

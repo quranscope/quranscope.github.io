@@ -1,54 +1,85 @@
 {
-  "title": "Koran-Analyse - Historische und kritische Untersuchung",
-  "description": "Umfassende historische, textliche und kritische Analyse des koranischen Inhalts, Untersuchung seiner Quellen, Behauptungen und historischen Entwicklung",
-  "researchOverview": "Forschungsübersicht",
-  "intro": "Diese Website präsentiert eine umfassende historische, textliche und kritische Analyse des koranischen Inhalts und untersucht seine Quellen, Behauptungen und historische Entwicklung.",
-  "cards_comparative_title": "Kopierte und bearbeitete Inhalte",
-  "cards_comparative_subtitle": "Wie koranische Erzählungen aus früheren Quellen abgeleitet wurden",
-  "cards_comparative_description": "75+ dokumentierte Parallelen zwischen koranischen Geschichten und früheren Quellen",
-  "cards_comparative_button": "Forschung ansehen →",
-  "cards_scientific_title": "Wissenschaftliche Ungenauigkeiten",
-  "cards_scientific_subtitle": "Gescheiterte wissenschaftliche Argumente im Koran",
-  "cards_scientific_description": "40+ dokumentierte Fehler in Kosmologie, Biologie und Naturphänomenen",
-  "cards_scientific_button": "Forschung ansehen →",
-  "cards_expansion_title": "Gewaltsame Expansionsgeschichte",
-  "cards_expansion_subtitle": "14 Jahrhunderte militärischer Eroberung und Zwangsbekehrung",
-  "cards_expansion_description": "Detaillierte Zeitleiste islamischer Militärkampagnen und territorialer Expansion",
-  "cards_expansion_button": "Forschung ansehen →",
-  "cards_antisemitism_title": "Antisemitismus und Antichristentum",
-  "cards_antisemitism_subtitle": "Koranische Verse gegen Juden und Christen",
-  "cards_antisemitism_description": "60+ Verse, die Hass und Gewalt fördern",
-  "cards_antisemitism_button": "Forschung ansehen →",
-  "cards_harm_title": "Realer Schaden",
-  "cards_harm_subtitle": "Terrorismus, Unterdrückung und Menschenrechtsverletzungen",
-  "cards_harm_description": "18 Hauptkategorien dokumentierter Schäden durch islamische Ideologie",
-  "cards_harm_button": "Forschung ansehen →",
-  "cards_migration_title": "Migrationsauswirkungen",
-  "cards_migration_subtitle": "Wie islamische Migration Gastländer zerstört",
-  "cards_migration_description": "Libanons Transformation, Europas Krise und Osteuropas Überleben",
-  "cards_migration_button": "Forschung ansehen →",
-  "cards_exmuslim_title": "Ex-Muslim-Stimmen",
-  "cards_exmuslim_subtitle": "Zeugnisse, Ressourcen und Unterstützungsnetzwerke",
-  "cards_exmuslim_description": "Wichtige YouTube-Kanäle und Gemeinschaften, die denjenigen helfen, die den Islam verlassen haben",
-  "cards_exmuslim_button": "Ressourcen ansehen →",
-  "cards_muhammadWomen_title": "Mohammed und Frauen",
-  "cards_muhammadWomen_subtitle": "Ehen des Propheten, Sklaverei und Behandlung von Frauen",
-  "cards_muhammadWomen_description": "Detaillierte Untersuchung von Mohammeds Beziehungen und islamischen Geschlechterlehren",
-  "cards_muhammadWomen_button": "Forschung ansehen →",
-  "cards_jihad_title": "Dschihad-Studie",
-  "cards_jihad_subtitle": "Koranische Grundlage der islamischen Kriegsdoktrin",
-  "cards_jihad_description": "Umfassende Analyse der Dschihad-Verse und ihrer Interpretation",
-  "cards_jihad_button": "Studie ansehen →",
-  "cards_terrorist_title": "Terrororganisationen",
-  "cards_terrorist_subtitle": "Globaler Terrorismus und Menschenrechtsverletzungen",
-  "cards_terrorist_description": "Exposing terrorist groups operating under false religious and political agendas",
-  "cards_terrorist_button": "Organisationen ansehen →",
-  "cards_recentAttacks_title": "Jüngste Angriffe",
-  "cards_recentAttacks_subtitle": "Neueste terroristische Vorfälle und Gewalt",
-  "cards_recentAttacks_description": "Dokumentation jüngster Terroranschläge und durch islamische Ideologie motivierter Gewalt",
-  "cards_recentAttacks_button": "Jüngste Angriffe ansehen →",
-  "cards_solution_title": "Lösung",
-  "cards_solution_subtitle": "Wie man mit den Auswirkungen der islamischen Ideologie umgeht",
-  "cards_solution_description": "Practical approaches to countering extremism and promoting reform",
-  "cards_solution_button": "Lösungen ansehen →"
+  "title": "Quran Scope - Historical & Critical Analysis",
+  "description": "Umfassende historische, textliche und kritische Analyse des koranischen Inhalts, die seine Quellen, Aussagen und historische Entwicklung untersucht",
+  "researchOverview": "Überblick über die Forschung",
+  "intro": "Diese Website bietet eine umfassende historische, textliche und kritische Analyse des koranischen Inhalts und untersucht seine Quellen, Ansprüche und historische Entwicklung.",
+  "cards": {
+    "comparative": {
+      "title": "Copied & Edited Content",
+      "description": "Quranic Narratives from Earlier Sources",
+      "details": "Comprehensive documentation of 80+ stories, laws, and concepts borrowed from Jewish scripture, Christian texts, and Arabian folklore",
+      "buttonText": "View Research"
+    },
+    "scientific": {
+      "title": "Scientific Inaccuracies",
+      "description": "Failed Scientific Arguments",
+      "details": "Analysis of astronomical, biological, and cosmological claims in the Quran that contradict established scientific evidence",
+      "buttonText": "View Analysis"
+    },
+    "expansion": {
+      "title": "Violent Expansion History",
+      "description": "14 Centuries of Military Conquest",
+      "details": "Historical documentation of Islamic military campaigns, forced conversions, and territorial expansion from 7th century to present",
+      "buttonText": "View History"
+    },
+    "antisemitism": {
+      "title": "Anti-Semitism & Anti-Christianity",
+      "description": "Quranic Verses Against Jews and Christians",
+      "details": "Examination of discriminatory verses, historical persecution, and theological basis for religious intolerance",
+      "buttonText": "View Documentation"
+    },
+    "harm": {
+      "title": "Real-World Harm",
+      "description": "Terrorism & Human Rights Violations",
+      "details": "Documented cases of violence, oppression, and human rights abuses justified through Islamic scripture and jurisprudence",
+      "buttonText": "View Evidence"
+    },
+    "migration": {
+      "title": "Migration Impact",
+      "description": "Effects on Host Nations",
+      "details": "Analysis of social, cultural, and political impacts of Islamic migration on Western and non-Muslim societies",
+      "buttonText": "View Analysis"
+    },
+    "exmuslim": {
+      "title": "Ex-Muslim Voices",
+      "description": "Testimonies & Support Resources",
+      "details": "Personal accounts from former Muslims, scholarly critiques, and resources for those questioning or leaving Islam",
+      "buttonText": "View Resources"
+    },
+    "muhammadWomen": {
+      "title": "Muhammad & Women",
+      "description": "Prophet's Marriages & Treatment",
+      "details": "Examination of Muhammad's relationships, including child marriage to Aisha, war captives, and Islamic laws regarding women",
+      "buttonText": "View Documentation"
+    },
+    "jihad": {
+      "title": "Jihad Study",
+      "description": "Quranic Foundation of Warfare Doctrine",
+      "details": "Analysis of jihad verses, classical interpretations, and the theological basis for religious warfare in Islamic tradition",
+      "buttonText": "View Study"
+    },
+    "terrorist": {
+      "title": "Terrorist Organizations",
+      "description": "Global Terrorism Analysis",
+      "details": "Documentation of Islamic terrorist groups, their ideological foundations, and connections to Quranic teachings",
+      "buttonText": "View Analysis"
+    },
+    "recentAttacks": {
+      "subtitle": "Recent Islamic Terror Attacks",
+      "description": "100+ Documented Attacks (2023-2025)",
+      "button": "View Timeline"
+    },
+    "solution": {
+      "title": "Solution",
+      "description": "Addressing Islamic Ideology's Impact",
+      "details": "Proposed approaches to countering Islamic extremism, promoting secular values, and supporting reform movements",
+      "buttonText": "View Solutions"
+    },
+    "dhimmi": {
+      "title": "Dhimmi Ideology",
+      "description": "Non-Muslims Under Islamic Rule",
+      "details": "Historical and theological examination of the dhimmi system, jizya tax, legal discrimination, and persecution of religious minorities",
+      "buttonText": "View Documentation"
+    }
+  }
 }

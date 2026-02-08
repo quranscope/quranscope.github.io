@@ -8,7 +8,12 @@ import {
   SectionTitle,
   StatsGrid,
   HighlightBox,
-  PageHeader
+  PageHeader,
+  Heading,
+  Description,
+  DataTable,
+  TableRow,
+  TableCell
 } from '../components/ui'
 import { PAGES } from '../config/pages'
 
@@ -105,25 +110,38 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
 
         <ContentCard>
           <h3 className="text-2xl font-bold mb-4">{t.keyVersesTitle}</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-white">
-              <thead>
-                <tr>
-                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.verseHeader}</th>
-                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.commandHeader}</th>
-                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.contextHeader}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td className="p-3 border-b border-gray-300">Quran 2:191-193</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse2191 }} /><td className="p-3 border-b border-gray-300">{t.context2191}</td></tr>
-                <tr><td className="p-3 border-b border-gray-300">Quran 4:89</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse489 }} /><td className="p-3 border-b border-gray-300">{t.context489}</td></tr>
-                <tr><td className="p-3 border-b border-gray-300">Quran 8:12</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse812 }} /><td className="p-3 border-b border-gray-300">{t.context812}</td></tr>
-                <tr><td className="p-3 border-b border-gray-300">Quran 8:39</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse839 }} /><td className="p-3 border-b border-gray-300">{t.context839}</td></tr>
-                <tr><td className="p-3 border-b border-gray-300">Quran 9:29</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse929 }} /><td className="p-3 border-b border-gray-300">{t.context929}</td></tr>
-                <tr><td className="p-3 border-b border-gray-300">Quran 9:111</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse9111 }} /><td className="p-3 border-b border-gray-300">{t.context9111}</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <DataTable headers={[t.verseHeader, t.commandHeader, t.contextHeader]}>
+            <TableRow>
+              <TableCell>Quran 2:191-193</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse2191 }} />
+              <TableCell>{t.context2191}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Quran 4:89</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse489 }} />
+              <TableCell>{t.context489}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Quran 8:12</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse812 }} />
+              <TableCell>{t.context812}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Quran 8:39</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse839 }} />
+              <TableCell>{t.context839}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Quran 9:29</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse929 }} />
+              <TableCell>{t.context929}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Quran 9:111</TableCell>
+              <TableCell dangerouslySetInnerHTML={{ __html: t.verse9111 }} />
+              <TableCell>{t.context9111}</TableCell>
+            </TableRow>
+          </DataTable>
         </ContentCard>
 
         <ContentCard>

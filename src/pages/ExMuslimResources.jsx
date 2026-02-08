@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Heading, Description } from '../components/ui'
 
 export default function ExMuslimResources({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -126,13 +127,13 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
       </Head>
       <div className="container">
         <a href="/" className="back-link">{t.homeButton}</a>
-        <h1>{t.pageTitle}</h1>
+        <Heading level={1} variant="page">{t.pageTitle}</Heading>
 
         <div style={styles.intro}>
           <p>{t.intro}</p>
         </div>
 
-        <h2>{t.youtubeTitle}</h2>
+        <Heading level={2} variant="section">{t.youtubeTitle}</Heading>
 
         <div style={styles.subtitle}>
           💡 Tip: Many channels offer subtitles in multiple languages. Click the CC button on YouTube videos to enable subtitles if available.
@@ -151,7 +152,7 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
           ))}
         </div>
 
-        <h2>{t.websitesTitle}</h2>
+        <Heading level={2} variant="section">{t.websitesTitle}</Heading>
 
         <div style={{ listStyle: 'none', padding: 0 }}>
           {websites.map((website, index) => (
@@ -163,7 +164,7 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
           ))}
         </div>
 
-        <h2>{t.reasonsTitle}</h2>
+        <Heading level={2} variant="section">{t.reasonsTitle}</Heading>
 
         <div style={styles.reasonSection}>
           <h3 style={{ color: '#555', marginBottom: '15px' }}>{t.reasonsSubtitle}</h3>

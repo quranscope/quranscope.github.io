@@ -57,7 +57,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">624 CE</td>
                   <td className="border border-gray-300 p-3">Battle of Badr</td>
                   <td className="border border-gray-300 p-3">Muslim victory</td>
@@ -69,7 +69,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Muslim defeat</td>
                   <td className="border border-gray-300 p-3">Revenge attack by Meccans; Muhammad wounded; 70 Muslims killed</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">627 CE</td>
                   <td className="border border-gray-300 p-3">Battle of the Trench</td>
                   <td className="border border-gray-300 p-3">Stalemate/Muslim strategic win</td>
@@ -81,7 +81,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Genocide</td>
                   <td className="border border-gray-300 p-3">600-900 Jewish men beheaded; women/children enslaved; total annihilation</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">628 CE</td>
                   <td className="border border-gray-300 p-3">Treaty of Hudaybiyyah</td>
                   <td className="border border-gray-300 p-3">Temporary peace</td>
@@ -93,7 +93,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Muslim victory</td>
                   <td className="border border-gray-300 p-3">Jewish fortress city conquered; wealth seized; jizya imposed</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">630 CE</td>
                   <td className="border border-gray-300 p-3">Conquest of Mecca</td>
                   <td className="border border-gray-300 p-3">Muslim victory (mostly bloodless)</td>
@@ -105,7 +105,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Muslim victory</td>
                   <td className="border border-gray-300 p-3">6,000 captives; massive booty distribution</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">630 CE</td>
                   <td className="border border-gray-300 p-3">Siege of Taif</td>
                   <td className="border border-gray-300 p-3">Initial failure, later submission</td>
@@ -165,7 +165,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">632-633</td>
                   <td className="border border-gray-300 p-3">Ridda Wars (Apostasy Wars)</td>
                   <td className="border border-gray-300 p-3">Arabian Peninsula</td>
@@ -177,7 +177,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Palestine</td>
                   <td className="border border-gray-300 p-3">Defeated Byzantine army; opened path to Syria</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">636</td>
                   <td className="border border-gray-300 p-3">Battle of Yarmouk</td>
                   <td className="border border-gray-300 p-3">Syria</td>
@@ -189,7 +189,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Iraq</td>
                   <td className="border border-gray-300 p-3">Defeated Persian Sassanid Empire; Iraq conquered</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">638</td>
                   <td className="border border-gray-300 p-3">Siege of Jerusalem</td>
                   <td className="border border-gray-300 p-3">Palestine</td>
@@ -201,7 +201,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Persia</td>
                   <td className="border border-gray-300 p-3">Final destruction of Persian Empire; forced Islamization began</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">642</td>
                   <td className="border border-gray-300 p-3">Conquest of Egypt</td>
                   <td className="border border-gray-300 p-3">Egypt</td>
@@ -259,7 +259,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">711-718</td>
                   <td className="border border-gray-300 p-3">Conquest of Hispania</td>
                   <td className="border border-gray-300 p-3">Spain/Portugal</td>
@@ -271,7 +271,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">France</td>
                   <td className="border border-gray-300 p-3">Muslim defeat; stopped expansion into Western Europe</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">674-678</td>
                   <td className="border border-gray-300 p-3">First Siege of Constantinople</td>
                   <td className="border border-gray-300 p-3">Byzantine Empire</td>
@@ -283,7 +283,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Byzantine Empire</td>
                   <td className="border border-gray-300 p-3">Failed; massive Muslim casualties</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">705-715</td>
                   <td className="border border-gray-300 p-3">Conquest of Transoxiana</td>
                   <td className="border border-gray-300 p-3">Central Asia</td>
@@ -358,7 +358,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">1453</td>
                   <td className="border border-gray-300 p-3">Fall of Constantinople</td>
                   <td className="border border-gray-300 p-3">Byzantine Empire</td>
@@ -370,7 +370,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Egypt, Syria, Levant</td>
                   <td className="border border-gray-300 p-3">Ottoman control of holy cities Mecca/Medina; claimed Caliphate</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">1526</td>
                   <td className="border border-gray-300 p-3">Battle of Mohács</td>
                   <td className="border border-gray-300 p-3">Hungary</td>
@@ -382,7 +382,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Austria</td>
                   <td className="border border-gray-300 p-3">Failed but terror across Europe</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">1683</td>
                   <td className="border border-gray-300 p-3">Second Siege of Vienna</td>
                   <td className="border border-gray-300 p-3">Austria</td>
@@ -446,7 +446,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">Pakistan</td>
                   <td className="border border-gray-300 p-3">Hindu/Christian minorities declining</td>
                   <td className="border border-gray-300 p-3">Forced conversions, kidnapping of girls, blasphemy laws, violence</td>
@@ -456,7 +456,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Hindu minority shrinking</td>
                   <td className="border border-gray-300 p-3">Violence, land seizure, forced conversion, exodus</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">Egypt</td>
                   <td className="border border-gray-300 p-3">Coptic Christians declining</td>
                   <td className="border border-gray-300 p-3">Church attacks, discrimination, kidnapping, forced conversion</td>
@@ -466,7 +466,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Boko Haram expansion</td>
                   <td className="border border-gray-300 p-3">Mass kidnappings, forced conversions, village massacres</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">Iraq/Syria</td>
                   <td className="border border-gray-300 p-3">ISIS genocide of Yazidis, Christians</td>
                   <td className="border border-gray-300 p-3">Systematic genocide, sex slavery, forced conversion, beheadings</td>
@@ -476,7 +476,7 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
                   <td className="border border-gray-300 p-3">Taliban rule</td>
                   <td className="border border-gray-300 p-3">Forced Sharia, zero religious freedom, death for apostasy</td>
                 </tr>
-                <tr style={{ background: '#f8f9fa' }}>
+                <tr className="bg-gray-50">
                   <td className="border border-gray-300 p-3">Europe</td>
                   <td className="border border-gray-300 p-3">Growing Islamic parallel societies</td>
                   <td className="border border-gray-300 p-3">No-go zones, Sharia councils, pressure for Islamic law</td>

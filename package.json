@@ -16,6 +16,7 @@
     "validate:key-format": "node scripts/validate-key-format.js",
     "validate:language": "node scripts/validate-language-content.js",
     "validate:usage": "node scripts/validate-translation-usage.js",
+    "validate:links": "node scripts/validate-external-links.js",
     "validate:all": "node scripts/validate-translations.js && node scripts/validate-language-content.js && node scripts/validate-translation-keys.js && node scripts/validate-key-format.js",
     "validate:report": "node scripts/translation-report.js",
     "validate:watch": "nodemon --watch lang --exec \"npm run validate:all\"",

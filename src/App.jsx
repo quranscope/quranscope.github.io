@@ -14,6 +14,8 @@ import MuhammadWomen from './pages/MuhammadWomen'
 import JihadStudy from './pages/JihadStudy'
 import Solution from './pages/Solution'
 import TerroristOrganizations from './pages/TerroristOrganizations'
+import Wahhabism from './pages/Wahhabism'
+import DhimmiIdeology from './pages/DhimmiIdeology'
 import './App.css'
 
 // Analytics tracking component
@@ -53,6 +55,8 @@ function App() {
             <Route path="/muhammad-women" element={<MuhammadWomen />} />
             <Route path="/jihad-study" element={<JihadStudy />} />
             <Route path="/terrorist-organizations" element={<TerroristOrganizations />} />
+            <Route path="/wahhabism" element={<Wahhabism />} />
+            <Route path="/dhimmi-ideology" element={<DhimmiIdeology />} />
             <Route path="/solution" element={<Solution />} />
           </Route>
         </Routes>

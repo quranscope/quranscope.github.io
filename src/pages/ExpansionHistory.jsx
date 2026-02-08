@@ -129,66 +129,45 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <p><strong>Result:</strong> One of the fastest military expansions in human history - almost entirely through warfare.</p>
           </HighlightBox>
           <HighlightBox title="⚔️ Major Conquests:" variant="danger">
-            <table className="w-full border-collapse my-4 bg-white">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Campaign</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Result</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">632-633</td>
-                  <td className="border border-gray-300 p-3">Ridda Wars (Apostasy Wars)</td>
-                  <td className="border border-gray-300 p-3">Arabian Peninsula</td>
-                  <td className="border border-gray-300 p-3">Forced reconversion of Arab tribes who left Islam after Muhammad's death; thousands killed</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">634</td>
-                  <td className="border border-gray-300 p-3">Battle of Ajnadayn</td>
-                  <td className="border border-gray-300 p-3">Palestine</td>
-                  <td className="border border-gray-300 p-3">Defeated Byzantine army; opened path to Syria</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">636</td>
-                  <td className="border border-gray-300 p-3">Battle of Yarmouk</td>
-                  <td className="border border-gray-300 p-3">Syria</td>
-                  <td className="border border-gray-300 p-3">Decisive defeat of Byzantine Empire; Syria conquered</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">637</td>
-                  <td className="border border-gray-300 p-3">Battle of al-Qadisiyyah</td>
-                  <td className="border border-gray-300 p-3">Iraq</td>
-                  <td className="border border-gray-300 p-3">Defeated Persian Sassanid Empire; Iraq conquered</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">638</td>
-                  <td className="border border-gray-300 p-3">Siege of Jerusalem</td>
-                  <td className="border border-gray-300 p-3">Palestine</td>
-                  <td className="border border-gray-300 p-3">Jerusalem surrendered; Christian holy sites taken</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">642</td>
-                  <td className="border border-gray-300 p-3">Battle of Nahavand</td>
-                  <td className="border border-gray-300 p-3">Persia</td>
-                  <td className="border border-gray-300 p-3">Final destruction of Persian Empire; forced Islamization began</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">642</td>
-                  <td className="border border-gray-300 p-3">Conquest of Egypt</td>
-                  <td className="border border-gray-300 p-3">Egypt</td>
-                  <td className="border border-gray-300 p-3">Alexandria fell; Coptic Christians subjugated under jizya</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">647-709</td>
-                  <td className="border border-gray-300 p-3">Conquest of North Africa</td>
-                  <td className="border border-gray-300 p-3">Libya, Tunisia, Algeria, Morocco</td>
-                  <td className="border border-gray-300 p-3">Berbers forcibly converted; Christian communities destroyed</td>
-                </tr>
-              </tbody>
-            </table>
+            <ResearchItem title="632-633 - Ridda Wars (Apostasy Wars)">
+              <DetailRow label="Region" value="Arabian Peninsula" />
+              <DetailRow label="Result" value="Forced reconversion of Arab tribes who left Islam after Muhammad's death; thousands killed" />
+            </ResearchItem>
+            
+            <ResearchItem title="634 - Battle of Ajnadayn">
+              <DetailRow label="Region" value="Palestine" />
+              <DetailRow label="Result" value="Defeated Byzantine army; opened path to Syria" />
+            </ResearchItem>
+            
+            <ResearchItem title="636 - Battle of Yarmouk">
+              <DetailRow label="Region" value="Syria" />
+              <DetailRow label="Result" value="Decisive defeat of Byzantine Empire; Syria conquered" />
+            </ResearchItem>
+            
+            <ResearchItem title="637 - Battle of al-Qadisiyyah">
+              <DetailRow label="Region" value="Iraq" />
+              <DetailRow label="Result" value="Defeated Persian Sassanid Empire; Iraq conquered" />
+            </ResearchItem>
+            
+            <ResearchItem title="638 - Siege of Jerusalem">
+              <DetailRow label="Region" value="Palestine" />
+              <DetailRow label="Result" value="Jerusalem surrendered; Christian holy sites taken" />
+            </ResearchItem>
+            
+            <ResearchItem title="642 - Battle of Nahavand">
+              <DetailRow label="Region" value="Persia" />
+              <DetailRow label="Result" value="Final destruction of Persian Empire; forced Islamization began" />
+            </ResearchItem>
+            
+            <ResearchItem title="642 - Conquest of Egypt">
+              <DetailRow label="Region" value="Egypt" />
+              <DetailRow label="Result" value="Alexandria fell; Coptic Christians subjugated under jizya" />
+            </ResearchItem>
+            
+            <ResearchItem title="647-709 - Conquest of North Africa">
+              <DetailRow label="Region" value="Libya, Tunisia, Algeria, Morocco" />
+              <DetailRow label="Result" value="Berbers forcibly converted; Christian communities destroyed" />
+            </ResearchItem>
           </HighlightBox>
           <HighlightBox title="🔥 Methods of Conquest:" variant="info">
             <List variant="numbered">
@@ -218,54 +197,35 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <p><strong>Total Area:</strong> ~15 million km² (5.8 million sq mi)</p>
           </HighlightBox>
           <HighlightBox title="⚔️ Major Military Campaigns:" variant="danger">
-            <table className="w-full border-collapse my-4 bg-white">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Campaign</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Result</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">711-718</td>
-                  <td className="border border-gray-300 p-3">Conquest of Hispania</td>
-                  <td className="border border-gray-300 p-3">Spain/Portugal</td>
-                  <td className="border border-gray-300 p-3">Visigothic Kingdom destroyed; Christian population subjugated; forced conversions</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">732</td>
-                  <td className="border border-gray-300 p-3">Battle of Tours</td>
-                  <td className="border border-gray-300 p-3">France</td>
-                  <td className="border border-gray-300 p-3">Muslim defeat; stopped expansion into Western Europe</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">674-678</td>
-                  <td className="border border-gray-300 p-3">First Siege of Constantinople</td>
-                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
-                  <td className="border border-gray-300 p-3">Failed; Greek fire used by Byzantines</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">717-718</td>
-                  <td className="border border-gray-300 p-3">Second Siege of Constantinople</td>
-                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
-                  <td className="border border-gray-300 p-3">Failed; massive Muslim casualties</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">705-715</td>
-                  <td className="border border-gray-300 p-3">Conquest of Transoxiana</td>
-                  <td className="border border-gray-300 p-3">Central Asia</td>
-                  <td className="border border-gray-300 p-3">Bukhara, Samarkand conquered; Zoroastrian/Buddhist populations forced to convert</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">712-715</td>
-                  <td className="border border-gray-300 p-3">Conquest of Sindh</td>
-                  <td className="border border-gray-300 p-3">Northwest India</td>
-                  <td className="border border-gray-300 p-3">Hindu/Buddhist regions conquered; beginning of Islamic India</td>
-                </tr>
-              </tbody>
-            </table>
+            <ResearchItem title="711-718 - Conquest of Hispania">
+              <DetailRow label="Region" value="Spain/Portugal" />
+              <DetailRow label="Result" value="Visigothic Kingdom destroyed; Christian population subjugated; forced conversions" />
+            </ResearchItem>
+            
+            <ResearchItem title="732 - Battle of Tours">
+              <DetailRow label="Region" value="France" />
+              <DetailRow label="Result" value="Muslim defeat; stopped expansion into Western Europe" />
+            </ResearchItem>
+            
+            <ResearchItem title="674-678 - First Siege of Constantinople">
+              <DetailRow label="Region" value="Byzantine Empire" />
+              <DetailRow label="Result" value="Failed; Greek fire used by Byzantines" />
+            </ResearchItem>
+            
+            <ResearchItem title="717-718 - Second Siege of Constantinople">
+              <DetailRow label="Region" value="Byzantine Empire" />
+              <DetailRow label="Result" value="Failed; massive Muslim casualties" />
+            </ResearchItem>
+            
+            <ResearchItem title="705-715 - Conquest of Transoxiana">
+              <DetailRow label="Region" value="Central Asia" />
+              <DetailRow label="Result" value="Bukhara, Samarkand conquered; Zoroastrian/Buddhist populations forced to convert" />
+            </ResearchItem>
+            
+            <ResearchItem title="712-715 - Conquest of Sindh">
+              <DetailRow label="Region" value="Northwest India" />
+              <DetailRow label="Result" value="Hindu/Buddhist regions conquered; beginning of Islamic India" />
+            </ResearchItem>
           </HighlightBox>
           <HighlightBox title="🔥 Forced Islamization Methods:" variant="danger">
             <List>
@@ -311,48 +271,30 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           <SectionTitle color="primary">Ottoman Empire Expansion & Devshirme System</SectionTitle>
           
           <HighlightBox title="⚔️ Major Conquests:" variant="danger">
-            <table className="w-full border-collapse my-4 bg-white">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Conquest</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Impact</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">1453</td>
-                  <td className="border border-gray-300 p-3">Fall of Constantinople</td>
-                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
-                  <td className="border border-gray-300 p-3">End of Christian Byzantine Empire; Hagia Sophia converted to mosque; massive population displacement</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">1517</td>
-                  <td className="border border-gray-300 p-3">Conquest of Mamluk Sultanate</td>
-                  <td className="border border-gray-300 p-3">Egypt, Syria, Levant</td>
-                  <td className="border border-gray-300 p-3">Ottoman control of holy cities Mecca/Medina; claimed Caliphate</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">1526</td>
-                  <td className="border border-gray-300 p-3">Battle of Mohács</td>
-                  <td className="border border-gray-300 p-3">Hungary</td>
-                  <td className="border border-gray-300 p-3">Hungary conquered; Central Europe under threat</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">1529</td>
-                  <td className="border border-gray-300 p-3">First Siege of Vienna</td>
-                  <td className="border border-gray-300 p-3">Austria</td>
-                  <td className="border border-gray-300 p-3">Failed but terror across Europe</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">1683</td>
-                  <td className="border border-gray-300 p-3">Second Siege of Vienna</td>
-                  <td className="border border-gray-300 p-3">Austria</td>
-                  <td className="border border-gray-300 p-3">Failed; beginning of Ottoman decline</td>
-                </tr>
-              </tbody>
-            </table>
+            <ResearchItem title="1453 - Fall of Constantinople">
+              <DetailRow label="Region" value="Byzantine Empire" />
+              <DetailRow label="Impact" value="End of Christian Byzantine Empire; Hagia Sophia converted to mosque; massive population displacement" />
+            </ResearchItem>
+            
+            <ResearchItem title="1517 - Conquest of Mamluk Sultanate">
+              <DetailRow label="Region" value="Egypt, Syria, Levant" />
+              <DetailRow label="Impact" value="Ottoman control of holy cities Mecca/Medina; claimed Caliphate" />
+            </ResearchItem>
+            
+            <ResearchItem title="1526 - Battle of Mohács">
+              <DetailRow label="Region" value="Hungary" />
+              <DetailRow label="Impact" value="Hungary conquered; Central Europe under threat" />
+            </ResearchItem>
+            
+            <ResearchItem title="1529 - First Siege of Vienna">
+              <DetailRow label="Region" value="Austria" />
+              <DetailRow label="Impact" value="Failed but terror across Europe" />
+            </ResearchItem>
+            
+            <ResearchItem title="1683 - Second Siege of Vienna">
+              <DetailRow label="Region" value="Austria" />
+              <DetailRow label="Impact" value="Failed; beginning of Ottoman decline" />
+            </ResearchItem>
           </HighlightBox>
           <HighlightBox title="👶 Devshirme System (Blood Tax):" variant="danger">
             <p><strong>Definition:</strong> Systematic kidnapping of Christian boys to create Janissary soldiers and bureaucrats</p>
@@ -393,52 +335,40 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             </List>
           </HighlightBox>
           <HighlightBox title="⚠️ Contemporary Conflicts & Forced Islamization:" variant="danger">
-            <table className="w-full border-collapse my-4 bg-white">
-              <thead>
-                <tr>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Situation</th>
-                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Methods</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">Pakistan</td>
-                  <td className="border border-gray-300 p-3">Hindu/Christian minorities declining</td>
-                  <td className="border border-gray-300 p-3">Forced conversions, kidnapping of girls, blasphemy laws, violence</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">Bangladesh</td>
-                  <td className="border border-gray-300 p-3">Hindu minority shrinking</td>
-                  <td className="border border-gray-300 p-3">Violence, land seizure, forced conversion, exodus</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">Egypt</td>
-                  <td className="border border-gray-300 p-3">Coptic Christians declining</td>
-                  <td className="border border-gray-300 p-3">Church attacks, discrimination, kidnapping, forced conversion</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">Nigeria</td>
-                  <td className="border border-gray-300 p-3">Boko Haram expansion</td>
-                  <td className="border border-gray-300 p-3">Mass kidnappings, forced conversions, village massacres</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">Iraq/Syria</td>
-                  <td className="border border-gray-300 p-3">ISIS genocide of Yazidis, Christians</td>
-                  <td className="border border-gray-300 p-3">Systematic genocide, sex slavery, forced conversion, beheadings</td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-300 p-3">Afghanistan</td>
-                  <td className="border border-gray-300 p-3">Taliban rule</td>
-                  <td className="border border-gray-300 p-3">Forced Sharia, zero religious freedom, death for apostasy</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="border border-gray-300 p-3">Europe</td>
-                  <td className="border border-gray-300 p-3">Growing Islamic parallel societies</td>
-                  <td className="border border-gray-300 p-3">No-go zones, Sharia councils, pressure for Islamic law</td>
-                </tr>
-              </tbody>
-            </table>
+            <ResearchItem title="Pakistan">
+              <DetailRow label="Situation" value="Hindu/Christian minorities declining" />
+              <DetailRow label="Methods" value="Forced conversions, kidnapping of girls, blasphemy laws, violence" />
+            </ResearchItem>
+            
+            <ResearchItem title="Bangladesh">
+              <DetailRow label="Situation" value="Hindu minority shrinking" />
+              <DetailRow label="Methods" value="Violence, land seizure, forced conversion, exodus" />
+            </ResearchItem>
+            
+            <ResearchItem title="Egypt">
+              <DetailRow label="Situation" value="Coptic Christians declining" />
+              <DetailRow label="Methods" value="Church attacks, discrimination, kidnapping, forced conversion" />
+            </ResearchItem>
+            
+            <ResearchItem title="Nigeria">
+              <DetailRow label="Situation" value="Boko Haram expansion" />
+              <DetailRow label="Methods" value="Mass kidnappings, forced conversions, village massacres" />
+            </ResearchItem>
+            
+            <ResearchItem title="Iraq/Syria">
+              <DetailRow label="Situation" value="ISIS genocide of Yazidis, Christians" />
+              <DetailRow label="Methods" value="Systematic genocide, sex slavery, forced conversion, beheadings" />
+            </ResearchItem>
+            
+            <ResearchItem title="Afghanistan">
+              <DetailRow label="Situation" value="Taliban rule" />
+              <DetailRow label="Methods" value="Forced Sharia, zero religious freedom, death for apostasy" />
+            </ResearchItem>
+            
+            <ResearchItem title="Europe">
+              <DetailRow label="Situation" value="Growing Islamic parallel societies" />
+              <DetailRow label="Methods" value="No-go zones, Sharia councils, pressure for Islamic law" />
+            </ResearchItem>
           </HighlightBox>
           <HighlightBox title="📈 Statistical Growth Mechanisms:" variant="success">
             <List>

@@ -1,118 +1,20 @@
 import Head from 'next/head';
 import { getPageConfig } from '../config/pages';
-import { List, ListItem } from '../components/ui';
+import { 
+  List, 
+  ListItem, 
+  Container, 
+  IntroBox, 
+  ContentCard, 
+  CategoryTag, 
+  SectionTitle, 
+  HighlightBox,
+  BackLink 
+} from '../components/ui';
 
 export default function ExpansionHistory({ translations: t, currentLang = 'en' }) {
   if (!t) return <div>Loading...</div>;
   const pageConfig = getPageConfig('/expansion-history');
-
-  const containerStyle = {
-    maxWidth: '1200px',
-    margin: '2rem auto',
-    padding: '0 1rem'
-  };
-
-  const introStyle = {
-    background: '#fff3cd',
-    borderLeft: '5px solid #ffc107',
-    padding: '1.5rem',
-    marginBottom: '2rem',
-    borderRadius: '5px'
-  };
-
-  const introH3Style = {
-    color: '#856404',
-    marginBottom: '0.5rem'
-  };
-
-  const introPStyle = {
-    color: '#856404',
-    margin: '0.5rem 0'
-  };
-
-  const timelineCardStyle = {
-    background: 'white',
-    borderRadius: '8px',
-    padding: '2rem',
-    marginBottom: '2rem',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
-  };
-
-  const h2Style = {
-    color: '#8e44ad',
-    marginBottom: '1rem',
-    paddingBottom: '0.5rem',
-    borderBottom: '2px solid #9b59b6'
-  };
-
-  const yearTagStyle = {
-    display: 'inline-block',
-    background: '#8e44ad',
-    color: 'white',
-    padding: '0.3rem 0.8rem',
-    borderRadius: '20px',
-    fontSize: '0.85rem',
-    marginBottom: '1rem',
-    fontWeight: 'bold'
-  };
-
-  const eventBoxStyle = {
-    background: '#f8f9fa',
-    borderLeft: '4px solid #9b59b6',
-    padding: '1rem',
-    margin: '1rem 0'
-  };
-
-  const statsBoxStyle = {
-    background: '#e8f5e9',
-    borderLeft: '4px solid #4caf50',
-    padding: '1rem',
-    margin: '1rem 0'
-  };
-
-  const warBoxStyle = {
-    background: '#ffebee',
-    borderLeft: '4px solid #f44336',
-    padding: '1rem',
-    margin: '1rem 0'
-  };
-
-  const h4EventStyle = {
-    color: '#8e44ad',
-    marginBottom: '0.5rem'
-  };
-
-  const h4StatsStyle = {
-    color: '#2e7d32',
-    marginBottom: '0.5rem'
-  };
-
-  const h4WarStyle = {
-    color: '#c62828',
-    marginBottom: '0.5rem'
-  };
-
-  const tableStyle = {
-    width: '100%',
-    borderCollapse: 'collapse',
-    margin: '1rem 0',
-    background: 'white'
-  };
-
-  const thStyle = {
-    border: '1px solid #ddd',
-    padding: '0.75rem',
-    textAlign: 'left',
-    background: '#8e44ad',
-    color: 'white',
-    fontWeight: 'bold'
-  };
-
-  const tdStyle = {
-    border: '1px solid #ddd',
-    padding: '0.75rem',
-    textAlign: 'left'
-  };
 
   return (
     <>
@@ -121,20 +23,20 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
         <meta name="description" content="1,400 Years of Islamic expansion through conquest, coercion, and political domination" />
       </Head>
       
-      <div style={containerStyle}>
-        <div style={introStyle}>
-          <h3 style={introH3Style}>⚠️ Historical Context</h3>
-          <p style={introPStyle}>This page documents the historical expansion of Islam primarily through military conquest, political coercion, taxation systems designed to force conversion, and demographic manipulation. All information is sourced from historical records, academic research, and Islamic sources themselves.</p>
-          <p style={introPStyle}><strong>Key Points:</strong> Islamic expansion was NOT primarily through "peaceful preaching" but through systematic warfare, jizya taxation on non-Muslims, threat of slavery, destruction of religious sites, and political domination.</p>
-        </div>
+      <Container>
+        <BackLink />
+        
+        <IntroBox title="⚠️ Historical Context" variant="warning">
+          <p>This page documents the historical expansion of Islam primarily through military conquest, political coercion, taxation systems designed to force conversion, and demographic manipulation. All information is sourced from historical records, academic research, and Islamic sources themselves.</p>
+          <p><strong>Key Points:</strong> Islamic expansion was NOT primarily through "peaceful preaching" but through systematic warfare, jizya taxation on non-Muslims, threat of slavery, destruction of religious sites, and political domination.</p>
+        </IntroBox>
 
         {/* MUHAMMAD'S MILITARY CAMPAIGNS */}
-        <div style={timelineCardStyle}>
-          <span style={yearTagStyle}>622-632 CE</span>
-          <h2 style={h2Style}>Muhammad's Military Campaigns (27 Battles, 60+ Raids)</h2>
+        <ContentCard>
+          <CategoryTag color="purple">622-632 CE</CategoryTag>
+          <SectionTitle color="primary">Muhammad's Military Campaigns (27 Battles, 60+ Raids)</SectionTitle>
           
-          <div style={eventBoxStyle}>
-            <h4 style={h4EventStyle}>📊 Statistics from Muhammad's Lifetime:</h4>
+          <HighlightBox title="📊 Statistics from Muhammad's Lifetime:" variant="info">
             <List>
               <ListItem><strong>27 major battles</strong> personally led or authorized by Muhammad</ListItem>
               <ListItem><strong>60+ raids (Ghazwa/Saraya)</strong> against caravans and tribes</ListItem>
@@ -142,79 +44,78 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Entire Jewish tribes</strong> expelled or executed (Banu Qaynuqa, Banu Nadir, Banu Qurayza)</ListItem>
               <ListItem><strong>Slavery institutionalized</strong> - captives sold or distributed as war booty</ListItem>
             </List>
-          </div>
+          </HighlightBox>
 
-          <div style={warBoxStyle}>
-            <h4 style={h4WarStyle}>⚔️ Major Military Campaigns:</h4>
-            <table style={tableStyle}>
+          <HighlightBox title="⚔️ Major Military Campaigns:" variant="danger">
+            <table className="w-full border-collapse my-4 bg-white">
               <thead>
                 <tr>
-                  <th style={thStyle}>Year</th>
-                  <th style={thStyle}>Battle/Raid</th>
-                  <th style={thStyle}>Outcome</th>
-                  <th style={thStyle}>Notes</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Battle/Raid</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Outcome</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Notes</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>624 CE</td>
-                  <td style={tdStyle}>Battle of Badr</td>
-                  <td style={tdStyle}>Muslim victory</td>
-                  <td style={tdStyle}>Caravan raid turned battle; 70 Meccans killed; prisoners ransomed or executed</td>
+                  <td className="border border-gray-300 p-3">624 CE</td>
+                  <td className="border border-gray-300 p-3">Battle of Badr</td>
+                  <td className="border border-gray-300 p-3">Muslim victory</td>
+                  <td className="border border-gray-300 p-3">Caravan raid turned battle; 70 Meccans killed; prisoners ransomed or executed</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>625 CE</td>
-                  <td style={tdStyle}>Battle of Uhud</td>
-                  <td style={tdStyle}>Muslim defeat</td>
-                  <td style={tdStyle}>Revenge attack by Meccans; Muhammad wounded; 70 Muslims killed</td>
+                  <td className="border border-gray-300 p-3">625 CE</td>
+                  <td className="border border-gray-300 p-3">Battle of Uhud</td>
+                  <td className="border border-gray-300 p-3">Muslim defeat</td>
+                  <td className="border border-gray-300 p-3">Revenge attack by Meccans; Muhammad wounded; 70 Muslims killed</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>627 CE</td>
-                  <td style={tdStyle}>Battle of the Trench</td>
-                  <td style={tdStyle}>Stalemate/Muslim strategic win</td>
-                  <td style={tdStyle}>Siege of Medina; followed by genocide of Banu Qurayza Jews</td>
+                  <td className="border border-gray-300 p-3">627 CE</td>
+                  <td className="border border-gray-300 p-3">Battle of the Trench</td>
+                  <td className="border border-gray-300 p-3">Stalemate/Muslim strategic win</td>
+                  <td className="border border-gray-300 p-3">Siege of Medina; followed by genocide of Banu Qurayza Jews</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>627 CE</td>
-                  <td style={tdStyle}>Massacre of Banu Qurayza</td>
-                  <td style={tdStyle}>Genocide</td>
-                  <td style={tdStyle}>600-900 Jewish men beheaded; women/children enslaved; total annihilation</td>
+                  <td className="border border-gray-300 p-3">627 CE</td>
+                  <td className="border border-gray-300 p-3">Massacre of Banu Qurayza</td>
+                  <td className="border border-gray-300 p-3">Genocide</td>
+                  <td className="border border-gray-300 p-3">600-900 Jewish men beheaded; women/children enslaved; total annihilation</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>628 CE</td>
-                  <td style={tdStyle}>Treaty of Hudaybiyyah</td>
-                  <td style={tdStyle}>Temporary peace</td>
-                  <td style={tdStyle}>Broken by Muhammad two years later</td>
+                  <td className="border border-gray-300 p-3">628 CE</td>
+                  <td className="border border-gray-300 p-3">Treaty of Hudaybiyyah</td>
+                  <td className="border border-gray-300 p-3">Temporary peace</td>
+                  <td className="border border-gray-300 p-3">Broken by Muhammad two years later</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>628 CE</td>
-                  <td style={tdStyle}>Conquest of Khaybar</td>
-                  <td style={tdStyle}>Muslim victory</td>
-                  <td style={tdStyle}>Jewish fortress city conquered; wealth seized; jizya imposed</td>
+                  <td className="border border-gray-300 p-3">628 CE</td>
+                  <td className="border border-gray-300 p-3">Conquest of Khaybar</td>
+                  <td className="border border-gray-300 p-3">Muslim victory</td>
+                  <td className="border border-gray-300 p-3">Jewish fortress city conquered; wealth seized; jizya imposed</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>630 CE</td>
-                  <td style={tdStyle}>Conquest of Mecca</td>
-                  <td style={tdStyle}>Muslim victory (mostly bloodless)</td>
-                  <td style={tdStyle}>10,000 troops; idols destroyed; forced conversion or exile</td>
+                  <td className="border border-gray-300 p-3">630 CE</td>
+                  <td className="border border-gray-300 p-3">Conquest of Mecca</td>
+                  <td className="border border-gray-300 p-3">Muslim victory (mostly bloodless)</td>
+                  <td className="border border-gray-300 p-3">10,000 troops; idols destroyed; forced conversion or exile</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>630 CE</td>
-                  <td style={tdStyle}>Battle of Hunayn</td>
-                  <td style={tdStyle}>Muslim victory</td>
-                  <td style={tdStyle}>6,000 captives; massive booty distribution</td>
+                  <td className="border border-gray-300 p-3">630 CE</td>
+                  <td className="border border-gray-300 p-3">Battle of Hunayn</td>
+                  <td className="border border-gray-300 p-3">Muslim victory</td>
+                  <td className="border border-gray-300 p-3">6,000 captives; massive booty distribution</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>630 CE</td>
-                  <td style={tdStyle}>Siege of Taif</td>
-                  <td style={tdStyle}>Initial failure, later submission</td>
-                  <td style={tdStyle}>Catapults used; later forced conversion</td>
+                  <td className="border border-gray-300 p-3">630 CE</td>
+                  <td className="border border-gray-300 p-3">Siege of Taif</td>
+                  <td className="border border-gray-300 p-3">Initial failure, later submission</td>
+                  <td className="border border-gray-300 p-3">Catapults used; later forced conversion</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>630 CE</td>
-                  <td style={tdStyle}>Expedition to Tabuk</td>
-                  <td style={tdStyle}>Show of force</td>
-                  <td style={tdStyle}>30,000 troops; Byzantine frontier; submission or jizya demanded</td>
+                  <td className="border border-gray-300 p-3">630 CE</td>
+                  <td className="border border-gray-300 p-3">Expedition to Tabuk</td>
+                  <td className="border border-gray-300 p-3">Show of force</td>
+                  <td className="border border-gray-300 p-3">30,000 troops; Byzantine frontier; submission or jizya demanded</td>
                 </tr>
               </tbody>
             </table>
@@ -230,9 +131,9 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
               <ListItem><strong>Sallam ibn Abu al-Huqayq</strong> - Jewish leader assassinated (625 CE)</ListItem>
               <ListItem><strong>Al-Nadr ibn al-Harith & Uqba ibn Abu Muayt</strong> - Prisoners of war executed after Badr</ListItem>
             </List>
-            <p><em>Sources: Sahih Bukhari, Sahih Muslim, Sirat Rasul Allah (Ibn Ishaq), Tabari's History</em></p>
-          </div>
-        </div>
+            <p className="mt-4"><em>Sources: Sahih Bukhari, Sahih Muslim, Sirat Rasul Allah (Ibn Ishaq), Tabari's History</em></p>
+          </HighlightBox>
+        </ContentCard>
 
         {/* RASHIDUN CALIPHATE */}
         <div style={timelineCardStyle}>
@@ -257,60 +158,60 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <table style={tableStyle}>
               <thead>
                 <tr>
-                  <th style={thStyle}>Year</th>
-                  <th style={thStyle}>Campaign</th>
-                  <th style={thStyle}>Region</th>
-                  <th style={thStyle}>Result</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Campaign</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Result</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>632-633</td>
-                  <td style={tdStyle}>Ridda Wars (Apostasy Wars)</td>
-                  <td style={tdStyle}>Arabian Peninsula</td>
-                  <td style={tdStyle}>Forced reconversion of Arab tribes who left Islam after Muhammad's death; thousands killed</td>
+                  <td className="border border-gray-300 p-3">632-633</td>
+                  <td className="border border-gray-300 p-3">Ridda Wars (Apostasy Wars)</td>
+                  <td className="border border-gray-300 p-3">Arabian Peninsula</td>
+                  <td className="border border-gray-300 p-3">Forced reconversion of Arab tribes who left Islam after Muhammad's death; thousands killed</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>634</td>
-                  <td style={tdStyle}>Battle of Ajnadayn</td>
-                  <td style={tdStyle}>Palestine</td>
-                  <td style={tdStyle}>Defeated Byzantine army; opened path to Syria</td>
+                  <td className="border border-gray-300 p-3">634</td>
+                  <td className="border border-gray-300 p-3">Battle of Ajnadayn</td>
+                  <td className="border border-gray-300 p-3">Palestine</td>
+                  <td className="border border-gray-300 p-3">Defeated Byzantine army; opened path to Syria</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>636</td>
-                  <td style={tdStyle}>Battle of Yarmouk</td>
-                  <td style={tdStyle}>Syria</td>
-                  <td style={tdStyle}>Decisive defeat of Byzantine Empire; Syria conquered</td>
+                  <td className="border border-gray-300 p-3">636</td>
+                  <td className="border border-gray-300 p-3">Battle of Yarmouk</td>
+                  <td className="border border-gray-300 p-3">Syria</td>
+                  <td className="border border-gray-300 p-3">Decisive defeat of Byzantine Empire; Syria conquered</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>637</td>
-                  <td style={tdStyle}>Battle of al-Qadisiyyah</td>
-                  <td style={tdStyle}>Iraq</td>
-                  <td style={tdStyle}>Defeated Persian Sassanid Empire; Iraq conquered</td>
+                  <td className="border border-gray-300 p-3">637</td>
+                  <td className="border border-gray-300 p-3">Battle of al-Qadisiyyah</td>
+                  <td className="border border-gray-300 p-3">Iraq</td>
+                  <td className="border border-gray-300 p-3">Defeated Persian Sassanid Empire; Iraq conquered</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>638</td>
-                  <td style={tdStyle}>Siege of Jerusalem</td>
-                  <td style={tdStyle}>Palestine</td>
-                  <td style={tdStyle}>Jerusalem surrendered; Christian holy sites taken</td>
+                  <td className="border border-gray-300 p-3">638</td>
+                  <td className="border border-gray-300 p-3">Siege of Jerusalem</td>
+                  <td className="border border-gray-300 p-3">Palestine</td>
+                  <td className="border border-gray-300 p-3">Jerusalem surrendered; Christian holy sites taken</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>642</td>
-                  <td style={tdStyle}>Battle of Nahavand</td>
-                  <td style={tdStyle}>Persia</td>
-                  <td style={tdStyle}>Final destruction of Persian Empire; forced Islamization began</td>
+                  <td className="border border-gray-300 p-3">642</td>
+                  <td className="border border-gray-300 p-3">Battle of Nahavand</td>
+                  <td className="border border-gray-300 p-3">Persia</td>
+                  <td className="border border-gray-300 p-3">Final destruction of Persian Empire; forced Islamization began</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>642</td>
-                  <td style={tdStyle}>Conquest of Egypt</td>
-                  <td style={tdStyle}>Egypt</td>
-                  <td style={tdStyle}>Alexandria fell; Coptic Christians subjugated under jizya</td>
+                  <td className="border border-gray-300 p-3">642</td>
+                  <td className="border border-gray-300 p-3">Conquest of Egypt</td>
+                  <td className="border border-gray-300 p-3">Egypt</td>
+                  <td className="border border-gray-300 p-3">Alexandria fell; Coptic Christians subjugated under jizya</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>647-709</td>
-                  <td style={tdStyle}>Conquest of North Africa</td>
-                  <td style={tdStyle}>Libya, Tunisia, Algeria, Morocco</td>
-                  <td style={tdStyle}>Berbers forcibly converted; Christian communities destroyed</td>
+                  <td className="border border-gray-300 p-3">647-709</td>
+                  <td className="border border-gray-300 p-3">Conquest of North Africa</td>
+                  <td className="border border-gray-300 p-3">Libya, Tunisia, Algeria, Morocco</td>
+                  <td className="border border-gray-300 p-3">Berbers forcibly converted; Christian communities destroyed</td>
                 </tr>
               </tbody>
             </table>
@@ -351,48 +252,48 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <table style={tableStyle}>
               <thead>
                 <tr>
-                  <th style={thStyle}>Year</th>
-                  <th style={thStyle}>Campaign</th>
-                  <th style={thStyle}>Region</th>
-                  <th style={thStyle}>Result</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Campaign</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Result</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>711-718</td>
-                  <td style={tdStyle}>Conquest of Hispania</td>
-                  <td style={tdStyle}>Spain/Portugal</td>
-                  <td style={tdStyle}>Visigothic Kingdom destroyed; Christian population subjugated; forced conversions</td>
+                  <td className="border border-gray-300 p-3">711-718</td>
+                  <td className="border border-gray-300 p-3">Conquest of Hispania</td>
+                  <td className="border border-gray-300 p-3">Spain/Portugal</td>
+                  <td className="border border-gray-300 p-3">Visigothic Kingdom destroyed; Christian population subjugated; forced conversions</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>732</td>
-                  <td style={tdStyle}>Battle of Tours</td>
-                  <td style={tdStyle}>France</td>
-                  <td style={tdStyle}>Muslim defeat; stopped expansion into Western Europe</td>
+                  <td className="border border-gray-300 p-3">732</td>
+                  <td className="border border-gray-300 p-3">Battle of Tours</td>
+                  <td className="border border-gray-300 p-3">France</td>
+                  <td className="border border-gray-300 p-3">Muslim defeat; stopped expansion into Western Europe</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>674-678</td>
-                  <td style={tdStyle}>First Siege of Constantinople</td>
-                  <td style={tdStyle}>Byzantine Empire</td>
-                  <td style={tdStyle}>Failed; Greek fire used by Byzantines</td>
+                  <td className="border border-gray-300 p-3">674-678</td>
+                  <td className="border border-gray-300 p-3">First Siege of Constantinople</td>
+                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
+                  <td className="border border-gray-300 p-3">Failed; Greek fire used by Byzantines</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>717-718</td>
-                  <td style={tdStyle}>Second Siege of Constantinople</td>
-                  <td style={tdStyle}>Byzantine Empire</td>
-                  <td style={tdStyle}>Failed; massive Muslim casualties</td>
+                  <td className="border border-gray-300 p-3">717-718</td>
+                  <td className="border border-gray-300 p-3">Second Siege of Constantinople</td>
+                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
+                  <td className="border border-gray-300 p-3">Failed; massive Muslim casualties</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>705-715</td>
-                  <td style={tdStyle}>Conquest of Transoxiana</td>
-                  <td style={tdStyle}>Central Asia</td>
-                  <td style={tdStyle}>Bukhara, Samarkand conquered; Zoroastrian/Buddhist populations forced to convert</td>
+                  <td className="border border-gray-300 p-3">705-715</td>
+                  <td className="border border-gray-300 p-3">Conquest of Transoxiana</td>
+                  <td className="border border-gray-300 p-3">Central Asia</td>
+                  <td className="border border-gray-300 p-3">Bukhara, Samarkand conquered; Zoroastrian/Buddhist populations forced to convert</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>712-715</td>
-                  <td style={tdStyle}>Conquest of Sindh</td>
-                  <td style={tdStyle}>Northwest India</td>
-                  <td style={tdStyle}>Hindu/Buddhist regions conquered; beginning of Islamic India</td>
+                  <td className="border border-gray-300 p-3">712-715</td>
+                  <td className="border border-gray-300 p-3">Conquest of Sindh</td>
+                  <td className="border border-gray-300 p-3">Northwest India</td>
+                  <td className="border border-gray-300 p-3">Hindu/Buddhist regions conquered; beginning of Islamic India</td>
                 </tr>
               </tbody>
             </table>
@@ -450,42 +351,42 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <table style={tableStyle}>
               <thead>
                 <tr>
-                  <th style={thStyle}>Year</th>
-                  <th style={thStyle}>Conquest</th>
-                  <th style={thStyle}>Region</th>
-                  <th style={thStyle}>Impact</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Year</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Conquest</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Impact</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>1453</td>
-                  <td style={tdStyle}>Fall of Constantinople</td>
-                  <td style={tdStyle}>Byzantine Empire</td>
-                  <td style={tdStyle}>End of Christian Byzantine Empire; Hagia Sophia converted to mosque; massive population displacement</td>
+                  <td className="border border-gray-300 p-3">1453</td>
+                  <td className="border border-gray-300 p-3">Fall of Constantinople</td>
+                  <td className="border border-gray-300 p-3">Byzantine Empire</td>
+                  <td className="border border-gray-300 p-3">End of Christian Byzantine Empire; Hagia Sophia converted to mosque; massive population displacement</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>1517</td>
-                  <td style={tdStyle}>Conquest of Mamluk Sultanate</td>
-                  <td style={tdStyle}>Egypt, Syria, Levant</td>
-                  <td style={tdStyle}>Ottoman control of holy cities Mecca/Medina; claimed Caliphate</td>
+                  <td className="border border-gray-300 p-3">1517</td>
+                  <td className="border border-gray-300 p-3">Conquest of Mamluk Sultanate</td>
+                  <td className="border border-gray-300 p-3">Egypt, Syria, Levant</td>
+                  <td className="border border-gray-300 p-3">Ottoman control of holy cities Mecca/Medina; claimed Caliphate</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>1526</td>
-                  <td style={tdStyle}>Battle of Mohács</td>
-                  <td style={tdStyle}>Hungary</td>
-                  <td style={tdStyle}>Hungary conquered; Central Europe under threat</td>
+                  <td className="border border-gray-300 p-3">1526</td>
+                  <td className="border border-gray-300 p-3">Battle of Mohács</td>
+                  <td className="border border-gray-300 p-3">Hungary</td>
+                  <td className="border border-gray-300 p-3">Hungary conquered; Central Europe under threat</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>1529</td>
-                  <td style={tdStyle}>First Siege of Vienna</td>
-                  <td style={tdStyle}>Austria</td>
-                  <td style={tdStyle}>Failed but terror across Europe</td>
+                  <td className="border border-gray-300 p-3">1529</td>
+                  <td className="border border-gray-300 p-3">First Siege of Vienna</td>
+                  <td className="border border-gray-300 p-3">Austria</td>
+                  <td className="border border-gray-300 p-3">Failed but terror across Europe</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>1683</td>
-                  <td style={tdStyle}>Second Siege of Vienna</td>
-                  <td style={tdStyle}>Austria</td>
-                  <td style={tdStyle}>Failed; beginning of Ottoman decline</td>
+                  <td className="border border-gray-300 p-3">1683</td>
+                  <td className="border border-gray-300 p-3">Second Siege of Vienna</td>
+                  <td className="border border-gray-300 p-3">Austria</td>
+                  <td className="border border-gray-300 p-3">Failed; beginning of Ottoman decline</td>
                 </tr>
               </tbody>
             </table>
@@ -539,46 +440,46 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
             <table style={tableStyle}>
               <thead>
                 <tr>
-                  <th style={thStyle}>Region</th>
-                  <th style={thStyle}>Situation</th>
-                  <th style={thStyle}>Methods</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Region</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Situation</th>
+                  <th className="border border-gray-300 p-3 text-left bg-purple-600 text-white font-bold">Methods</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>Pakistan</td>
-                  <td style={tdStyle}>Hindu/Christian minorities declining</td>
-                  <td style={tdStyle}>Forced conversions, kidnapping of girls, blasphemy laws, violence</td>
+                  <td className="border border-gray-300 p-3">Pakistan</td>
+                  <td className="border border-gray-300 p-3">Hindu/Christian minorities declining</td>
+                  <td className="border border-gray-300 p-3">Forced conversions, kidnapping of girls, blasphemy laws, violence</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>Bangladesh</td>
-                  <td style={tdStyle}>Hindu minority shrinking</td>
-                  <td style={tdStyle}>Violence, land seizure, forced conversion, exodus</td>
+                  <td className="border border-gray-300 p-3">Bangladesh</td>
+                  <td className="border border-gray-300 p-3">Hindu minority shrinking</td>
+                  <td className="border border-gray-300 p-3">Violence, land seizure, forced conversion, exodus</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>Egypt</td>
-                  <td style={tdStyle}>Coptic Christians declining</td>
-                  <td style={tdStyle}>Church attacks, discrimination, kidnapping, forced conversion</td>
+                  <td className="border border-gray-300 p-3">Egypt</td>
+                  <td className="border border-gray-300 p-3">Coptic Christians declining</td>
+                  <td className="border border-gray-300 p-3">Church attacks, discrimination, kidnapping, forced conversion</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>Nigeria</td>
-                  <td style={tdStyle}>Boko Haram expansion</td>
-                  <td style={tdStyle}>Mass kidnappings, forced conversions, village massacres</td>
+                  <td className="border border-gray-300 p-3">Nigeria</td>
+                  <td className="border border-gray-300 p-3">Boko Haram expansion</td>
+                  <td className="border border-gray-300 p-3">Mass kidnappings, forced conversions, village massacres</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>Iraq/Syria</td>
-                  <td style={tdStyle}>ISIS genocide of Yazidis, Christians</td>
-                  <td style={tdStyle}>Systematic genocide, sex slavery, forced conversion, beheadings</td>
+                  <td className="border border-gray-300 p-3">Iraq/Syria</td>
+                  <td className="border border-gray-300 p-3">ISIS genocide of Yazidis, Christians</td>
+                  <td className="border border-gray-300 p-3">Systematic genocide, sex slavery, forced conversion, beheadings</td>
                 </tr>
                 <tr>
-                  <td style={tdStyle}>Afghanistan</td>
-                  <td style={tdStyle}>Taliban rule</td>
-                  <td style={tdStyle}>Forced Sharia, zero religious freedom, death for apostasy</td>
+                  <td className="border border-gray-300 p-3">Afghanistan</td>
+                  <td className="border border-gray-300 p-3">Taliban rule</td>
+                  <td className="border border-gray-300 p-3">Forced Sharia, zero religious freedom, death for apostasy</td>
                 </tr>
                 <tr style={{ background: '#f8f9fa' }}>
-                  <td style={tdStyle}>Europe</td>
-                  <td style={tdStyle}>Growing Islamic parallel societies</td>
-                  <td style={tdStyle}>No-go zones, Sharia councils, pressure for Islamic law</td>
+                  <td className="border border-gray-300 p-3">Europe</td>
+                  <td className="border border-gray-300 p-3">Growing Islamic parallel societies</td>
+                  <td className="border border-gray-300 p-3">No-go zones, Sharia councils, pressure for Islamic law</td>
                 </tr>
               </tbody>
             </table>

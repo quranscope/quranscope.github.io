@@ -7,8 +7,12 @@ import {
   CategoryTag,
   SectionTitle,
   VerseBox,
-  HighlightBox
+  HighlightBox,
+  PageHeader,
+  List,
+  ListItem
 } from '../components/ui';
+import { PAGES } from '../config/pages';
 
 export default function AntisemitismChristianity({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -24,6 +28,12 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
         <meta name="description" content={t.metaDescription} />
         <link rel="canonical" href="https://quranscope.github.io/antisemitism-christianity" />
       </Head>
+      
+      <PageHeader 
+        title={t.metaTitle.replace(' - Quran Scope', '')} 
+        subtitle={t.metaDescription}
+        gradient={PAGES.antisemitism.backgroundColor}
+      />
       
       <Container>
         <BackLink>{t.backLink}</BackLink>
@@ -189,13 +199,13 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
           </table>
 
           <HighlightBox variant="info" title={t.jewishPopTitle}>
-            <ul className="list-disc list-inside space-y-2">
-              <li dangerouslySetInnerHTML={{ __html: t.popIraq }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popEgypt }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popYemen }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popSyria }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popLibya }} />
-            </ul>
+            <List>
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popIraq }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popEgypt }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popYemen }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popSyria }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popLibya }} />
+            </List>
             <p className="mt-4" dangerouslySetInnerHTML={{ __html: t.popResult }} />
           </HighlightBox>
         </ContentCard>
@@ -267,12 +277,12 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
           </table>
 
           <HighlightBox variant="info" title={t.christianPopTitle}>
-            <ul className="list-disc list-inside space-y-2">
-              <li dangerouslySetInnerHTML={{ __html: t.popTurkey }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popIraqChristian }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popSyriaChristian }} />
-              <li dangerouslySetInnerHTML={{ __html: t.popEgyptChristian }} />
-            </ul>
+            <List>
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popTurkey }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popIraqChristian }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popSyriaChristian }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.popEgyptChristian }} />
+            </List>
             <p className="mt-4" dangerouslySetInnerHTML={{ __html: t.popOverall }} />
           </HighlightBox>
         </ContentCard>
@@ -283,26 +293,26 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
           <SectionTitle color="red">{t.dhimmiTitle}</SectionTitle>
           
           <HighlightBox variant="warning" title={t.pactTitle}>
-            <ul className="list-disc list-inside space-y-2">
-              <li>{t.rule1}</li>
-              <li>{t.rule2}</li>
-              <li>{t.rule3}</li>
-              <li>{t.rule4}</li>
-              <li>{t.rule5}</li>
-              <li>{t.rule6}</li>
-              <li>{t.rule7}</li>
-              <li>{t.rule8}</li>
-              <li>{t.rule9}</li>
-            </ul>
+            <List>
+              <ListItem>{t.rule1}</ListItem>
+              <ListItem>{t.rule2}</ListItem>
+              <ListItem>{t.rule3}</ListItem>
+              <ListItem>{t.rule4}</ListItem>
+              <ListItem>{t.rule5}</ListItem>
+              <ListItem>{t.rule6}</ListItem>
+              <ListItem>{t.rule7}</ListItem>
+              <ListItem>{t.rule8}</ListItem>
+              <ListItem>{t.rule9}</ListItem>
+            </List>
           </HighlightBox>
 
           <HighlightBox variant="info" title={t.jizyaTitle}>
-            <ul className="list-disc list-inside space-y-2">
-              <li>{t.jizya1}</li>
-              <li>{t.jizya2}</li>
-              <li>{t.jizya3}</li>
-              <li>{t.jizya4}</li>
-            </ul>
+            <List>
+              <ListItem>{t.jizya1}</ListItem>
+              <ListItem>{t.jizya2}</ListItem>
+              <ListItem>{t.jizya3}</ListItem>
+              <ListItem>{t.jizya4}</ListItem>
+            </List>
             <p className="mt-4" dangerouslySetInnerHTML={{ __html: t.jizyaResult }} />
           </HighlightBox>
         </ContentCard>
@@ -313,14 +323,14 @@ export default function AntisemitismChristianity({ translations: t, currentLang 
           <SectionTitle color="red">{t.modernTitle}</SectionTitle>
           
           <HighlightBox variant="danger" title={t.modernWarningTitle}>
-            <ul className="list-disc list-inside space-y-2">
-              <li dangerouslySetInnerHTML={{ __html: t.modern1 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.modern2 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.modern3 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.modern4 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.modern5 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.modern6 }} />
-            </ul>
+            <List>
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern1 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern2 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern3 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern4 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern5 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.modern6 }} />
+            </List>
           </HighlightBox>
         </ContentCard>
       </Container>

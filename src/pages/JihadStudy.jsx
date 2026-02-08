@@ -1,239 +1,253 @@
 import Head from 'next/head'
+import {
+  Container,
+  BackLink,
+  IntroBox,
+  ContentCard,
+  CategoryTag,
+  SectionTitle,
+  StatsGrid,
+  HighlightBox,
+  PageHeader,
+  List,
+  ListItem
+} from '../components/ui'
+import { PAGES } from '../config/pages'
 
 export default function JihadStudy({ translations: t, currentLang = 'en' }) {
   if (!t) {
-    return <div className="loading">{t?.loadingText || 'Loading...'}</div>
+    return <div className="flex items-center justify-center min-h-screen">{t?.loadingText || 'Loading...'}</div>
   }
-
-  const styles = {
-    intro: { background: '#fff3cd', borderLeft: '5px solid #ffc107', padding: '1.5rem', marginBottom: '2rem', borderRadius: '5px' },
-    verseBox: { background: '#e3f2fd', borderLeft: '4px solid #2196f3', padding: '1rem', margin: '1rem 0', borderRadius: '4px' },
-    verseRef: { fontWeight: 'bold', color: '#1565c0', marginBottom: '0.5rem' },
-    hadithBox: { background: '#f3e5f5', borderLeft: '4px solid #9c27b0', padding: '1rem', margin: '1rem 0', borderRadius: '4px' },
-    hadithRef: { fontWeight: 'bold', color: '#6a1b9a', marginBottom: '0.5rem' },
-    warBox: { background: '#ffebee', borderLeft: '4px solid #f44336', padding: '1rem', margin: '1rem 0', borderRadius: '4px' },
-    statsGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '1.5rem 0' },
-    statBox: { background: 'linear-gradient(135deg, #e74c3c, #c0392b)', color: 'white', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' },
-    table: { width: '100%', borderCollapse: 'collapse', margin: '1rem 0', background: 'white' },
-    th: { background: '#c0392b', color: 'white', padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' },
-    td: { padding: '0.75rem', borderBottom: '1px solid #ddd' },
-  };
 
   return (
     <>
       <Head>
-                <title>{t.title} - Quran Scope</title>
+        <title>{t.title} - Quran Scope</title>
         <meta name="description" content={t.subtitle} />
         <link rel="canonical" href="https://quranscope.github.io/jihad-study" />
         <meta property="og:title" content={t.title} />
       </Head>
-      <div className="page-content">
-        <a href="/" className="back-link">{t.backLink}</a>
-        
-        <h1>{t.title}</h1>
-        <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>{t.pageSubtitle}</p>
+      
+      <PageHeader 
+        title={t.title} 
+        subtitle={t.pageSubtitle}
+        gradient={PAGES.jihad.backgroundColor}
+      />
+      
+      <Container>
+        <BackLink href="/">{t.backLink}</BackLink>
 
-        <div style={styles.intro}>
+        <IntroBox variant="warning">
           <h3 dangerouslySetInnerHTML={{ __html: t.introTitle }} />
           <p dangerouslySetInnerHTML={{ __html: t.introParaOverview }} />
           <p dangerouslySetInnerHTML={{ __html: t.introParaCommonTactics }} />
-        </div>
+        </IntroBox>
 
-        <h2 dangerouslySetInnerHTML={{ __html: t.etymologyTitle }} />
-        <div className="content-section">
-          <div style={{ background: '#e8f5e9', borderLeft: '4px solid #4caf50', padding: '1rem', margin: '1rem 0', borderRadius: '4px' }}>
-            <h4 style={{ color: '#2e7d32' }}>{t.lingMeaningTitle}</h4>
+        <ContentCard>
+          <SectionTitle color="red" dangerouslySetInnerHTML={{ __html: t.etymologyTitle }} />
+          
+          <HighlightBox variant="success" title={t.lingMeaningTitle}>
             <p dangerouslySetInnerHTML={{ __html: t.lingMeaningText }} />
             <p>{t.lingMeaningText2}</p>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.verseBox}>
-            <div style={styles.verseRef}>{t.quranDefTitle}</div>
+          <HighlightBox variant="info" title={t.quranDefTitle}>
             <p dangerouslySetInnerHTML={{ __html: t.quranDef1 }} />
             <p dangerouslySetInnerHTML={{ __html: t.quranDef2 }} />
-          </div>
+          </HighlightBox>
 
-          <div style={styles.hadithBox}>
-            <div style={styles.hadithRef}>{t.prophetDefTitle}</div>
+          <HighlightBox variant="info" title={t.prophetDefTitle} className="bg-purple-50 border-purple-400">
             <p dangerouslySetInnerHTML={{ __html: t.prophetDef1 }} />
             <p dangerouslySetInnerHTML={{ __html: t.prophetDef2 }} />
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
-        <h2 dangerouslySetInnerHTML={{ __html: t.typesTitle }} />
-        <div className="content-section">
-          <h3>{t.greaterJihadTitle}</h3>
-          <p>{t.greaterJihadSubtitle}</p>
-          <p>{t.greaterJihadText1}</p>
-          <p dangerouslySetInnerHTML={{ __html: t.greaterJihadText2 }} />
+        <ContentCard>
+          <SectionTitle color="red" dangerouslySetInnerHTML={{ __html: t.typesTitle }} />
+          
+          <h3 className="text-2xl font-bold mb-3">{t.greaterJihadTitle}</h3>
+          <p className="mb-2">{t.greaterJihadSubtitle}</p>
+          <p className="mb-2">{t.greaterJihadText1}</p>
+          <p className="mb-4" dangerouslySetInnerHTML={{ __html: t.greaterJihadText2 }} />
 
-          <h3>{t.lesserJihadTitle}</h3>
-          <div style={styles.warBox}>
-            <h4 style={{ color: '#c62828' }}>{t.lesserJihadSubtitle}</h4>
+          <h3 className="text-2xl font-bold mb-3">{t.lesserJihadTitle}</h3>
+          <HighlightBox variant="danger" title={t.lesserJihadSubtitle}>
             <p>{t.lesserJihadText1}</p>
-            <ul>
-              <li dangerouslySetInnerHTML={{ __html: t.lesserItem1 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.lesserItem2 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.lesserItem3 }} />
-            </ul>
-          </div>
+            <List>
+              <ListItem dangerouslySetInnerHTML={{ __html: t.lesserItem1 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.lesserItem2 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.lesserItem3 }} />
+            </List>
+          </HighlightBox>
 
-          <div style={styles.verseBox}>
-            <div style={styles.verseRef}>
-              {t.offensiveTitle}
-            </div>
+          <HighlightBox variant="info" title={t.offensiveTitle}>
             <p dangerouslySetInnerHTML={{ __html: t.offensiveText1 }} />
             <p dangerouslySetInnerHTML={{ __html: t.offensiveText2 }} />
-          </div>
-        </div>
+          </HighlightBox>
+        </ContentCard>
 
-        <h2 dangerouslySetInnerHTML={{ __html: t.quranEvidenceTitle }} />
-        <div className="content-section">
-          <h3>{t.chronologyTitle}</h3>
-          <p>{t.chronologyText}</p>
+        <ContentCard>
+          <SectionTitle color="red" dangerouslySetInnerHTML={{ __html: t.quranEvidenceTitle }} />
+          
+          <h3 className="text-2xl font-bold mb-3">{t.chronologyTitle}</h3>
+          <p className="mb-4">{t.chronologyText}</p>
 
-          <div style={styles.verseBox}>
-            <div style={styles.verseRef}>{t.meccanTitle}</div>
+          <HighlightBox variant="info" title={t.meccanTitle}>
             <p dangerouslySetInnerHTML={{ __html: t.meccanText1 }} />
             <p dangerouslySetInnerHTML={{ __html: t.meccanText2 }} />
             <p dangerouslySetInnerHTML={{ __html: t.meccanNote }} />
-          </div>
+          </HighlightBox>
 
-          <div style={styles.verseBox}>
-            <div style={styles.verseRef}>{t.medinanTitle}</div>
+          <HighlightBox variant="info" title={t.medinanTitle}>
             <p dangerouslySetInnerHTML={{ __html: t.medinanText1 }} />
             <p dangerouslySetInnerHTML={{ __html: t.medinanText2 }} />
             <p dangerouslySetInnerHTML={{ __html: t.medinanNote }} />
+          </HighlightBox>
+        </ContentCard>
+
+        <ContentCard>
+          <h3 className="text-2xl font-bold mb-4">{t.keyVersesTitle}</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white">
+              <thead>
+                <tr>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.verseHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.commandHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.contextHeader}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="p-3 border-b border-gray-300">Quran 2:191-193</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse2191 }} /><td className="p-3 border-b border-gray-300">{t.context2191}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">Quran 4:89</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse489 }} /><td className="p-3 border-b border-gray-300">{t.context489}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">Quran 8:12</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse812 }} /><td className="p-3 border-b border-gray-300">{t.context812}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">Quran 8:39</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse839 }} /><td className="p-3 border-b border-gray-300">{t.context839}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">Quran 9:29</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse929 }} /><td className="p-3 border-b border-gray-300">{t.context929}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">Quran 9:111</td><td className="p-3 border-b border-gray-300" dangerouslySetInnerHTML={{ __html: t.verse9111 }} /><td className="p-3 border-b border-gray-300">{t.context9111}</td></tr>
+              </tbody>
+            </table>
           </div>
-        </div>
+        </ContentCard>
 
-        <div className="content-section">
-          <h3>{t.keyVersesTitle}</h3>
-          <table style={styles.table}>
-            <thead>
-              <tr>
-                <th style={styles.th}>{t.verseHeader}</th>
-                <th style={styles.th}>{t.commandHeader}</th>
-                <th style={styles.th}>{t.contextHeader}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td style={styles.td}>Quran 2:191-193</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse2191 }} /><td style={styles.td}>{t.context2191}</td></tr>
-              <tr><td style={styles.td}>Quran 4:89</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse489 }} /><td style={styles.td}>{t.context489}</td></tr>
-              <tr><td style={styles.td}>Quran 8:12</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse812 }} /><td style={styles.td}>{t.context812}</td></tr>
-              <tr><td style={styles.td}>Quran 8:39</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse839 }} /><td style={styles.td}>{t.context839}</td></tr>
-              <tr><td style={styles.td}>Quran 9:29</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse929 }} /><td style={styles.td}>{t.context929}</td></tr>
-              <tr><td style={styles.td}>Quran 9:111</td><td style={styles.td} dangerouslySetInnerHTML={{ __html: t.verse9111 }} /><td style={styles.td}>{t.context9111}</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>{t.hadithEvidenceTitle}</h2>
-        <div className="content-section">
-          <div style={styles.hadithBox}>
-            <div style={styles.hadithRef}>Jihad as Best Deed</div>
+        <ContentCard>
+          <SectionTitle color="red">{t.hadithEvidenceTitle}</SectionTitle>
+          
+          <HighlightBox variant="info" title="Jihad as Best Deed" className="bg-purple-50 border-purple-400">
             <p><strong>Sahih Bukhari 2785</strong> - Muhammad said jihad (fighting) is second-best deed after belief in Allah.</p>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.hadithBox}>
-            <div style={styles.hadithRef}>{t.hadith2Title}</div>
+          <HighlightBox variant="info" title={t.hadith2Title} className="bg-purple-50 border-purple-400">
             <p dangerouslySetInnerHTML={{ __html: t.hadith2Text }} />
-          </div>
+          </HighlightBox>
 
-          <div style={styles.hadithBox}>
-            <div style={styles.hadithRef}>{t.hadith4Title}</div>
+          <HighlightBox variant="info" title={t.hadith4Title} className="bg-purple-50 border-purple-400">
             <p dangerouslySetInnerHTML={{ __html: t.hadith4Text }} />
-          </div>
+          </HighlightBox>
 
-          <div style={styles.hadithBox}>
-            <div style={styles.hadithRef}>{t.hadith5Title}</div>
+          <HighlightBox variant="info" title={t.hadith5Title} className="bg-purple-50 border-purple-400">
             <p dangerouslySetInnerHTML={{ __html: t.hadith5Text }} />
+          </HighlightBox>
+        </ContentCard>
+
+        <ContentCard>
+          <SectionTitle color="red">{t.historicalTitle}</SectionTitle>
+          
+          <h3 className="text-2xl font-bold mb-4">{t.muhammadCampaignsTitle}</h3>
+          <StatsGrid stats={[
+            { number: '27', label: t.statGhazwa },
+            { number: '38', label: t.statSaraya },
+            { number: '65+', label: t.statTotal },
+            { number: '10', label: t.statYears }
+          ]} />
+
+          <h3 className="text-2xl font-bold mb-4 mt-6">{t.majorBattlesTitle}</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white">
+              <thead>
+                <tr>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.battleYearHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.battleNameHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.battleVictimsHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.battleOutcomeHeader}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="p-3 border-b border-gray-300">624</td><td className="p-3 border-b border-gray-300">{t.battleBadr}</td><td className="p-3 border-b border-gray-300">{t.battleBadrVictims}</td><td className="p-3 border-b border-gray-300">{t.battleBadrOutcome}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">627</td><td className="p-3 border-b border-gray-300">{t.battleTrench}</td><td className="p-3 border-b border-gray-300">{t.battleTrenchVictims}</td><td className="p-3 border-b border-gray-300">{t.battleTrenchOutcome}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">628</td><td className="p-3 border-b border-gray-300">{t.battleKhaybar}</td><td className="p-3 border-b border-gray-300">{t.battleKhaybarVictims}</td><td className="p-3 border-b border-gray-300">{t.battleKhaybarOutcome}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">630</td><td className="p-3 border-b border-gray-300">{t.battleMecca}</td><td className="p-3 border-b border-gray-300">{t.battleMeccaVictims}</td><td className="p-3 border-b border-gray-300">{t.battleMeccaOutcome}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">630</td><td className="p-3 border-b border-gray-300">{t.battleHunain}</td><td className="p-3 border-b border-gray-300">{t.battleHunainVictims}</td><td className="p-3 border-b border-gray-300">{t.battleHunainOutcome}</td></tr>
+              </tbody>
+            </table>
           </div>
-        </div>
 
-        <h2>{t.historicalTitle}</h2>
-        <div className="content-section">
-          <h3>{t.muhammadCampaignsTitle}</h3>
-          <div style={styles.statsGrid}>
-            <div style={styles.statBox}><h3>27</h3><p>{t.statGhazwa}</p></div>
-            <div style={styles.statBox}><h3>38</h3><p>{t.statSaraya}</p></div>
-            <div style={styles.statBox}><h3>65+</h3><p>{t.statTotal}</p></div>
-            <div style={styles.statBox}><h3>10</h3><p>{t.statYears}</p></div>
-          </div>
-
-          <h3>{t.majorBattlesTitle}</h3>
-          <table style={styles.table}>
-            <thead>
-              <tr><th style={styles.th}>{t.battleYearHeader}</th><th style={styles.th}>{t.battleNameHeader}</th><th style={styles.th}>{t.battleVictimsHeader}</th><th style={styles.th}>{t.battleOutcomeHeader}</th></tr>
-            </thead>
-            <tbody>
-              <tr><td style={styles.td}>624</td><td style={styles.td}>{t.battleBadr}</td><td style={styles.td}>{t.battleBadrVictims}</td><td style={styles.td}>{t.battleBadrOutcome}</td></tr>
-              <tr><td style={styles.td}>627</td><td style={styles.td}>{t.battleTrench}</td><td style={styles.td}>{t.battleTrenchVictims}</td><td style={styles.td}>{t.battleTrenchOutcome}</td></tr>
-              <tr><td style={styles.td}>628</td><td style={styles.td}>{t.battleKhaybar}</td><td style={styles.td}>{t.battleKhaybarVictims}</td><td style={styles.td}>{t.battleKhaybarOutcome}</td></tr>
-              <tr><td style={styles.td}>630</td><td style={styles.td}>{t.battleMecca}</td><td style={styles.td}>{t.battleMeccaVictims}</td><td style={styles.td}>{t.battleMeccaOutcome}</td></tr>
-              <tr><td style={styles.td}>630</td><td style={styles.td}>{t.battleHunain}</td><td style={styles.td}>{t.battleHunainVictims}</td><td style={styles.td}>{t.battleHunainOutcome}</td></tr>
-            </tbody>
-          </table>
-
-          <h3>{t.rashidunTitle}</h3>
-          <div style={styles.warBox}>
+          <h3 className="text-2xl font-bold mb-3 mt-6">{t.rashidunTitle}</h3>
+          <HighlightBox variant="danger">
             <p>{t.rashidunText1}</p>
-            <ul>
-              <li dangerouslySetInnerHTML={{ __html: t.rashidunItem1 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.rashidunItem2 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.rashidunItem3 }} />
-              <li dangerouslySetInnerHTML={{ __html: t.rashidunItem4 }} />
-            </ul>
+            <List className="mt-2">
+              <ListItem dangerouslySetInnerHTML={{ __html: t.rashidunItem1 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.rashidunItem2 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.rashidunItem3 }} />
+              <ListItem dangerouslySetInnerHTML={{ __html: t.rashidunItem4 }} />
+            </List>
+          </HighlightBox>
+
+          <h3 className="text-2xl font-bold mb-3 mt-6">{t.umayyadTitle}</h3>
+          <List>
+            <ListItem dangerouslySetInnerHTML={{ __html: t.umayyadItem1 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.umayyadItem2 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.umayyadItem3 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.umayyadItem4 }} />
+          </List>
+
+          <h3 className="text-2xl font-bold mb-3 mt-6">{t.abbasidTitle}</h3>
+          <List>
+            <ListItem dangerouslySetInnerHTML={{ __html: t.abbasidItem1 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.ottomanItem3 }} />
+          </List>
+        </ContentCard>
+
+        <ContentCard>
+          <SectionTitle color="red">{t.modernTitle}</SectionTitle>
+          
+          <h3 className="text-2xl font-bold mb-4">{t.terrorGroupsTitle}</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white">
+              <thead>
+                <tr>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.groupHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.regionHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.deathsHeader}</th>
+                  <th className="bg-red-700 text-white p-3 text-left font-bold">{t.justificationHeader}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td className="p-3 border-b border-gray-300">{t.groupAlQaeda}</td><td className="p-3 border-b border-gray-300">{t.regionAlQaeda}</td><td className="p-3 border-b border-gray-300">{t.deathsAlQaeda}</td><td className="p-3 border-b border-gray-300">{t.justAlQaeda}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">{t.groupISIS}</td><td className="p-3 border-b border-gray-300">{t.regionISIS}</td><td className="p-3 border-b border-gray-300">{t.deathsISIS}</td><td className="p-3 border-b border-gray-300">{t.justISIS}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">{t.groupBoko}</td><td className="p-3 border-b border-gray-300">{t.regionBoko}</td><td className="p-3 border-b border-gray-300">{t.deathsBoko}</td><td className="p-3 border-b border-gray-300">{t.justBoko}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">{t.groupTaliban}</td><td className="p-3 border-b border-gray-300">{t.regionTaliban}</td><td className="p-3 border-b border-gray-300">{t.deathsTaliban}</td><td className="p-3 border-b border-gray-300">{t.justTaliban}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">{t.groupHamas}</td><td className="p-3 border-b border-gray-300">{t.regionHamas}</td><td className="p-3 border-b border-gray-300">{t.deathsHamas}</td><td className="p-3 border-b border-gray-300">{t.justHamas}</td></tr>
+                <tr><td className="p-3 border-b border-gray-300">{t['groupAl-Shabaab']}</td><td className="p-3 border-b border-gray-300">{t.regionShabaab}</td><td className="p-3 border-b border-gray-300">{t.deathsShabaab}</td><td className="p-3 border-b border-gray-300">{t.justShabaab}</td></tr>
+              </tbody>
+            </table>
           </div>
 
-          <h3>{t.umayyadTitle}</h3>
-          <ul>
-            <li dangerouslySetInnerHTML={{ __html: t.umayyadItem1 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.umayyadItem2 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.umayyadItem3 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.umayyadItem4 }} />
-          </ul>
+          <h3 className="text-2xl font-bold mb-3 mt-6">{t.attacksTitle}</h3>
+          <List>
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack1 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack3 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack4 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack5 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack9 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack11 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack12 }} />
+            <ListItem dangerouslySetInnerHTML={{ __html: t.attack14 }} />
+          </List>
+        </ContentCard>
 
-          <h3>{t.abbasidTitle}</h3>
-          <ul>
-            <li dangerouslySetInnerHTML={{ __html: t.abbasidItem1 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.ottomanItem3 }} />
-          </ul>
-        </div>
-
-        <h2>{t.modernTitle}</h2>
-        <div className="content-section">
-          <h3>{t.terrorGroupsTitle}</h3>
-          <table style={styles.table}>
-            <thead>
-              <tr><th style={styles.th}>{t.groupHeader}</th><th style={styles.th}>{t.regionHeader}</th><th style={styles.th}>{t.deathsHeader}</th><th style={styles.th}>{t.justificationHeader}</th></tr>
-            </thead>
-            <tbody>
-              <tr><td style={styles.td}>{t.groupAlQaeda}</td><td style={styles.td}>{t.regionAlQaeda}</td><td style={styles.td}>{t.deathsAlQaeda}</td><td style={styles.td}>{t.justAlQaeda}</td></tr>
-              <tr><td style={styles.td}>{t.groupISIS}</td><td style={styles.td}>{t.regionISIS}</td><td style={styles.td}>{t.deathsISIS}</td><td style={styles.td}>{t.justISIS}</td></tr>
-              <tr><td style={styles.td}>{t.groupBoko}</td><td style={styles.td}>{t.regionBoko}</td><td style={styles.td}>{t.deathsBoko}</td><td style={styles.td}>{t.justBoko}</td></tr>
-              <tr><td style={styles.td}>{t.groupTaliban}</td><td style={styles.td}>{t.regionTaliban}</td><td style={styles.td}>{t.deathsTaliban}</td><td style={styles.td}>{t.justTaliban}</td></tr>
-              <tr><td style={styles.td}>{t.groupHamas}</td><td style={styles.td}>{t.regionHamas}</td><td style={styles.td}>{t.deathsHamas}</td><td style={styles.td}>{t.justHamas}</td></tr>
-              <tr><td style={styles.td}>{t['groupAl-Shabaab']}</td><td style={styles.td}>{t.regionShabaab}</td><td style={styles.td}>{t.deathsShabaab}</td><td style={styles.td}>{t.justShabaab}</td></tr>
-            </tbody>
-          </table>
-
-          <h3>{t.attacksTitle}</h3>
-          <ul>
-            <li dangerouslySetInnerHTML={{ __html: t.attack1 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack3 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack4 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack5 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack9 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack11 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack12 }} />
-            <li dangerouslySetInnerHTML={{ __html: t.attack14 }} />
-          </ul>
-        </div>
-
-        <h2>{t.whyTitle}</h2>
-        <div className="content-section">
-          <ol>
+        <ContentCard>
+          <SectionTitle color="red">{t.whyTitle}</SectionTitle>
+          
+          <ol className="list-decimal pl-6 space-y-3">
             <li><strong>{t.reason1Title}</strong> {t.reason1Text}</li>
             <li><strong>{t.reason2Title}</strong> {t.reason2Text}</li>
             <li><strong>{t.reason3Title}</strong> {t.reason3Text}</li>
@@ -243,29 +257,29 @@ export default function JihadStudy({ translations: t, currentLang = 'en' }) {
             <li><strong>{t.reason7Title}</strong> {t.reason7Text}</li>
             <li><strong>{t.reason8Title}</strong> {t.reason8Text}</li>
           </ol>
-        </div>
+        </ContentCard>
 
-        <h2>{t.conclusionTitle}</h2>
-        <div className="content-section">
-          <div style={styles.statsGrid}>
-            <div style={styles.statBox}><h3>164</h3><p>{t.statJihadVerses}</p></div>
-            <div style={styles.statBox}><h3>1,400</h3><p>{t.statYearsWar}</p></div>
-            <div style={styles.statBox}><h3>100+</h3><p>{t.statCountries}</p></div>
-            <div style={styles.statBox}><h3>270M+</h3><p>{t.statDeaths}</p></div>
-          </div>
+        <ContentCard>
+          <SectionTitle color="red">{t.conclusionTitle}</SectionTitle>
+          
+          <StatsGrid stats={[
+            { number: '164', label: t.statJihadVerses },
+            { number: '1,400', label: t.statYearsWar },
+            { number: '100+', label: t.statCountries },
+            { number: '270M+', label: t.statDeaths }
+          ]} />
 
-          <div style={styles.intro}>
-            <h3>{t.finalTitle}</h3>
+          <IntroBox variant="warning" title={t.finalTitle}>
             <p>{t.finalPara1}</p>
             <p>{t.finalPara2}</p>
             <p dangerouslySetInnerHTML={{ __html: t.finalPara3 }} />
-          </div>
-        </div>
+          </IntroBox>
+        </ContentCard>
 
-        <div className="nav-buttons">
-          <a href="/" className="nav-button">🏠 Home</a>
+        <div className="flex justify-center mt-8">
+          <a href="/" className="bg-gradient-to-r from-red-600 to-red-800 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-red-900 transition-all">🏠 Home</a>
         </div>
-      </div>
+      </Container>
     </>
   )
 }

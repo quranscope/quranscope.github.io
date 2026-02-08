@@ -42,8 +42,6 @@
   "attacks2023Title": "2023 Major Attacks",
   "attacks2023Intro": "Major terror attacks from 2023 with full documentation",
   "patternTitle": "Pattern Analysis: Common Characteristics",
-  "recentAttacks2024To2025Title": "2024-2025 Attacks (100+ Documented)",
-  "recentAttacks2024To2025Intro": "The most recent wave of Islamic terror attacks, including the Australia synagogue attack (December 2024), India's Pahalgam massacre (November 2024), and ongoing violence across Africa, Europe, and Asia.",
   "attacks2024_2025": [
     {
       "date": "Dec 14, 2024",
@@ -508,8 +506,6 @@
       ]
     }
   ],
-  "attacks2023SectionTitle": "2023 Attacks (80+ Additional Cases)",
-  "attacks2023SectionIntro": "Continuation of systematic Islamic terror attacks throughout 2023, demonstrating the persistent nature of religiously-motivated violence.",
   "attacks2023": [
     {
       "date": "Dec 16, 2023",
@@ -978,6 +974,5 @@
   "conclusionTitle": "The Unavoidable Pattern",
   "conclusionText": "These 100+ documented attacks from just 2023-2025 represent a tiny fraction of global Islamic terrorism. Each attack shares common elements: (1) Perpetrators are practicing Muslims who cite Quranic verses, (2) Attacks target the exact groups mentioned in the Quran as enemies (Jews, Christians, polytheists, apostates), (3) Methods match those commanded in Islamic texts (beheading, terrorizing, killing in Allah's name), and (4) Attackers believe they are following Muhammad's example and will be rewarded in paradise. The pattern is undeniable and has remained consistent for 1,400 years. Until Islamic theology is reformed to reject violent verses, these attacks will continue. The problem is not 'extremism' or 'misinterpretation' - the problem is that these attackers are following their scriptures literally.",
   "homeButton": "🏠 Home",
-  "jihadButton": "Jihad Study →",
-  "loadingText": "Loading..."
+  "jihadButton": "Jihad Study →"
 }

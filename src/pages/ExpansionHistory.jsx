@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { getPageConfig } from '../config/pages';
+import { List, ListItem } from '../components/ui';
 
 export default function ExpansionHistory({ translations: t, currentLang = 'en' }) {
   if (!t) return <div>Loading...</div>;
@@ -113,16 +114,6 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
     textAlign: 'left'
   };
 
-  const ulStyle = {
-    marginLeft: '1.5rem',
-    marginTop: '0.5rem'
-  };
-
-  const olStyle = {
-    marginLeft: '1.5rem',
-    marginTop: '0.5rem'
-  };
-
   return (
     <>
       <Head>
@@ -144,13 +135,13 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           
           <div style={eventBoxStyle}>
             <h4 style={h4EventStyle}>📊 Statistics from Muhammad's Lifetime:</h4>
-            <ul style={ulStyle}>
-              <li><strong>27 major battles</strong> personally led or authorized by Muhammad</li>
-              <li><strong>60+ raids (Ghazwa/Saraya)</strong> against caravans and tribes</li>
-              <li><strong>Hundreds of assassinations</strong> ordered against critics and opponents</li>
-              <li><strong>Entire Jewish tribes</strong> expelled or executed (Banu Qaynuqa, Banu Nadir, Banu Qurayza)</li>
-              <li><strong>Slavery institutionalized</strong> - captives sold or distributed as war booty</li>
-            </ul>
+            <List>
+              <ListItem><strong>27 major battles</strong> personally led or authorized by Muhammad</ListItem>
+              <ListItem><strong>60+ raids (Ghazwa/Saraya)</strong> against caravans and tribes</ListItem>
+              <ListItem><strong>Hundreds of assassinations</strong> ordered against critics and opponents</ListItem>
+              <ListItem><strong>Entire Jewish tribes</strong> expelled or executed (Banu Qaynuqa, Banu Nadir, Banu Qurayza)</ListItem>
+              <ListItem><strong>Slavery institutionalized</strong> - captives sold or distributed as war booty</ListItem>
+            </List>
           </div>
 
           <div style={warBoxStyle}>
@@ -231,14 +222,14 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
 
           <div style={warBoxStyle}>
             <h4 style={h4WarStyle}>🗡️ Ordered Assassinations (Partial List):</h4>
-            <ul style={ulStyle}>
-              <li><strong>Asma bint Marwan</strong> - Poetess killed for writing critical poetry (624 CE)</li>
-              <li><strong>Abu Afak</strong> - 120-year-old poet assassinated for criticizing Muhammad (624 CE)</li>
-              <li><strong>Ka'b ibn al-Ashraf</strong> - Jewish poet assassinated (624 CE)</li>
-              <li><strong>Abu Rafi</strong> - Jewish leader assassinated in his sleep (624 CE)</li>
-              <li><strong>Sallam ibn Abu al-Huqayq</strong> - Jewish leader assassinated (625 CE)</li>
-              <li><strong>Al-Nadr ibn al-Harith & Uqba ibn Abu Muayt</strong> - Prisoners of war executed after Badr</li>
-            </ul>
+            <List>
+              <ListItem><strong>Asma bint Marwan</strong> - Poetess killed for writing critical poetry (624 CE)</ListItem>
+              <ListItem><strong>Abu Afak</strong> - 120-year-old poet assassinated for criticizing Muhammad (624 CE)</ListItem>
+              <ListItem><strong>Ka'b ibn al-Ashraf</strong> - Jewish poet assassinated (624 CE)</ListItem>
+              <ListItem><strong>Abu Rafi</strong> - Jewish leader assassinated in his sleep (624 CE)</ListItem>
+              <ListItem><strong>Sallam ibn Abu al-Huqayq</strong> - Jewish leader assassinated (625 CE)</ListItem>
+              <ListItem><strong>Al-Nadr ibn al-Harith & Uqba ibn Abu Muayt</strong> - Prisoners of war executed after Badr</ListItem>
+            </List>
             <p><em>Sources: Sahih Bukhari, Sahih Muslim, Sirat Rasul Allah (Ibn Ishaq), Tabari's History</em></p>
           </div>
         </div>
@@ -251,13 +242,13 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           <div style={statsBoxStyle}>
             <h4 style={h4StatsStyle}>📈 Territorial Expansion:</h4>
             <p>In just 30 years, Islam expanded from Arabia across:</p>
-            <ul style={ulStyle}>
-              <li>Entire Arabian Peninsula</li>
-              <li>Byzantine Levant (Syria, Palestine, Jordan)</li>
-              <li>Entire Sassanid Persian Empire</li>
-              <li>Egypt and North Africa</li>
-              <li>Parts of Anatolia and Armenia</li>
-            </ul>
+            <List>
+              <ListItem>Entire Arabian Peninsula</ListItem>
+              <ListItem>Byzantine Levant (Syria, Palestine, Jordan)</ListItem>
+              <ListItem>Entire Sassanid Persian Empire</ListItem>
+              <ListItem>Egypt and North Africa</ListItem>
+              <ListItem>Parts of Anatolia and Armenia</ListItem>
+            </List>
             <p><strong>Result:</strong> One of the fastest military expansions in human history - almost entirely through warfare.</p>
           </div>
 
@@ -327,14 +318,14 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
 
           <div style={eventBoxStyle}>
             <h4 style={h4EventStyle}>🔥 Methods of Conquest:</h4>
-            <ol style={olStyle}>
-              <li><strong>Ultimatum System:</strong> "Convert to Islam, pay jizya (heavy tax), or face war"</li>
-              <li><strong>Jizya Taxation:</strong> Non-Muslims taxed heavily to incentivize conversion</li>
-              <li><strong>Slavery:</strong> War captives enslaved; children taken and raised Muslim</li>
-              <li><strong>Destruction of Religious Sites:</strong> Churches, temples, synagogues destroyed or converted to mosques</li>
-              <li><strong>Dhimmi System:</strong> Non-Muslims made second-class citizens with restricted rights</li>
-              <li><strong>Economic Pressure:</strong> Non-Muslims barred from many professions and positions</li>
-            </ol>
+            <List variant="numbered">
+              <ListItem><strong>Ultimatum System:</strong> "Convert to Islam, pay jizya (heavy tax), or face war"</ListItem>
+              <ListItem><strong>Jizya Taxation:</strong> Non-Muslims taxed heavily to incentivize conversion</ListItem>
+              <ListItem><strong>Slavery:</strong> War captives enslaved; children taken and raised Muslim</ListItem>
+              <ListItem><strong>Destruction of Religious Sites:</strong> Churches, temples, synagogues destroyed or converted to mosques</ListItem>
+              <ListItem><strong>Dhimmi System:</strong> Non-Muslims made second-class citizens with restricted rights</ListItem>
+              <ListItem><strong>Economic Pressure:</strong> Non-Muslims barred from many professions and positions</ListItem>
+            </List>
           </div>
         </div>
 
@@ -346,12 +337,12 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           <div style={statsBoxStyle}>
             <h4 style={h4StatsStyle}>📈 Peak Territorial Extent:</h4>
             <p>At its height, the Umayyad Caliphate was one of the largest empires in history, spanning from:</p>
-            <ul style={ulStyle}>
-              <li><strong>West:</strong> Iberian Peninsula (Spain/Portugal)</li>
-              <li><strong>East:</strong> Borders of India and Central Asia</li>
-              <li><strong>North:</strong> Southern France (briefly)</li>
-              <li><strong>South:</strong> North Africa to the Sahara</li>
-            </ul>
+            <List>
+              <ListItem><strong>West:</strong> Iberian Peninsula (Spain/Portugal)</ListItem>
+              <ListItem><strong>East:</strong> Borders of India and Central Asia</ListItem>
+              <ListItem><strong>North:</strong> Southern France (briefly)</ListItem>
+              <ListItem><strong>South:</strong> North Africa to the Sahara</ListItem>
+            </List>
             <p><strong>Total Area:</strong> ~15 million km² (5.8 million sq mi)</p>
           </div>
 
@@ -409,13 +400,13 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
 
           <div style={warBoxStyle}>
             <h4 style={h4WarStyle}>🔥 Forced Islamization Methods:</h4>
-            <ul style={ulStyle}>
-              <li><strong>Temple Destruction:</strong> Hindu, Buddhist, Zoroastrian temples systematically destroyed</li>
-              <li><strong>Enslavement:</strong> Millions of Hindus, Persians, Europeans enslaved</li>
-              <li><strong>Conversion or Death:</strong> In some regions, especially for "pagans," no jizya option given</li>
-              <li><strong>Kidnapping Children:</strong> Devshirme-like systems; children taken and raised Muslim</li>
-              <li><strong>Economic Exclusion:</strong> Non-Muslims banned from government, military, education</li>
-            </ul>
+            <List>
+              <ListItem><strong>Temple Destruction:</strong> Hindu, Buddhist, Zoroastrian temples systematically destroyed</ListItem>
+              <ListItem><strong>Enslavement:</strong> Millions of Hindus, Persians, Europeans enslaved</ListItem>
+              <ListItem><strong>Conversion or Death:</strong> In some regions, especially for "pagans," no jizya option given</ListItem>
+              <ListItem><strong>Kidnapping Children:</strong> Devshirme-like systems; children taken and raised Muslim</ListItem>
+              <ListItem><strong>Economic Exclusion:</strong> Non-Muslims banned from government, military, education</ListItem>
+            </List>
           </div>
         </div>
 
@@ -426,26 +417,26 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           
           <div style={eventBoxStyle}>
             <h4 style={h4EventStyle}>📜 Systematic Islamization Policies:</h4>
-            <ul style={ulStyle}>
-              <li><strong>Dhimmi Laws Codified:</strong> Non-Muslims required to wear distinctive clothing; restricted from certain professions</li>
-              <li><strong>Church/Temple Destruction:</strong> Laws prohibiting new church/temple construction; many forcibly converted to mosques</li>
-              <li><strong>Jizya Increases:</strong> Tax burden increased to economically pressure conversion</li>
-              <li><strong>Forced Relocation:</strong> Christian and Jewish communities moved or scattered</li>
-              <li><strong>Slavery Trade:</strong> Massive African and European slave trade; millions enslaved</li>
-            </ul>
+            <List>
+              <ListItem><strong>Dhimmi Laws Codified:</strong> Non-Muslims required to wear distinctive clothing; restricted from certain professions</ListItem>
+              <ListItem><strong>Church/Temple Destruction:</strong> Laws prohibiting new church/temple construction; many forcibly converted to mosques</ListItem>
+              <ListItem><strong>Jizya Increases:</strong> Tax burden increased to economically pressure conversion</ListItem>
+              <ListItem><strong>Forced Relocation:</strong> Christian and Jewish communities moved or scattered</ListItem>
+              <ListItem><strong>Slavery Trade:</strong> Massive African and European slave trade; millions enslaved</ListItem>
+            </List>
           </div>
 
           <div style={statsBoxStyle}>
             <h4 style={h4StatsStyle}>📊 Demographic Changes:</h4>
             <p>Over 500 years, formerly Christian/Zoroastrian/Hindu/Buddhist majority regions became Muslim majority through:</p>
-            <ul style={ulStyle}>
-              <li>Economic pressure via jizya taxation</li>
-              <li>Social discrimination and exclusion</li>
-              <li>Intermarriage rules (Muslim men could marry non-Muslim women; children raised Muslim)</li>
-              <li>Legal discrimination in courts (non-Muslim testimony worth less)</li>
-              <li>Educational exclusion (non-Muslims barred from learning)</li>
-              <li>Periodic violence and forced conversions</li>
-            </ul>
+            <List>
+              <ListItem>Economic pressure via jizya taxation</ListItem>
+              <ListItem>Social discrimination and exclusion</ListItem>
+              <ListItem>Intermarriage rules (Muslim men could marry non-Muslim women; children raised Muslim)</ListItem>
+              <ListItem>Legal discrimination in courts (non-Muslim testimony worth less)</ListItem>
+              <ListItem>Educational exclusion (non-Muslims barred from learning)</ListItem>
+              <ListItem>Periodic violence and forced conversions</ListItem>
+            </List>
           </div>
         </div>
 
@@ -503,25 +494,25 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           <div style={warBoxStyle}>
             <h4 style={h4WarStyle}>👶 Devshirme System (Blood Tax):</h4>
             <p><strong>Definition:</strong> Systematic kidnapping of Christian boys to create Janissary soldiers and bureaucrats</p>
-            <ul style={ulStyle}>
-              <li><strong>Age:</strong> Boys aged 8-18 taken from Christian families</li>
-              <li><strong>Forced Conversion:</strong> Forcibly converted to Islam</li>
-              <li><strong>Indoctrination:</strong> Raised to be fanatically loyal to Sultan</li>
-              <li><strong>Family Separation:</strong> Forbidden from contacting families</li>
-              <li><strong>Scale:</strong> Hundreds of thousands of Christian boys stolen over centuries</li>
-              <li><strong>Purpose:</strong> Create elite military force loyal only to Islam and Sultan</li>
-            </ul>
+            <List>
+              <ListItem><strong>Age:</strong> Boys aged 8-18 taken from Christian families</ListItem>
+              <ListItem><strong>Forced Conversion:</strong> Forcibly converted to Islam</ListItem>
+              <ListItem><strong>Indoctrination:</strong> Raised to be fanatically loyal to Sultan</ListItem>
+              <ListItem><strong>Family Separation:</strong> Forbidden from contacting families</ListItem>
+              <ListItem><strong>Scale:</strong> Hundreds of thousands of Christian boys stolen over centuries</ListItem>
+              <ListItem><strong>Purpose:</strong> Create elite military force loyal only to Islam and Sultan</ListItem>
+            </List>
             <p><em>This constitutes systematic child kidnapping, forced conversion, and cultural genocide.</em></p>
           </div>
 
           <div style={warBoxStyle}>
             <h4 style={h4WarStyle}>💀 Ottoman Genocides & Atrocities:</h4>
-            <ul style={ulStyle}>
-              <li><strong>Armenian Genocide (1915-1917):</strong> 1.5 million Armenians killed; systematic ethnic cleansing</li>
-              <li><strong>Assyrian Genocide:</strong> 250,000-750,000 Assyrian Christians killed</li>
-              <li><strong>Greek Genocide:</strong> 450,000-900,000 Greeks killed or expelled</li>
-              <li><strong>Forced Islamization:</strong> Millions of Balkan and Caucasus Christians forcibly converted or killed over 600 years</li>
-            </ul>
+            <List>
+              <ListItem><strong>Armenian Genocide (1915-1917):</strong> 1.5 million Armenians killed; systematic ethnic cleansing</ListItem>
+              <ListItem><strong>Assyrian Genocide:</strong> 250,000-750,000 Assyrian Christians killed</ListItem>
+              <ListItem><strong>Greek Genocide:</strong> 450,000-900,000 Greeks killed or expelled</ListItem>
+              <ListItem><strong>Forced Islamization:</strong> Millions of Balkan and Caucasus Christians forcibly converted or killed over 600 years</ListItem>
+            </List>
           </div>
         </div>
 
@@ -532,15 +523,15 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           
           <div style={eventBoxStyle}>
             <h4 style={h4EventStyle}>📊 Methods of Modern Expansion:</h4>
-            <ul style={ulStyle}>
-              <li><strong>High Birth Rates:</strong> Demographic conquest through population growth in minority regions</li>
-              <li><strong>Immigration & Refusal to Integrate:</strong> Mass migration with self-segregation and demand for Sharia</li>
-              <li><strong>Oil Money Influence:</strong> Saudi Arabia funds mosque construction and Wahhabism worldwide</li>
-              <li><strong>Blasphemy Laws:</strong> Political pressure to criminalize criticism of Islam in Western countries</li>
-              <li><strong>Intimidation & Violence:</strong> Death threats against critics, apostates, and cartoonists</li>
-              <li><strong>Lawfare:</strong> Using Western legal systems to impose Islamic restrictions</li>
-              <li><strong>Educational Infiltration:</strong> Demanding Islamic content in schools; opposing critical analysis</li>
-            </ul>
+            <List>
+              <ListItem><strong>High Birth Rates:</strong> Demographic conquest through population growth in minority regions</ListItem>
+              <ListItem><strong>Immigration & Refusal to Integrate:</strong> Mass migration with self-segregation and demand for Sharia</ListItem>
+              <ListItem><strong>Oil Money Influence:</strong> Saudi Arabia funds mosque construction and Wahhabism worldwide</ListItem>
+              <ListItem><strong>Blasphemy Laws:</strong> Political pressure to criminalize criticism of Islam in Western countries</ListItem>
+              <ListItem><strong>Intimidation & Violence:</strong> Death threats against critics, apostates, and cartoonists</ListItem>
+              <ListItem><strong>Lawfare:</strong> Using Western legal systems to impose Islamic restrictions</ListItem>
+              <ListItem><strong>Educational Infiltration:</strong> Demanding Islamic content in schools; opposing critical analysis</ListItem>
+            </List>
           </div>
 
           <div style={warBoxStyle}>
@@ -595,13 +586,13 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
 
           <div style={statsBoxStyle}>
             <h4 style={h4StatsStyle}>📈 Statistical Growth Mechanisms:</h4>
-            <ul style={ulStyle}>
-              <li><strong>Birth Rate Differential:</strong> Muslim-majority countries have significantly higher birth rates than non-Muslim populations</li>
-              <li><strong>Apostasy Prohibition:</strong> Death penalty or social death for leaving Islam = one-way conversion system</li>
-              <li><strong>Intermarriage Asymmetry:</strong> Muslim men can marry non-Muslim women (children raised Muslim); Muslim women forbidden from marrying non-Muslims</li>
-              <li><strong>Inheritance Laws:</strong> Non-Muslim children receive less inheritance, incentivizing conversion</li>
-              <li><strong>Political Dominance:</strong> Once Muslim majority is achieved, Sharia implemented; non-Muslims become second-class</li>
-            </ul>
+            <List>
+              <ListItem><strong>Birth Rate Differential:</strong> Muslim-majority countries have significantly higher birth rates than non-Muslim populations</ListItem>
+              <ListItem><strong>Apostasy Prohibition:</strong> Death penalty or social death for leaving Islam = one-way conversion system</ListItem>
+              <ListItem><strong>Intermarriage Asymmetry:</strong> Muslim men can marry non-Muslim women (children raised Muslim); Muslim women forbidden from marrying non-Muslims</ListItem>
+              <ListItem><strong>Inheritance Laws:</strong> Non-Muslim children receive less inheritance, incentivizing conversion</ListItem>
+              <ListItem><strong>Political Dominance:</strong> Once Muslim majority is achieved, Sharia implemented; non-Muslims become second-class</ListItem>
+            </List>
           </div>
         </div>
 
@@ -611,32 +602,32 @@ export default function ExpansionHistory({ translations: t, currentLang = 'en' }
           
           <div style={eventBoxStyle}>
             <h4 style={h4EventStyle}>Historical Pattern:</h4>
-            <ol style={olStyle}>
-              <li><strong>Military Conquest:</strong> Invade territory through warfare</li>
-              <li><strong>Impose Jizya Tax:</strong> Economic pressure on non-Muslims</li>
-              <li><strong>Dhimmi Laws:</strong> Systematic discrimination and humiliation</li>
-              <li><strong>Destroy Religious Sites:</strong> Eliminate competing religious identity</li>
-              <li><strong>Legal Inequality:</strong> Non-Muslims second-class in courts and society</li>
-              <li><strong>Intermarriage Rules:</strong> One-way genetic/cultural conquest</li>
-              <li><strong>Apostasy Laws:</strong> No exit allowed from Islam</li>
-              <li><strong>Generational Pressure:</strong> Over time, economic and social pressure converts majority</li>
-              <li><strong>Final Stage:</strong> Sharia fully implemented; remaining non-Muslims expelled or killed</li>
-            </ol>
+            <List variant="numbered">
+              <ListItem><strong>Military Conquest:</strong> Invade territory through warfare</ListItem>
+              <ListItem><strong>Impose Jizya Tax:</strong> Economic pressure on non-Muslims</ListItem>
+              <ListItem><strong>Dhimmi Laws:</strong> Systematic discrimination and humiliation</ListItem>
+              <ListItem><strong>Destroy Religious Sites:</strong> Eliminate competing religious identity</ListItem>
+              <ListItem><strong>Legal Inequality:</strong> Non-Muslims second-class in courts and society</ListItem>
+              <ListItem><strong>Intermarriage Rules:</strong> One-way genetic/cultural conquest</ListItem>
+              <ListItem><strong>Apostasy Laws:</strong> No exit allowed from Islam</ListItem>
+              <ListItem><strong>Generational Pressure:</strong> Over time, economic and social pressure converts majority</ListItem>
+              <ListItem><strong>Final Stage:</strong> Sharia fully implemented; remaining non-Muslims expelled or killed</ListItem>
+            </List>
           </div>
 
           <div style={warBoxStyle}>
             <h4 style={h4WarStyle}>⚠️ Key Conclusion:</h4>
             <p><strong>Islamic expansion was NOT primarily through "peaceful preaching" as often claimed.</strong></p>
             <p>Historical evidence overwhelmingly shows expansion through:</p>
-            <ul style={ulStyle}>
-              <li>✗ Military conquest and warfare</li>
-              <li>✗ Economic coercion (jizya taxation system)</li>
-              <li>✗ Legal discrimination (dhimmi system)</li>
-              <li>✗ Political domination and Sharia implementation</li>
-              <li>✗ Slavery and forced conversion</li>
-              <li>✗ Destruction of religious/cultural heritage</li>
-              <li>✗ Demographic manipulation (birth rates + apostasy laws)</li>
-            </ul>
+            <List>
+              <ListItem>✗ Military conquest and warfare</ListItem>
+              <ListItem>✗ Economic coercion (jizya taxation system)</ListItem>
+              <ListItem>✗ Legal discrimination (dhimmi system)</ListItem>
+              <ListItem>✗ Political domination and Sharia implementation</ListItem>
+              <ListItem>✗ Slavery and forced conversion</ListItem>
+              <ListItem>✗ Destruction of religious/cultural heritage</ListItem>
+              <ListItem>✗ Demographic manipulation (birth rates + apostasy laws)</ListItem>
+            </List>
             <p><em>These are documented historical facts from Islamic, Western, and neutral sources.</em></p>
           </div>
         </div>

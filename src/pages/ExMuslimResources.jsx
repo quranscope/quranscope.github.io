@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { List, ListItem } from '../components/ui'
 
 export default function ExMuslimResources({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -167,11 +168,11 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
 
         <div style={styles.reasonSection}>
           <h3 style={{ color: '#555', marginBottom: '15px' }}>{t.reasonsSubtitle}</h3>
-          <ul style={styles.reasonList}>
+          <List variant="none">
             {reasons.map((reason, index) => (
               <li key={index} style={styles.reasonItem}>{reason}</li>
             ))}
-          </ul>
+          </List>
         </div>
 
         <div className="navigation">

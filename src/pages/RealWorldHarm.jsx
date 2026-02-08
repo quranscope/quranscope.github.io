@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { List, ListItem } from '../components/ui'
 
 export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -36,13 +37,13 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
           <p>This is not about \"misinterpretation\" or \"extremism.\" Every category of harm documented here is <strong>explicitly commanded or permitted in Islamic texts</strong> (Quran, Hadith, Sira). Perpetrators cite these texts to justify their actions. The texts ARE the problem.</p>
           <div style={styles.statsBox}>
             <h3>Overall Statistics</h3>
-            <ul style={{ fontSize: '1.1rem' }}>
-              <li><strong>270 million</strong> people killed in jihad over 1,400 years</li>
-              <li><strong>90%+</strong> of terrorism globally motivated by Islamic texts</li>
-              <li><strong>600 million+</strong> women oppressed under Sharia law</li>
-              <li><strong>13 countries</strong> execute apostates by law</li>
-              <li><strong>200 million</strong> women/girls subjected to FGM</li>
-            </ul>
+            <List className="text-white text-[1.1rem]">
+              <ListItem><strong>270 million</strong> people killed in jihad over 1,400 years</ListItem>
+              <ListItem><strong>90%+</strong> of terrorism globally motivated by Islamic texts</ListItem>
+              <ListItem><strong>600 million+</strong> women oppressed under Sharia law</ListItem>
+              <ListItem><strong>13 countries</strong> execute apostates by law</ListItem>
+              <ListItem><strong>200 million</strong> women/girls subjected to FGM</ListItem>
+            </List>
           </div>
         </div>
 
@@ -673,17 +674,17 @@ export default function RealWorldHarm({ translations: t, currentLang = 'en' }) {
         <div className="content-section">
           <div style={styles.statsBox}>
             <h3>The Numbers Don't Lie</h3>
-            <ul style={{ fontSize: '1.1rem' }}>
-              <li><strong>270 million</strong> deaths from Islamic jihad (1,400 years)</li>
-              <li><strong>90%+</strong> of modern terrorism motivated by Islamic texts</li>
-              <li><strong>600 million+</strong> women oppressed under Sharia</li>
-              <li><strong>200 million</strong> victims of FGM</li>
-              <li><strong>12 million+</strong> child brides yearly</li>
-              <li><strong>5,000+</strong> honor killings yearly</li>
-              <li><strong>13 countries</strong> execute apostates by law</li>
-              <li><strong>30 million+</strong> modern slaves in Kafala system</li>
-              <li><strong>19,000+</strong> UK grooming gang victims</li>
-            </ul>
+            <List className="text-white text-[1.1rem]">
+              <ListItem><strong>270 million</strong> deaths from Islamic jihad (1,400 years)</ListItem>
+              <ListItem><strong>90%+</strong> of modern terrorism motivated by Islamic texts</ListItem>
+              <ListItem><strong>600 million+</strong> women oppressed under Sharia</ListItem>
+              <ListItem><strong>200 million</strong> victims of FGM</ListItem>
+              <ListItem><strong>12 million+</strong> child brides yearly</ListItem>
+              <ListItem><strong>5,000+</strong> honor killings yearly</ListItem>
+              <ListItem><strong>13 countries</strong> execute apostates by law</ListItem>
+              <ListItem><strong>30 million+</strong> modern slaves in Kafala system</ListItem>
+              <ListItem><strong>19,000+</strong> UK grooming gang victims</ListItem>
+            </List>
           </div>
 
           <div style={styles.warningBox}>

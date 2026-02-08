@@ -40,6 +40,7 @@ const langDir = path.join(__dirname, '..', 'public', 'lang');
 
 let totalErrors = 0;
 let totalWarnings = 0;
+let autoCleanup = process.argv.includes('--cleanup') || process.env.BUILD_CLEANUP === 'true';
 
 // Regex patterns to find translation key usage in JSX
 const patterns = [
@@ -99,13 +100,28 @@ function loadTranslationFile(fileName) {
   }
 }
 
+function cleanupUnusedKeys(translationFile, unusedKeys) {
+  const filePath = path.join(langDir, translationFile);
+  const translations = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  
+  // Remove unused keys
+  unusedKeys.forEach(key => {
+    delete translations[key];
+  });
+  
+  // Write back to file
+  fs.writeFileSync(filePath, JSON.stringify(translations, null, 2) + '\n', 'utf8');
+  console.log(`${colors.green}   ✓ Removed ${unusedKeys.length} unused key(s) from ${translationFile}${colors.reset}`);
+}
+
 function validateFile(jsxFile) {
   const jsxPath = path.join(pagesDir, jsxFile);
   const translationFile = getTranslationFileName(jsxFile);
   
   if (!translationFile) {
-    console.log(`${colors.yellow}⚠️  ${jsxFile}: No translation mapping found (skipping)${colors.reset}`);
-    totalWarnings++;
+    console.error(`\n${colors.red}❌ CRITICAL: ${jsxFile} has no translation mapping!${colors.reset}`);
+    console.error(`   This page will not be translatable. Add mapping to getTranslationFileName().`);
+    totalErrors++;
     return;
   }
   
@@ -125,8 +141,9 @@ function validateFile(jsxFile) {
   const usedKeys = findTranslationKeys(jsxContent);
   
   if (usedKeys.length === 0) {
-    console.log(`${colors.yellow}⚠️  No translation keys found in ${jsxFile}${colors.reset}`);
-    totalWarnings++;
+    console.error(`${colors.red}❌ CRITICAL: ${jsxFile} uses no translation keys!${colors.reset}`);
+    console.error(`   Page has hardcoded strings. Refactor to use translations.`);
+    totalErrors++;
     return;
   }
   
@@ -157,12 +174,23 @@ function validateFile(jsxFile) {
     console.log(`${colors.green}✅ All translation keys are available${colors.reset}`);
   }
   
-  // Find unused keys (optional warning)
+  // Find unused keys - now treated as ERROR
   const unusedKeys = availableKeys.filter(key => !usedKeys.includes(key));
-  if (unusedKeys.length > 0 && unusedKeys.length < 20) {
-    console.log(`${colors.yellow}ℹ️  ${unusedKeys.length} unused translation key(s) in ${translationFile}${colors.reset}`);
-    // Uncomment to see unused keys:
-    // unusedKeys.forEach(key => console.log(`   - ${key}`));
+  if (unusedKeys.length > 0) {
+    if (autoCleanup) {
+      console.log(`${colors.yellow}🧹 Found ${unusedKeys.length} unused key(s) - cleaning up...${colors.reset}`);
+      try {
+        cleanupUnusedKeys(translationFile, unusedKeys);
+      } catch (error) {
+        console.error(`${colors.red}❌ Failed to cleanup ${translationFile}: ${error.message}${colors.reset}`);
+        totalErrors++;
+      }
+    } else {
+      console.error(`${colors.red}❌ CRITICAL: ${unusedKeys.length} unused translation key(s) in ${translationFile}:${colors.reset}`);
+      unusedKeys.forEach(key => console.error(`   - ${key}`));
+      console.error(`${colors.yellow}   Run with --cleanup flag to auto-remove unused keys${colors.reset}`);
+      totalErrors += unusedKeys.length;
+    }
   }
 }
 
@@ -197,18 +225,21 @@ function main() {
   console.log(`${'='.repeat(70)}${colors.reset}`);
   
   if (totalErrors > 0) {
-    console.log(`${colors.red}❌ Found ${totalErrors} missing translation key(s)${colors.reset}`);
+    console.log(`${colors.red}❌ VALIDATION FAILED: ${totalErrors} error(s) found${colors.reset}`);
+    console.log(`${colors.red}   Build cannot proceed with translation errors.${colors.reset}`);
+    if (!autoCleanup) {
+      console.log(`${colors.yellow}   TIP: Run 'npm run validate:keys -- --cleanup' to auto-fix unused keys${colors.reset}`);
+    }
   } else {
     console.log(`${colors.green}✅ All translation keys are valid!${colors.reset}`);
-  }
-  
-  if (totalWarnings > 0) {
-    console.log(`${colors.yellow}⚠️  ${totalWarnings} warning(s)${colors.reset}`);
+    console.log(`${colors.green}   ✓ All pages use translations${colors.reset}`);
+    console.log(`${colors.green}   ✓ No missing keys${colors.reset}`);
+    console.log(`${colors.green}   ✓ No unused keys${colors.reset}`);
   }
   
   console.log();
   
-  // Exit with error code if there are errors
+  // Exit with error code if there are errors (no warnings allowed)
   if (totalErrors > 0) {
     process.exit(1);
   }

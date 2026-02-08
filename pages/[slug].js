@@ -13,6 +13,7 @@ import MuhammadWomen from '../src/pages/MuhammadWomen'
 import JihadStudy from '../src/pages/JihadStudy'
 import Solution from '../src/pages/Solution'
 import RecentAttacks from '../src/pages/RecentAttacks'
+import TerroristOrganizations from '../src/pages/TerroristOrganizations'
 import { PAGES, LANGUAGES, AVAILABLE_LANGUAGES } from '../src/config/pages'
 
 const pageComponents = {
@@ -28,6 +29,7 @@ const pageComponents = {
   'jihad-study': JihadStudy,
   'solution': Solution,
   'recent-attacks': RecentAttacks,
+  'terrorist-organizations': TerroristOrganizations,
 }
 
 export default function DynamicPage({ pageKey, lang, translations, pageConfig }) {

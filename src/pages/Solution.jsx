@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { List, ListItem } from '../components/ui'
 
 export default function Solution({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -44,12 +45,12 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
           <p><strong>The Ex-Muslim community is NOT calling for banning Islam or stopping people from practicing their faith.</strong></p>
           <p style={{ marginTop: '1rem' }}>We believe in <strong>freedom of belief</strong> and <strong>freedom FROM belief</strong>. People have the right to practice any religion - but NOT the right to impose it on others, harm others, or indoctrinate children with violent, hateful ideologies.</p>
           <p style={{ marginTop: '1rem' }}><strong>Our message is direct:</strong> If you want to keep believing, that's your right. But you must:</p>
-          <ul style={{ ...styles.ul, marginTop: '1rem' }}>
-            <li>✋ <strong>STOP LYING ABOUT THE TEXTS</strong> - Admit what the Quran and Hadith actually say</li>
-            <li>✋ <strong>STOP TEACHING HATE TO CHILDREN</strong> - Don't pass violence to next generation</li>
-            <li>✋ <strong>ADMIT THE QURAN HAS MORAL PROBLEMS</strong> - It contains violence, misogyny, slavery</li>
-            <li>✋ <strong>EMBRACE UNIVERSAL HUMAN RIGHTS</strong> - Modern values over 7th-century tribal law</li>
-          </ul>
+          <List className="mt-4">
+            <ListItem>✋ <strong>STOP LYING ABOUT THE TEXTS</strong> - Admit what the Quran and Hadith actually say</ListItem>
+            <ListItem>✋ <strong>STOP TEACHING HATE TO CHILDREN</strong> - Don't pass violence to next generation</ListItem>
+            <ListItem>✋ <strong>ADMIT THE QURAN HAS MORAL PROBLEMS</strong> - It contains violence, misogyny, slavery</ListItem>
+            <ListItem>✋ <strong>EMBRACE UNIVERSAL HUMAN RIGHTS</strong> - Modern values over 7th-century tribal law</ListItem>
+          </List>
         </div>
 
         <div style={styles.contentCard}>
@@ -57,13 +58,13 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
           
           <div style={styles.notSolution}>
             <h3 style={styles.notSolutionH3}>We Are NOT Asking To:</h3>
-            <ul style={styles.ul}>
-              <li><strong>Ban Islam:</strong> People have the right to believe what they choose</li>
-              <li><strong>Force Atheism:</strong> We respect people's need for spirituality</li>
-              <li><strong>Discriminate Against Muslims:</strong> Individual Muslims are not the problem</li>
-              <li><strong>Promote Hatred:</strong> We oppose hate from all sources</li>
-              <li><strong>Blame All Muslims:</strong> Millions are peaceful and reject violence</li>
-            </ul>
+            <List>
+              <ListItem><strong>Ban Islam:</strong> People have the right to believe what they choose</ListItem>
+              <ListItem><strong>Force Atheism:</strong> We respect people's need for spirituality</ListItem>
+              <ListItem><strong>Discriminate Against Muslims:</strong> Individual Muslims are not the problem</ListItem>
+              <ListItem><strong>Promote Hatred:</strong> We oppose hate from all sources</ListItem>
+              <ListItem><strong>Blame All Muslims:</strong> Millions are peaceful and reject violence</ListItem>
+            </List>
           </div>
 
           <div style={styles.emphasisBox}>
@@ -81,12 +82,12 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
             <span style={{ ...styles.tag, background: '#4caf50' }}>TEXT REFORM</span>
             <p style={{ marginTop: '1rem' }}><strong>The Problem:</strong> Violent verses are taught as eternal and applicable today.</p>
             <p style={{ marginTop: '0.5rem' }}><strong>The Solution:</strong></p>
-            <ul style={styles.ul}>
-              <li>Declare violent verses as "historical context only"</li>
-              <li>Add disclaimers in printed Qurans</li>
-              <li>Remove from children's curriculum</li>
-              <li>Islamic scholars issue unified fatwa against violence</li>
-            </ul>
+            <List>
+              <ListItem>Declare violent verses as "historical context only"</ListItem>
+              <ListItem>Add disclaimers in printed Qurans</ListItem>
+              <ListItem>Remove from children's curriculum</ListItem>
+              <ListItem>Islamic scholars issue unified fatwa against violence</ListItem>
+            </List>
           </div>
 
           <div style={styles.solutionItem}>
@@ -94,27 +95,27 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
             <span style={{ ...styles.tag, background: '#ff9800' }}>EDUCATION</span>
             <p style={{ marginTop: '1rem' }}><strong>The Problem:</strong> Children taught from age 3-4 that Quran is perfect and violent verses are Allah's commands.</p>
             <p style={{ marginTop: '0.5rem' }}><strong>The Solution:</strong></p>
-            <ul style={styles.ul}>
-              <li>Ban teaching violent verses to minors</li>
-              <li>Reform madrasa curriculum - focus on ethics, not violence</li>
-              <li>Teach comparative religion and critical thinking</li>
-              <li>Monitor extremist content in religious schools</li>
-            </ul>
+            <List>
+              <ListItem>Ban teaching violent verses to minors</ListItem>
+              <ListItem>Reform madrasa curriculum - focus on ethics, not violence</ListItem>
+              <ListItem>Teach comparative religion and critical thinking</ListItem>
+              <ListItem>Monitor extremist content in religious schools</ListItem>
+            </List>
           </div>
 
           <div style={styles.solutionItem}>
             <h3 style={styles.solutionH3}>3. Embrace Modern Values</h3>
             <span style={{ ...styles.tag, background: '#00bcd4' }}>MODERN VALUES</span>
             <p style={{ marginTop: '1rem' }}><strong>The Solution:</strong></p>
-            <ul style={styles.ul}>
-              <li>Separation of Mosque and State</li>
-              <li>Abolish Sharia criminal law</li>
-              <li>Gender equality by law</li>
-              <li>Freedom FROM religion - right to leave Islam</li>
-              <li>Abolish blasphemy laws</li>
-              <li>LGBTQ+ rights - decriminalize homosexuality</li>
-              <li>Ban child marriage globally</li>
-            </ul>
+            <List>
+              <ListItem>Separation of Mosque and State</ListItem>
+              <ListItem>Abolish Sharia criminal law</ListItem>
+              <ListItem>Gender equality by law</ListItem>
+              <ListItem>Freedom FROM religion - right to leave Islam</ListItem>
+              <ListItem>Abolish blasphemy laws</ListItem>
+              <ListItem>LGBTQ+ rights - decriminalize homosexuality</ListItem>
+              <ListItem>Ban child marriage globally</ListItem>
+            </List>
           </div>
 
           <div style={styles.solutionItem}>
@@ -122,13 +123,13 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
             <p style={{ marginTop: '1rem' }}><strong>Replace tribal Islamic values with universal human values:</strong></p>
             <div style={styles.actionList}>
               <h4 style={styles.actionListH4}>✅ Universal Human Values:</h4>
-              <ul style={styles.ul}>
-                <li><strong>True Charity:</strong> Help ALL people regardless of religion</li>
-                <li><strong>Universal Community:</strong> Based on shared humanity, not religion</li>
-                <li><strong>Genuine Hospitality:</strong> Kindness to everyone</li>
-                <li><strong>Personal Autonomy:</strong> Dress how you want</li>
-                <li><strong>Secular Humanism:</strong> Morality for all humanity</li>
-              </ul>
+              <List>
+                <ListItem><strong>True Charity:</strong> Help ALL people regardless of religion</ListItem>
+                <ListItem><strong>Universal Community:</strong> Based on shared humanity, not religion</ListItem>
+                <ListItem><strong>Genuine Hospitality:</strong> Kindness to everyone</ListItem>
+                <ListItem><strong>Personal Autonomy:</strong> Dress how you want</ListItem>
+                <ListItem><strong>Secular Humanism:</strong> Morality for all humanity</ListItem>
+              </List>
             </div>
           </div>
 
@@ -136,36 +137,36 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
             <h3 style={styles.solutionH3}>5. Support Ex-Muslims</h3>
             <span style={{ ...styles.tag, background: '#9c27b0' }}>PROTECTION</span>
             <p style={{ marginTop: '1rem' }}><strong>The Solution:</strong></p>
-            <ul style={styles.ul}>
-              <li>Legal protection - grant asylum to ex-Muslims</li>
-              <li>Platform their voices - media interviews</li>
-              <li>Fund support organizations</li>
-              <li>Social acceptance - leaving Islam should be normalized</li>
-            </ul>
+            <List>
+              <ListItem>Legal protection - grant asylum to ex-Muslims</ListItem>
+              <ListItem>Platform their voices - media interviews</ListItem>
+              <ListItem>Fund support organizations</ListItem>
+              <ListItem>Social acceptance - leaving Islam should be normalized</ListItem>
+            </List>
           </div>
 
           <div style={styles.solutionItem}>
             <h3 style={styles.solutionH3}>6. Legal and Political Action</h3>
             <p style={{ marginTop: '1rem' }}><strong>International accountability:</strong></p>
-            <ul style={styles.ul}>
-              <li>UN sanctions on countries with apostasy death penalty</li>
-              <li>Trade conditions tied to human rights</li>
-              <li>ICC prosecution of honor killings and persecution</li>
-              <li>Ban hate preachers</li>
-              <li>Monitor extremist mosques</li>
-            </ul>
+            <List>
+              <ListItem>UN sanctions on countries with apostasy death penalty</ListItem>
+              <ListItem>Trade conditions tied to human rights</ListItem>
+              <ListItem>ICC prosecution of honor killings and persecution</ListItem>
+              <ListItem>Ban hate preachers</ListItem>
+              <ListItem>Monitor extremist mosques</ListItem>
+            </List>
           </div>
 
           <div style={styles.solutionItem}>
             <h3 style={styles.solutionH3}>7. Education and Counter-Narrative</h3>
             <p style={{ marginTop: '1rem' }}><strong>Promote critical thinking:</strong></p>
-            <ul style={styles.ul}>
-              <li>Teach Islamic history honestly</li>
-              <li>Critical analysis of religious texts</li>
-              <li>Comparative ethics</li>
-              <li>Challenge censorship - "Islamophobia" shouldn't silence criticism</li>
-              <li>Ex-Muslim testimonies in education</li>
-            </ul>
+            <List>
+              <ListItem>Teach Islamic history honestly</ListItem>
+              <ListItem>Critical analysis of religious texts</ListItem>
+              <ListItem>Comparative ethics</ListItem>
+              <ListItem>Challenge censorship - "Islamophobia" shouldn't silence criticism</ListItem>
+              <ListItem>Ex-Muslim testimonies in education</ListItem>
+            </List>
           </div>
         </div>
 
@@ -174,26 +175,26 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
           
           <div style={styles.solutionItem}>
             <h3 style={styles.solutionH3}>Imagine a World Where:</h3>
-            <ul style={styles.ul}>
-              <li>✅ Muslim women walk freely without hijab or male guardianship</li>
-              <li>✅ Ex-Muslims openly discuss their journey without death threats</li>
-              <li>✅ LGBTQ+ Muslims live authentically without risk of execution</li>
-              <li>✅ Non-Muslims in Muslim countries have equal rights</li>
-              <li>✅ Children learn ethics instead of violent verses</li>
-              <li>✅ Mosques preach love and tolerance, not jihad</li>
-              <li>✅ Islamic countries prosper with secular law</li>
-              <li>✅ Terrorism ends because religious justification is rejected</li>
-            </ul>
+            <List>
+              <ListItem>✅ Muslim women walk freely without hijab or male guardianship</ListItem>
+              <ListItem>✅ Ex-Muslims openly discuss their journey without death threats</ListItem>
+              <ListItem>✅ LGBTQ+ Muslims live authentically without risk of execution</ListItem>
+              <ListItem>✅ Non-Muslims in Muslim countries have equal rights</ListItem>
+              <ListItem>✅ Children learn ethics instead of violent verses</ListItem>
+              <ListItem>✅ Mosques preach love and tolerance, not jihad</ListItem>
+              <ListItem>✅ Islamic countries prosper with secular law</ListItem>
+              <ListItem>✅ Terrorism ends because religious justification is rejected</ListItem>
+            </List>
           </div>
 
           <div style={styles.emphasisBox}>
             <h4 style={styles.emphasisH4}>This Is Achievable - But Requires Real Reform:</h4>
-            <ul style={styles.ul}>
-              <li><strong>Christianity reformed:</strong> No longer burns witches or executes heretics</li>
-              <li><strong>Judaism reformed:</strong> Most don't follow Torah's stoning laws</li>
-              <li><strong>Buddhism evolved:</strong> Rejected violent elements</li>
-              <li><strong>But Islam is uniquely resistant:</strong> "Final, perfect, eternal" doctrine prevents change</li>
-            </ul>
+            <List>
+              <ListItem><strong>Christianity reformed:</strong> No longer burns witches or executes heretics</ListItem>
+              <ListItem><strong>Judaism reformed:</strong> Most don't follow Torah's stoning laws</ListItem>
+              <ListItem><strong>Buddhism evolved:</strong> Rejected violent elements</ListItem>
+              <ListItem><strong>But Islam is uniquely resistant:</strong> "Final, perfect, eternal" doctrine prevents change</ListItem>
+            </List>
             <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>Real solution: <span style={styles.highlightStat}>LEAVE ISLAM ENTIRELY.</span> Build ethics on humanism and universal compassion.</p>
           </div>
         </div>
@@ -203,35 +204,35 @@ export default function Solution({ translations: t, currentLang = 'en' }) {
           
           <div style={styles.actionList}>
             <h4 style={styles.actionListH4}>For Muslims & Those Still Believing:</h4>
-            <ul style={styles.ul}>
-              <li>✊ Face the truth about your texts</li>
-              <li>✊ Admit Muhammad was not perfect</li>
-              <li>✊ Stop teaching violence to children</li>
-              <li>✊ Protect ex-Muslims in your family</li>
-              <li>✊ Consider leaving entirely - you can be moral without Islam</li>
-            </ul>
+            <List>
+              <ListItem>✊ Face the truth about your texts</ListItem>
+              <ListItem>✊ Admit Muhammad was not perfect</ListItem>
+              <ListItem>✊ Stop teaching violence to children</ListItem>
+              <ListItem>✊ Protect ex-Muslims in your family</ListItem>
+              <ListItem>✊ Consider leaving entirely - you can be moral without Islam</ListItem>
+            </List>
           </div>
 
           <div style={{ ...styles.actionList, background: '#e1f5fe', borderColor: '#0277bd' }}>
             <h4 style={{ ...styles.actionListH4, color: '#01579b' }}>For Non-Muslims & Allies:</h4>
-            <ul style={styles.ul}>
-              <li>✊ Amplify ex-Muslim voices</li>
-              <li>✊ Support reform organizations</li>
-              <li>✊ Distinguish people from ideology</li>
-              <li>✊ Demand accountability</li>
-              <li>✊ Reject false equivalences - acknowledge reality</li>
-            </ul>
+            <List>
+              <ListItem>✊ Amplify ex-Muslim voices</ListItem>
+              <ListItem>✊ Support reform organizations</ListItem>
+              <ListItem>✊ Distinguish people from ideology</ListItem>
+              <ListItem>✊ Demand accountability</ListItem>
+              <ListItem>✊ Reject false equivalences - acknowledge reality</ListItem>
+            </List>
           </div>
 
           <div style={{ ...styles.actionList, background: '#fce4ec', borderColor: '#c2185b' }}>
             <h4 style={{ ...styles.actionListH4, color: '#880e4f' }}>For Governments & Policy Makers:</h4>
-            <ul style={styles.ul}>
-              <li>✊ Grant asylum to ex-Muslims and persecuted minorities</li>
-              <li>✊ Sanction countries with apostasy death penalties</li>
-              <li>✊ Monitor extremism in mosques</li>
-              <li>✊ Ban child marriage - no religious exemptions</li>
-              <li>✊ Protect free speech - criticism is legal</li>
-            </ul>
+            <List>
+              <ListItem>✊ Grant asylum to ex-Muslims and persecuted minorities</ListItem>
+              <ListItem>✊ Sanction countries with apostasy death penalties</ListItem>
+              <ListItem>✊ Monitor extremism in mosques</ListItem>
+              <ListItem>✊ Ban child marriage - no religious exemptions</ListItem>
+              <ListItem>✊ Protect free speech - criticism is legal</ListItem>
+            </List>
           </div>
         </div>
 

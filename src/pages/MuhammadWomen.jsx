@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { List, ListItem } from '../components/ui'
 
 export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
   if (!t) return <div>Loading...</div>
@@ -113,11 +114,11 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
         <div style={{ background: '#fff3cd', padding: '30px', borderRadius: '12px', margin: '30px 0', borderLeft: '6px solid #ffc107' }}>
           <h2 style={{ color: '#c94b4b', marginTop: 0, marginBottom: '10px' }}>{t.crimesTitle || crimesTitle}</h2>
           <p style={{ fontStyle: 'italic', color: '#666', marginBottom: '20px' }}>{t.crimesSubtitle || 'All documented in Islam\'s most authentic sources'}</p>
-          <ul style={styles.crimesList}>
+          <List variant="none">
             {(t.crimesList || crimes).map((crime, index) => (
               <li key={index} style={styles.crimeItem}>{crime}</li>
             ))}
-          </ul>
+          </List>
         </div>
 
         <div style={styles.warningBox}>
@@ -151,14 +152,14 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </div>
 
           <h3>Historical Context and Impact</h3>
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Age Difference:</strong> Muhammad was 53-54 years old when he consummated marriage with 9-year-old Aisha</li>
-            <li style={styles.evidenceItem}><strong>Modern Classification:</strong> In every civilized country today, this would be prosecuted as child rape and pedophilia</li>
-            <li style={styles.evidenceItem}><strong>Cannot Be Denied:</strong> Reported in most authentic Hadith collections; accepted by all four major Sunni schools of Islamic jurisprudence</li>
-            <li style={styles.evidenceItem}><strong>Ongoing Harm:</strong> Used to justify child marriage in Yemen, Afghanistan, Pakistan, Iran where girls as young as 6-9 are married to adult men</li>
-            <li style={styles.evidenceItem}><strong>The Problem:</strong> Muhammad is considered "uswa hasana" (perfect example) for all Muslims to follow (Quran 33:21)</li>
-            <li style={styles.evidenceItem}><strong>Death Toll:</strong> Millions of child brides suffer lifelong trauma, health complications, and death due to this precedent</li>
-          </ul>
+          <List>
+            <ListItem><strong>Age Difference:</strong> Muhammad was 53-54 years old when he consummated marriage with 9-year-old Aisha</ListItem>
+            <ListItem><strong>Modern Classification:</strong> In every civilized country today, this would be prosecuted as child rape and pedophilia</ListItem>
+            <ListItem><strong>Cannot Be Denied:</strong> Reported in most authentic Hadith collections; accepted by all four major Sunni schools of Islamic jurisprudence</ListItem>
+            <ListItem><strong>Ongoing Harm:</strong> Used to justify child marriage in Yemen, Afghanistan, Pakistan, Iran where girls as young as 6-9 are married to adult men</ListItem>
+            <ListItem><strong>The Problem:</strong> Muhammad is considered "uswa hasana" (perfect example) for all Muslims to follow (Quran 33:21)</ListItem>
+            <ListItem><strong>Death Toll:</strong> Millions of child brides suffer lifelong trauma, health complications, and death due to this precedent</ListItem>
+          </List>
         </div>
 
         <h2>2. Multiple Wives and Captive Women</h2>
@@ -180,20 +181,20 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </div>
 
           <h3>Muhammad's Wives</h3>
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Khadijah:</strong> First wife; 15 years older; married when Muhammad was 25</li>
-            <li style={styles.evidenceItem}><strong>Sawda:</strong> Married after Khadijah's death</li>
-            <li style={styles.evidenceItem}><strong>Aisha:</strong> Married at 6, consummated at 9; daughter of Abu Bakr</li>
-            <li style={styles.evidenceItem}><strong>Hafsa:</strong> Daughter of Umar; political alliance</li>
-            <li style={styles.evidenceItem}><strong>Zaynab bint Khuzayma:</strong> Died shortly after marriage</li>
-            <li style={styles.evidenceItem}><strong>Hind (Umm Salama):</strong> Widow of companion</li>
-            <li style={styles.evidenceItem}><strong>Zaynab bint Jahsh:</strong> Previously married to Muhammad's adopted son Zayd; Allah "conveniently" revealed verses allowing Muhammad to marry her after Zayd divorced her (Quran 33:37)</li>
-            <li style={styles.evidenceItem}><strong>Juwayriya:</strong> War captive from defeated Banu Mustaliq tribe</li>
-            <li style={styles.evidenceItem}><strong>Safiyya bint Huyayy:</strong> Jewish captive; Muhammad killed her husband and father in Battle of Khaybar, then took her as wife/slave same day</li>
-            <li style={styles.evidenceItem}><strong>Ramlah (Umm Habiba):</strong> Daughter of Abu Sufyan</li>
-            <li style={styles.evidenceItem}><strong>Maymunah:</strong> Last wife</li>
-            <li style={styles.evidenceItem}><strong>Maria al-Qibtiyya:</strong> Coptic Christian slave gifted to Muhammad; bore him son Ibrahim</li>
-          </ul>
+          <List>
+            <ListItem><strong>Khadijah:</strong> First wife; 15 years older; married when Muhammad was 25</ListItem>
+            <ListItem><strong>Sawda:</strong> Married after Khadijah's death</ListItem>
+            <ListItem><strong>Aisha:</strong> Married at 6, consummated at 9; daughter of Abu Bakr</ListItem>
+            <ListItem><strong>Hafsa:</strong> Daughter of Umar; political alliance</ListItem>
+            <ListItem><strong>Zaynab bint Khuzayma:</strong> Died shortly after marriage</ListItem>
+            <ListItem><strong>Hind (Umm Salama):</strong> Widow of companion</ListItem>
+            <ListItem><strong>Zaynab bint Jahsh:</strong> Previously married to Muhammad's adopted son Zayd; Allah "conveniently" revealed verses allowing Muhammad to marry her after Zayd divorced her (Quran 33:37)</ListItem>
+            <ListItem><strong>Juwayriya:</strong> War captive from defeated Banu Mustaliq tribe</ListItem>
+            <ListItem><strong>Safiyya bint Huyayy:</strong> Jewish captive; Muhammad killed her husband and father in Battle of Khaybar, then took her as wife/slave same day</ListItem>
+            <ListItem><strong>Ramlah (Umm Habiba):</strong> Daughter of Abu Sufyan</ListItem>
+            <ListItem><strong>Maymunah:</strong> Last wife</ListItem>
+            <ListItem><strong>Maria al-Qibtiyya:</strong> Coptic Christian slave gifted to Muhammad; bore him son Ibrahim</ListItem>
+          </List>
         </div>
 
         <h2>3. Women's Rights and Status in Islam</h2>
@@ -221,15 +222,15 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             </div>
           </div>
 
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Legal Inferiority:</strong> Woman's testimony worth half a man's in court (Quran 2:282)</li>
-            <li style={styles.evidenceItem}><strong>Inheritance:</strong> Women inherit half of what men inherit (Quran 4:11)</li>
-            <li style={styles.evidenceItem}><strong>Beating Permitted:</strong> Husbands allowed to beat disobedient wives (Quran 4:34)</li>
-            <li style={styles.evidenceItem}><strong>Intellectual Deficiency:</strong> Muhammad said women are "deficient in intelligence" (Sahih Bukhari 304)</li>
-            <li style={styles.evidenceItem}><strong>Majority in Hell:</strong> Muhammad said he saw hell and most inhabitants were women (Sahih Bukhari 304)</li>
-            <li style={styles.evidenceItem}><strong>Obedience Required:</strong> If a woman refuses sex, angels curse her until morning (Sahih Bukhari 5193)</li>
-            <li style={styles.evidenceItem}><strong>Male Guardianship:</strong> Women require male permission for travel, work, marriage in strict Islamic societies</li>
-          </ul>
+          <List>
+            <ListItem><strong>Legal Inferiority:</strong> Woman's testimony worth half a man's in court (Quran 2:282)</ListItem>
+            <ListItem><strong>Inheritance:</strong> Women inherit half of what men inherit (Quran 4:11)</ListItem>
+            <ListItem><strong>Beating Permitted:</strong> Husbands allowed to beat disobedient wives (Quran 4:34)</ListItem>
+            <ListItem><strong>Intellectual Deficiency:</strong> Muhammad said women are "deficient in intelligence" (Sahih Bukhari 304)</ListItem>
+            <ListItem><strong>Majority in Hell:</strong> Muhammad said he saw hell and most inhabitants were women (Sahih Bukhari 304)</ListItem>
+            <ListItem><strong>Obedience Required:</strong> If a woman refuses sex, angels curse her until morning (Sahih Bukhari 5193)</ListItem>
+            <ListItem><strong>Male Guardianship:</strong> Women require male permission for travel, work, marriage in strict Islamic societies</ListItem>
+          </List>
         </div>
 
         <h2>4. War Captives and Sexual Slavery</h2>
@@ -257,14 +258,14 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             </div>
           </div>
 
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Quranic Permission:</strong> Sex with married female captives explicitly permitted (Quran 4:24, 23:5-6, 70:29-30)</li>
-            <li style={styles.evidenceItem}><strong>Muhammad's Practice:</strong> Took Safiyya as slave/wife after killing her husband Kinana and father; same day of battle</li>
-            <li style={styles.evidenceItem}><strong>Mass Rape:</strong> After battle of Banu Mustaliq, Muslim men raped captured women; asked Muhammad only about coitus interruptus to avoid pregnancies</li>
-            <li style={styles.evidenceItem}><strong>No Consent:</strong> Captive women had no choice; taken as "spoils of war"</li>
-            <li style={styles.evidenceItem}><strong>Modern Application:</strong> ISIS used these verses to justify enslaving Yazidi women (2014-2019); published manual citing Quran 4:24</li>
-            <li style={styles.evidenceItem}><strong>Still Practiced:</strong> Sex slavery continues in conflict zones where jihadists operate</li>
-          </ul>
+          <List>
+            <ListItem><strong>Quranic Permission:</strong> Sex with married female captives explicitly permitted (Quran 4:24, 23:5-6, 70:29-30)</ListItem>
+            <ListItem><strong>Muhammad's Practice:</strong> Took Safiyya as slave/wife after killing her husband Kinana and father; same day of battle</ListItem>
+            <ListItem><strong>Mass Rape:</strong> After battle of Banu Mustaliq, Muslim men raped captured women; asked Muhammad only about coitus interruptus to avoid pregnancies</ListItem>
+            <ListItem><strong>No Consent:</strong> Captive women had no choice; taken as "spoils of war"</ListItem>
+            <ListItem><strong>Modern Application:</strong> ISIS used these verses to justify enslaving Yazidi women (2014-2019); published manual citing Quran 4:24</ListItem>
+            <ListItem><strong>Still Practiced:</strong> Sex slavery continues in conflict zones where jihadists operate</ListItem>
+          </List>
         </div>
 
         <h2>5. Modern Perspective: Is Muhammad Followable Today?</h2>
@@ -272,14 +273,14 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           <h3>Ethical and Legal Analysis</h3>
           <p><strong>If Muhammad lived in any modern country and repeated his actions, he would be:</strong></p>
 
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Arrested for Child Sexual Abuse:</strong> Marrying and having sex with 9-year-old = statutory rape; decades in prison</li>
-            <li style={styles.evidenceItem}><strong>Charged with Human Trafficking:</strong> Owning and selling slaves = modern slavery; life imprisonment</li>
-            <li style={styles.evidenceItem}><strong>War Crimes Prosecution:</strong> Genociding Banu Qurayza (600-900 men beheaded), enslaving women and children = crimes against humanity</li>
-            <li style={styles.evidenceItem}><strong>Sexual Assault Charges:</strong> Taking war captives as sex slaves without consent = rape; multiple life sentences</li>
-            <li style={styles.evidenceItem}><strong>Incitement to Violence:</strong> Commanding violence against apostates, critics, non-Muslims = terrorism charges</li>
-            <li style={styles.evidenceItem}><strong>Domestic Violence:</strong> Commanding wife-beating = criminal assault</li>
-          </ul>
+          <List>
+            <ListItem><strong>Arrested for Child Sexual Abuse:</strong> Marrying and having sex with 9-year-old = statutory rape; decades in prison</ListItem>
+            <ListItem><strong>Charged with Human Trafficking:</strong> Owning and selling slaves = modern slavery; life imprisonment</ListItem>
+            <ListItem><strong>War Crimes Prosecution:</strong> Genociding Banu Qurayza (600-900 men beheaded), enslaving women and children = crimes against humanity</ListItem>
+            <ListItem><strong>Sexual Assault Charges:</strong> Taking war captives as sex slaves without consent = rape; multiple life sentences</ListItem>
+            <ListItem><strong>Incitement to Violence:</strong> Commanding violence against apostates, critics, non-Muslims = terrorism charges</ListItem>
+            <ListItem><strong>Domestic Violence:</strong> Commanding wife-beating = criminal assault</ListItem>
+          </List>
 
           <p style={{ marginTop: '20px', fontWeight: '600', fontSize: '1.1em', color: '#c94b4b' }}>
             Yet 1.8 billion Muslims are taught to follow his example as the "perfect man" and "seal of prophets."
@@ -320,14 +321,14 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           </div>
 
           <h3>Universal Declaration of Human Rights Violations</h3>
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Article 1:</strong> All humans born free and equal → Islam establishes women as inferior</li>
-            <li style={styles.evidenceItem}><strong>Article 4:</strong> No slavery → Muhammad owned, bought, sold, and took slaves; sex slavery permitted</li>
-            <li style={styles.evidenceItem}><strong>Article 5:</strong> No torture/degrading treatment → Beating wives permitted; war captives enslaved</li>
-            <li style={styles.evidenceItem}><strong>Article 16:</strong> Free consent to marriage → Child brides cannot consent; war captives forced into marriage</li>
-            <li style={styles.evidenceItem}><strong>Article 18:</strong> Freedom of religion → Apostasy punishable by death; forced conversions practiced</li>
-            <li style={styles.evidenceItem}><strong>Article 19:</strong> Freedom of expression → Blasphemy/criticism of Islam punishable by death</li>
-          </ul>
+          <List>
+            <ListItem><strong>Article 1:</strong> All humans born free and equal → Islam establishes women as inferior</ListItem>
+            <ListItem><strong>Article 4:</strong> No slavery → Muhammad owned, bought, sold, and took slaves; sex slavery permitted</ListItem>
+            <ListItem><strong>Article 5:</strong> No torture/degrading treatment → Beating wives permitted; war captives enslaved</ListItem>
+            <ListItem><strong>Article 16:</strong> Free consent to marriage → Child brides cannot consent; war captives forced into marriage</ListItem>
+            <ListItem><strong>Article 18:</strong> Freedom of religion → Apostasy punishable by death; forced conversions practiced</ListItem>
+            <ListItem><strong>Article 19:</strong> Freedom of expression → Blasphemy/criticism of Islam punishable by death</ListItem>
+          </List>
         </div>
 
         <h2>7. Conclusion: The Impact on Women</h2>
@@ -335,16 +336,16 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           <p style={{ marginBottom: '25px', fontWeight: '500', fontSize: '1.05em' }}>
             Muhammad's treatment of women and the legal frameworks he established have resulted in 1,400 years of systemic oppression affecting hundreds of millions of women.
           </p>
-          <ul style={styles.evidenceList}>
-            <li style={styles.evidenceItem}><strong>Child Marriage Epidemic:</strong> 12 million girls married yearly in Muslim-majority countries; Muhammad's marriage to Aisha used as justification</li>
-            <li style={styles.evidenceItem}><strong>Honor Killings:</strong> 5,000+ women killed annually for "dishonoring" families; rooted in Islamic concepts of male honor</li>
-            <li style={styles.evidenceItem}><strong>FGM:</strong> 200 million women mutilated; justified by Hadith</li>
-            <li style={styles.evidenceItem}><strong>Legal Discrimination:</strong> Women treated as legal minors requiring male guardianship in Islamic law countries</li>
-            <li style={styles.evidenceItem}><strong>Domestic Violence:</strong> 70-90% of women in some Muslim countries experience violence; Quran 4:34 cited as justification</li>
-            <li style={styles.evidenceItem}><strong>Sex Slavery:</strong> ISIS enslaved 5,000+ Yazidi women citing Quran 4:24; practice continues in conflict zones</li>
-            <li style={styles.evidenceItem}><strong>Forced Conversion:</strong> 1,000+ girls kidnapped yearly in Pakistan alone; forced to convert and marry</li>
-            <li style={styles.evidenceItem}><strong>Cannot Reform:</strong> Muhammad's actions considered divinely sanctioned and perfect; criticism = apostasy/blasphemy = death</li>
-          </ul>
+          <List>
+            <ListItem><strong>Child Marriage Epidemic:</strong> 12 million girls married yearly in Muslim-majority countries; Muhammad's marriage to Aisha used as justification</ListItem>
+            <ListItem><strong>Honor Killings:</strong> 5,000+ women killed annually for "dishonoring" families; rooted in Islamic concepts of male honor</ListItem>
+            <ListItem><strong>FGM:</strong> 200 million women mutilated; justified by Hadith</ListItem>
+            <ListItem><strong>Legal Discrimination:</strong> Women treated as legal minors requiring male guardianship in Islamic law countries</ListItem>
+            <ListItem><strong>Domestic Violence:</strong> 70-90% of women in some Muslim countries experience violence; Quran 4:34 cited as justification</ListItem>
+            <ListItem><strong>Sex Slavery:</strong> ISIS enslaved 5,000+ Yazidi women citing Quran 4:24; practice continues in conflict zones</ListItem>
+            <ListItem><strong>Forced Conversion:</strong> 1,000+ girls kidnapped yearly in Pakistan alone; forced to convert and marry</ListItem>
+            <ListItem><strong>Cannot Reform:</strong> Muhammad's actions considered divinely sanctioned and perfect; criticism = apostasy/blasphemy = death</ListItem>
+          </List>
 
           <p style={{ marginTop: '30px', padding: '20px', background: '#fff3cd', borderRadius: '10px', fontWeight: '600', fontSize: '1.1em' }}>
             The question is simple: Can a man who married a 6-year-old child, owned slaves, captured women as war booty, commanded wife-beating, and established women as legally inferior truly be considered a moral example for humanity?

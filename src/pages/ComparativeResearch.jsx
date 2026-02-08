@@ -10,8 +10,10 @@ import {
   ResearchItem,
   DetailRow,
   VerseReference,
-  SourceDate
+  SourceDate,
+  PageHeader
 } from '../components/ui'
+import { PAGES } from '../config/pages'
 
 export default function ComparativeResearch({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -31,6 +33,12 @@ export default function ComparativeResearch({ translations: t, currentLang = 'en
         <meta property="og:title" content="Copied & Edited Content - Quran Analysis" />
         <meta property="og:description" content="80 documented parallels between Quranic stories and sources 100-1,300 years older" />
       </Head>
+
+      <PageHeader 
+        title="Copied & Edited Content" 
+        subtitle="How Quranic Narratives Were Derived from Earlier Sources"
+        gradient={PAGES.comparative.backgroundColor}
+      />
 
       <Container>
         <BackLink />

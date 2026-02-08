@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { List, ListItem } from '../components/ui'
 
 export default function MigrationImpact({ translations: t, currentLang = 'en' }) {
   if (!t) {
@@ -78,11 +79,11 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
 
           <div style={styles.statsBox}>
             <h3>Lebanon Transformation Statistics</h3>
-            <ul style={{ fontSize: '1.1rem' }}>
-              <li><strong>1932:</strong> 60% Christian → <strong>2025:</strong> 40% Christian (33% population loss)</li>
-              <li><strong>1932:</strong> 40% Muslim → <strong>2025:</strong> 54% Muslim (35% population gain)</li>
-              <li><strong>Outcome:</strong> Paradise → Failed Islamic state in 100 years</li>
-            </ul>
+            <List className="text-white text-[1.1rem]">
+              <ListItem><strong>1932:</strong> 60% Christian → <strong>2025:</strong> 40% Christian (33% population loss)</ListItem>
+              <ListItem><strong>1932:</strong> 40% Muslim → <strong>2025:</strong> 54% Muslim (35% population gain)</ListItem>
+              <ListItem><strong>Outcome:</strong> Paradise → Failed Islamic state in 100 years</ListItem>
+            </List>
           </div>
         </div>
 
@@ -285,11 +286,11 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
 
           <div style={styles.statsBox}>
             <h3>Eastern Europe Statistics</h3>
-            <ul style={{ fontSize: '1.1rem' }}>
-              <li><strong>Terror Attacks (2015-2024):</strong> France 15+, UK 12+, Germany 8+ vs Poland 0, Hungary 0, Czech 0</li>
-              <li><strong>No-Go Zones:</strong> France 750+, Sweden 60+, UK 50+ vs Poland 0, Hungary 0, Czech 0</li>
-              <li><strong>Grooming Gangs:</strong> UK 19,000+ victims vs Eastern Europe 0</li>
-            </ul>
+            <List className="text-white text-[1.1rem]">
+              <ListItem><strong>Terror Attacks (2015-2024):</strong> France 15+, UK 12+, Germany 8+ vs Poland 0, Hungary 0, Czech 0</ListItem>
+              <ListItem><strong>No-Go Zones:</strong> France 750+, Sweden 60+, UK 50+ vs Poland 0, Hungary 0, Czech 0</ListItem>
+              <ListItem><strong>Grooming Gangs:</strong> UK 19,000+ victims vs Eastern Europe 0</ListItem>
+            </List>
           </div>
         </div>
 
@@ -387,12 +388,12 @@ export default function MigrationImpact({ translations: t, currentLang = 'en' })
         <div className="content-section">
           <div style={styles.statsBox}>
             <h3>The Lebanon Pattern is Repeating</h3>
-            <ul style={{ fontSize: '1.1rem' }}>
-              <li><strong>Lebanon:</strong> Christian 60% → 40% in 100 years = Islamic failed state</li>
-              <li><strong>UK:</strong> Muslim 0.1% (1961) → 6.5% (2021) → 17% (2050 projection)</li>
-              <li><strong>France:</strong> Muslim 2% (1980) → 10% (2023) → 18% (2050 projection)</li>
-              <li><strong>Pattern:</strong> Demographics → Demands → Violence → Takeover</li>
-            </ul>
+            <List className="text-white text-[1.1rem]">
+              <ListItem><strong>Lebanon:</strong> Christian 60% → 40% in 100 years = Islamic failed state</ListItem>
+              <ListItem><strong>UK:</strong> Muslim 0.1% (1961) → 6.5% (2021) → 17% (2050 projection)</ListItem>
+              <ListItem><strong>France:</strong> Muslim 2% (1980) → 10% (2023) → 18% (2050 projection)</ListItem>
+              <ListItem><strong>Pattern:</strong> Demographics → Demands → Violence → Takeover</ListItem>
+            </List>
           </div>
 
           <div style={styles.warningBox}>

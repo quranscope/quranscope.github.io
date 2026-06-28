@@ -1,99 +1,20 @@
 import Head from 'next/head'
-import { List, ListItem } from '../components/ui'
+import {
+  Container,
+  BackLink,
+  IntroBox,
+  ContentCard,
+  SectionTitle,
+  HighlightBox,
+  CategoryTag,
+  List,
+  ListItem
+} from '../components/ui'
 
 export default function ExMuslimResources({ translations: t, currentLang = 'en' }) {
   if (!t) {
     return <div className="loading">{t?.loadingText || 'Loading...'}</div>
   }
-
-  const styles = {
-    intro: {
-      background: '#f8f9fa',
-      padding: '20px',
-      borderRadius: '10px',
-      marginBottom: '30px',
-      borderLeft: '5px solid #667eea',
-    },
-    subtitle: {
-      background: '#e3f2fd',
-      borderLeft: '5px solid #2196F3',
-      marginBottom: '30px',
-      padding: '20px',
-      borderRadius: '10px',
-      color: '#1976D2',
-      fontWeight: '500',
-    },
-    channelGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-      gap: '25px',
-      margin: '30px 0',
-    },
-    channelCard: {
-      background: 'white',
-      border: '2px solid #e0e0e0',
-      borderRadius: '12px',
-      padding: '20px',
-      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    },
-    channelName: {
-      fontSize: '1.3em',
-      fontWeight: 'bold',
-      color: '#2c3e50',
-      marginBottom: '10px',
-    },
-    channelLanguage: {
-      color: '#667eea',
-      fontWeight: '600',
-      fontSize: '0.9em',
-      marginBottom: '15px',
-      display: 'block',
-    },
-    channelLink: {
-      display: 'inline-block',
-      background: '#667eea',
-      color: 'white',
-      padding: '10px 20px',
-      borderRadius: '6px',
-      textDecoration: 'none',
-      fontWeight: '500',
-    },
-    websiteItem: {
-      background: '#f8f9fa',
-      margin: '15px 0',
-      padding: '20px',
-      borderRadius: '10px',
-      borderLeft: '5px solid #764ba2',
-    },
-    websiteName: {
-      fontSize: '1.2em',
-      fontWeight: 'bold',
-      color: '#2c3e50',
-      marginBottom: '8px',
-    },
-    websiteLink: {
-      color: '#667eea',
-      textDecoration: 'none',
-      fontWeight: '500',
-    },
-    reasonSection: {
-      background: '#fff3cd',
-      padding: '25px',
-      borderRadius: '10px',
-      margin: '30px 0',
-      borderLeft: '5px solid #ffc107',
-    },
-    reasonList: {
-      listStylePosition: 'inside',
-      paddingLeft: '20px',
-    },
-    reasonItem: {
-      margin: '12px 0',
-      padding: '10px',
-      background: 'white',
-      borderRadius: '6px',
-    },
-  };
 
   const channels = [
     { name: 'Arif Hussain Theruvath', language: '🗣️ Malayalam', link: 'https://www.youtube.com/@ArifHussainTheruvath', desc: t.channel1Desc },
@@ -125,61 +46,66 @@ export default function ExMuslimResources({ translations: t, currentLang = 'en' 
         <meta name="description" content={t.intro} />
         <link rel="canonical" href="https://quranscope.github.io/ex-muslim-resources" />
       </Head>
-      <div className="container">
-        <a href="/" className="back-link">{t.homeButton}</a>
-        <h1>{t.pageTitle}</h1>
+      <Container>
+        <BackLink href="/">{t.homeButton}</BackLink>
+        <h1 className="text-4xl font-bold text-center mb-6">{t.pageTitle}</h1>
 
-        <div style={styles.intro}>
+        <IntroBox title="" variant="info">
           <p>{t.intro}</p>
-        </div>
+        </IntroBox>
 
-        <h2>{t.youtubeTitle}</h2>
+        <ContentCard>
+          <SectionTitle color="primary">{t.youtubeTitle}</SectionTitle>
 
-        <div style={styles.subtitle}>
-          💡 Tip: Many channels offer subtitles in multiple languages. Click the CC button on YouTube videos to enable subtitles if available.
-        </div>
+          <HighlightBox title="💡 Tip" variant="info">
+            <p>Many channels offer subtitles in multiple languages. Click the CC button on YouTube videos to enable subtitles if available.</p>
+          </HighlightBox>
 
-        <div style={styles.channelGrid}>
-          {channels.map((channel, index) => (
-            <div key={index} style={styles.channelCard}>
-              <div style={styles.channelName}>{channel.name}</div>
-              <span style={styles.channelLanguage}>{channel.language}</span>
-              <p style={{ color: '#666', marginBottom: '15px', lineHeight: '1.5' }}>
-                {channel.desc}
-              </p>
-              <a href={channel.link} target="_blank" rel="noopener noreferrer" style={styles.channelLink}>{t.visitChannelButton}</a>
-            </div>
-          ))}
-        </div>
-
-        <h2>{t.websitesTitle}</h2>
-
-        <div style={{ listStyle: 'none', padding: 0 }}>
-          {websites.map((website, index) => (
-            <div key={index} style={styles.websiteItem}>
-              <div style={styles.websiteName}>{website.name}</div>
-              <p style={{ color: '#666', marginBottom: '10px' }}>{website.desc}</p>
-              <a href={website.link} target="_blank" rel="noopener noreferrer" style={styles.websiteLink}>{website.link}</a>
-            </div>
-          ))}
-        </div>
-
-        <h2>{t.reasonsTitle}</h2>
-
-        <div style={styles.reasonSection}>
-          <h3 style={{ color: '#555', marginBottom: '15px' }}>{t.reasonsSubtitle}</h3>
-          <List variant="none">
-            {reasons.map((reason, index) => (
-              <li key={index} style={styles.reasonItem}>{reason}</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
+            {channels.map((channel, index) => (
+              <HighlightBox key={index} variant="info">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{channel.name}</h3>
+                <CategoryTag color="purple" className="mb-3">{channel.language}</CategoryTag>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {channel.desc}
+                </p>
+                <a href={channel.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-primary-500 hover:bg-primary-600 text-white px-5 py-2 rounded-md font-medium transition-colors">{t.visitChannelButton}</a>
+              </HighlightBox>
             ))}
-          </List>
-        </div>
+          </div>
+        </ContentCard>
 
-        <div className="navigation">
-          <a href="/" className="nav-button">{t.homeButton}</a>
-          <a href="/muhammad-women" className="nav-button">{t.muhammadButton}</a>
+        <ContentCard>
+          <SectionTitle color="primary">{t.websitesTitle}</SectionTitle>
+
+          <div className="space-y-4">
+            {websites.map((website, index) => (
+              <HighlightBox key={index} variant="success">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{website.name}</h3>
+                <p className="text-gray-600 mb-3">{website.desc}</p>
+                <a href={website.link} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 font-medium">{website.link}</a>
+              </HighlightBox>
+            ))}
+          </div>
+        </ContentCard>
+
+        <ContentCard>
+          <SectionTitle color="primary">{t.reasonsTitle}</SectionTitle>
+
+          <HighlightBox title={t.reasonsSubtitle} variant="warning">
+            <List variant="none">
+              {reasons.map((reason, index) => (
+                <ListItem key={index} className="mb-3 p-3 bg-white rounded-md">{reason}</ListItem>
+              ))}
+            </List>
+          </HighlightBox>
+        </ContentCard>
+
+        <div className="flex gap-4 justify-center mt-8">
+          <a href="/" className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-md font-medium transition-colors">{t.homeButton}</a>
+          <a href="/muhammad-women" className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-md font-medium transition-colors">{t.muhammadButton}</a>
         </div>
-      </div>
+      </Container>
     </>
   )
 }

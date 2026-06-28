@@ -1,80 +1,18 @@
 import Head from 'next/head'
-import { List, ListItem } from '../components/ui'
+import {
+  Container,
+  BackLink,
+  IntroBox,
+  ContentCard,
+  SectionTitle,
+  HighlightBox,
+  CategoryTag,
+  List,
+  ListItem
+} from '../components/ui'
 
 export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
   if (!t) return <div>Loading...</div>
-
-  const styles = {
-    warningBox: {
-      background: '#fff3cd',
-      borderLeft: '5px solid #ffc107',
-      padding: '20px',
-      margin: '30px 0',
-      borderRadius: '8px',
-      color: '#856404',
-    },
-    intro: {
-      background: '#f8f9fa',
-      padding: '25px',
-      borderRadius: '10px',
-      marginBottom: '30px',
-      borderLeft: '5px solid #c94b4b',
-    },
-    crimesList: {
-      listStyle: 'none',
-      padding: 0,
-    },
-    crimeItem: {
-      background: 'white',
-      padding: '15px 20px',
-      margin: '12px 0',
-      borderRadius: '8px',
-      borderLeft: '4px solid #c94b4b',
-      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-      lineHeight: '1.6',
-    },
-    referenceBox: {
-      background: '#e8f4f8',
-      borderLeft: '4px solid #0288d1',
-      padding: '15px',
-      margin: '15px 0',
-      borderRadius: '6px',
-      fontFamily: '"Courier New", monospace',
-    },
-    referenceTitle: {
-      fontWeight: 'bold',
-      color: '#01579b',
-      marginBottom: '8px',
-    },
-    evidenceList: {
-      listStylePosition: 'inside',
-      margin: '20px 0',
-      paddingLeft: '20px',
-    },
-    evidenceItem: {
-      margin: '15px 0',
-      padding: '15px',
-      background: '#f8f9fa',
-      borderRadius: '8px',
-      borderLeft: '4px solid #c94b4b',
-    },
-    countryCard: {
-      background: 'white',
-      border: '2px solid #e0e0e0',
-      borderRadius: '10px',
-      padding: '25px',
-      marginBottom: '20px',
-      boxShadow: '0 3px 6px rgba(0, 0, 0, 0.1)',
-    },
-    countryName: {
-      fontSize: '1.3em',
-      fontWeight: 'bold',
-      color: '#c94b4b',
-      marginBottom: '15px',
-      paddingBottom: '10px',
-      borderBottom: '2px solid #c94b4b',
-    },
-  };
 
   const crimesTitle = "MAJOR CRIMES DOCUMENTED";
   const crimes = [
@@ -94,62 +32,62 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
         <meta name="description" content="Prophet's Marriages, Slavery, and Women's Treatment - Detailed examination of Muhammad's relationships and Islamic gender teachings." />
         <link rel="canonical" href="https://quranscope.github.io/muhammad-women" />
       </Head>
-      <div className="page-content">
+      <Container>
         <a href="/" className="back-link">{t.homeButton || '← Back to Home'}</a>
         
         <h1>{t.title || 'Muhammad and the Treatment of Women: A Critical Analysis'}</h1>
 
-        <div style={styles.intro}>
-          <p style={{ marginBottom: '15px' }}>
+        <IntroBox>
+          <p className="mb-4">
             {t.introParaOverview || 'Muhammad, considered the perfect moral example for 1.8 billion Muslims, married a 6-year-old child, owned slaves, captured women as war booty, and established legal frameworks treating women as inferior beings.'}
           </p>
-          <p style={{ marginBottom: '15px' }}>
+          <p className="mb-4">
             {t.introParaCommonTactics || 'This page documents Muhammad\'s treatment of women based on Islam\'s most authentic sources: Sahih (authentic) Hadith collections and the Quran.'}
           </p>
-          <p style={{ fontWeight: '600', color: '#c94b4b', fontSize: '1.05em' }}>
+          <p className="font-semibold text-red-700 text-lg">
             {t.introQuestion || 'If Muhammad lived today, would he be considered a role model, or would he be prosecuted for child sexual abuse, slavery, and war crimes?'}
           </p>
-        </div>
+        </IntroBox>
 
-        <div style={{ background: '#fff3cd', padding: '30px', borderRadius: '12px', margin: '30px 0', borderLeft: '6px solid #ffc107' }}>
-          <h2 style={{ color: '#c94b4b', marginTop: 0, marginBottom: '10px' }}>{t.crimesTitle || crimesTitle}</h2>
-          <p style={{ fontStyle: 'italic', color: '#666', marginBottom: '20px' }}>{t.crimesSubtitle || 'All documented in Islam\'s most authentic sources'}</p>
+        <HighlightBox variant="warning">
+          <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">{t.crimesTitle || crimesTitle}</h2>
+          <p className="italic text-gray-600 mb-5">{t.crimesSubtitle || 'All documented in Islam\'s most authentic sources'}</p>
           <List variant="none">
             {(t.crimesList || crimes).map((crime, index) => (
-              <li key={index} style={styles.crimeItem}>{crime}</li>
+              <ListItem key={index}>{crime}</ListItem>
             ))}
           </List>
-        </div>
+        </HighlightBox>
 
-        <div style={styles.warningBox}>
+        <HighlightBox variant="warning">
           <strong>{t.warningTitle || '⚠️ Content Warning:'}</strong>
-          <p style={{ marginTop: '10px' }}>{t.warningText || 'This page discusses child marriage, sexual slavery, domestic violence, and human rights violations documented in Islamic texts.'}</p>
-        </div>
+          <p className="mt-4">{t.warningText || 'This page discusses child marriage, sexual slavery, domestic violence, and human rights violations documented in Islamic texts.'}</p>
+        </HighlightBox>
 
-        <h2>1. Child Marriage: The Case of Aisha</h2>
-        <div className="content-section">
+        <SectionTitle color="red">1. Child Marriage: The Case of Aisha</SectionTitle>
+        <ContentCard>
           <p><strong>The single most damaging fact about Muhammad:</strong> He married a 6-year-old child and had sex with her at age 9.</p>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Bukhari 5134:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Bukhari 5134:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "The Prophet married Aisha when she was six years old and he consummated his marriage when she was nine years old."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Muslim 1422a:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Muslim 1422a:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "Aisha reported that Allah's Apostle married her when she was seven years old, and she was taken to his house as a bride when she was nine, and her dolls were with her."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Bukhari 5158:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Bukhari 5158:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "Aisha said: 'The Prophet engaged me when I was a girl of six. We went to Medina and stayed... Then I was delivered to him (for marriage) while I was nine years old, and my dolls were with me.'"
             </div>
-          </div>
+          </HighlightBox>
 
           <h3>Historical Context and Impact</h3>
           <List>
@@ -160,22 +98,22 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             <ListItem><strong>The Problem:</strong> Muhammad is considered "uswa hasana" (perfect example) for all Muslims to follow (Quran 33:21)</ListItem>
             <ListItem><strong>Death Toll:</strong> Millions of child brides suffer lifelong trauma, health complications, and death due to this precedent</ListItem>
           </List>
-        </div>
+        </ContentCard>
 
-        <h2>2. Multiple Wives and Captive Women</h2>
-        <div className="content-section">
+        <SectionTitle color="red">2. Multiple Wives and Captive Women</SectionTitle>
+        <ContentCard>
           <p>Muhammad had special permission from Allah to exceed the 4-wife limit imposed on other Muslims. He married at least 11 women, including war captives.</p>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Quran 33:50:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Quran 33:50:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "O Prophet, indeed We have made lawful to you your wives... and any believing woman who gives herself to the Prophet if the Prophet wishes to marry her - [this is] only for you, excluding the [other] believers."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Bukhari 371:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Bukhari 371:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "The Prophet used to visit all his wives in one night and he had nine wives at that time."
             </div>
           </div>
@@ -195,29 +133,29 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             <ListItem><strong>Maymunah:</strong> Last wife</ListItem>
             <ListItem><strong>Maria al-Qibtiyya:</strong> Coptic Christian slave gifted to Muhammad; bore him son Ibrahim</ListItem>
           </List>
-        </div>
+        </HighlightBox>
 
-        <h2>3. Women's Rights and Status in Islam</h2>
-        <div className="content-section">
+        <SectionTitle color="red">3. Women's Rights and Status in Islam</SectionTitle>
+        <ContentCard>
           <p>The Quran and Hadith establish women as legally and morally inferior to men in Islamic law.</p>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Quran 4:34:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Quran 4:34:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "Men are in charge of women... As to those women on whose part you fear disloyalty and ill-conduct, admonish them, refuse to share their beds, and beat them."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Quran 2:282:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Quran 2:282:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "Call upon two of your men as witnesses. If two men are not available, then one man and two women from among those you approve as witnesses - so if one of the women forgets, the other may remind her."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Bukhari 304:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Bukhari 304:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "The Prophet said: 'Isn't the witness of a woman equal to half of that of a man?' The women said: 'Yes.' He said: 'This is because of the deficiency of a woman's mind.'"
             </div>
           </div>
@@ -231,29 +169,29 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             <ListItem><strong>Obedience Required:</strong> If a woman refuses sex, angels curse her until morning (Sahih Bukhari 5193)</ListItem>
             <ListItem><strong>Male Guardianship:</strong> Women require male permission for travel, work, marriage in strict Islamic societies</ListItem>
           </List>
-        </div>
+        </HighlightBox>
 
-        <h2>4. War Captives and Sexual Slavery</h2>
-        <div className="content-section">
+        <SectionTitle color="red">4. War Captives and Sexual Slavery</SectionTitle>
+        <ContentCard>
           <p>Islam explicitly permits sexual slavery of war captives. Muhammad practiced this and established it as Islamic law.</p>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Quran 4:24:</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Quran 4:24:</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "Also forbidden are married women, except those whom your right hands possess [war captives]."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Muslim 1438a (Banu Mustaliq Raid):</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Muslim 1438a (Banu Mustaliq Raid):</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "We went out with Allah's Messenger on the expedition to Banu Mustaliq and took captive some excellent Arab women; and we desired them, for we were suffering from the absence of our wives... So we asked the Prophet about coitus interruptus."
             </div>
-          </div>
+          </HighlightBox>
 
-          <div style={styles.referenceBox}>
-            <div style={styles.referenceTitle}>Sahih Bukhari 2229 (Safiyya bint Huyayy):</div>
-            <div style={{ color: '#333', lineHeight: '1.6', fontStyle: 'italic' }}>
+          <HighlightBox variant="info" className="font-mono">
+            <h4 className="font-bold text-blue-900 mb-2">Sahih Bukhari 2229 (Safiyya bint Huyayy):</h4>
+            <div className="text-gray-800 leading-relaxed italic">
               "The Prophet stayed with Safiyya for three days during a journey. When it was the day of Khaybar, he married her. And then I saw the Prophet making a kind of pancake with dates and butter for her."
             </div>
           </div>
@@ -266,9 +204,9 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             <ListItem><strong>Modern Application:</strong> ISIS used these verses to justify enslaving Yazidi women (2014-2019); published manual citing Quran 4:24</ListItem>
             <ListItem><strong>Still Practiced:</strong> Sex slavery continues in conflict zones where jihadists operate</ListItem>
           </List>
-        </div>
+        </HighlightBox>
 
-        <h2>5. Modern Perspective: Is Muhammad Followable Today?</h2>
+        <SectionTitle color="red">5. Modern Perspective: Is Muhammad Followable Today?</SectionTitle>
         <div className="content-section" style={{ background: '#ffebee', padding: '25px', borderRadius: '10px', borderLeft: '5px solid #c94b4b' }}>
           <h3>Ethical and Legal Analysis</h3>
           <p><strong>If Muhammad lived in any modern country and repeated his actions, he would be:</strong></p>
@@ -285,14 +223,14 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
           <p style={{ marginTop: '20px', fontWeight: '600', fontSize: '1.1em', color: '#c94b4b' }}>
             Yet 1.8 billion Muslims are taught to follow his example as the "perfect man" and "seal of prophets."
           </p>
-        </div>
+        </HighlightBox>
 
-        <h2>6. Legal Consequences in Modern Countries</h2>
-        <div className="content-section">
+        <SectionTitle color="red">6. Legal Consequences in Modern Countries</SectionTitle>
+        <ContentCard>
           <p><strong>What would happen to Muhammad if he lived today and repeated his documented actions?</strong></p>
 
-          <div style={styles.countryCard}>
-            <div style={styles.countryName}>United States</div>
+          <ContentCard>
+            <h3 className="text-xl font-bold text-red-700 mb-4 pb-2 border-b-2 border-red-700">United States</h3>
             <p style={{ whiteSpace: 'pre-line' }}>
               {`• Child marriage (Aisha): Statutory rape = 25 years to life
 • Sex slavery: Human trafficking = 15-20 years per victim
@@ -301,8 +239,8 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             </p>
           </div>
 
-          <div style={styles.countryCard}>
-            <div style={styles.countryName}>Saudi Arabia</div>
+          <ContentCard>
+            <h3 className="text-xl font-bold text-red-700 mb-4 pb-2 border-b-2 border-red-700">Saudi Arabia</h3>
             <p style={{ whiteSpace: 'pre-line' }}>
               {`• Ironically: In modern Saudi Arabia, child marriage restricted by 2019 reforms
 • But: Muhammad's actions still considered divinely sanctioned; cannot be criticized
@@ -310,8 +248,8 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             </p>
           </div>
 
-          <div style={styles.countryCard}>
-            <div style={styles.countryName}>India</div>
+          <ContentCard>
+            <h3 className="text-xl font-bold text-red-700 mb-4 pb-2 border-b-2 border-red-700">India</h3>
             <p style={{ whiteSpace: 'pre-line' }}>
               {`• Child marriage: POCSO Act = 10-20 years rigorous imprisonment
 • Sex slavery: Immoral Traffic Act + Human Trafficking = 7-14 years
@@ -329,10 +267,10 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
             <ListItem><strong>Article 18:</strong> Freedom of religion → Apostasy punishable by death; forced conversions practiced</ListItem>
             <ListItem><strong>Article 19:</strong> Freedom of expression → Blasphemy/criticism of Islam punishable by death</ListItem>
           </List>
-        </div>
+        </HighlightBox>
 
-        <h2>7. Conclusion: The Impact on Women</h2>
-        <div className="content-section">
+        <SectionTitle color="red">7. Conclusion: The Impact on Women</SectionTitle>
+        <ContentCard>
           <p style={{ marginBottom: '25px', fontWeight: '500', fontSize: '1.05em' }}>
             Muhammad's treatment of women and the legal frameworks he established have resulted in 1,400 years of systemic oppression affecting hundreds of millions of women.
           </p>
@@ -360,3 +298,9 @@ export default function MuhammadWomen({ translations: t, currentLang = 'en' }) {
     </>
   )
 }
+
+
+
+
+
+
